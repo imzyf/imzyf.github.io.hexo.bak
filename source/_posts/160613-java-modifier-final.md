@@ -1,5 +1,5 @@
 ---
-title: Java-final-修饰符
+title: Java-final修饰符
 permalink: java-modifier-final
 comments: true
 date: 2016-06-13 14:09:00
