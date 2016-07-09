@@ -4,10 +4,10 @@
 
 # Site
 title: Yifans_Z
-subtitle: Yifans Blog | Try to write something
-description: Yifans;zyf;
+subtitle: Yifans Blog
+description: Its now or never
 author: Yifan Zhao
-language: zh-CN
+language: zh-Hans
 timezone: Asia/Shanghai
 
 # URL
@@ -27,6 +27,7 @@ code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
 
+
 # Writing
 new_post_name: :title.md # File name of new posts
 default_layout: post
@@ -39,8 +40,8 @@ relative_link: false
 future: true
 highlight:
   enable: true
-  line_number: true
-  auto_detect: true
+  line_number: false
+  auto_detect: false
   tab_replace:
 
 # Category & Tag
@@ -63,10 +64,17 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: maupassant
-
+#theme: maupassant
+theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: 
+
+
+baidu_analytics: 8b913a9ab9fd59ff248ad7d2408f7080
+duoshuo_shortname: zyfim
+
+# JiaThis 分享服务
+jiathis: true
 

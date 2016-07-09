@@ -1,44 +1,53 @@
 ---
-title: Ubuntu+JDK+Nginx+WildFly+MySQL 环境配置
+title: Ubuntu JDK Nginx WildFly MySQL 环境配置
 permalink: ubuntu-jdk-nginx-wildfly-mysql-config
 comments: true
 date: 2016-07-07 10:00:00
 toc: true
-description: 
+tags: 
+  - ubuntu
+  - wildfly
 ---
 
 新项目部署上线，参考[世雷的博客](http://blog.csdn.net/hanshileiai)自己也总结了下。从 JDK 安装、Web 容器、数据库，都有涉及比较全面。
-
+<!-- more -->
 ## JDK8
 ### 安装 JDK8
 1. 添加软件源
+
 ```
 sudo add-apt-repository ppa:webupd8team/java
 ```
 2. 更新软件源
+
 ```
 sudo apt-get update
 ```
 3. 安装 jdk1.8
+
 ```
 sudo apt-get install oracle-java8-installer
 ```
 ### 查看 Java 安装路径
+
 ```
 sudo update-alternatives --config java
 sudo update-alternatives --config javac
 ```
 ### 查看 Java 安装后的版本
+
 ```
 java -version
 ```
 ### （扩展）增加多版本 JDK 和切换方法
 1. 安装 JDK 6 和 JDK 7
+
 ```
 sudo apt-get install oracle-java6-installer
 sudo apt-get install oracle-java7-installer 
 ```
 2. 查看所有 JDK 安装版本
+
 ```
 sudo update-java-alternatives -l
 java-6-oracle 3 /usr/lib/jvm/java-6-oracle
@@ -46,6 +55,7 @@ java-7-oracle 4 /usr/lib/jvm/java-7-oracle
 java-8-oracle 2 /usr/lib/jvm/java-8-oracle
 ```
 3. 通过 `-s` 参数可以方便的切换到其它的 JDK 版本
+
 ```
 sudo update-java-alternatives -s java-6-oracle
 ```
@@ -56,6 +66,7 @@ sudo update-java-alternatives -s java-7-oracle
 sudo update-java-alternatives -s java-8-oracle
 ```
 4. 再次查看 JDK 版本
+
 ```
 java -version
 ```
@@ -67,38 +78,62 @@ Java HotSpot(TM) 64-Bit Server VM (build 20.45-b01, mixed mode)
 ## Nginx
 ### Nginx 安装
 1. 更新软件源
+
 ```
 sudo apt-get update
 ```
 2. 安装 Nginx
+
 ```
 sudo apt-get install nginx
 ```
 3. 查看 Nginx 位置
+
 ```
 whereis nginx
 ```
+### Nginx 禁止外网访问
 
-4. 禁止外网方法，防止 Google 收录
+- 防止 Google 收录
+
 ```
 sudo vi /etc/nginx/sites-enabled/default
 ```
 - 在 `server` 中添加
+
 ```
 # server add
 # 公司代理IP
 allow 114.243.*.*;
 deny all;
 ```
-- 域名 `www` 跳转 `non www`，`server` 中添加配置
+### Nginx 域名调整
+&emsp;&emsp;域名 `www` 跳转 `non www`，`server` 中添加配置
 ```
 server_name www.aaa.org aaa.org;
 if ($host != 'aaa.org'){
     rewrite ^/(.*)$ http://aaa.org/$1 permanent;
 }
 ```
+### Nginx GZip
+```
+##
+# Gzip Settings
+##
 
-- 静态文件缓存
+gzip on;
+gzip_disable "msie6";
+
+gzip_vary on;
+gzip_min_length 1k;
+gzip_proxied any;
+gzip_comp_level 6;
+gzip_buffers 16 8k;
+gzip_http_version 1.1;
+gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript application/x-httpd-php image/jpeg image/gif image/png image/x-icon
+```
+
+### Nginx 静态文件缓存
 ```
 location ~*\.(gif|jpg|jpeg|png|bmp|swf|woff|icon)$ {
     proxy_cache my_zone;
@@ -117,12 +152,11 @@ location ~ .*\.(js|css|ttf)$ {
     expires 15d;
 }
 ```
-
-- 静态文件放在配置的 `root` 下
+&emsp;&emsp;静态文件放在配置的 `root` 下
 ```
 root /opt/***;
 ```
-- 还有个技巧，项目中大量资源文件，例如 PDF，在设计访问 url 时可以 `**/pdf/**`，这样在 Nginx 进行配置就可以将文件分离出项目；这些文件也放在 `root` 路径下。
+&emsp;&emsp;还有个技巧，项目中大量资源文件，例如 PDF，在设计访问 url 时可以 `**/pdf/**`，这样在 Nginx 进行配置就可以将文件分离出项目；这些文件也放在 `root` 路径下。
 ```
 location ^~ /html/ {
 }
@@ -130,67 +164,74 @@ location ^~ /pdf/ {
 }
 ```
 
-- nginx 命令
+### Nginx Commands
 ```
 sudo service nginx stop
 sudo service nginx start
 sudo service nginx restart
 ```
 
-- 查看日志
+### Nginx Show Log
 ```
 vi /var/log/nginx/error.log +
 ```
 
 
 
-
 ## WildFly 10.0.0.Final
 
 ### WildFly 安装
-1. 下载 WildFly，并提取到 /opt 目录
-WildFly 10.0.0.Final [下载地址](http://wildfly.org/downloads/)
+1. 下载 WildFly，并提取到 /opt 目录 WildFly 10.0.0.Final [下载地址](http://wildfly.org/downloads/)
+
 ```
 cd /opt
 sudo wget -c http://download.jboss.org/wildfly/10.0.0.Final/wildfly-10.0.0.Final.tar.gz
 sudo tar -xzvf wildfly-10.0.0.Final.tar.gz
 ```
 2. 创建 WildFly 用户和组
+
 ```
 sudo addgroup wildfly
 sudo useradd -g wildfly wildfly
 ```
-改变 wildfly 文件夹的所有权:
+- 改变 wildfly 文件夹的所有权：
+
 ```
 sudo chown -R wildfly:wildfly /opt/wildfly-10.0.0.Final
 ```
-创建一个链接映射（好处：如果你改变WildFly版本,不需要更新其他配置）
+- 创建一个链接映射（好处：如果你改变WildFly版本,不需要更新其他配置）
+
 ```
 sudo ln -s wildfly-10.0.0.Final /opt/wildfly
 ```
 
 3. 安装 init.d 脚本
 设置并使用 init.d 脚本来启动和停止WildFly。复制` /opt/wildfly/bin/init.d/wildfly-init-debian.sh`脚本到 `/etc/init.d/wildfly`，更改权限,并使其可执行
+
 ```
 sudo cp /opt/wildfly/docs/contrib/scripts/init.d/wildfly-init-debian.sh /etc/init.d/wildfly
 sudo chown root:root /etc/init.d/wildfly
 sudo chmod ug+x /etc/init.d/wildfly
 ```
-启动/停止WildFly 命令 
+- 启动/停止WildFly 命令 
+
 ```
 sudo /etc/init.d/wildfly start
 sudo /etc/init.d/wildfly stop
 ```
 4. WildFly 做为系统服务，开机启动
+
 ```
 sudo update-rc.d wildfly defaults
 ```
 ### 配置 WildFly 允许所有 ip 访问
 1. 打开配置文件 `standalone.xml`
+
 ```
 sudo vi /opt/wildfly/standalone/configuration/standalone.xml
 ```
 2. 替换此处
+
 ```
 <interface name="management">
     <inet-address value="${jboss.bind.address.management:127.0.0.1}"/>
@@ -200,6 +241,7 @@ sudo vi /opt/wildfly/standalone/configuration/standalone.xml
 </interface>
 ```
 2. 改为
+
 ```
 <interface name="management">
     <any-address/>
@@ -210,6 +252,7 @@ sudo vi /opt/wildfly/standalone/configuration/standalone.xml
 ```
 
 3. 保存后，重新启动 WildFily
+
 ```
 sudo service wildfly restart
 ```
@@ -243,6 +286,7 @@ sudo service wildfly restart
 1. 项目以站点根目录访问
 你现在可以将应用程序部署到 WildFly 视图在your_ip:8080
 在你的项目目录 WEB-INF 下添加jboss-web.xml，确保你的配置 context-root 设置为 / 
+
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <jboss-web>
@@ -253,30 +297,35 @@ sudo service wildfly restart
 &emsp;&emsp;**注意：在之后的配置会使用 Nginx 反向代理，所用 WildFly 端口不用映射为 80，这里只是个方法的笔记**
 &emsp;&emsp;注意，在linux里，由于内核的限制，普通用户不能使用1024一下的端口。所以在配置文件（standalone.xml）里改成80，用普通用户是启动不了的。
 &emsp;&emsp;此时，我们需要在linux下使用root用户运行一个命令，使访问80端口的应用转到8080上：
+
 ```
 sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 8080
 ```
 以上端口转发为临时操作，重启 linux 服务器后失效。如果要重启服务器不丢失FORWARD转发”操作，可写入配置。
 
 > &emsp;&emsp;在Linux的下面部署了tomcat，为了安全我们使用非root用户进行启动，但是在域名绑定时无法直接访问80端口号。众所周知，在unix下，非root用户不能监听1024以上的端口号，这个tomcat服务器就没办法绑定在80端口下。所以这里需要使用linux的端口转发机制，把到80端口的服务请求都转到8080端口上。
-> 
-> 1. 安装 iptables-persistent
-> ```
+
+1. 安装 iptables-persistent
+
+```
 sudo apt-get update
 sudo apt-get install iptables-persistent
 ```
-> 2. 添加 80 端口跳转到 8080 规则
-> ```
+2. 添加 80 端口跳转到 8080 规则
+
+```
 sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8080
 ```
-> 3. 保存跳转规则
-> ```
+3. 保存跳转规则
+
+```
 sudo service iptables-persistent save
 ```
 
 3. wildfly 不支持 struts2 的配置文件（.xml）里用通配符
 **这是原博文的内容，我没有使用 struts2；在 spring 中有用通配符，但是好像没什么影响**
-ps: jboss wildfly 不支持 struts2 配置文件里用通配符 *.xml，如下：
+jboss wildfly 不支持 struts2 配置文件里用通配符 *.xml，如下：
+
 ```
     <!-- <include file="struts/*.xml"></include> -->
     <include file="struts/struts_post.xml"></include>
@@ -284,12 +333,14 @@ ps: jboss wildfly 不支持 struts2 配置文件里用通配符 *.xml，如下�
 ```
 
 4. 增加部署扫描仪的超时设置
+
 ```
 <subsystem xmlns="urn:jboss:domain:deployment-scanner:2.0">
             <deployment-scanner path="deployments" relative-to="jboss.server.base.dir" scan-interval="5000" />
 </subsystem>
 ```
 4. `<deployment-scanner>` 内增加属性 `deployment-timeout="1200"` 如下：
+
 ```
 <subsystem xmlns="urn:jboss:domain:deployment-scanner:2.0">
             <deployment-scanner path="deployments" relative-to="jboss.server.base.dir" scan-interval="5000" deployment-timeout="1200" />
@@ -298,12 +349,14 @@ ps: jboss wildfly 不支持 struts2 配置文件里用通配符 *.xml，如下�
 
 ### Nginx 反向代理 WildFly
 1. 在 `http` 中添加
+
 ```
 upstream jboss {
     server 127.0.0.1:8080;
 }
 ```
 2. 在 `server` 中修改
+
 ```
 location /{
     proxy_pass http://jboss;
@@ -312,6 +365,7 @@ location /{
     proxy_set_header X-Real-IP $remote_addr;
     proxy_set_header Host $http_host;
     index index.html index.htm index.jsp;
+    # 动态网站要小心这个 缓存 选项
     add_header Cache-Control max-age=1728000;
 }
 ```
