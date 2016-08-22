@@ -1,5 +1,5 @@
 ---
-title: CSS-font整理总结
+title: CSS Font 整理总结
 permalink: css-font-summary
 date: 2016-06-23 19:29:00
 tags: css

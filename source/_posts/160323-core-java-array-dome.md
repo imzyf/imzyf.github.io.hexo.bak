@@ -4,8 +4,9 @@ date: 2016-03-23 20:10:00
 tags: java
 permalink: core-java-array-dome
 ---
-从1,2,3……h中取k个中奖号码
+从 1,2,3……h 中取 k 个中奖号码
 
+<!-- more -->
 java code:
 ```
 package im.zyf.javacore;
