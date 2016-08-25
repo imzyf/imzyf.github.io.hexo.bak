@@ -7,7 +7,7 @@ tags: ubuntu
 ---
 
 新买了Filco Majestouch Convertible 2键盘。在自己的笔记本上连接没什么问题，搬到公司Ubuntu的IBM笔记本这么都连接不上，上网查找解决。
-
+<!-- more -->
 >转自 [番茄博客-ubuntu下蓝牙键盘无法连接](http://www.thecatcher.net/archives/61f)
 
 安装蓝牙的hcidump：
