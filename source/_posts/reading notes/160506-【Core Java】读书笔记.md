@@ -1,17 +1,17 @@
 ---
 title: 【Core Java】读书笔记
 permalink: core-java-reading-notes
+date: 2016-05-06 11:00:00
 comments: true
-date: 2016-05-06 11:10:51
-tags: java
+toc: true
+tags:
+   - reading notes
+   - java
 ---
-自己是第一次把一本厚厚的的技术类书读一遍。不过7、8、9、10章讲的是关于图形的就是翻了翻，没怎么看。第4章 对象与类，里面有很多非常基础，可以补充一些知识细节。第14章 多线程，是自己最陌生的，慕课网上有节课 [深入浅出Java多线程](http://www.imooc.com/view/202) 讲到的例子就是书上例子的变形，可以对照理解。第二遍阅读做做笔记。
+&emsp;&emsp;自己是第一次把一本厚厚的的技术类书读一遍。不过7、8、9、10章讲的是关于图形的就是翻了翻，没怎么看。第4章 对象与类，里面有很多非常基础，可以补充一些知识细节。第14章 多线程，是自己最陌生的，慕课网上有节课 [深入浅出Java多线程](http://www.imooc.com/view/202) 讲到的例子就是书上例子的变形，可以对照理解。第二遍阅读做做笔记。
+&emsp;&emsp;本文总结的是书中的：第 3 章 Java 的基本程序设计结构、第 4 章 对象与类；
+<!-- more -->
 
-----
-
-[TOC]
-
-----
 ## 3 Java的基础程序设计结构
 ### 3.3 数据类型
 - Java是一种强类型语音。在Java中，一共有8中基本类型（primitive type），其中有4种整型、2种浮点类型、1种用于表示Unicode编码的字符单元的字符类型char和1种用于表示真值的 boolean 类型。
@@ -28,16 +28,17 @@ tags: java
 
 ### 3.10 数组
 - 在Java中，允许将一个数组变量拷贝给另一个数组变量。这时，两个变量将引用同一个数组：
+
 ``` java
 int[] luckyNumbers = smallPrimes; `
 luckNumbers[5] = 12; // now smallPrimes[5] is also 12
 ```
 - 如果希望将一个数组的所用值拷贝到一个新的数组中去，就要使用Arrays类的copyOf方法：
+
 ``` java
 int[] copiedLuckyNumbers = Arrays.copyOf(luckyNumbers, luckyNumbers.length)
 ```
 
-----
 ## 4 对象与类
 ### 4.1 面向对象程序设计概述
 - 类之间的关系
@@ -51,6 +52,7 @@ int[] copiedLuckyNumbers = Arrays.copyOf(luckyNumbers, luckyNumbers.length)
 
 ### 4.2 使用预定义类
 - 在对象与对象变量之间存在着一个重要的区别。例如：
+
 ``` java
 Date deadline; // deadline doesn't refer to any object
 ```
@@ -79,6 +81,7 @@ s = deadline.toString(); // not yet
 公有的域服务器方法
 公有的域改变方法
 - 不要编写返回引用可变对象的访问器方法。
+
 ``` java
 class Employee {
     ...
@@ -89,6 +92,7 @@ class Employee {
 }
 ```
 - 这样会破坏封装性！代码：
+
 ``` java 
 Employee harry = ...;
 Date d = harry.getHireDay();
@@ -99,12 +103,14 @@ d.setTime(d.getTime() - (long)tenYearsInMilliSeconds);
 - 出错的原因很微妙。d 和 harry.hireDay 引用同一个对象。对 d 调用更改器方法就可以自动地改变这个雇员的私有状态！
 
 - 如果需要返回一个可变对象的引用，应该首先对它进行克隆（clone）。对象 clone 是指存放在另一个位置上的对象副本。
+
 ``` java
     public Date getHireDay() {
         return Date hireDay.clone();
     }
 ```
 - Employee 类的方法可以访问 Emloyee 类的任何一个对象的**私有域 ** 。
+
 ``` java
 class Employee {
     public boolen equals(Employee other) {
@@ -113,6 +119,7 @@ class Employee {
 }
 ```
 - final 修饰符大都应用于基本（primitive）类型域，或不可变（immutable）类的域（如果类中的每个方法都是不会改变其对象，这中类就是不可变的类。例如，String 类就是一个不可变的类）。对于可变的类，使用 final 修饰符可能会对读者造成混乱。代码
+
 ``` java
 private final Date hiredate;
 ```
@@ -120,6 +127,7 @@ private final Date hiredate;
 
 ### 4.4 静态域与静态方法
 - 每一个雇员对象都有一个自己的 id 域，但这个类的所有实例将共享一个 nextId 域。
+
 ``` java
 class Employee {
     private static int nextId = 1;
@@ -143,6 +151,7 @@ class Employee {
 - 如果在编写一个类时没有编写构造器，那么系统就会提供一个无参数构造器。这个构造器将所有的实例域设置为默认值。实例域中的数值类型数据设置为0、布尔型数值设置为 false、所有对象变量将设置为 null。
 - 如果类中提供了至少一个构造器，但是没有提供无参数的构造器，则在构造对象时如果没有提供参数就会被视为不合法。
 - 对每一个实例域都可以被设置为一个有意义的初值，这是一种很好的设计习惯。
+
 ``` java
 class Employee {
     private String name = "";
@@ -150,5 +159,12 @@ class Employee {
 }
 ```
 
-### 类设计技巧
+### 4.10 类设计技巧
+
+- 一定要保证数据私有。绝对不要破坏封装性。
+- 一定要对数据初始化。
+- 不要在类中使用过多的基本类型。就是说，用其他的类代替多个相关的基本类型的使用。
+- 不是所有的域都需要独立的域访问器和域更改器。
+- 将职责过多的类进行分解。
+- 类名和方法名要能够体现它们的职责。
 

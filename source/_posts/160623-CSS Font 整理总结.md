@@ -1,10 +1,14 @@
 ---
 title: CSS Font 整理总结
 permalink: css-font-summary
-date: 2016-06-23 19:29:00
+date: 2016-06-23 19:30:00
 tags: css
-description: 对于web页面来说，字体就是计算机上存储的一套文字显示方式。通过对文字进行一些特殊处理（比如末端加强）来提高不同环境中文字的可读性。
+description: 
 ---
+
+&emsp;&emsp;对于web页面来说，字体就是计算机上存储的一套文字显示方式。通过对文字进行一些特殊处理（比如末端加强）来提高不同环境中文字的可读性。
+
+<!-- more -->
 
 ## font-family
 &emsp;&emsp;关于font-family的介绍大多数只是说明他可以设置文本中的字体名称序列。其实font-family真正的作用是将一系列近似的字体按照优先级顺序组成一个列表，浏览器从第一项开始依次查找，找到第一种可用的字体来显示文字。
@@ -101,6 +105,6 @@ font-face{
 &emsp;&emsp;对于字体库的压缩可以使用这款[工具](https://www.fontsquirrel.com/tools/webfont-generator)。
 
 
->参考转自 [我的小树林-CSS Font知识整理总结](http://www.cnblogs.com/dojo-lzz/p/4375347.html)
+> 参考转自 [我的小树林-CSS Font知识整理总结](http://www.cnblogs.com/dojo-lzz/p/4375347.html)
 
 

@@ -73,8 +73,19 @@ deploy:
 
 
 baidu_analytics: 8b913a9ab9fd59ff248ad7d2408f7080
+google_analytics: UA-84666938-1
 duoshuo_shortname: zyfim
 
 # JiaThis 分享服务
 jiathis: true
 
+
+search:
+  path: search.xml
+  field: post
+
+sitemap:
+  path: sitemap.xml
+
+baidusitemap:
+  path: baidusitemap.xml

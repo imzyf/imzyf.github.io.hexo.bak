@@ -1,12 +1,12 @@
 ---
 title: 使用 GitHub 和 Hexo 搭建个人独立博客
 permalink: hexo-github-blog
+date: 2016-06-24 18:30:00
 comments: true
-date: 2016-06-24 18:47:00
+toc: true
 tags: 
   - github
   - hexo
-toc: true
 ---
 
 &emsp;&emsp;Wordpress这类博客系统功能强大，可对与我只想划拉的写点东西的人，感觉大材小用了。而且wp需要部署，网站的服务器也会带来问题，国内的服务器首先需要备案，费用不低；国外服务器访问速度受影响。近来接触到一种新的博客系统Hexo，它的不同地方就是将：**在上线编写博客和页面渲染的过程在线下完成**。在本地编写博文的Markdown文件，使用Hexo将博客网站的所有前台HTML等全部生成，让后将生成的文件上传的服务器就行了。
