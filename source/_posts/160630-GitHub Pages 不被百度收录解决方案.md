@@ -5,6 +5,7 @@ comments: true
 date: 2016-06-30 20:00:00
 tags: 
   - github
+  - hexo
 ---
 
 &emsp;&emsp;在[使用Hexo和Github搭建个人独立博客](http://zyf.im/2016/06/24/hexo-github-blog/)几天后，发现百度并不对博客进行收录。在天朝使用百度搜索毕竟多数，使用百度站长工具-抓取诊断，在百度Spider抓取结果返回HTTP头：HTTP/1.1 403 Forbidden，原来是 GitHub 禁止了百度爬虫的爬去。Google下早已有许多热心网友给出了解决方案，自己在这里总结下。

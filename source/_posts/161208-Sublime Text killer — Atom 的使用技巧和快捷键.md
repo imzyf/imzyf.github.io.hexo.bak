@@ -2,6 +2,7 @@
 title: Sublime Text killer — Atom 的使用技巧和快捷键
 permalink: sublime-text-killer-atom-tips-and-shortcuts
 date: 2016-12-08 19:00:00
+updatetime: 2016-12-22 19:00:00
 comments: true
 toc: true
 tags: 

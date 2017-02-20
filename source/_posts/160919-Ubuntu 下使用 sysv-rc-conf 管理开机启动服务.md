@@ -4,9 +4,9 @@ permalink: manage-startup-program-using-sysv-rc-conf-in-ubuntu
 date: 2016-09-19 14:00:00
 comments: true
 toc: true
-tags: 
+tags:
    - ubuntu
-description: 
+description:
 ---
 
 `sysv-rc-conf` gives an easy to use interface for managing "/etc/rc{runlevel}.d/" symlinks. The interface comes in two different flavors, one that simply allows turning services on or off and another that allows for more fine tuned management of the symlinks.
@@ -17,7 +17,7 @@ description:
 sudo apt-get install sysv-rc-conf
 ```
 
-## 使用sysv-rc-conf
+## 使用 sysv-rc-conf
 ``` bash
 sudo sysv-rc-conf
 ```
@@ -25,7 +25,7 @@ sudo sysv-rc-conf
 
 
 ## 相关知识
-### 1、Ubuntu运行级别
+### 1、Ubuntu 运行级别
 &emsp;&emsp;Linux 系统任何时候都运行在一个指定的运行级上，并且不同的运行级的程序和服务都不同，所要完成的工作和要达到的目的都不同，系统可以在这些运行级之间进行切换，以完成不同的工作。
 
 Ubuntu 的系统运行级别：
@@ -54,7 +54,7 @@ int [0123456Ss]
 ``` bash
 ls /etc/rc*
 ```
-对于以K开头的文件，系统将终止对应的服务； 
+对于以K开头的文件，系统将终止对应的服务；
 对于以S开头的文件，系统将启动对应的服务；
 
 ### 2、Linux 系统主要启动步骤

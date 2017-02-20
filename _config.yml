@@ -65,11 +65,11 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 #theme: maupassant
-theme: next
+theme: next_yi
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: 
+  type:
 
 
 baidu_analytics: 8b913a9ab9fd59ff248ad7d2408f7080
