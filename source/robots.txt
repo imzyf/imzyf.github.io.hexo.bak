@@ -9,5 +9,5 @@ Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
 
-Sitemap: http://zyf.im/sitemap.xml
-Sitemap: http://zyf.im/baidusitemap.xml
+Sitemap: https://zyf.im/sitemap.xml
+Sitemap: https://zyf.im/baidusitemap.xml
