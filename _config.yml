@@ -4,9 +4,9 @@
 
 # Site
 title: Yifans_Z
-subtitle: Yifans Blog
-description: Its now or never
-author: Yifan Zhao
+subtitle: 
+description: It's now or never
+author: Zhao Yifan
 language: zh-Hans
 timezone: Asia/Shanghai
 
@@ -58,27 +58,26 @@ time_format: HH:mm:ss
 
 # Pagination
 ## Set per_page to 0 to disable pagination
-per_page: 10
+per_page: 15
 pagination_dir: page
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 #theme: maupassant
-theme: next_yi
+theme: anatole
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type:
 
 
-baidu_analytics: 8b913a9ab9fd59ff248ad7d2408f7080
-google_analytics: UA-84666938-1
-duoshuo_shortname: zyfim
+#baidu_analytics: 8b913a9ab9fd59ff248ad7d2408f7080
+#google_analytics: UA-84666938-1
+#duoshuo_shortname: zyfim
 
 # JiaThis 分享服务
 jiathis: true
-
 
 search:
   path: search.xml
@@ -89,3 +88,9 @@ sitemap:
 
 baidusitemap:
   path: baidusitemap.xml
+
+archive_generator:
+  per_page: 0
+  yearly: false
+  monthly: false
+  daily: false
