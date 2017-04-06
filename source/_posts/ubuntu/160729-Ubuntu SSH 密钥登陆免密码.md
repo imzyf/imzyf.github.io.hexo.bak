@@ -55,7 +55,7 @@ cat ~/id_rsa.pub >> ~/.ssh/authorized_keys
 
 ```
 sudo chmod 755 ~/.ssh
-sudo chmod 600 ~/.ssh/authorized_keys 
+sudo chmod 600 ~/.ssh/authorized_keys
 ```
 
 ### 三、设置用户以证书登录后，可选择 sudo 操作
@@ -67,7 +67,7 @@ $ sudo visudo
 ```
 %sudo ALL=(ALL:ALL) ALL
 #替换这一行如下：
-%sudo ALL=(ALL) NOPASSWD:ALL 
+%sudo ALL=(ALL) NOPASSWD:ALL
 ```
 
 ### 四、客户端以私钥 id_rsa 登录
@@ -90,7 +90,7 @@ scp -i ~/.ssh/id_rsa filename username@<ssh_server_ip>:/username
 
 ## 方法二
 
-亚马逊AWS虚拟服务器使用一个预先生成的 *.pem 证书文件（密钥）为客户端和服务器之间建立连接。
+亚马逊AWS虚拟服务器使用一个预先生成的 `*.pem` 证书文件（密钥）为客户端和服务器之间建立连接。
 例如：
 
 ```
@@ -104,7 +104,7 @@ $ sudo ssh root@12.34.56.78
 ```
 
 生成 .pem 步骤如下
- 
+
 ### 一、客户端（本地主机）生成验证没有密码密钥对
 
 ```
@@ -116,8 +116,8 @@ $ ssh-keygen -t rsa -b 2048 -v
 ```
 Generating public/private rsa key pair.
 Enter file in which to save the key (/home/anonymouse/.ssh/id_rsa): myPemKey
-Enter passphrase (empty for no passphrase): 
-Enter same passphrase again: 
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
 Your identification has been saved in hetzner.
 Your public key has been saved in hetzner.pub.
 The key fingerprint is:
@@ -174,7 +174,3 @@ $ sudo service ssh restart
 > - [Better-ubuntu配置SSH免密码登录](http://bosschow.github.io/2016/03/31/ubuntu-ssh-without-passwd-login/)
 > - [韩世磊-ubuntu 生成 .pem 证书连接服务器，取消OpenSSH密钥密码认证](http://blog.csdn.net/hanshileiai/article/details/51141638)
 > - [韩世磊-ubuntu ssh 证书登录（不输入密码）](http://blog.csdn.net/hanshileiai/article/details/50381467)
-
-
-
-

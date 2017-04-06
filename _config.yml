@@ -89,6 +89,11 @@ sitemap:
 baidusitemap:
   path: baidusitemap.xml
 
+nofollow:
+    enable: true
+    exclude:
+    - zyf.im
+
 archive_generator:
   per_page: 0
   yearly: false

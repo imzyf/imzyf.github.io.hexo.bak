@@ -36,7 +36,7 @@ sudo dpkg-reconfigure localepurge
 sudo locale-gen zh_CN.UTF-8 en_US.UTF-8
 ```
 打印出当前的配置信息
-````
+```
 locale
 ```
 
