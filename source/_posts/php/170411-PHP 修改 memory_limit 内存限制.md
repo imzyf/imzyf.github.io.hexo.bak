@@ -9,7 +9,7 @@ tags:
 description:
 ---
 &emsp;&emsp;在进行大量统计运算时，PHP 可能产生内存不足的情况
-<!-- more -->
+
 ## 查看 memory_limit
 ``` php
 <?php phpinfo(); ?>
@@ -22,6 +22,8 @@ description:
 memory_limit = 1024M;
 ```
 &emsp;&emsp;如果没有，你可以在文件的尾部自己增加这个参数
+
+<!-- more -->
 
 > reference:
 > - [如何修改PHP的memory_limit限制 - 站长之家](http://www.chinaz.com/program/2011/1010/213048.shtml)

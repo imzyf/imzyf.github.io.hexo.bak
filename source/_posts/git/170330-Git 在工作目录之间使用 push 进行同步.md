@@ -10,7 +10,7 @@ description:
 ---
 *Pushing to a non-bare repo is now possible (Git 2.3.0 February 2015).*
 And it is possible when you are pushing the branch currently checked out at the remote repo!
-<!--more -->
+
 **receive-pack: add another option for `receive.denyCurrentBranch`**
 When synchronizing between working directories, it can be handy to update the current branch via 'push' rather than 'pull', e.g. when pushing a fix from inside a VM, or when pushing a fix made on a user's machine (where the developer is not at liberty to install an ssh daemon let alone know the user's password).
 
@@ -28,6 +28,7 @@ git config receive.denyCurrentBranch updateInstead
 
 and then you can use `git push` to synchronize between working directories in local repo.
 
+<!--more -->
 
 > Reference:
 > - [cannot push into git repository - Stack Overflow](http://stackoverflow.com/questions/3221859/cannot-push-into-git-repository)

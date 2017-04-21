@@ -8,9 +8,8 @@ tags:
    - ubuntu
 description:
 ---
+使用邮件发送程序的执行情况、运行日志都非常方便。Ubuntu 下搭建邮件服务也不复杂
 
-&emsp;&emsp;使用邮件发送程序的执行情况、运行日志都非常方便。Ubuntu 下搭建邮件服务也不复杂
-<!-- more -->
 ## sendmail
 ### install
 ``` bash
@@ -33,6 +32,8 @@ sudo apt-get install mailutils
 ``` bash
 echo 'test-email-content' | mail -s 'email title' xxx@gmail.com
 ```
+
+<!-- more -->
 
 ## sendmail mail 区别
 

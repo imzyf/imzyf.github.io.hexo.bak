@@ -15,11 +15,20 @@ description:
 ``` bash
 ssh-add your_publickey
 ```
-&emsp;&emsp;**注意：** 在重启电脑后失效，一直没有找的其他合适的解决方案，所以选择在 `~/.bashrc` 或 `~/.zshrc` 中添加：
+如果遇到报错
+```
+Could not open a connection to your authentication agent.
+```
+Try to
+```
+eval `ssh-agent`
+```
+
+**注意：** 在重启电脑后失效，一直没有找的其他合适的解决方案，所以选择在 `~/.bashrc` 或 `~/.zshrc` 中添加：
 ``` bash
 ssh-add your_publickey 2> /dev/null
 ```
-&emsp;&emsp;`2> /dev/null` 是为了保持静默运行
+`2> /dev/null` 是为了保持静默运行
 
 > Reference:
 > - [ssh 连接提示 Permission denied (publickey) 怎么破？ | 吴川斌的博客](http://www.mr-wu.cn/ssh-permission-denied-publickey/)
