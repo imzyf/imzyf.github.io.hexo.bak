@@ -9,8 +9,8 @@ tags:
    - ssh
 description:
 ---
-&emsp;&emsp;服务器是使用 publickey 进行连接，当在 git push 时发生 `Permission denied (publickey)`；同时解决 ssh-add 重启后失效
-<!--more -->
+服务器是使用 publickey 进行连接，当在 git push 时发生 `Permission denied (publickey)`；同时解决 ssh-add 重启后失效
+
 ## 解决
 ``` bash
 ssh-add your_publickey
@@ -29,6 +29,8 @@ eval `ssh-agent`
 ssh-add your_publickey 2> /dev/null
 ```
 `2> /dev/null` 是为了保持静默运行
+
+<!--more -->
 
 > Reference:
 > - [ssh 连接提示 Permission denied (publickey) 怎么破？ | 吴川斌的博客](http://www.mr-wu.cn/ssh-permission-denied-publickey/)

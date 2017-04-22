@@ -9,19 +9,18 @@ tags:
    - ufw
 description:
 ---
-
-&emsp;&emsp;UFW (Uncomplicated Firewall) 作为 iptables 的前端应用，给用户提供了简单的接口界面。使用着不需要去记非常复杂的 iptables 语法。UFW 也使用了 简单英语 作为它的参数。像 allow、deny、reset 就是他们当中的一部分。UFW 绝对是那些想要快速、简单的就建立自己的防火墙，而且还很安全的用户的最佳替代品之一。
-<!-- more -->
+UFW (Uncomplicated Firewall) 作为 iptables 的前端应用，给用户提供了简单的接口界面。使用着不需要去记非常复杂的 iptables 语法。UFW 也使用了 简单英语 作为它的参数。像 allow、deny、reset 就是他们当中的一部分。UFW 绝对是那些想要快速、简单的就建立自己的防火墙，而且还很安全的用户的最佳替代品之一。
 
 ## 检查系统上是否已经安装 UFW
 ``` bash
 sudo dpkg --get-selections | grep ufw
 ```
-
 ## 安装 UFW
 ``` bash
 sudo apt-get install ufw
 ```
+
+<!-- more -->
 
 ## UFW 常用命令
 ### 查看 UFW 状态

@@ -8,7 +8,7 @@ tags:
    - php
 description:
 ---
-&emsp;&emsp;在进行大量统计运算时，PHP 可能产生内存不足的情况
+在进行大量统计运算时，PHP 可能产生内存不足的情况
 
 ## 查看 memory_limit
 ``` php
@@ -16,12 +16,13 @@ description:
 ```
 
 ## 修改 memory_limit
-&emsp;&emsp;可以在 `phpinfo()` 中找到 `Loaded Configuration File` `php.ini` 的位置
-&emsp;&emsp;修改 `php.ini` 中的 memory_limit
+可以在 `phpinfo()` 中找到 `Loaded Configuration File` `php.ini` 的位置
+
+修改 `php.ini` 中的 memory_limit
 ``` ini
 memory_limit = 1024M;
 ```
-&emsp;&emsp;如果没有，你可以在文件的尾部自己增加这个参数
+如果没有，你可以在文件的尾部自己增加这个参数
 
 <!-- more -->
 

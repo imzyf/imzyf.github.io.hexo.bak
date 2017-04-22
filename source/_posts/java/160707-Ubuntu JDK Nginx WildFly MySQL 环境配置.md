@@ -4,12 +4,11 @@ permalink: ubuntu-jdk-nginx-wildfly-mysql-config
 comments: true
 date: 2016-07-07 10:00:00
 toc: true
-tags: 
+tags:
    - ubuntu
    - wildfly
-description: 
+description:
 ---
-
 新项目部署上线，主要参考[世雷博客](http://blog.csdn.net/hanshileiai)的内容，自己也总结了下。从 JDK 安装、Web 容器、数据库，都有涉及比较全面。
 
 ## JDK8
@@ -41,7 +40,7 @@ java -version
 1、安装 JDK 6 和 JDK 7
 ``` bash
 sudo apt-get install oracle-java6-installer
-sudo apt-get install oracle-java7-installer 
+sudo apt-get install oracle-java7-installer
 ```
 2、查看所有 JDK 安装版本
 ``` bash
@@ -131,8 +130,7 @@ location ~*\.(gif|jpg|jpeg|png|bmp|swf|woff|icon)$ {
 	add_header X-Proxy-Cache $upstream_cache_status;
 	expires 15d;
 }
-```
-```
+
 location ~ .*\.(js|css|ttf)$ {
 	proxy_cache my_zone;
 	proxy_cache_bypass $http_cache_control;
@@ -145,7 +143,7 @@ location ~ .*\.(js|css|ttf)$ {
 ```
 root /opt/***;
 ```
-&emsp;&emsp;还有个技巧，项目中大量资源文件，例如 PDF，在设计访问 url 时可以 `**/pdf/**`，这样在 Nginx 进行配置就可以将文件分离出项目；这些文件也放在 `root` 路径下。
+还有个技巧，项目中大量资源文件，例如 PDF，在设计访问 url 时可以 `**/pdf/**`，这样在 Nginx 进行配置就可以将文件分离出项目；这些文件也放在 `root` 路径下。
 ```
 location ^~ /html/ {
 }
@@ -162,46 +160,39 @@ sudo service nginx restart
 
 ### Nginx Show Log
 ```
-vi /var/log/nginx/error.log +
+sudo tail -f /var/log/nginx/error.log
 ```
 
 ## WildFly 10.0.0.Final
-
 ### WildFly 安装
 1、下载 WildFly，并提取到 /opt 目录 WildFly 10.0.0.Final [下载地址](http://wildfly.org/downloads/)
-
 ```
 cd /opt
 sudo wget -c http://download.jboss.org/wildfly/10.0.0.Final/wildfly-10.0.0.Final.tar.gz
 sudo tar -xzvf wildfly-10.0.0.Final.tar.gz
 ```
 2、创建 WildFly 用户和组
-
 ```
 sudo addgroup wildfly
 sudo useradd -g wildfly wildfly
 ```
-- 改变 wildfly 文件夹的所有权：
-
+改变 wildfly 文件夹的所有权：
 ```
 sudo chown -R wildfly:wildfly /opt/wildfly-10.0.0.Final
 ```
-- 创建一个链接映射（好处：如果你改变WildFly版本,不需要更新其他配置）
-
+创建一个链接映射（好处：如果你改变WildFly版本,不需要更新其他配置）
 ```
 sudo ln -s wildfly-10.0.0.Final /opt/wildfly
 ```
 
 3、安装 init.d 脚本
 设置并使用 init.d 脚本来启动和停止WildFly。复制` /opt/wildfly/bin/init.d/wildfly-init-debian.sh`脚本到 `/etc/init.d/wildfly`，更改权限,并使其可执行
-
 ```
 sudo cp /opt/wildfly/docs/contrib/scripts/init.d/wildfly-init-debian.sh /etc/init.d/wildfly
 sudo chown root:root /etc/init.d/wildfly
 sudo chmod ug+x /etc/init.d/wildfly
 ```
-- 启动/停止WildFly 命令 
-
+启动/停止WildFly 命令
 ```
 sudo /etc/init.d/wildfly start
 sudo /etc/init.d/wildfly stop
@@ -263,12 +254,10 @@ sudo service wildfly restart
 </servlet-container>
 ```
 
-
 ### 注意事项
-
 1、项目以站点根目录访问
 你现在可以将应用程序部署到 WildFly 视图在 your_ip:8080
-在你的项目目录 WEB-INF 下添加 jboss-web.xml，确保你的配置 context-root 设置为 / 
+在你的项目目录 WEB-INF 下添加 jboss-web.xml，确保你的配置 context-root 设置为 /
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <jboss-web>
@@ -276,24 +265,24 @@ sudo service wildfly restart
 </jboss-web>
 ```
 2、Linux 里设置端口 80 到 8080
-&emsp;&emsp;**注意：在之后的配置会使用 Nginx 反向代理，所用 WildFly 端口不用映射为 80，这里只是个方法的笔记**
-&emsp;&emsp;注意，在linux里，由于内核的限制，普通用户不能使用 1024 一下的端口。所以在配置文件（standalone.xml）里改成80，用普通用户是启动不了的。
-&emsp;&emsp;此时，我们需要在 linux 下使用 root 用户运行一个命令，使访问80端口的应用转到8080上：
+**注意：在之后的配置会使用 Nginx 反向代理，所用 WildFly 端口不用映射为 80，这里只是个方法的笔记**
+
+注意，在linux里，由于内核的限制，普通用户不能使用 1024 一下的端口。所以在配置文件（standalone.xml）里改成80，用普通用户是启动不了的。
+
+此时，我们需要在 linux 下使用 root 用户运行一个命令，使访问80端口的应用转到8080上：
 ```
 sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 8080
 ```
 以上端口转发为临时操作，重启 linux 服务器后失效。如果要重启服务器不丢失FORWARD转发”操作，可写入配置。
 
-> &emsp;&emsp;在Linux的下面部署了tomcat，为了安全我们使用非root用户进行启动，但是在域名绑定时无法直接访问80端口号。众所周知，在unix下，非root用户不能监听1024以上的端口号，这个tomcat服务器就没办法绑定在80端口下。所以这里需要使用linux的端口转发机制，把到80端口的服务请求都转到8080端口上。
+> 在Linux的下面部署了tomcat，为了安全我们使用非root用户进行启动，但是在域名绑定时无法直接访问80端口号。众所周知，在unix下，非root用户不能监听1024以上的端口号，这个tomcat服务器就没办法绑定在80端口下。所以这里需要使用linux的端口转发机制，把到80端口的服务请求都转到8080端口上。
 
 2.1、安装 iptables-persistent
-
 ```
 sudo apt-get update
 sudo apt-get install iptables-persistent
 ```
 2.2、添加 80 端口跳转到 8080 规则
-
 ```
 sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8080
 ```
@@ -304,9 +293,9 @@ sudo service iptables-persistent save
 
 3、wildfly 不支持 struts2 的配置文件（.xml）里用通配符
 **这是原博文的内容，我没有使用 struts2；在 spring 中有用通配符，但是好像没什么影响**
-jboss wildfly 不支持 struts2 配置文件里用通配符 *.xml，如下：
+jboss wildfly 不支持 struts2 配置文件里用通配符 `*.xml`，如下：
 ```
-	<!-- <include file="struts/*.xml"></include> -->
+    <!-- <include file="struts/*.xml"></include> -->
     <include file="struts/struts_post.xml"></include>
     <include file="struts/struts_user.xml"></include>
 ```
@@ -315,14 +304,13 @@ jboss wildfly 不支持 struts2 配置文件里用通配符 *.xml，如下：
 位置：
 ```
 <subsystem xmlns="urn:jboss:domain:deployment-scanner:2.0">
-            <deployment-scanner path="deployments" relative-to="jboss.server.base.dir" scan-interval="5000" />
+    <deployment-scanner path="deployments" relative-to="jboss.server.base.dir" scan-interval="5000" />
 </subsystem>
 ```
- `<deployment-scanner>` 内增加属性 `deployment-timeout="1200"` 如下：
-
+`<deployment-scanner>` 内增加属性 `deployment-timeout="1200"` 如下：
 ```
 <subsystem xmlns="urn:jboss:domain:deployment-scanner:2.0">
-            <deployment-scanner path="deployments" relative-to="jboss.server.base.dir" scan-interval="5000" deployment-timeout="1200" />
+    <deployment-scanner path="deployments" relative-to="jboss.server.base.dir" scan-interval="5000" deployment-timeout="1200" />
 </subsystem>
 ```
 
@@ -358,20 +346,20 @@ CREATE DATABASE IF NOT EXISTS scrapy DEFAULT CHARSET utf8 COLLATE utf8_general_c
 ```
 ### MySQL 数据库导出/导入
 ``` bash
-./usr/local/mysql/bin/mysqldump -u root -p123456 zhumaohai | gzip > /home/backup/zhumaohai.sql.gz
-./usr/local/mysql/bin/mysqldump -u root -p123456 --all-databases | gzip > /home/backup/all.sql.gz
+mysqldump -u root -p123456 db_name | gzip > /home/backup/db_name.sql.gz
+mysqldump -u root -p123456 --all-databases | gzip > /home/backup/all.sql.gz
 
-mysqldump -h192.168.8.152 -uroot -p manualdb > 152_manualdb.sql
-mysqldump -uroot -p scrapy-manual manualsprinter > /home/moma/manualsprinter_0318.sql
+mysqldump -h192.168.1.100 -uroot -p db_name > db_name.sql
+mysqldump -uroot -p db_name_1 db_name_2 > db_name_1_and_2.sql
 ```
 ``` bash
-gunzip < /home/backup/zhumaohai.sql.gz | /usr/local/mysql/bin/mysql -u root -p123456 zhumaohai
-gunzip < /home/backup/all.sql.gz | /usr/local/mysql/bin/mysql -u root -p123456
+gunzip < db_name.sql.gz | mysql -u root -p123456 db_name
+gunzip < all.sql.gz | mysql -u root -p123456
 
 mysql -uroot -p
 show databases;
-use manualdb;
-source ~/Documents/152_manualdb.sql
+use db_name;
+source ~/db_name.sql
 ```
 ### MySQL 查看表结构
 ``` sql
@@ -385,8 +373,7 @@ User-agent: *
 Disallow: /
 ```
 
----
-> 参考文章：
+> Renference:
 > - [韩世雷-ubuntu 配置 java jdk1.8 环境，增加多版本 jdk 和切换方法](http://blog.csdn.net/hanshileiai/article/details/46968275)
 > - [韩世雷-ubuntu14.04 Terminal 配置 wildfly-10.0.0.Final 服务器](http://blog.csdn.net/hanshileiai/article/details/46987859)
 > - [韩世雷-Ubuntu14.04 配置 iptables 把80端口转到8080](http://blog.csdn.net/hanshileiai/article/details/47757217)

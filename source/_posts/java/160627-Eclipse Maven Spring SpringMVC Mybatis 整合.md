@@ -4,14 +4,14 @@ permalink: eclipse-maven-spring-springmvc-mybatis-example
 date: 2016-06-27 07:00:00
 comments: true
 toc: true
-tags: 
+tags:
   - springmvc
   - maven
-description: 
+description:
 ---
 
 新项目自己撘框架，想着用点新的。看慕课网【[Java高并发秒杀API](http://www.imooc.com/index/search?words=%E7%A7%92%E6%9D%80)】的系列课程时很受益。所以想着仿着来使用：Mavan-Spring-SpringMVC-Mybatis 的架构。框架整合的代码我已上传到我的 Github：[maven-mybatis-spring-springmvc](https://github.com/imzyf/maven-mybatis-spring-springmvc)。
-<!-- more -->
+
 本示例是在：Ubuntu15 上实现的；Windows 上安装 Maven 将不太相同。
 
 ## Maven Install
@@ -33,9 +33,9 @@ The Maven configuration files are stored in `/etc/maven`
 3. restrat Eclipse
 4. config m2e -> Window -> Preferences -> Maven -> Installations -> click "Add…" -> select Maven
 
+<!-- more -->
 
 ## Create a Maven Project
-
 1. File -> New -> New Maven project
 2. select "Use default Workspace location"
 3. select "maven-archetype-j2ee-simple"
@@ -61,14 +61,14 @@ Tips:
     |   ├── java //java源代码
     |   ├── resources //配置资源文件
     |   └── webapp //web文件
-    | 
+    |
     └── test
 	    └── java //junit测试
 ```
 
 ## pom.xml Config
 [Github-maven-mybatis-spring-springmvc pom.xml](https://github.com/imzyf/maven-mybatis-spring-springmvc/blob/master/pom.xml)
-```
+``` xml
 <!-- junit4 -->
 <dependency>
 	<groupId>junit</groupId>
@@ -88,11 +88,10 @@ Tips:
 ```
 
 ## logback.xml Config
-
-```
+``` xml
 <configuration>
 	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
-		<!-- encoders are assigned the type ch.qos.logback.classic.encoder.PatternLayoutEncoder 
+		<!-- encoders are assigned the type ch.qos.logback.classic.encoder.PatternLayoutEncoder
 			by default -->
 		<encoder>
 			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
@@ -105,10 +104,9 @@ Tips:
 </configuration>
 ```
 
-
 ## Mybatis Config
 [Github-maven-mybatis-spring-springmvc mybatis-config.xml](https://github.com/imzyf/maven-mybatis-spring-springmvc/blob/master/src/main/resources/mybatis-config.xml)
-```
+``` xml
 <configuration>
 	<settings>
 		<!-- 使用jdbc的getGeneratedKays 获取数据库自增主键 -->
@@ -118,15 +116,14 @@ Tips:
 		<!-- 是否开启自动驼峰命名规则（camel case）映射，即从经典数据库列名 A_COLUMN 到经典 Java 属性名 aColumn 的类似映射。 -->
 		<setting name="mapUnderscoreToCamelCase" value="true" />
 	</settings>
-</configuration>	
+</configuration>
 ```
 
 ## Spring Config
 [Github-maven-mybatis-spring-springmvc spring](https://github.com/imzyf/maven-mybatis-spring-springmvc/tree/master/src/main/resources/spring)
 
 ### Spring-DAO Config
-
-```
+``` xml
 <!-- 1 数据库配置文件位置 -->
 <context:property-placeholder location="classpath:jdbc.properties" />
 
@@ -173,7 +170,7 @@ Tips:
 </bean>
 ```
 ### Spring-Service Config
-```
+``` xml
 <!-- 扫描service包下 所有使用注解的类型 -->
 <context:component-scan base-package="com.moma.dmv.service" />
 
@@ -187,14 +184,14 @@ Tips:
 <tx:annotation-driven transaction-manager="transactionManager" />
 
 <!-- 使用注解控制事务方法的优点
-1：开发团队达成一致约定，明确标注事务方法的编程风格 
+1：开发团队达成一致约定，明确标注事务方法的编程风格
 2：保证事务方法的执行时间尽可能短，不要穿插其他网络操作RPC/HTTP请求或者剥离到事务方法外部
 3：不是所有的方法都需要事务，比如只有一条修改操作，只读操作不需要事务控制
 -->
 ```
 
 ### Spring-Web Config
-```
+``` xml
 <!-- 1:开启springMVC 注解模式 -->
 <mvc:annotation-driven />
 
@@ -220,7 +217,7 @@ Tips:
 ```
 
 ## DAO Mapper Example
-```
+``` xml
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
@@ -231,24 +228,24 @@ Tips:
 		select id,`key`,`value` from info where id = #{id}
 		]]>
 	</select>
-	
+
 	<select id="queryAll" resultType="Info">
 		<![CDATA[
-		select id,key,value 
-		from info 
+		select id,key,value
+		from info
 		limit #{offset},#{limit}
 		]]>
 	</select>
-	
+
 </mapper>
 ```
 
 ## web.xml Config
-```
+``` xml
 <servlet>
 	<servlet-name>dmv-dispatcher</servlet-name>
 	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-	<!-- 配置springMVC需要加载的配置文件 spring-dao.xml spring-service.xml spring-web.xml 
+	<!-- 配置springMVC需要加载的配置文件 spring-dao.xml spring-service.xml spring-web.xml
 		mybatis -> spring -> springMVC -->
 	<init-param>
 		<param-name>contextConfigLocation</param-name>
@@ -263,8 +260,7 @@ Tips:
 ```
 
 ## JUnit Example
-```
-
+``` java
 import javax.annotation.Resource;
 
 import org.junit.Test;
@@ -284,7 +280,7 @@ public class InfoDaoTest {
 	@Resource
 	private InfoDao infoDao;
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
-	
+
 	@Test
 	public void testQueryById() throws Exception {
 		long id = 1;

@@ -9,24 +9,21 @@ tags:
    - ssh
 description:
 ---
-
-最近有需求使用 SSH 进行通信，而且要需免密码，总结了下 SSH 密钥登陆免密码的方法。
-<!-- more -->
+最近有需求使用 SSH 进行通信，而且要需免密码，总结了下 SSH 密钥登陆免密码的方法
 
 ## 快速配置
-
 本机ip：192.168.1.1
 服务器ip：192.168.1.2
 欲实现本机免密码登录服务器，执行如下命令：
-
 ```
 ssh-copy-id username@192.168.1.2
 ```
 
 如果命令成功，则说明配置成功。如果执行失败，则需要参考下面的步骤进行配置
 
-## 方法一
+<!-- more -->
 
+## 方法一
 ### 一、客户端生成 公钥、私钥，并添加到服务器端
 
 1.客户端生成密钥
@@ -165,12 +162,11 @@ PasswordAuthentication no
 ```
 
 重启 ssh 服务
-
 ```
 $ sudo service ssh restart
 ```
 
-> 参考转载自：
+> Reference
 > - [Better-ubuntu配置SSH免密码登录](http://bosschow.github.io/2016/03/31/ubuntu-ssh-without-passwd-login/)
 > - [韩世磊-ubuntu 生成 .pem 证书连接服务器，取消OpenSSH密钥密码认证](http://blog.csdn.net/hanshileiai/article/details/51141638)
 > - [韩世磊-ubuntu ssh 证书登录（不输入密码）](http://blog.csdn.net/hanshileiai/article/details/50381467)

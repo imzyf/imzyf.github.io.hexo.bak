@@ -8,6 +8,7 @@ Disallow: /css/
 Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
+Disallow: /search.xml
 
 Sitemap: https://zyf.im/sitemap.xml
 Sitemap: https://zyf.im/baidusitemap.xml

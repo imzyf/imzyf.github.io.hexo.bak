@@ -4,17 +4,15 @@ permalink: springmvc-getting-started-tutorial
 date: 2016-09-07 14:00:00
 comments: true
 toc: true
-tags: 
+tags:
    - springmvc
-description: 
+description:
 ---
+本文主要参考了 [IMOOC-SpringMVC 起步](http://www.imooc.com/video/7237) 视频教程和 [SpringMVC从入门到精通 系列 - HansonQ](http://www.imooc.com/article/3804) ，还有自己的一些总结。
 
-&emsp;&emsp;主要参考了 [IMOOC-SpringMVC 起步](http://www.imooc.com/video/7237) 视频教程和 [SpringMVC从入门到精通 系列 - HansonQ](http://www.imooc.com/article/3804) ，还有自己的一些总结。MVC 简介、前端控制器模式、SpringMVC 基本概念、SpringMVC 配置、SpringMVC 中的注解、SpringMVC 数据绑定
-
-<!-- more -->
+主要内容：MVC 简介、前端控制器模式、SpringMVC 基本概念、SpringMVC 配置、SpringMVC 中的注解、SpringMVC 数据绑定
 
 ## MVC 简介
-
 1、MVC 是一种架构模式
 程序分层，分工合作，既相互独立，又协同工作，分为三层：模型层、视图层和控制层
 
@@ -33,6 +31,8 @@ MVC 设计模式在 B/S 下的应用：
 
 **MVC 本质：MVC 的核心思想是业务数据抽取同业务数据呈现相分离；分离有利于程序简化，方便编程**
 
+<!-- more -->
+
 ## 前端控制器模式
 前端控制器模式（Front Controller Pattern）是用来提供一个集中的请求处理机制，所有的请求都将由一个单一的处理程序处理。该处理程序可以做认证/授权/记录日志，或者跟踪请求，然后把请求传给相应的处理程序。
 
@@ -46,28 +46,26 @@ MVC 设计模式在 B/S 下的应用：
 
 ![Front Controller(MVC)](http://7xs09x.com1.z0.glb.clouddn.com/160907-springmvc-getting-started-tutorial-front-controller.jpg)
 
-
 ## SpringMVC 基本概念
-
 ![SpringMVC 基本概念](http://7xs09x.com1.z0.glb.clouddn.com/160907-springmvc-getting-started-tutorial-springmvc01.jpg)
 
 对组件说明：
- 1、DispatherServlet：前端控制器 用户请求到达前端控制器，相当于 MVC 中的 C，而 DispatherServlet 是整个流程的核心，它来调用其他组件来处理用户的请求，前端控制器的存在降低了其他组件之间的耦合度。 
- 2、HandlerMapping：处理器映射器 它的作用就好比去看电影要拿着电影票根据电影票上面的座位号找到座位其中座位就是 Handler，电影票以及上面的座位号就是 URL HandlerMapping 负责根据用户请求找到 Handler 即处理器，SpringMVC 提供了不同的映射器实现不同的映射方式，例如：配置文件方式，实现接口方式，注解方式等。 
- 3、Handler：处理器 Handler 是后端控制器，在前端控制器的控制下后端控制器对具体的用户请求进行处理，Handler 涉及到具体的用户业务请求，所以一般情况下需要程序员根据业务需求开发。
- 4、HandlerAdapter：处理器适配器 通过 HandlerAdapter 对处理器进行执行，这是适配器模式的应用，通过适配器可以对更多类型的处理器进行执行。播放的电影是 3D 的你看不清楚，因此电影院跟你说你要想看清电影就必须戴 3D 眼镜。也就是说 Handler 满足一定的要求才可以被执行。 
- 5、ViewResolver：视图解析器 ViewResolver 负责将处理结果生成 View 视图，ViewResolver 首先根据逻辑视图名解析成物理视图名即具体的页面地址，再生成View视图对象，最后对View进行渲染将处理结果通过页面展示给用户。
+1、DispatherServlet：前端控制器 用户请求到达前端控制器，相当于 MVC 中的 C，而 DispatherServlet 是整个流程的核心，它来调用其他组件来处理用户的请求，前端控制器的存在降低了其他组件之间的耦合度。
+2、HandlerMapping：处理器映射器 它的作用就好比去看电影要拿着电影票根据电影票上面的座位号找到座位其中座位就是 Handler，电影票以及上面的座位号就是 URL HandlerMapping 负责根据用户请求找到 Handler 即处理器，SpringMVC 提供了不同的映射器实现不同的映射方式，例如：配置文件方式，实现接口方式，注解方式等。
+3、Handler：处理器 Handler 是后端控制器，在前端控制器的控制下后端控制器对具体的用户请求进行处理，Handler 涉及到具体的用户业务请求，所以一般情况下需要程序员根据业务需求开发。
+4、HandlerAdapter：处理器适配器 通过 HandlerAdapter 对处理器进行执行，这是适配器模式的应用，通过适配器可以对更多类型的处理器进行执行。播放的电影是 3D 的你看不清楚，因此电影院跟你说你要想看清电影就必须戴 3D 眼镜。也就是说 Handler 满足一定的要求才可以被执行。
+5、ViewResolver：视图解析器 ViewResolver 负责将处理结果生成 View 视图，ViewResolver 首先根据逻辑视图名解析成物理视图名即具体的页面地址，再生成View视图对象，最后对View进行渲染将处理结果通过页面展示给用户。
 
 ![SpringMVC 基本概念](http://7xs09x.com1.z0.glb.clouddn.com/160907-springmvc-getting-started-tutorial-springmvc02.jpg)
 
 工作原理解释说明：
 1、用户发送请求到 SpringMVC 框架提供的 DispatcherServlet 这个前端控制器（了解 struts2 的朋友也都知道其实 struts2也有一个前端控制器 web.xml 中的 filter 标签就是）。
-2、前端控制器会去找处理器映射器（HandlerMapping），处理器映射器根据请求 url 找到具体的处理器，生成处理器对象及处理器拦截器（如果有则生成）一并返回给 DispatcherServlet 。 
+2、前端控制器会去找处理器映射器（HandlerMapping），处理器映射器根据请求 url 找到具体的处理器，生成处理器对象及处理器拦截器（如果有则生成）一并返回给 DispatcherServlet 。
 3、根据处理器映射器返回的处理器，DispatcherServlet 会找“合适”的处理器适配器（HandlerAdapter）
-4、处理器适配器 HandlerAdpater 会去执行处理器（Handler 开发的时候会被叫成 Controller 也叫后端控制器在 struts2 中action 也是一个后端控制器）执行之前会有转换器、数据绑定、校验器等等完成上面这些才会去正在执行 Handler 
+4、处理器适配器 HandlerAdpater 会去执行处理器（Handler 开发的时候会被叫成 Controller 也叫后端控制器在 struts2 中action 也是一个后端控制器）执行之前会有转换器、数据绑定、校验器等等完成上面这些才会去正在执行 Handler
 5、后端控制器 Handler 执行完成之后返回一个 ModelAndView 对象 。
-6、处理器适配器 HandlerAdpater 会将这个 ModelAndView 返回前端控制器 DispatcherServlet。前端控制器会将ModelAndView 对象交给视图解析器 ViewResolver。 
-7、视图解析器 ViewResolver 解析 ModelAndView 对象之后返回逻辑视图。 
+6、处理器适配器 HandlerAdpater 会将这个 ModelAndView 返回前端控制器 DispatcherServlet。前端控制器会将ModelAndView 对象交给视图解析器 ViewResolver。
+7、视图解析器 ViewResolver 解析 ModelAndView 对象之后返回逻辑视图。
 8、前端控制器 DispatcherServlet 对逻辑视图进行渲染（数据填充）之后返回真正的物理 View 并响应给浏览器。
 
 ![SpringMVC 基本概念](http://7xs09x.com1.z0.glb.clouddn.com/160907-springmvc-getting-started-tutorial-springmvc03.jpg)
@@ -136,9 +134,7 @@ MVC 设计模式在 B/S 下的应用：
 <context:component-scan base-package="com.controller" />
 ```
 
-
 ## SpringMVC 中的注解
-
 ### `@Controller`
 @Controller 注解，用于标识这个类是一个后端控制器（类似struts中的action），主要作用就是接受页面的参数，转发页面。
 @Controller 源码：
@@ -158,9 +154,7 @@ public @interface Controller {
 ```
 
 ### `@RequestMapping`
-
-这个注解的作用目标就跟@Controller不一样了，这个注解可以定义在类上面也可以定义在方法上面。
-
+这个注解的作用目标就跟 @Controller 不一样了，这个注解可以定义在类上面也可以定义在方法上面。
 ``` java
 /**
 * 1.@RequestMapping：除了修饰方法,还可以修饰类
@@ -181,7 +175,7 @@ public @interface RequestMapping {
 
 代码实例
 
-``` 
+```
 @Controller
 @RequestMapping("/demo")
 public class IndexController {
@@ -268,9 +262,9 @@ slug = google
 /**
  * Annotation that indicates a method return value should be bound to the web
  * response body. Supported for annotated handler methods in Servlet environments.
- * 
+ *
  * 这个注解指明一个方法的返回值应该绑定在 web response body 中，在 Servlet 环境中支持注解处理方法
- * 
+ *
  * <p>As of version 4.0 this annotation can also be added on the type level in
  * which case it is inherited and does not need to be added on the method level.
  */
@@ -309,9 +303,10 @@ public @ResponseBody Domain index7(HttpServletRequest request, Model model) {
 
 
 ## SpringMVC 数据绑定
-
 简单说一下场景：
-对于一个注册页面有很多信息譬如：用户名、密码、确认密码、邮箱、手机、兴趣等等。这时候就会想能不能将这些个参数包装在一个对象中（POJO），用这个POJO来做目标方法的形参上面。可以说的是 SpringMVC 是支持将 POJO 作为目标参数的。当然也是要遵循一些规则的，就是表单的 name 属性值要和 POJO 的属性值要一致。当然了，这样又会有一个新的疑问支不支持级联属性答案是支持的。
+对于一个注册页面有很多信息譬如：用户名、密码、确认密码、邮箱、手机、兴趣等等。这时候就会想能不能将这些个参数包装在一个对象中（POJO），用这个POJO来做目标方法的形参上面。
+
+可以说的是 SpringMVC 是支持将 POJO 作为目标参数的。当然也是要遵循一些规则的，就是表单的 name 属性值要和 POJO 的属性值要一致。当然了，这样又会有一个新的疑问支不支持级联属性答案是支持的。
 
 ``` java
 public class Address {
@@ -362,5 +357,5 @@ public String index5(HttpServletRequest request, Model model) {
 ```
 
 > Reference:
-> - [IMOOC-SpringMVC 起步](http://www.imooc.com/video/7237) 
+> - [IMOOC-SpringMVC 起步](http://www.imooc.com/video/7237)
 > - [SpringMVC从入门到精通 系列 - HansonQ](http://www.imooc.com/article/3804)

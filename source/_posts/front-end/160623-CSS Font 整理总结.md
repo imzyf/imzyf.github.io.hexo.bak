@@ -3,7 +3,7 @@ title: CSS Font 整理总结
 permalink: css-font-summary
 date: 2016-06-23 19:30:00
 tags: css
-description: 
+description:
 ---
 
 &emsp;&emsp;对于web页面来说，字体就是计算机上存储的一套文字显示方式。通过对文字进行一些特殊处理（比如末端加强）来提高不同环境中文字的可读性。
@@ -47,7 +47,7 @@ font-family: Times New Roman,"open-sans","幼圆",sans-serif
 &emsp;&emsp;@font-face是链接服务器上的字体的一种方式，就像制定图片链接一样，浏览器会根据这条指令把对应字体下载到本地缓存，用它去修饰文本。
 ``` css
 font-face {
-    font-family:<identifier>; 
+    font-family:<identifier>;
     src:<fontsrc> [,<fontsrc>]*;
     <font>;
 }
@@ -106,5 +106,3 @@ font-face{
 
 
 > 参考转自 [我的小树林-CSS Font知识整理总结](http://www.cnblogs.com/dojo-lzz/p/4375347.html)
-
-

@@ -9,10 +9,10 @@ tags:
    - sogou
 description:
 ---
-&emsp;&emsp; sogou 输入法突然无法选词输入中文，候选词位置出现白框，多次重重装 fcitx 和 sogou 也没有解决。尝试使用 google pinyin 代替，但是感觉很不顺手
-<!--more -->
+sogou 输入法突然无法选词输入中文，候选词位置出现白框，多次重重装 fcitx 和 sogou 也没有解决。尝试使用 google pinyin 代替，但是感觉很不顺手
+
 ## issue in GitHub
-&emsp;&emsp; sogou 输入法 GitHub 上的一些 issue：
+sogou 输入法 GitHub 上的一些 issue：
 - [#43](https://github.com/FZUG/repo/issues/43)
 - [#177](https://github.com/FZUG/repo/issues/177)
 - [#179](https://github.com/FZUG/repo/issues/179)
@@ -22,10 +22,12 @@ description:
 try to lastest version
 ### 方案二
 clean `fcitx`, `SogouPY*`, `sogou-qimpanel` in `~/.config`, then relogin and try again
-```
+``` bash
 cd ~/.config
 sudo rm -rf  fcitx SogouPY sogou-qimpanel
 ```
+
+<!--more -->
 
 > Reference:
 > - [ubuntu-sogou-不能显示候选词 | Color Win's Notes](https://colorwin.github.io/2017/02/17/ubuntu-sogou/)

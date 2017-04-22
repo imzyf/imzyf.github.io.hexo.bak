@@ -4,13 +4,12 @@ permalink: resolving-ubuntu-warning-setting-locale-failed
 date: 2017-03-03 17:00:00
 comments: true
 toc: true
-tags: 
+tags:
    - ubuntu
-description: 
+description:
 ---
+在配置新服务器时遇到 `Setting locale failed` 的警告，要求 `Please check that your locale settings`
 
-&emsp;&emsp;在配置新服务器时遇到 `Setting locale failed` 的警告，要求 `Please check that your locale settings`
-<!-- more -->
 ```
 perl: warning: Setting locale failed.
 perl: warning: Please check that your locale settings:
@@ -39,11 +38,12 @@ sudo locale-gen zh_CN.UTF-8 en_US.UTF-8
 ```
 locale
 ```
-
 默认情况下终端 ssh 的时候会将本地的 locale 传到服务器中，可以通过命令指定 ssh 服务器的语言：
 ```
 LC_ALL=en_US.UTF-8 ssh <host>
 ```
+
+<!-- more -->
 
 > Reference:
 > - [ubuntu 解决语言设置错误的问题 —— 文翼的博客](http://wenzhixin.net.cn/2014/01/11/ubuntu_setting_locale_failed)
