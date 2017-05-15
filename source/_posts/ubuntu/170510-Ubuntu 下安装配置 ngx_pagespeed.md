@@ -53,11 +53,11 @@ deb-src http://nginx.org/packages/ubuntu/ xenial nginx
 ``` bash
 sudo apt-get update
 ```
-**注意：**如果在执行更新源时出现错误信息：
+**注意：** 如果在执行更新源时出现错误信息：
 ``` bash
 GPG error: http://nginx.org <name package> Release: The following signatures couldn't be verified because the public key is not available: NOPUBKEY ABF5BD8xxxxxxx
 ```
- 执行下面的命令添加签名：
+执行下面的命令添加签名：
 ``` bash
 wget -q "http://nginx.org/packages/keys/nginx_signing.key" -O-| sudo apt-key add -
 ```
@@ -104,7 +104,7 @@ PS_NGX_EXTRA_FLAGS="--with-cc=/usr/lib/gcc-mozilla/bin/gcc  --with-ld-opt=-stati
 ### 下载 ngx_pagespeed
 > [PageSpeed Release Notes](https://modpagespeed.com/doc/release_notes)
 
-```
+``` bash
 NPS_VERSION=[check the release notes for the latest version]
 cd
 wget https://github.com/pagespeed/ngx_pagespeed/archive/v${NPS_VERSION}-beta.zip
@@ -119,7 +119,7 @@ tar -xzvf $(basename ${psol_url})  # extracts to psol/
 ### 下载 Nginx 源码
 > [nginx: download](http://nginx.org/en/download.html)
 
-```
+``` bash
 NGINX_VERSION=[check nginx's site for the latest version]
 cd
 wget http://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz
@@ -133,9 +133,8 @@ sudo make install
 
 eg:
 ``` bash
-./configure --add-module=$HOME/ngx_pagespeed-${NPS_VERSION}-beta --prefix=/usr/local/nginx --with-pcre --with-http_stub_status_module --with-http_ssl_module --with-http_gzip_static_module --with-ipv6 --with-http_gunzip_module --with-http_gzip_static_module --with-http_image_filter_module
+./configure --add-module=$HOME/ngx_pagespeed-${NPS_VERSION}-beta  --prefix=/usr/local/nginx --http-log-path=/var/log/nginx/access.log --error-log-path=/var/log/nginx/error.log --with-debug --with-pcre-jit --with-http_ssl_module --with-http_stub_status_module --with-http_realip_module --with-http_auth_request_module  --with-http_gunzip_module --with-http_gzip_static_module   --with-http_sub_module  --with-stream --with-threads
 ```
-
 ### 一些经验
 我是推荐使用 Automated Installer 安装的，Nginx 和 ngx_pagespeed 都会下载到 `$HOME` 下，Nginx 会安装到 `/usr/local/nginx/`，之后如果有缺少的可以再进行编译安装
 
@@ -211,6 +210,10 @@ esac
 
 exit 0
 ```
+赋予执行
+```
+sudo chmod +x /etc/init.d/nginx
+```
 
 ### 一些经验
 这里我原来已经安装了 Nginx，不想修改原来的配置，只是先调试下新的，所以这一步你可以先停用现有的 Nginx，然后：
@@ -218,7 +221,7 @@ exit 0
 # 换个别的命
 sudo vim /etc/init.d/nginxnew
 ```
-再贴入上面的代码，然后修改权限 `755`，下一步的管理同样替换为 `/etc/init.d/nginxnew`
+再贴入上面的代码，下一步的管理同样替换为 `/etc/init.d/nginxnew`
 
 ## 管理 Nginx
 ``` bash
@@ -243,8 +246,13 @@ curl -I -p http://localhost
 ```
 HTTP/1.1 200 OK
 Server: nginx/1.13.0
-Content-Type: text/html; charset=UTF-8
+Date: Fri, 12 May 2017 01:48:09 GMT
+Content-Type: text/html
+Content-Length: 612
+Last-Modified: Fri, 12 May 2017 01:38:37 GMT
 Connection: keep-alive
+ETag: "5915121d-264"
+Accept-Ranges: bytes
 ```
 
 ### 启用 pagespeed 模块
@@ -275,9 +283,12 @@ curl -I -p http://localhost
 ```
 HTTP/1.1 200 OK
 Server: nginx/1.13.0
-Content-Type: text/html; charset=UTF-8
+Content-Type: text/html
 Connection: keep-alive
+Vary: Accept-Encoding
+Date: Fri, 12 May 2017 01:59:03 GMT
 X-Page-Speed: Powered By ngx_pagespeed
+Cache-Control: max-age=0, no-cache
 ```
 
 It’s ALL. No need scripts any more.
@@ -323,8 +334,10 @@ pagespeed LogDir /var/log/pagespeed;
 pagespeed AdminPath /pagespeed_admin;
 
 # cache
+# 1GB
 pagespeed FileCacheSizeKb            1024000;
-pagespeed FileCacheCleanIntervalMs   3600000;
+# 10h
+pagespeed FileCacheCleanIntervalMs   36000000;
 pagespeed FileCacheInodeLimit        500000;
 
 pagespeed HttpCacheCompressionLevel 3;
@@ -333,6 +346,7 @@ pagespeed EnableCachePurge on;
 
 ### 刷新缓存
 > [Flushing PageSpeed Server-Side Cache](https://modpagespeed.com/doc/system#flush_cache)
+
 ``` bash
 curl 'http://localhost/pagespeed_admin/cache?purge=*'
 ```
