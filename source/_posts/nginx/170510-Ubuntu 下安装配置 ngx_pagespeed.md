@@ -6,6 +6,7 @@ comments: true
 toc: true
 tags:
    - ubuntu
+   - nginx
    - ngx-pagespeed
 ---
 
@@ -133,10 +134,11 @@ sudo make install
 
 eg:
 ``` bash
-./configure --add-module=$HOME/ngx_pagespeed-${NPS_VERSION}-beta  --prefix=/usr/local/nginx --http-log-path=/var/log/nginx/access.log --error-log-path=/var/log/nginx/error.log --with-debug --with-pcre-jit --with-http_ssl_module --with-http_stub_status_module --with-http_realip_module --with-http_auth_request_module  --with-http_gunzip_module --with-http_gzip_static_module   --with-http_sub_module  --with-stream --with-threads
+./configure --add-module=$HOME/ngx_pagespeed-${NPS_VERSION}-beta  --prefix=/usr/local/nginx
 ```
 ### 一些经验
-我是推荐使用 Automated Installer 安装的，Nginx 和 ngx_pagespeed 都会下载到 `$HOME` 下，Nginx 会安装到 `/usr/local/nginx/`，之后如果有缺少的可以再进行编译安装
+- 我是推荐使用 Automated Installer 安装的，Nginx 和 ngx_pagespeed 都会下载到 `$HOME` 下，Nginx 会安装到 `/usr/local/nginx/`，之后如果有缺少的可以再进行编译安装
+- 编译 ssl 模块参见我的其他文章
 
 ## 编写 Nginx 控制脚本
 > [Debian/Ubuntu Nginx init Script (opt) &raquo;  KBeezie](http://kbeezie.com/debian-ubuntu-nginx-init-script/)
@@ -232,7 +234,7 @@ sudo /etc/init.d/nginx start
 sudo /etc/init.d/nginx stop
 
 # for restart:
-sudo /etc/init.d/nginx  restart
+sudo /etc/init.d/nginx restart
 
 # for reload:
 sudo /etc/init.d/nginx reload
@@ -329,16 +331,18 @@ location ~ "^/ngx_pagespeed_beacon$" { }
 pagespeed XHeaderValue "Powered By ngx_pagespeed";
 
 pagespeed Statistics on;
-pagespeed StatisticsLogging on;
+pagespeed StatisticsLogging off;
 pagespeed LogDir /var/log/pagespeed;
 pagespeed AdminPath /pagespeed_admin;
 
-# cache
-# 1GB
-pagespeed FileCacheSizeKb            1024000;
-# 10h
-pagespeed FileCacheCleanIntervalMs   36000000;
+# Configuring the File Cache
+pagespeed FileCacheSizeKb            1024000; # 1GB
+pagespeed FileCacheCleanIntervalMs   3600000; # 1h
 pagespeed FileCacheInodeLimit        500000;
+
+# Configuring the in-memory LRU Cache
+pagespeed LRUCacheKbPerProcess     1024;
+pagespeed LRUCacheByteLimit        16384;
 
 pagespeed HttpCacheCompressionLevel 3;
 pagespeed EnableCachePurge on;
