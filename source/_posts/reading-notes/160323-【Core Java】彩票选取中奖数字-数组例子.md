@@ -6,7 +6,7 @@ tags:
    - reading notes
    - java
 ---
-从 1,2,3……h 中取 k 个中奖号码
+从 1,2,3...h 中随机取 k 个中奖号码
 
 <!-- more -->
 java code:
@@ -19,7 +19,6 @@ import java.util.Scanner;
 public class LotteryDrawing {
 
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
 
         Scanner in = new Scanner(System.in);
         System.out.println("how many numbers do you need?");
@@ -45,12 +44,11 @@ public class LotteryDrawing {
         }
         Arrays.sort(karr);
         System.out.println(Arrays.toString(karr));
-
     }
 }
 ```
 
-Console：
+Console:
 ```
 how many numbers do you need?
 3
@@ -60,8 +58,8 @@ what is the highest number?
 ```
 
 有几个点：
-取过的数不能再取
-取后升序排列
+- 取过的数不能再取
+- 取后升序排列
 
 关键点：
-每次取的都是下标，而不是实际的值。下标指向包含尚未抽取的数组元素
+- 每次取的都是下标，而不是实际的值。下标指向包含尚未抽取的数组元素

@@ -308,11 +308,7 @@ pagespeed FileCachePath /var/ngx_pagespeed_cache;
 
 # filters
 pagespeed RewriteLevel CoreFilters;
-pagespeed EnableFilters make_google_analytics_async,remove_comments,collapse_whitespace;
-pagespeed EnableFilters move_css_above_scripts;
-pagespeed EnableFilters prioritize_critical_css;
-pagespeed EnableFilters lazyload_images;
-pagespeed LazyloadImagesAfterOnload off;
+pagespeed EnableFilters remove_comments,collapse_whitespace;
 
 # admin
 location /ngx_pagespeed_statistics { allow 127.0.0.1; deny all;  }
@@ -354,6 +350,9 @@ pagespeed EnableCachePurge on;
 ``` bash
 curl 'http://localhost/pagespeed_admin/cache?purge=*'
 ```
+
+## 一些经验
+- 高流量网站谨慎使用，pagespeed 对内存和 CPU 的占用极大
 
 > Reference:
 > - [Levantado/ngx_pagespeed-install-script: Install nginx and pagespeed latest version on clean Ubuntu 14.04, 15.04, 16.04](https://github.com/Levantado/ngx_pagespeed-install-script)

@@ -4,7 +4,7 @@ permalink: core-java-reading-notes-part2
 date: 2016-09-23 16:00:00
 comments: true
 toc: true
-tags: 
+tags:
    - java
    - reading notes
 description:
@@ -80,16 +80,16 @@ class Employee {
 	public boolean equals(Object otherObject) {
 		// a quick test to see if the objects are identical
 		if(this == otherObject) return true;
-		
+
 		// must return false if the explicit parameter is null
 		if(otherObject == null) return false;
-		
+
 		// if the classes don`t match, they can`t be equal
 		if(getClass() != otherObject.getClass()) return false;
 
 		// now we know otherObject is a non-null values
 		Emloyee other = (Emloyee)otherObject;
-	
+
 		// test whether the fields have identical values
 		return name.equals(other.name) && salary == other.salary
 			&& hrieDay.equals(other.hirDay);
