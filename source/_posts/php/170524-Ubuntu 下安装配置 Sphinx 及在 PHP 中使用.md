@@ -1,5 +1,5 @@
 ---
-title: Ubuntu 下安装配置 Sphinx 及 PHP 中使用
+title: Ubuntu 下安装配置 Sphinx 及在 PHP 中使用
 permalink: install-and-configre-sphinx-and-using-by-php-in-ubuntu
 comments: true
 date: 2017-05-24 16:00:00

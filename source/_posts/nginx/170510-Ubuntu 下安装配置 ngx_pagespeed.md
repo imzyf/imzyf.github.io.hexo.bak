@@ -9,7 +9,6 @@ tags:
    - nginx
    - ngx-pagespeed
 ---
-
 ## 题外话
 前端优化大体上是：减小资源文件体积、减少请求、合理布置页面元素等；再具体些就是：开启 Gzip 压缩、合并 CSS 文件、合并 JavaScript 文件、长链接、减少 DNS 查询、使用 cookie-free 域名、JavaScript 放页面最下面、指定缓存时间、ETag、延迟加载、异步加载
 
@@ -18,14 +17,7 @@ tags:
 
 Google PageSpeed 对于 Apache 模块名是 `mod_pagespeed` 还提供各个平台编译完打好包的二进制文件，对于 Nginx 模块名是 `ngx_pagespeed`，需要自己去编译。
 
-ngx_pagespeed 自动使用最佳的方法，优化网页和相关资源文件 (CSS, JavaScript, images)，从而加快网站的速度，并减少页面加载时间，而无需修改现有内容或工作流。功能包括：
-- image 优化：分离 meta-data，动态调整大小，再压缩
-- CSS & JavaScript 压缩、合并、内嵌、outlining
-- 小资源内嵌
-- 延迟加载 image 和 JavaScript
-- HTML 重写、压缩空格、去除注释
-- 延长缓存生存期
-- 以及其他 [config_filters](https://developers.google.com/speed/docs/mod_pagespeed/config_filters)
+ngx_pagespeed 自动使用最佳的方法，优化网页和相关资源文件 (CSS JavaScript images)，从而加快网站的速度，并减少页面加载时间，而无需修改现有内容或工作流。
 
 <!-- more -->
 
@@ -134,10 +126,11 @@ sudo make install
 
 eg:
 ``` bash
-./configure --add-module=$HOME/ngx_pagespeed-${NPS_VERSION}-beta  --prefix=/usr/local/nginx
+sudo ./configure --add-module=../ngx_pagespeed-latest-stable --with-debug --with-pcre-jit --with-http_ssl_module --with-http_stub_status_module --with-http_realip_module --with-http_auth_request_module  --with-http_gunzip_module --with-http_gzip_static_module   --with-http_sub_module  --with-threads --with-http_v2_module --with-openssl=../openssl-1.0.2l
 ```
+
 ### 一些经验
-- 我是推荐使用 Automated Installer 安装的，Nginx 和 ngx_pagespeed 都会下载到 `$HOME` 下，Nginx 会安装到 `/usr/local/nginx/`，之后如果有缺少的可以再进行编译安装
+- 我是推荐使用 Automated Installer 安装的，Nginx 和 ngx_pagespeed 都会下载到 `$HOME` 下，Nginx 会安装到 `/usr/local/nginx/`，之后如果有缺少的可以再进行编译安装，然后替换 sbin 中的 nginx
 - 编译 ssl 模块参见我的其他文章
 
 ## 编写 Nginx 控制脚本
@@ -302,9 +295,13 @@ It’s ALL. No need scripts any more.
 Filters 的配置是最重要的。PageSpeed 提供三个“level”来简化配置：PassThrough，CoreFilters 和 OptimizeForBandwidth。CoreFilters 集合包含了 PageSpeed 团队认为对大多数网站都是安全的过滤器。OptimizeForBandwidth 设置提供了更强的安全保障，适合作为不知道PageSpeed的站点使用的默认设置。
 
 基于 CoreFilters 配置就可以。
-``` vim
+```
 pagespeed on;
 pagespeed FileCachePath /var/ngx_pagespeed_cache;
+
+# setting
+pagespeed XHeaderValue "Powered By ngx_pagespeed";
+pagespeed SupportNoScriptEnabled false;
 
 # filters
 pagespeed RewriteLevel CoreFilters;
@@ -323,8 +320,6 @@ location ~ "\.pagespeed\.([a-z]\.)?[a-z]{2}\.[^.]{10}\.[^.]+" {
 }
 location ~ "^/pagespeed_static/" { }
 location ~ "^/ngx_pagespeed_beacon$" { }
-
-pagespeed XHeaderValue "Powered By ngx_pagespeed";
 
 pagespeed Statistics on;
 pagespeed StatisticsLogging off;
@@ -353,6 +348,8 @@ curl 'http://localhost/pagespeed_admin/cache?purge=*'
 
 ## 一些经验
 - 高流量网站谨慎使用，pagespeed 对内存和 CPU 的占用极大
+- 通读一遍官方的 [FAQ](https://modpagespeed.com/doc/faq)，很多情况里面都有说明
+- 对于 Nginx 的 HTTPS HTTP/2 安装配置可以参看我的其他文章
 
 > Reference:
 > - [Levantado/ngx_pagespeed-install-script: Install nginx and pagespeed latest version on clean Ubuntu 14.04, 15.04, 16.04](https://github.com/Levantado/ngx_pagespeed-install-script)

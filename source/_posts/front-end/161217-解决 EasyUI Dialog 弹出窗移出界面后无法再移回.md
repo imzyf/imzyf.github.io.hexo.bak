@@ -4,14 +4,15 @@ permalink: resolving-easyui-dialog-out-of-windows-can-not-be-moved-back
 date: 2016-12-17 10:00:00
 comments: true
 toc: false
-tags: 
+tags:
    - easyui
-description: 
+description:
 ---
+当不小心将 EasyUI Dialog 头部移出页面后，将无法再次移动弹出框，便只好刷新页面。
 
-&emsp;&emsp;当不小心将 EasyUI Dialog 头部移出页面后，将无法再次移动弹出框，便只好刷新页面。
 <!-- more -->
-&emsp;&emsp;解决方法如下：
+
+解决方法如下：
 
 ``` javascript
 /**
@@ -24,7 +25,7 @@ description:
 * @returns
 */
 var easyuiPanelOnMove = function(left, top){
-    if ($(this).panel('options').closed) 
+    if ($(this).panel('options').closed)
         return;
     var parentObj = $(this).panel('panel').parent();
     var width = $(this).panel('options').width;
@@ -33,7 +34,7 @@ var easyuiPanelOnMove = function(left, top){
     var buttom = top + height;
     var parentWidth = parentObj.width();
     var parentHeight = parentObj.height();
-    
+
     if (left < 1) {
         $(this).panel('move', {
             left: 1
@@ -49,7 +50,7 @@ var easyuiPanelOnMove = function(left, top){
             left: parentWidth-width
         });
     }
-    
+
     if (parentHeight < buttom) {
         $(this).panel('move', {
             top: parentHeight-height
@@ -58,7 +59,8 @@ var easyuiPanelOnMove = function(left, top){
 };
 $.fn.window.defaults.onMove = easyuiPanelOnMove;
 //$.fn.panel.defaults.onMove = easyuiPanelOnMove;
-$.fn.dialog.defaults.onMove = easyuiPanelOnMove; 
+$.fn.dialog.defaults.onMove = easyuiPanelOnMove;
 ```
+
 > reference:
 > - [easyui dialog移动出界面问题](http://www.iteye.com/topic/1134739)
