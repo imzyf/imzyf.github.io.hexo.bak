@@ -31,7 +31,7 @@ Vagrant 可以为你提供可配置、可再生、便携的工作环境，它主
 
 ## Enable Virtualization Technolog
 在刚启动电脑时，按 F1 进入 BIOS，Config->CPU->Intel Virtualization Technology 中 `Intel VT-d Feature` 改成 `Enabled`，保存退出
-**注意：**这里有一个坑，修改后需要**关机再启动**，直接重启电脑，配置不生效
+**注意：** 这里有一个坑，修改后需要 **关机再启动**，直接重启电脑，配置不生效
 
 <!-- more -->
 
