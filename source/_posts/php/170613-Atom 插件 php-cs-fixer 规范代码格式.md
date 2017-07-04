@@ -59,4 +59,4 @@ Here's an example configuration:
 ## Notice
 - PHP 版本要 5.6+
 - PHP-CS-Fixer 版本要 2.0+
-- 我系统 `php` 命令使用的是 5.5 的版本，所以在 `PHP executable path` 中填写高版本的 PHP 命令
+- `phpExecutablePath: "php7.1"` 这行的配置，我系统 `php` 命令使用的是 5.5 的版本，不够使用 `PHP-CS-Fixer`，所以安装了 php7.1，所以在  PHP executable path 中填写高版本的 PHP 命令。如果版本足够可以不特别指定

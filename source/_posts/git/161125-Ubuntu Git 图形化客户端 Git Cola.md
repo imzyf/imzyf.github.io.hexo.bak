@@ -23,6 +23,9 @@ $ sudo apt-get install git-core git-cola
 
 `Status` 视图中显示文件的状态；`Diff` 可方便查看文件的变动
 
+## 一点经验
+当发现 `Status` 面板中的内容没有刷新时，可以 `ctrl + r` 进行刷新
+
 <!-- more -->
 
 下面的这篇文章介绍的很好，就不再累述了
