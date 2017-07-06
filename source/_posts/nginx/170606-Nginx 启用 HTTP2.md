@@ -7,7 +7,13 @@ toc: true
 tags:
    - nginx
 ---
-HTTP/2 中的特性：
+2015年5月14日 HTTP/2 协议正式版的发布，越来越多的网站开始部署 HTTP/2 了。
+
+HTTP/2 协议是从 SPDY 演变而来，SPDY 已经完成了使命并很快就会退出历史舞台（例如 Chrome 在 2016 年初结束对 SPDY 的支持；Nginx 在 15 年年底正式支持 HTTP/2 后，也不再支持 SPDY）。
+
+[HTTP/2: the Future of the Internet | Akamai](https://http2.akamai.com/demo) 提供了 HTTP/1 和 HTTP/2 的加载速度对比。
+
+## HTTP/2 中的特性
 - 多路复用：通过多个请求 stream 共享一个 TCP 连接的方式，解决了 HTTP1.x holb (head of line blocking) 的问题，降低了延迟同时提高了带宽的利用率。
 - 压缩头部：HTTP/2 规定了在客户端和服务器端会使用并且维护“首部表”，来跟踪和存储之前发送的键值对，对于相同的头部，不必再通过请求发送，只需发送一次。
 - 二进制分帧：在应用层与传输层之间增加一个二进制分帧层，以此达到：在不改动 HTTP 的语义，HTTP 方法、状态码、URI 及首部字段的情况下，突破 HTTP1.1 的性能限制，改进传输性能，实现低延迟和高吞吐量。
