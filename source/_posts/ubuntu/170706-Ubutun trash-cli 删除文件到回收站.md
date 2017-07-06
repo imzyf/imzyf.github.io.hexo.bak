@@ -6,7 +6,7 @@ comments: true
 toc: true
 tags:
    - ubuntu
-   - awesome-liunx
+   - awesome-linux
 description:
 ---
 [andreafrancia/trash-cli: Command line interface to the freedesktop.org trashcan.](https://github.com/andreafrancia/trash-cli)

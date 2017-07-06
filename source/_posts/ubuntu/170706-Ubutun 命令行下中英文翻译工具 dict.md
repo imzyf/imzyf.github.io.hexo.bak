@@ -6,17 +6,17 @@ comments: true
 toc: true
 tags:
    - ubuntu
-   - awesome-liunx
+   - awesome-linux
 description:
 ---
 [wufeifei/dict: 命令行下中英文翻译工具（Chinese and English translation tools in the command line）](https://github.com/wufeifei/dict)
 
-## install
+## Installation
 ``` bash
 sudo pip install dict-cli
 ```
 
-## usage
+## Usage
 ### English To Chinese
 ``` bash
 dict test
