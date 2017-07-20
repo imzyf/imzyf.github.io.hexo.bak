@@ -1,5 +1,5 @@
 ---
-title: 【Core Java】读书笔记 Part2
+title: 【Core Java】读书笔记 Part 2
 permalink: core-java-reading-notes-part2
 date: 2016-09-23 16:00:00
 comments: true

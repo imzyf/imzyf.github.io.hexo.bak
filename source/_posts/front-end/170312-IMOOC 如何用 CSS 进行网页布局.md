@@ -4,13 +4,16 @@ permalink: imooc-how-to-use-css-for-web-layout
 date: 2017-03-12 12:00:00
 comments: true
 toc: true
-tags: 
+tags:
    - html
    - css
-description: 
+description:
 ---
-&emsp;&emsp;慕课网上【如何用 CSS 进行网页布局】学习笔记。一列布局、两列布局、三列布局、混合布局
+
+慕课网上【如何用 CSS 进行网页布局】学习笔记。一列布局、两列布局、三列布局、混合布局。
+
 <!-- more -->
+
 ## 一列布局
 ```
 <style type="text/css">
@@ -29,7 +32,7 @@ body{marin:0;padding:0;}
 .main{width:800px;margin: 0 auto;}
 body{margin:0; padding:0; font-size:30px}
 .left{width:20%;height:500px; float:left; background:#ccc;}
-.right{width:80%;height:500px; float:right; background:#ddd;} 
+.right{width:80%;height:500px; float:right; background:#ddd;}
 </style>
 <body>
 	<div class="main">
@@ -39,7 +42,7 @@ body{margin:0; padding:0; font-size:30px}
 </body>
 ```
 ## 三列布局
-&emsp;&emsp;中间自适应；注意 `position:absolute` 使用
+中间自适应；注意 `position:absolute` 使用
 ```
 <style type="text/css">
 .left{ height:600px; width:200px; background:#ccc; position:absolute; left:0; top:0}
@@ -81,4 +84,3 @@ div{ text-align:center; line-height:50px}
 <div class="footer">footer</div>
 ```
 ![混合布局](http://img.mukewang.com/58525eb80001417a12800720.jpg)
-
