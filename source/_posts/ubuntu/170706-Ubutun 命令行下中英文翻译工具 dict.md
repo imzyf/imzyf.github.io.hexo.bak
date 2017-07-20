@@ -59,6 +59,8 @@ dict I love you
 ###################################
 ```
 
+<!-- more -->
+
 ### Chinese To English
 ``` bash
 dict 测试

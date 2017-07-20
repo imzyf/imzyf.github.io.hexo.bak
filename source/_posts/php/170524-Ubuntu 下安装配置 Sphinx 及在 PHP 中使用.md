@@ -150,13 +150,13 @@ sudo searchd --stop
 sudo search -c /etc/sphinxsearch/sphinx.conf google
 ```
 
-
 ## using Sphinx by PHP
-
 ### install PHP extension
+> 个人不推荐，下面有更新内容
+
 安装 PHP Sphinx 依赖库
 ``` bash
-sudo aptitude install libsphinxclient-dev  libsphinxclient-0.0.1 -y
+sudo apt-get install libsphinxclient-dev  libsphinxclient-0.0.1 -y
 ```
 安装 PHP Sphinx 扩展
 ``` bash
@@ -173,7 +173,10 @@ extension=sphinx.so
 ``` bash
 sudo /etc/init.d/php5-fpm restart
 ```
+
 ### call in PHP
+> 个人不推荐，下面有更新内容
+
 ``` php
 public function testSphinx()
 {
@@ -187,6 +190,37 @@ public function testSphinx()
 	$result = array_column($result,'id');
 	dump($result);
 }
+```
+
+### using nilportugues/sphinx-search
+**2017年07月19日 更新：**
+
+我在 Ubuntu 16.04 环境下，发现 `libsphinxclient-dev` `libsphinxclient-0.0.1` 无法正常安装，所以查找其他方法。
+
+[Installing Sphinx PHP API on Ubuntu 16.04 | Sphinx](http://sphinxsearch.com/forum/view.html?id=15228) 中提到了 `sphinxapi.php`，联想到最近使用的 Composer，找到了 [nilportugues/sphinx-search - Packagist](https://packagist.org/packages/nilportugues/sphinx-search) `SphinxClient` 这个类中有很多 `set` 方法，我想这就和上面的 PHP 扩展的内容差不多，省去了安装扩展库。
+
+``` bash
+$ composer require nilportugues/sphinx-search
+```
+
+``` php
+<?php
+
+$sphinxSearch = new \NilPortugues\Sphinx\SphinxClient();
+
+//Do connection and set up search method...
+$sphinxSearch->setServer('127.0.0.1',9312);
+
+
+// Do search...
+// Result would contain "The Amazing Spider-Man 2", to be in theatres in 2014.
+$sphinxSearch->setFilter('year',array(2014));
+$result = $sphinxSearch->query('Spiderman','movies');
+
+// Unset the filter to stop filtering by year
+// Now we'll get all the Spiderman movies.
+$sphinxSearch->removeFilter('year');
+$result = $sphinxSearch->query('Spiderman','movies');
 ```
 
 > Rerference:

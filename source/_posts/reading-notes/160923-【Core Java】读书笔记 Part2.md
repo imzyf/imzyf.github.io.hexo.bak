@@ -10,12 +10,13 @@ tags:
 description:
 ---
 
-本文总结的是书中的：第 5 章 继承
+本文总结的是书中的：第5章 继承
 
-前几章的总结在：[ZYF.IM-【Core Java】读书笔记 Part1](https://zyf.im/2016/05/06/core-java-reading-notes/)
+前几章的总结在：[ZYF.IM-【Core Java】读书笔记 Part1](/2016/05/06/core-java-reading-notes/)
+
+<!-- more -->
 
 ## 5 继承
-
 ### 5.1 类、超类和子类
 1、有些人认为 `super` 与 `this` 引用是类似的概念，实际上，这样比较并不太恰当。这是因为 `super` 不是一个对象的引用，不能将 `super` 赋予另一个对象变量，它只是一个指示编译器调用超类方法的特殊关键字。
 2、使用 `super` 或 `this` 调用构造器的语句必须时子类构造器的第一条语句。也就是说 `super` 和 `this` 不能同时出现在一个构造器中。
