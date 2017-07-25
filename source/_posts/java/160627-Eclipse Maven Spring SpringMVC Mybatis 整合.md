@@ -10,7 +10,7 @@ tags:
 description:
 ---
 
-新项目自己撘框架，想着用点新的。看慕课网【[Java高并发秒杀API](http://www.imooc.com/index/search?words=%E7%A7%92%E6%9D%80)】的系列课程时很受益。所以想着仿着来使用：Mavan-Spring-SpringMVC-Mybatis 的架构。框架整合的代码我已上传到我的 Github：[maven-mybatis-spring-springmvc](https://github.com/imzyf/maven-mybatis-spring-springmvc)。
+新项目自己撘框架，想着用点新的。看慕课网 [Java高并发秒杀API](http://www.imooc.com/index/search?words=%E7%A7%92%E6%9D%80) 的系列课程时很受益。所以想着仿着来使用：Mavan-Spring-SpringMVC-Mybatis 的架构。框架整合的代码我已上传到我的 Github：[maven-mybatis-spring-springmvc](https://github.com/imzyf/maven-mybatis-spring-springmvc)。
 
 本示例是在：Ubuntu15 上实现的；Windows 上安装 Maven 将不太相同。
 

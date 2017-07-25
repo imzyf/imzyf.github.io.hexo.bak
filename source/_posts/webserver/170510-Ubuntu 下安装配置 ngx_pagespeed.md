@@ -130,7 +130,7 @@ sudo ./configure --add-module=../ngx_pagespeed-latest-stable --with-debug --with
 ```
 
 ### 一些经验
-- 我是推荐使用 Automated Installer 安装的，Nginx 和 ngx_pagespeed 都会下载到 `$HOME` 下，Nginx 会安装到 `/usr/local/nginx/`，之后如果有缺少的可以再进行编译安装，然后替换 sbin 中的 nginx
+- 我是推荐使用 Automated Installer 安装的，Nginx 和 ngx_pagespeed 都会下载到 `$HOME` 下，Nginx 会安装到 `/usr/local/nginx/`，之后如果有缺少的可以再进行编译安装，然后从 `objs/nginx` 替换 `sbin` 中的 `nginx`
 - 编译 ssl 模块参见我的其他文章
 
 ## 编写 Nginx 控制脚本

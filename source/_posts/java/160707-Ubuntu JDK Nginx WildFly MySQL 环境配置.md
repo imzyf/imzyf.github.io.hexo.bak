@@ -9,7 +9,7 @@ tags:
    - wildfly
 description:
 ---
-新项目部署上线，主要参考[世雷博客](http://blog.csdn.net/hanshileiai)的内容，自己也总结了下。从 JDK 安装、Web 容器、数据库，都有涉及比较全面。
+新项目部署上线，主要参考 [世雷博客](http://blog.csdn.net/hanshileiai) 的内容，自己也总结了下。从 JDK 安装、Web 容器、数据库，都有涉及比较全面。
 
 ## JDK8
 ### 安装 JDK8
@@ -25,17 +25,18 @@ sudo apt-get update
 ``` bash
 sudo apt-get install oracle-java8-installer
 ```
-### 查看 Java 安装路径
 
+### 查看 Java 安装路径
 ``` bash
 sudo update-alternatives --config java
 sudo update-alternatives --config javac
 ```
-### 查看 Java 安装后的版本
 
+### 查看 Java 安装后的版本
 ``` bash
 java -version
 ```
+
 ### （扩展）增加多版本 JDK 和切换方法
 1、安装 JDK 6 和 JDK 7
 ``` bash
@@ -68,6 +69,9 @@ java version "1.6.0_45"
 Java(TM) SE Runtime Environment (build 1.6.0_45-b06)
 Java HotSpot(TM) 64-Bit Server VM (build 20.45-b01, mixed mode)
 ```
+
+<!-- more -->
+
 ## Nginx
 ### Nginx 安装
 1、更新软件源

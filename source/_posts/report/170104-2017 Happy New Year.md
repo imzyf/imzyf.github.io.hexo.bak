@@ -13,7 +13,7 @@ description:
 
 <!-- more -->
 
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=760 height=52 src="//music.163.com/outchain/player?type=2&id=31445772&auto=0&height=32"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=260 height=52 src="//music.163.com/outchain/player?type=2&id=31445772&auto=0&height=32"></iframe>
 
 2016 是在保定的雾霾中开始。结束了大为，决定离开老师的队伍，来北京实习，这对我来说是一个不大不小的决定。老师带着，跟学长一起走到这里，这里有了很多宝贵的东西，有很多回忆，很多故事可以讲。选择离开，主要还是想看看在这之外的是什么样子。
 

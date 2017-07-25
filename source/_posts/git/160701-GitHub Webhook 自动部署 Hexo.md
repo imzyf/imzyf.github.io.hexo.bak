@@ -10,10 +10,12 @@ tags:
   - git
 ---
 
-在[GitHub Pages不被百度收录解决方案](/2016/06/30/github-pages-forbidden-baiduspide-solution/)中，思路二是通过 Dnspod 的智能 DNS 服务。简而言之就是搭建一个Server，做一个Blog的镜像站，专为百度收录使用。
+在 [GitHub Pages不被百度收录解决方案](/2016/06/30/github-pages-forbidden-baiduspide-solution/) 中，思路二是通过 Dnspod 的智能 DNS 服务。简而言之就是搭建一个Server，做一个Blog的镜像站，专为百度收录使用。
 
 但是每次将新建的博客文章 `PUSH` 到 GitHub 后，还要再登陆 Server `PULL` 一下，简直是太蠢了。那有什么解决办法吗？答：GitHub Webhook。
+
 <!-- more -->
+
 ## Webhook
 Webhook，也就是人们常说的钩子，是一个很有用的工具。你可以通过定制 Webhook 来监测你在 Github.com 上的各种事件，最常见的莫过于 push 事件。
 

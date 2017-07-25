@@ -4,22 +4,24 @@ permalink: eclipse-java-comments-templates
 date: 2016-09-18 19:00:00
 comments: true
 toc: true
-tags: 
+tags:
    - eclipse
-description: 
+description:
 ---
 
-&emsp;&emsp;自己总结的比较规范的 Eclipse Java 注释模板
-<!-- more -->
+自己总结的比较规范的 Eclipse Java 注释模板
+
 ## Eclipse Java 注释模板设置
 Window -> Preference -> Java -> CodeStyle -> Code Template 然后展开 Comments 节点就是所有需设置注释的元素
+
+<!-- more -->
 
 ## 各项注释模板
 ### Files
 ```
 /**
  * Copyright © ${year}. All rights reserved.
- * 
+ *
  * @Title: ${file_name}
  * @Prject: ${project_name}
  * @Package: ${package_name}
@@ -32,8 +34,8 @@ Window -> Preference -> Java -> CodeStyle -> Code Template 然后展开 Comments
 ### Types
 ```
 /**
- * 
- * 
+ *
+ *
  * @ClassName: ${type_name}
  * @Description: ${todo}
  * @author: ${user}
@@ -63,8 +65,8 @@ Window -> Preference -> Java -> CodeStyle -> Code Template 然后展开 Comments
 ### Methods
 ```
 /**
- * 
- * 
+ *
+ *
  * @Title: ${enclosing_method}
  * @Description: ${todo}
  * @author: ${user}

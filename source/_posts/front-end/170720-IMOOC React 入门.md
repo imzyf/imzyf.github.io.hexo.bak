@@ -21,7 +21,7 @@ description:
 2. 重用组件库，组件组合
 3. “懒”，少做无用功
 
-> 你总是这样轻言放弃的话，无论过多久都只会原地踏步。 -- 多啦a梦
+> 你总是这样轻言放弃的话，无论过多久都只会原地踏步。 —— 多啦a梦
 
 ### 前置知识
 1. JS CSS
@@ -38,7 +38,7 @@ description:
 ## React 的 JSX 与 Style
 官网：[React - A JavaScript library for building user interfaces](https://facebook.github.io/react/)
 
-> 罐头是1810发明出来的，可是开罐器呢，却在1858年才发明出来。有时就是这样，重要的东西可能迟来一步，但却一定会到。生活和爱情，都是如此。程序，当然也不例外。
+> 罐头是 1810 发明出来的，可是开罐器呢，却在 1858 年才发明出来。有时就是这样，重要的东西可能迟来一步，但却一定会到。生活和爱情，都是如此。程序，当然也不例外。
 
 <!-- more -->
 
@@ -85,7 +85,7 @@ description:
 </body>
 </html>
 ```
-添加组件属性，有一个地方需要注意：class 属性需要写成 className ，for 属性需要写成 htmlFor ，这是因为 class 和 for 是 JavaScript 的保留字。然后，属性名都是驼峰命名法。
+添加组件属性，有一个地方需要注意：`class` 属性需要写成 `className` ，`for` 属性需要写成 `htmlFor` ，这是因为 `class` 和 `for` 是 JavaScript 的保留字。然后，属性名都是驼峰命名法。
 
 > 正所谓粉末登场，远近起帆，风云更迭，嬉皮而黄，多少聚散于圆缺。
 
@@ -93,14 +93,11 @@ description:
 ### React Components Lifecycle
 [State and Lifecycle - React](https://facebook.github.io/react/docs/state-and-lifecycle.html)
 
-1. Mounted
-React Component 被 render 解析生成对应的 DOM 节点，并在插入浏览器的 DOM 结构的一个过程
-2. Update
-一个 mounted 的 React Component 被重新 render 的过程（只有影响了DOM结构时才会被改变）
-3. Unmounted
-一个 mounted 的 React Component 对应的 DOM 节点被从 DOM 结构中移除的过程
+1. Mounted：React Component 被 render 解析生成对应的 DOM 节点，并在插入浏览器的 DOM 结构的一个过程
+2. Update：一个 mounted 的 React Component 被重新 render 的过程（只有影响了DOM结构时才会被改变）
+3. Unmounted：一个 mounted 的 React Component 对应的 DOM 节点被从 DOM 结构中移除的过程
 
-每一个状态都封装了对应的 hook 函数。`will` and `did` hook
+每一个状态都封装了对应的 hook 函数。`will` and `did` hook.
 
 ###  React Event Listener
 [Handling Events - React](https://facebook.github.io/react/docs/handling-events.html)
