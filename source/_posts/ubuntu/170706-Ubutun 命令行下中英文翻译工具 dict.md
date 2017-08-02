@@ -16,6 +16,8 @@ description:
 sudo pip install dict-cli
 ```
 
+<!-- more -->
+
 ## Usage
 ### English To Chinese
 ``` bash
@@ -58,8 +60,6 @@ dict I love you
 #                   爱你我该怎么办
 ###################################
 ```
-
-<!-- more -->
 
 ### Chinese To English
 ``` bash

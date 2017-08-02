@@ -10,7 +10,8 @@ tags:
 ---
 自己是第一次把一本厚厚的的技术类书读一遍。不过 7、8、9、10 章讲的是关于图形的就是翻了翻，没怎么看。第 4 章 对象与类，里面有很多非常基础，可以补充一些知识细节。第 14 章 多线程，是自己最陌生的，慕课网上有节课 [深入浅出Java多线程](http://www.imooc.com/view/202) 讲到的例子就是书上例子的变形，可以对照理解。第二遍阅读做做笔记。
 
-本文总结的是书中的：第 3 章 Java 的基本程序设计结构、第 4 章 对象与类
+本文总结的是书中的：第 3 章 Java 的基本程序设计结构、第 4 章 对象与类。
+
 <!-- more -->
 
 ## 3 Java的基础程序设计结构
@@ -36,7 +37,7 @@ luckNumbers[5] = 12; // now smallPrimes[5] is also 12
 - 如果希望将一个数组的所用值拷贝到一个新的数组中去，就要使用Arrays类的copyOf方法：
 
 ``` java
-int[] copiedLuckyNumbers = Arrays.copyOf(luckyNumbers, luckyNumbers.length)
+int[] copiedLuckyNumbers = Arrays.copyOf(luckyNumbers, luckyNumbers.length);
 ```
 
 ## 4 对象与类

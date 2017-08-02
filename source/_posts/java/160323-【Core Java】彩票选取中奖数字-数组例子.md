@@ -1,16 +1,16 @@
 ---
 title: 【Core Java】彩票选取中奖数字-数组例子
-date: 2016-03-23 20:10:00
+date: 2016-03-23 20:00:00
 permalink: core-java-array-dome
 tags:
    - reading-notes
    - java
 ---
-从 1,2,3...h 中随机取 k 个中奖号码
+从 1,2,3...h 中随机取 k 个中奖号码。
 
 <!-- more -->
-java code:
-```
+
+```java
 package im.zyf.javacore;
 
 import java.util.Arrays;
