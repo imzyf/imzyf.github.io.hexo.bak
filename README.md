@@ -17,6 +17,5 @@ hexo g
 hexo s
 ```
 
-
 ## 博文
-- [文章原始 Markdown 文件](tree/master/source/_posts)
+- [所有文章原始 Markdown 文件](source/_posts)
