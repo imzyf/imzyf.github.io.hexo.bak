@@ -13,10 +13,10 @@ React Native 入门学习练习 - Mac 环境
 
 项目代码：[GitHub - imzyf/react-native-started](https://github.com/imzyf/react-native-started)
 
-> Thanks:
-> - [IMOOC - React Native 基础与入门](http://www.imooc.com/video/14287)
-> - [Official Getting Started](http://facebook.github.io/react-native/docs/getting-started.html)
-> - [React Native之React速学教程(上中下) - 贾鹏辉的技术博客](http://www.devio.org/2016/08/09/React-Native%E4%B9%8BReact%E9%80%9F%E5%AD%A6%E6%95%99%E7%A8%8B-(%E4%B8%8A)/)
+Thanks:
+- [IMOOC - React Native 基础与入门](http://www.imooc.com/video/14287)
+- [Official Getting Started](http://facebook.github.io/react-native/docs/getting-started.html)
+- [React Native之React速学教程(上中下) - 贾鹏辉的技术博客](http://www.devio.org/2016/08/09/React-Native%E4%B9%8BReact%E9%80%9F%E5%AD%A6%E6%95%99%E7%A8%8B-(%E4%B8%8A)/)
 
 ## 组件
 React 组件将 UI 分割成独立的、可复用的一些碎片或部分，这些部分是相关独立的。
