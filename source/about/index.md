@@ -2,12 +2,15 @@
 title: About Yifans_Z
 date: 2016-05-04 16:00:00
 ---
-赵一帆，荔枝，工程师。现居帝都
+Yifans_Z，荔枝。工程师。现居帝都。
+
+## Motto
+> The limits of my language means the limits of my world.  -- Ludwig Wittgenstein
 
 ## Hobby
-- 时不时撸橡皮章子
-- 狼人杀爱好者
-- 炉石小弱鸡
+- 时不时撸橡皮章子。
+- 狼人杀爱好者。
+- 炉石小弱鸡。
 
 ## Timeline
 - 2016年3月：[试着写东西](/2016/03/18/try-to-write-something/)
@@ -16,18 +19,6 @@ date: 2016-05-04 16:00:00
 - 2016年8月：[刚刚毕业的两个月小结](/2016/08/31/20160601-20160831-report/)
 - 2017年1月：[2017 Happy New Year](/2017/01/04/2017-happy-new-year/)
 - 2017年6月：与你相遇，好幸运。
-
-## Wish
-- ~~Macbook Pro - 07/04/2016~~
-- ~~Apple Watch - 07/04/2016~~
-- ~~使用股票基金理财跑赢 P2P - 07/04/2016~~
-- ~~参加一个开源项目贡献代码 - 07/04/2016~~
-- ~~博客日 IP 数过 50 - 07/04/2016~~
-- ~~用吉他弹一首歌 - 05/25/2017~~
-- 娶大小姐 - 07/04/2017
-
-## Achieved
-- 04/30/2017 Apple Watch Series2 42mm - JD.com
 
 ## Booklist
 ### Tech
