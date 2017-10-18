@@ -31,16 +31,15 @@ menu:
 theme:
   color: Cobalt Blue
   toc: true
-  search: true
   fancybox: true
 
 copyright:
   enable: true
   # https://creativecommons.org/
-  license: '本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可'
+  license: '<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>'
 
 reward:
-  enable: false
+  enable: true
   qrCode:
     wechat: /image/reward/wechat.png
     alipay: /image/reward/alipay.png
@@ -49,34 +48,48 @@ reward:
 # Social links Settings
 # ===========================================
 social:
-  email:
-  stack-overflow:
+  email: 168@yifans.com
+  stack-overflow: https://stackoverflow.com/users/5958443/yifan-zhao
   twitter: https://twitter.com/zhaoyifans
   facebook:
   linkedin:
   google:
   github: https://github.com/imzyf
-  weibo: http://weibo.com/zhaoyifans
+  weibo: https://weibo.com/zhaoyifans
   zhihu:
+  douban:
   pocket:
+  tumblr:
+  instagram:
 
 # ===========================================
 # Third Party Services Settings
 # ===========================================
 
+# LeanCloud
+leancloud:
+  app_id: er5hlK0M8mWKUTrVtqnHl97N-gzGzoHsz
+  app_key: a6lIOEoJs3ijGvj3eP2rkFGG
+
 # Baidu Analytics
 baidu_analytics:
+# Baidu Verification
+baidu_verification:
+
 # Google Analytics
 google_analytics:
+# Google Verification
+google_verification:
 
-# Duoshuo
-# duoshuo_shortname:
 # Disqus
 disqus_shortname: yifans
-# netease
-# netease_key:
+
+#Changyan
+changyan:
+  appid:
+  appkey:
 
 # ===========================================
 # Version
 # ===========================================
-version: 2.4.x
+version: 2.6.0
