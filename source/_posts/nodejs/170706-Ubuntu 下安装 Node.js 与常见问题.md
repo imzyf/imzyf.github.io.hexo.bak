@@ -20,6 +20,8 @@ To install or update nvm.
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
 ```
 
+<!-- more -->
+
 The script clones the nvm repository to `~/.nvm` and adds the source line to your profile (`~/.bash_profile`, `~/.zshrc`, `~/.profile`, or `~/.bashrc`).
 ``` bash
 export NVM_DIR="/home/moma/.nvm"
@@ -80,8 +82,6 @@ nvm install iojs
 
 nvm alias default v6.11.1
 ```
-
-<!-- more -->
 
 > Reference:
 > - [How To Install Node.js on Ubuntu 16.04 | DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04)

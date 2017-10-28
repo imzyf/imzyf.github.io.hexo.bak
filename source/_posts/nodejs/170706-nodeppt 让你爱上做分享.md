@@ -22,6 +22,8 @@ npm install -g nodeppt
 nodeppt create ppt-name
 ```
 
+<!-- more -->
+
 ## 启动
 ``` bash
 # 获取帮助

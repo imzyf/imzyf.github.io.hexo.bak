@@ -1,6 +1,6 @@
 ---
 title: About Yifans_Z
-date: 2016-05-04 16:00:00
+layout: page
 ---
 I’m Zhao Yifan, a software engineer in Beijing. My biggest interest is in the world of front-end. Hopefully you’ll find some of my thoughts, discoveries, and experiences helpful.
 
