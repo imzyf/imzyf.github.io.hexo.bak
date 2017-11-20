@@ -5,7 +5,7 @@ npm install hexo-cli -g
 yarn add
 mkdir public && cd public
 git init .
-git remote add origin root@zyf.im:/home/yifan/project/imzyf
+git remote add imzyf root@zyf.im:/home/yifan/project/imzyf
 ```
 
 ## Hexo command
