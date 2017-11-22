@@ -8,7 +8,8 @@ tags:
    - markdown
 description:
 ---
-一直想大爱网易云音乐，也想着在 markdown 中插入音乐播放插件。研究了下，发现可以很容易实现。
+
+一直大爱网易云音乐，也想着在 markdown 中插入音乐播放组件。研究了下，发现实现很容易。
 
 ## 选歌、生成代码
 Step 1：打开 [网易云音乐网页版](http://music.163.com/) ，检索歌曲打开播放页面，例如 [G.E.M. - 偶尔](http://music.163.com/#/song?id=27836172) `http://music.163.com/#/song?id=27836172`

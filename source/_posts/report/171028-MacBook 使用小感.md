@@ -5,9 +5,9 @@ date: 2017-10-28 14:00:00
 comments: true
 toc: true
 tags:
-   - mac
+  - mac
 categories:
-   - report
+  - report
 description:
 ---
 现在自己开发的主力机是：2015 版的 MacBook Pro。对于工程师来讲，MacBook 绝对是用来提高生产力的，如果条件允许十分推荐。
