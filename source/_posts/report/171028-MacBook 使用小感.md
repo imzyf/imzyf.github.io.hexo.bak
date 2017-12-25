@@ -47,6 +47,10 @@ description:
 - Alferd 3
 - [Go2Shell](http://zipzapmac.com/go2shell) - 在当前 Finder 路径打开命令行。
 - [ResuceTime](https://www.rescuetime.com/) - 时间管理。
+- [Scroll Reverser](http://pilotmoon.com/scrollreverser/) - 翻转设备滚动方向。
+
+### 其他
+- [IINA](https://lhc70000.github.io/iina/) - The modern video player.
 
 <!-- more -->
 
