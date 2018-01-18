@@ -19,7 +19,6 @@ rss: default
 menu:
   Home: /
   Tags: /tags
-  Categories: /categories
   Archives: /archives/
   About: /about
 

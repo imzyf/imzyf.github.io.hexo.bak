@@ -24,7 +24,5 @@ I’m Zhao Yifan, a software engineer in Beijing. My biggest interest is in the 
 - 06/25：与你相遇，好幸运。
 - 09/06：开始接触 iOS 开发。
 
-## Booklist
-### Tech
-- 《代码整洁之道》- Robert C. Martin - 人民邮电出版社
-- [《Git权威指南》](http://www.worldhello.net/gotgit/index.html)- 蒋鑫
+### 2018
+- 01/05：[2017 不要再孤单](/2018/01/05/dont-be-lonely-in-2017/)
