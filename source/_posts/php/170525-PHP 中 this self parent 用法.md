@@ -60,6 +60,7 @@ Y::foo()
 <!-- more -->
 
 suppressing polymorphic behaviour by using `self::` for member:
+
 ``` php
 <?php
 class X {
@@ -80,6 +81,7 @@ $x = new Y();
 $x->bar();
 ?>
 ```
+
 ```
 X::foo()
 ```

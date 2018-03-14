@@ -8,7 +8,8 @@ tags:
    - php
 description:
 ---
-在使用 `empty(mixed $var)` 时要考虑 `$var` 的**类型**，尤其是在判断数据库查询后的字段
+
+在使用 `empty(mixed $var)` 时要考虑 `$var` 的 **类型**，尤其是在判断数据库查询后的字段。
 
 ```
 bool empty(mixed $var)
@@ -25,9 +26,11 @@ bool empty(mixed $var)
 - `$var` （一个声明了，但是没有值的变量）
 
 **注意：** string 的判断要非常注意，数据库查询后的字段常常为 string；应该进行正确的类型转换
+
 ``` php
 $str = '0.0';
 echo empty($str); // false 很可能和预期是相反的
 echo empty((float)$str); // true
 ```
+
 <!-- more -->
