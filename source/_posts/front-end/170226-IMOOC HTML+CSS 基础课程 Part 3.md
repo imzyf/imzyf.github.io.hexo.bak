@@ -5,10 +5,10 @@ date: 2017-02-26 13:00:00
 updatetime: 2017-03-01 00:00:00
 comments: true
 toc: true
-tags: 
+tags:
    - html
    - css
-description: 
+description:
 ---
 
 &emsp;&emsp;慕课网上【 HTML+CSS 基础课程】学习笔记。本文主要内容： CSS 盒模型、CSS 布局模型
@@ -92,7 +92,7 @@ div{
 div{
 	border-bottom:1px solid red;
 	border-top:1px solid red;
-	border-right:1px solid red; 
+	border-right:1px solid red;
 	border-left:1px solid red;
 }
 ```
@@ -100,7 +100,7 @@ div{
 7、宽度和高度
 &emsp;&emsp;CSS 定义的宽（width）和高（height），指的是填充以里的内容范围
 &emsp;&emsp;因此一个元素实际宽度（盒子的宽度）= 左边界 + 左边框 + 左填充 + 内容宽度 + 右填充 + 右边框 + 右边界
-![一个元素实际宽度](http://img.mukewang.com/539fbb3a0001304305570259.jpg)
+![一个元素实际宽度](https://img.mukewang.com/539fbb3a0001304305570259.jpg)
 ```
 div{
     width:200px;
@@ -110,7 +110,7 @@ div{
 }
 ```
 &emsp;&emsp;元素的实际长度为：10px + 1px + 20px + 200px + 20px + 1px + 10px = 262px
-![元素的实际长度](http://img.mukewang.com/543b4cae0001b34304300350.jpg)
+![元素的实际长度](https://img.mukewang.com/543b4cae0001b34304300350.jpg)
 
 9、填充
 &emsp;&emsp;元素内容与边框之间是可以设置距离的，称之为“填充”。填充也可分为上、右、下、左（顺时针）
@@ -154,9 +154,9 @@ div{margin:20px 10px 15px 30px;}
 &emsp;&emsp;流动布局模型具有2个比较典型的特征：
 &emsp;&emsp;- 第一点，块状元素都会在所处的包含元素内自上而下按顺序垂直延伸分布，因为在默认状态下，块状元素的宽度都为100%。实际上，块状元素都会以行的形式占据位置
 ```
-<div id="box2">box2</div><!--块状元素，由于没有设置宽度，宽度默认显示为100%--> 
-<h1>标题</h1><!--块状元素，由于没有设置宽度，宽度默认显示为100%--> 
-<p>文本段文本段文本段文本段文本段文本段文本段文本段文本段文本段文本段文本段文本段文本段文本段文本段文本段。</p><!--块状元素，由于没有设置宽度，宽度默认显示为100%--> 
+<div id="box2">box2</div><!--块状元素，由于没有设置宽度，宽度默认显示为100%-->
+<h1>标题</h1><!--块状元素，由于没有设置宽度，宽度默认显示为100%-->
+<p>文本段文本段文本段文本段文本段文本段文本段文本段文本段文本段文本段文本段文本段文本段文本段文本段文本段。</p><!--块状元素，由于没有设置宽度，宽度默认显示为100%-->
 <div id="box1">box1</div><!--块状元素，由于设置了width:300px，宽度显示为300px-->
 ```
 &emsp;&emsp;第二点，在流动模型下，内联元素都会在所处的包含元素内从左到右水平分布显示
@@ -201,7 +201,7 @@ div{
 }
 <div id="div1"></div>
 ```
-![层模型 - 绝对定位 | 400x0](http://img.mukewang.com/53a00b130001e86707360547.jpg)
+![层模型 - 绝对定位 | 400x0](https://img.mukewang.com/53a00b130001e86707360547.jpg)
 
 5、层模型 - 相对定位
 &emsp;&emsp;如果想为元素设置层模型中的相对定位，需要设置 `position:relative`（表示相对定位），它通过 left、right、top、bottom 属性确定元素在正常文档流中的偏移位置。相对定位完成的过程是首先按 static(float) 方式生成一个元素(并且元素像层一样浮动了起来)，然后相对于以前的位置移动，移动的方向和幅度由 left、right、top、bottom 属性确定，偏移前的位置保留不动
@@ -216,14 +216,14 @@ div{
 }
 <div id="div1"></div>
 ```
-<img src="http://img.mukewang.com/53a00d2b00015c4b06190509.jpg" height="350px" />
+<img src="https://img.mukewang.com/53a00d2b00015c4b06190509.jpg" height="350px" />
 &emsp;&emsp;什么叫做“偏移前的位置保留不动”呢？
 ```
 <body>
     <div id="div1"></div><span>偏移前的位置还保留不动，覆盖不了前面的div没有偏移前的位置</span>
 </body>
 ```
-<img src="http://img.mukewang.com/541a4bfc0001abef05940489.jpg" height="350px" />
+<img src="https://img.mukewang.com/541a4bfc0001abef05940489.jpg" height="350px" />
 
 6、层模型 - 固定定位
 &emsp;&emsp;fixed：表示固定定位，与absolute定位类型类似，但它的相对移动的坐标是视图（屏幕内的网页窗口）本身。由于视图本身是固定的，它不会随浏览器窗口的滚动条滚动而变化，除非你在屏幕中移动浏览器窗口的屏幕位置，或改变浏览器窗口的显示大小，因此固定定位的元素会始终位于浏览器窗口内视图的某个位置，不会受文档流动影响，这与 `background-attachment:fixed;` 属性功能相同。
