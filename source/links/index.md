@@ -8,11 +8,11 @@ layout: page
 ## Engineers
 
 - [Feilong](http://feilong.tech/) 同门师兄弟，健身成功者；PHP。
-- [Botao_Gou](http://imbotao.top/) Java。
+- [wave](http://imbotao.top/) 带过的实习小弟，理想主义者；Java。
 
 ## Friends
 
-- [我盒鸡王又回来啦](http://penmodeyu.com) 喷墨的鱼直播间。
+- [我盒鸡王又回来啦](http://penmodeyu.com) 喷墨的鱼直播间（域名低价出售）。
 
 ---
 
