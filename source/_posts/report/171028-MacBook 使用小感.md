@@ -24,6 +24,8 @@ description:
 - 很安静。
 - 装包时边沿有些割手。
 
+<!-- more -->
+
 ## 软件推荐
 
 > 设置安装源允许任何 `sudo spctl --master-disable`
