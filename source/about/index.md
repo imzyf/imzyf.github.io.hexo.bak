@@ -3,7 +3,7 @@ title: About Yifans_Z
 layout: page
 ---
 
-我是 Yifan，一名漂在帝都的软件工程师，对前端非常感兴趣。这里记录了我开发过程中的一些经验或是人生感悟，希望对你有帮助。
+我是 Yifan，一名在帝都的软件工程师，对前端非常感兴趣。这里记录了我开发过程中的一些经验或是人生感悟，希望对你有帮助。
 
 I’m Zhao Yifan, a software engineer in Beijing. My biggest interest is in the world of front-end. Hopefully you’ll find some of my thoughts, discoveries, and experiences helpful.
 
@@ -36,6 +36,7 @@ I’m Zhao Yifan, a software engineer in Beijing. My biggest interest is in the 
 - 01/05：[2017 不要再孤单](/2018/01/05/dont-be-lonely-in-2017/)
 - 03/13：完全属于 Swift、属于我的 1.4.2 上线。
 
-## Opinion
+## Others
 
-- 我们为什么要学习？毕竟，改变需要时间。(03/26/2018 from [六阿哥](https://github.com/6ag))
+- [Yifans_Z’s Technology Stack](./technology-stack)
+- [Yifans_Z’s Booklist](./booklist)
