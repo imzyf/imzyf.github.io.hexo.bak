@@ -340,7 +340,6 @@ SHELL
 ```
 
 ```
-
 vagrant reload --provision
 ```
 
