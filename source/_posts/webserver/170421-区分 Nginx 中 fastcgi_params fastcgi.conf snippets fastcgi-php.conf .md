@@ -6,9 +6,9 @@ comments: true
 toc: true
 tags:
    - nginx
-   - fastcgi
 description:
 ---
+
 Nginx 有两份 fastcgi 配置文件，分别是 `fastcgi_params` 和 `fastcgi.conf`，其区别只有一点点。到目前为止，由于 package managers，他们仍然引起新用户的混淆。
 
 在自己系统中还有份 `snippets/fastcgi-php.conf`，这个又是啥？

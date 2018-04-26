@@ -6,7 +6,6 @@ comments: true
 toc: true
 tags:
    - nginx
-   - proxy
    - cdn
    - php
 ---

@@ -40,10 +40,8 @@ $ docker/etc/init.d/docker restart
 
 > When a problem arises, it only takes a bit of digging to discover the solution was already there, waiting for you to make it so. Don't let this issue with Docker stop you from using this incredible technology.
 
-> 相关阅读：
-> - [Yifans_Z Ubuntu 下使用 UFW 管理防火墙服务](/2016/10/10/manage-iptables-using-ufw-in-ubuntu/)
-
----
+相关阅读：
+- [Yifans_Z Ubuntu 下使用 UFW 管理防火墙服务](/2016/10/10/manage-iptables-using-ufw-in-ubuntu/)
 
 > Reference:
 > - [How to fix the Docker and UFW security flaw](https://www.techrepublic.com/article/how-to-fix-the-docker-and-ufw-security-flaw/)

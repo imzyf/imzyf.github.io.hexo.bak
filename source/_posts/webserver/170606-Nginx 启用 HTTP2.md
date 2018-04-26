@@ -6,7 +6,9 @@ comments: true
 toc: true
 tags:
    - nginx
+   - https
 ---
+
 2015年5月14日 HTTP/2 协议正式版的发布，越来越多的网站开始部署 HTTP/2 了。
 
 HTTP/2 协议是从 SPDY 演变而来，SPDY 已经完成了使命并很快就会退出历史舞台（例如 Chrome 在 2016 年初结束对 SPDY 的支持；Nginx 在 15 年年底正式支持 HTTP/2 后，也不再支持 SPDY）。
