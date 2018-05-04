@@ -38,5 +38,6 @@ I’m Zhao Yifan, a software engineer in Beijing. My biggest interest is in the 
 
 ## Others
 
-- [Yifans_Z’s Technology Stack](./technology-stack)
-- [Yifans_Z’s Booklist](./booklist)
+- [My Project](./project)
+- [My Technology Stack](./technology-stack)
+- [My Booklist](./booklist)

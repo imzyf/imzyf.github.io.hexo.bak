@@ -25,6 +25,8 @@ cd /opt/certbot
 ./certbot-auto certonly -d *.zyf.im -d zyf.im --manual --preferred-challenges dns --server "https://acme-v02.api.letsencrypt.org/directory"
 ```
 
+<!-- more -->
+
 `-preferred-challenges dns` 使用 DNS 方式校验域名所有权，所以会遇到：
 
 ```

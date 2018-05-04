@@ -3,7 +3,7 @@ title: Technology Stack
 layout: page
 ---
 
-个人技术栈。
+Yifans_Z 的技术栈。
 
 ## iOS
 
@@ -14,13 +14,12 @@ layout: page
 ## Front-end
 
 - Vue.js
-- React.js
-- Webpack
+- webpack
 
 ## Web
 
 - Laravel
-- Nginx
+- NGINX
 - PageSpeed
 - Varnish
 - SSL
