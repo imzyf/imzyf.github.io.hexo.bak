@@ -9,30 +9,77 @@ Yifans_Z 的技术栈。
 
 - Swift 4.*
 - CocoaPods
-- Firebase
 
-## Front-end
+### Firebase
 
-- Vue.js
-- webpack
+- Crashlytice
+
+### View
+
+- Charts
+- SnapKit
+- PPBadgeViewSwift
+- SVProgressHUD
+- MJRefresh
+- Kingfisher
+- Typist 键盘管理
+
+### Animation
+
+- Spring
+
+### Network
+
+- Alamofire
+- Moya
+- ReachabilitySwift
+
+### Utility
+
+- R.swift
+- SwifterSwift
+- CryptoSwift
+- SwiftyJSON
+- ObjectMapper
+- Zip
+
+### DataBase
+
+- RealmSwift
+
+### Test
+
+- Quick
+- Nimble
+
+---
 
 ## Web
 
 - Laravel
-- NGINX
 - PageSpeed
 - Varnish
 - SSL
 - Statcounter
 
-## DataBase
+### Front-end
 
-- MySQL 5.6
+- Vue.js
+- webpack
+
+### 工具包
+
+- Carbon 时间处理
+
+### DataBase
+
+- MySQL
 - Redis
 
-## Build
+### Build
 
 - Docker
+ - Laradock
 
 ## Cloud
 

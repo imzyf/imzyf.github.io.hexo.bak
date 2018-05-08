@@ -10,11 +10,13 @@ description:
 ---
 
 ## 遇到的问题
+
 在编写 GitHub 的 README.md 后，其中引用的网络图片无法正常显示，点击 `alt` 的文字提示：`Content length exceeded`。
 
 <!-- more -->
 
 ## 分析
+
 根据 [About anonymized image URLs](https://help.github.com/articles/about-anonymized-image-urls/) 这篇文章：上传的图片 URL 将被修改，所以个人信息将不会被跟踪。GitHub 将使用 [开源项目 Camo](https://github.com/atmos/camo)。Camo 将为每一个图片生成一个以 `https://camo.githubusercontent.com/` 匿名代理 URL 同时隐藏来自其他用户的浏览器详细信息和相关信息。
 
 我引用的 GIF 图片有 7MB 多，那么图片大小的限制是多少？

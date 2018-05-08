@@ -1,5 +1,5 @@
 ---
-title: 在 PHPStorm 中使用 PHP-CS-Fixer
+title: 在 PhpStorm 中使用 PHP-CS-Fixer
 permalink: use-php-cs-fixer-in-phpstorm
 date: 2018-04-16 9:00:00
 updated: 2018-04-16 9:00:00
@@ -16,7 +16,7 @@ description:
 
 工作环境：MacBook。
 
-打开 PHPStorm `Preferences > Tools > External Tools` 添加：
+打开 PhpStorm `Preferences > Tools > External Tools` 添加：
 
 ![Preferences > Tools > External Tools](https://cdn-qn.yifans.com/180416-use-php-cs-fixer-in-phpstorm-001.png)
 
