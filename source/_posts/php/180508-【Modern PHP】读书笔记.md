@@ -15,16 +15,6 @@ description:
 
 > PHP 正在重生。
 
-## 新时代的 PHP
-
-### 展望未来
-
-Hack 是一门建立在 PHP 之上的编程语音，引入了静态类型，新的数据结构和额外的接口，同时还能向后兼容现有的动态类型 PHP 代码。
-
-动态类型和静态类型，二者之间的区别在于何时检查 PHP 类型。动态类型在运行时检查类型，而静态类型在编译时检查类型。
-
-<!-- more -->
-
 ## 特性
 
 ### 命名空间
@@ -45,6 +35,8 @@ use Symfony\Component\HttpFoundation\Response as Res;
 $r = new Res('Oops', 400);
 $r->send();
 ```
+
+<!-- more -->
 
 PHP 5.6 开始可以导入函数和常量：
 
@@ -366,3 +358,7 @@ realpath_cache_size = 64k
 ## HHVM 和 Hack
 
 Hip-Hop Virtual Machine.
+
+Hack 是一门建立在 PHP 之上的编程语音，引入了静态类型，新的数据结构和额外的接口，同时还能向后兼容现有的动态类型 PHP 代码。
+
+动态类型和静态类型，二者之间的区别在于何时检查 PHP 类型。动态类型在运行时检查类型，而静态类型在编译时检查类型。
