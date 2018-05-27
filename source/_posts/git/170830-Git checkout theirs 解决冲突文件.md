@@ -8,6 +8,7 @@ tags:
    - git
 description:
 ---
+
 在代码合并时遇到 `conflict` 是常有的事情，有些内容是自动生成的资源文件，手工处理起来很麻烦，某一文件如何全部以某一分支的内容为准？
 
 使用 `checkout --theirs`。

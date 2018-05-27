@@ -85,7 +85,7 @@ curl http://10.200.21.33:88/test.php -H 'X-Forwarded-For: unkonw, <8.8.8.8> 1.1.
 
 curl 请求：
 
-``` bash
+```bash
 curl http://10.200.21.34:88/test.php -H 'X-Forwarded-For: unkonw, <8.8.8.8> 1.1.1.1' -H 'X-Real-IP: 2.2.2.2'
 ```
 
@@ -113,11 +113,12 @@ proxy_set_header X-Forwarded-For $remote_addr; # 针对首层代理
 proxy_set_header X-Forwarded-For $http_x_forwarded_for; # 针对非首层代理
 ```
 
-3、 从 `X-Forwarded-For` 中获取的用户真实 IP，排除掉所有代理 IP，取最后一个符合 IP 规则的，注意不是第一个，因为第一个可能是被伪造的（除非首层代理使用了握手会话 IP 做为值向下传递）。
+3、从 `X-Forwarded-For` 中获取的用户真实 IP，排除掉所有代理 IP，取最后一个符合 IP 规则的，注意不是第一个，因为第一个可能是被伪造的（除非首层代理使用了握手会话 IP 做为值向下传递）。
 
 一般 CDN 都会将用户的真实 IP 在 XFF 中传递下去。我们可以做几个简单的测试就能知道我们该怎么做。
 
 注意：Nginx 配置的这两个变量：
+
 - `$proxy_add_x_forwarded_for` 会累加代理层的 IP 向后传递
 - `$http_x_forwarded_for` 仅仅是上层传过来的值
 
@@ -185,6 +186,19 @@ function get_client_ip($type = 0, $adv = false) {
 }
 ```
 
+## Nginx LOG 记录真实 IP
+
+```
+log_format porxy '$http_x_forwarded_for - $remote_user [$time_local] '
+                 ' "$request"  $status $body_bytes_sent '
+                 ' "$http_referer"  "$http_user_agent" ';
+
+access_log /usr/local/nginx/logs/access.log porxy;
+```
+
+文章称 `nginx reload` 配置并不生效，需要 `restart` 。
+
 > Reference:
 > - [使用PHP获取客户端真实IP地址？——不可能！ - 也就这样](http://blog.zhengshuiguang.com/php/php-ip.html)
 > - [NGINX多层转发或使用CDN之后如何获取用户真实IP | Snow Blog](http://www.wkii.org/nginx-cdn-get-user-real-ip.html)
+> - [Nginx 日志配置详情解析](https://juejin.im/post/59f94f626fb9a045023af34c)

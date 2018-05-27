@@ -157,7 +157,7 @@ $ php artisan migrate:rollback
 
 ### 模型文件
 
-创建模型命令指定命名空间，同时顺便创建数据库迁移使用 --migration 或 -m 选项
+创建模型命令指定命名空间，同时顺便创建数据库迁移使用 `--migration` 或 `-m` 选项
 
 ```
 $ php artisan make:model Models/Article -m
@@ -221,7 +221,7 @@ Route::delete('/users/{user}', 'UsersController@destroy')->name('users.destroy')
 $ composer require "overtrue/laravel-lang:~3.0"
 ```
 
-config/app.php 修改：
+`config/app.php` 修改：
 
 ```
     'locale' => 'zh-CN',
@@ -263,7 +263,7 @@ session()->get('success')
 
 在 Laravel 中可以使用 授权策略 (Policy) 来对用户的操作权限进行验证，在用户未经授权进行操作时将返回 403 禁止访问的异常。
 
-redirect() 实例提供了一个 intended 方法，该方法可将页面重定向到上一次请求尝试访问的页面上，并接收一个默认跳转地址参数，当上一次请求记录为空时，跳转到默认地址上。
+`redirect()` 实例提供了一个 intended 方法，该方法可将页面重定向到上一次请求尝试访问的页面上，并接收一个默认跳转地址参数，当上一次请求记录为空时，跳转到默认地址上。
 
 ```
 return redirect()->intended(route('users.show', [Auth::user()]));
@@ -300,7 +300,7 @@ MAIL_DRIVER=log
 
 ### 在生产环境中发送邮件
 
-QQ 邮箱的账号设置里开启 POP3 和 SMTP 服务。
+QQ 邮箱的账号设置里开启 `POP3` 和 `SMTP` 服务。
 
 ```
 MAIL_DRIVER=smtp
@@ -317,7 +317,7 @@ MAIL_FROM_NAME=SampleApp
 
 ### 显示微博
 
-diffForHumans() 该方法的作用是将日期进行友好化处理：
+`diffForHumans()` 该方法的作用是将日期进行友好化处理：
 
 ```
 >>> $created_at->diffForHumans()
