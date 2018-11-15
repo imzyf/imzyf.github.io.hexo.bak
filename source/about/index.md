@@ -13,6 +13,7 @@ I’m Zhao Yifan, a software engineer in Beijing. My biggest interest is in the 
 
 ## Hobby
 
+- 初入 Switch 感觉掌机比想象中有意思的多。（2018-09）
 - 时不时撸橡皮章子。
 - 狼人杀爱好者。
 
