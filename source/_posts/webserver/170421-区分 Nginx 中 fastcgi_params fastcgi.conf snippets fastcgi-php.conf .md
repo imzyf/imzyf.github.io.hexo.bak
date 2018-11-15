@@ -14,10 +14,13 @@ Nginx 有两份 fastcgi 配置文件，分别是 `fastcgi_params` 和 `fastcgi.c
 在自己系统中还有份 `snippets/fastcgi-php.conf`，这个又是啥？
 
 ## fastcgi_params vs fastcgi.conf
+
 它们没有太大的差异，唯一的区别是 `fastcgi.conf` 比 `fastcgi_params` 多了一行 `SCRIPT_FILENAME` 的定义
+
 ```
 fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
 ```
+
 注意：`$document_root` 和 `$fastcgi_script_name` 之间没有 `/`。
 
 原本 Nginx 只有 `fastcgi_params`，后来发现很多人在定义 `SCRIPT_FILENAME` 时使用了硬编码的方式，于是为了规范用法便引入了 `fastcgi.conf`
@@ -31,6 +34,7 @@ fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
 <!--more -->
 
 ### 实例
+
 ```
 server {
     listen 80;
@@ -53,9 +57,11 @@ server {
 ```
 
 ## snippets/fastcgi-php.conf
+
 `/etc/nginx/snippets`: This directory contains configuration fragments that can be included elsewhere in the Nginx configuration. Potentially repeatable configuration segments are good candidates for refactoring into snippets.
 
 `fastcgi-php.conf`:
+
 ```
 # regex to split $uri to $fastcgi_script_name and $fastcgi_path
 fastcgi_split_path_info ^(.+\.php)(/.+)$;
@@ -71,9 +77,11 @@ fastcgi_param PATH_INFO $path_info;
 fastcgi_index index.php;
 include fastcgi.conf;
 ```
+
 从 `fastcgi-php.conf` 的内容可以看出，它帮我们封装了一些公共代码
 
 ### 实例
+
 ```
 server {
 	...
@@ -85,10 +93,13 @@ server {
 ```
 
 ## 让我把话说完
+
 ### PHP Nginx Unix sock 切换 TCP/IP
+
 ```
 sudo vim /etc/php5/fpm/pool.d/www.conf
 ```
+
 ```
 # 取消注释
 listen.backlog = 65536
@@ -97,12 +108,15 @@ listen = /var/run/php5-fpm.sock
 # 修改为
 listen = 127.0.0.1:9000
 ```
+
 and then, edit Nginx configuration file
+
 ```
 fastcgi_pass unix:/var/run/php5-fpm.sock;
 # 修改为
 fastcgi_pass 127.0.0.1:9000;
 ```
+
 ```
 sudo service php5-fpm restart
 sudo service nginx restart

@@ -9,10 +9,13 @@ tags:
    - nginx
    - ngx-pagespeed
 ---
+
 ## 题外话
+
 前端优化大体上是：减小资源文件体积、减少请求、合理布置页面元素等；再具体些就是：开启 Gzip 压缩、合并 CSS 文件、合并 JavaScript 文件、长链接、减少 DNS 查询、使用 cookie-free 域名、JavaScript 放页面最下面、指定缓存时间、ETag、延迟加载、异步加载
 
 ## What is it
+
 > [PageSpeed Examples Directory](https://modpagespeed.com/)
 
 Google PageSpeed 对于 Apache 模块名是 `mod_pagespeed` 还提供各个平台编译完打好包的二进制文件，对于 Nginx 模块名是 `ngx_pagespeed`，需要自己去编译。
@@ -22,12 +25,15 @@ ngx_pagespeed 自动使用最佳的方法，优化网页和相关资源文件 (C
 <!-- more -->
 
 ## 安装依赖库
+
 ``` bash
 sudo apt-get install dpkg-dev build-essential zlib1g-dev libpcre3 libpcre3-dev unzip
 ```
 
 ## 使用 Automated Installer 安装
+
 ### 添加 Nginx 源
+
 ``` bash
 sudo vim /etc/apt/sources.list.d/nginx.list
 ```

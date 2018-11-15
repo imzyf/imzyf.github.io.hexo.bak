@@ -196,7 +196,7 @@ log_format porxy '$http_x_forwarded_for - $remote_user [$time_local] '
 access_log /usr/local/nginx/logs/access.log porxy;
 ```
 
-文章称 `nginx reload` 配置并不生效，需要 `restart` 。
+文章称 `nginx reload` 配置并不生效，需要 `restart`。
 
 > Reference:
 > - [使用PHP获取客户端真实IP地址？——不可能！ - 也就这样](http://blog.zhengshuiguang.com/php/php-ip.html)
