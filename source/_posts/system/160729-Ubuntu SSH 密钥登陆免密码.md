@@ -88,8 +88,8 @@ scp -i ~/.ssh/id_rsa filename username@<ssh_server_ip>:/username
 ```
 
 **Tips：还是需要密码登陆**
-我在这里遇到了一个问题，就是登陆时还是需要密码，注销后再登陆问题解决。
 
+我在这里遇到了一个问题，就是登陆时还是需要密码，注销后再登陆问题解决。
 
 ## 类似 AWS PEM 配置方法
 
@@ -168,6 +168,7 @@ PasswordAuthentication no
 ```
 
 重启 ssh 服务
+
 ```
 $ sudo service ssh restart
 ```

@@ -11,11 +11,13 @@ description:
 ---
 
 ## Ubuntu
+
 ```bash
 ssh -oProxyCommand="nc -x 127.0.0.1:1080 %h %p" ubuntu@111.111.1.1
 ```
 
 ## Mac
+
 ```bash
 ssh -o "ProxyCommand nc -X 5 -x 127.0.0.1:1080 %h %p" ubuntu@111.111.1.1
 ```
@@ -23,11 +25,13 @@ ssh -o "ProxyCommand nc -X 5 -x 127.0.0.1:1080 %h %p" ubuntu@111.111.1.1
 <!-- more -->
 
 ## 参数
+
 - `-o ProxyCommand`：SSH 命令选项，你可以理解成使用 “在 SSH 中使用代理”。
 - `nc`：netcat 命令。
 - `127.0.0.1:1080`：本地 Shadowsocks 的监听地址和监听端口。
 
 ## 鉴别自己是否真的使用了代理来登陆服务器
+
 ```
 root@ubuntu:~# who
 root     pts/2        2017-05-13 18:13 (xxx.xxx.xxx.xxx)

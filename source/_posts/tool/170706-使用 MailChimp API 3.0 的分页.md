@@ -8,20 +8,25 @@ tags:
    - mailchimp
 description:
 ---
+
 ## Situation
+
 在使用 GET 调用 MailChimp 数据时，发现只返回了 10 条数据，这肯定是不合需求的，所以开始寻找分页查询的方法
 
 <!-- more -->
 
 ## Solution
+
 In order to get more than 10 items or start from a particular item, count and offset parameters need to be applied when calling HTTP GET.
 
 For example, in order to get more than 10 lists (e.g. get 500 lists at once), append the `count=500` to the uri like this:
+
 ```
 https://us10.api.mailchimp.com/3.0/lists?count=500
 ```
 
 In order to get items from the 11th entry and ignore the first 10 items, append the `offset=10` to the uri as query string like this:
+
 ```
 https://us10.api.mailchimp.com/3.0/lists?offset=10
 ```

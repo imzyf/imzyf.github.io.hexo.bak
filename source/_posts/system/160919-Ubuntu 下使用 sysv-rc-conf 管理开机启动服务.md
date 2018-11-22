@@ -8,26 +8,33 @@ tags:
    - ubuntu
 description:
 ---
+
 `sysv-rc-conf` gives an easy to use interface for managing "/etc/rc{runlevel}.d/" symlinks. The interface comes in two different flavors, one that simply allows turning services on or off and another that allows for more fine tuned management of the symlinks.
 
 ## 安装 sysv-rc-conf
+
 ``` bash
 sudo apt-get install sysv-rc-conf
 ```
 
 ## 使用 sysv-rc-conf
+
 ``` bash
 sudo sysv-rc-conf
 ```
+
 操作界面十分简洁，你可以用鼠标点击，也可以用键盘方向键定位，用空格键选择，用 `Ctrl+n` 翻下一页，用 `Ctrl+p` 翻上一页，用 `q` 退出。
 
 <!-- more -->
 
 ## 相关知识
+
 ### Ubuntu 运行级别
+
 Linux 系统任何时候都运行在一个指定的运行级上，并且不同的运行级的程序和服务都不同，所要完成的工作和要达到的目的都不同，系统可以在这些运行级之间进行切换，以完成不同的工作。
 
 Ubuntu 的系统运行级别：
+
 ```
 0 停机
 1 单用户，Does not configure network interfaces, start daemons, or allow non-root logins
@@ -39,33 +46,46 @@ Ubuntu 的系统运行级别：
 ```
 
 查看当前运行级别，执行命令：
+
 ``` bash
 runlevel
 ```
+
 runlevel 显示上次的运行级别和当前的运行级别，“N”表示没有上次的运行级别。
 
 切换运行级别，执行命令：
+
 ``` bash
 int [0123456Ss]
 ```
+
 即在 init 命令后跟一个参数，此参数是要切换到的运行级的运行级代号，如：用 init 0 命令关机；用 init 6 命令重新启动。
 
 ``` bash
 ls /etc/rc*
 ```
+
 对于以 K 开头的文件，系统将终止对应的服务；
 对于以 S 开头的文件，系统将启动对应的服务；
 
 ### Linux 系统主要启动步骤
-1. 读取 MBR 的信息，启动 Boot Manager
+
+1、读取 MBR 的信息，启动 Boot Manager
+
 Windows 使用 NTLDR 作为 Boot Manager，如果您的系统中安装多个版本的 Windows，您就需要在 NTLDR 中选择您要进入的系统。Linux 通常使用功能强大，配置灵活的 GRUB 作为 Boot Manager。
-2. 加载系统内核，启动 init 进程
+
+2、加载系统内核，启动 init 进程
+
 init 进程是 Linux 的根进程，所有的系统进程都是它的子进程。
-3. init 进程读取 `/etc/inittab` 文件中的信息，并进入预设的运行级别，按顺序运行该运行级别对应文件夹下的脚本。脚本通常以 start 参数启动，并指向一个系统中的程序。通常情况下，`/etc/rcS.d/` 目录下的启动脚本首先被执行，然后是 `/etc/rcN.d/` 目录。例如您设定的运行级别为 `3`，那么它对应的启动目录为 `/etc/rc3.d/`。
-4. 根据 `/etc/rcS.d/` 文件夹中对应的脚本启动 Xwindow 服务器 xorg Xwindow 为 Linux 下的图形用户界面系统。
-5. 启动登录管理器，等待用户登录 Ubuntu 系统默认使用 GDM 作为登录管理器，您在登录管理器界面中输入用户名和密码后，便可以登录系统。
+
+3、init 进程读取 `/etc/inittab` 文件中的信息，并进入预设的运行级别，按顺序运行该运行级别对应文件夹下的脚本。脚本通常以 start 参数启动，并指向一个系统中的程序。通常情况下，`/etc/rcS.d/` 目录下的启动脚本首先被执行，然后是 `/etc/rcN.d/` 目录。例如您设定的运行级别为 `3`，那么它对应的启动目录为 `/etc/rc3.d/`。
+
+4、根据 `/etc/rcS.d/` 文件夹中对应的脚本启动 Xwindow 服务器 xorg Xwindow 为 Linux 下的图形用户界面系统。
+
+5、启动登录管理器，等待用户登录 Ubuntu 系统默认使用 GDM 作为登录管理器，您在登录管理器界面中输入用户名和密码后，便可以登录系统。
 
 ### 常见的系统服务
+
 ```
 acpi-support 高级电源管理支持
 acpid acpi 守护程序。这两个用于电源管理，非常重要
