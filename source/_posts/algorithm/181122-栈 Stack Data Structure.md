@@ -2,7 +2,7 @@
 title: 栈 Stack Data Structure
 permalink: stack-data-structure
 date: 2018-11-22 14:00:00
-updated: 2018-11-22 10:00:00
+updated: 2018-11-22 14:00:00
 comments: true
 toc: true
 tags:
@@ -31,7 +31,7 @@ description:
 A stack gives you a LIFO or last-in first-out order. 栈是后进先出，队列是先进先出。
 
 ```
-struct Stack<Element> {
+public struct Stack<Element> {
     fileprivate var array: [Element] = []
 }
 ```
@@ -41,7 +41,7 @@ struct Stack<Element> {
 `push` 是在数组的尾部添加元素是以 `O(1)`，如果是在数组最前添加是 `O(n)` 这是昂贵的。
 
 ```
-mutating func push(_ element: Element) {
+public mutating func push(_ element: Element) {
   array.append(element)
 }
 ```
@@ -53,7 +53,7 @@ mutating func push(_ element: Element) {
 想从一个空栈中弹出最后一个元素将返回 `nil`。
 
 ```
-mutating func pop(_ element: Element) {
+public mutating func pop(_ element: Element) {
     return array.popLast()
 }
 ```
@@ -63,7 +63,8 @@ mutating func pop(_ element: Element) {
 与 `pop` 有点像，但是并没有移除栈顶的元素。
 
 ```
-func peek() -> Element? {
+/// peek 改为更加语义化的 top 只读变量
+public var top: T? {
     return array.last
 }
 ```
@@ -73,11 +74,11 @@ func peek() -> Element? {
 两个其他的常用属性，栈是否为空，栈中元素的个数。
 
 ```
-var isEmpty: Bool {
+public var isEmpty: Bool {
   return array.isEmpty
 }
 
-var count: Int {
+public var count: Int {
   return array.count
 }
 ```
