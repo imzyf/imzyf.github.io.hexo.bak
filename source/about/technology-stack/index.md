@@ -3,7 +3,7 @@ title: Technology Stack
 layout: page
 ---
 
-Yifans_Z 的技术栈。
+Yifans_Z 的技术栈、工具集。
 
 ## iOS
 

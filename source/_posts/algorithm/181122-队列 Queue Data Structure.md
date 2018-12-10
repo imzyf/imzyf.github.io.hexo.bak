@@ -129,7 +129,7 @@ public struct OptimizedQueue<T> {
 }
 ```
 
-文章代码：[GitHub - imzyf/data-structure-and-algorithm](https://github.com/imzyf/data-structure-and-algorithm)。
+文章代码：[GitHub - imzyf/data-structure-and-algorithm/002-Queue/](https://github.com/imzyf/data-structure-and-algorithm/tree/master/002-Queue)。
 
 > Reference:
 > - [raywenderlich/swift-algorithm-club/Queue](https://github.com/raywenderlich/swift-algorithm-club/tree/master/Queue)

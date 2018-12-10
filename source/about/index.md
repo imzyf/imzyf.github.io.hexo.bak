@@ -36,6 +36,7 @@ I’m Zhao Yifan, a software engineer in Beijing. My biggest interest is in the 
 
 - 01/05：[2017 不要再孤单](/2018/01/05/dont-be-lonely-in-2017/)
 - 03/13：完全属于 Swift、属于我的 1.4.2 上线。
+- 11/18：「你愿意嫁给我吗？」
 
 ## Others
 

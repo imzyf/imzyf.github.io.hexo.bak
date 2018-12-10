@@ -1,6 +1,6 @@
 ---
 title: 使用 MailChimp API 3.0 的分页查询
-permalink: work-with-mailchimp-api-3-0s-pagination
+permalink: work-with-mailchimp-api-3-pagination
 date: 2017-07-06 15:00:00
 comments: true
 toc: true
@@ -17,15 +17,13 @@ description:
 
 ## Solution
 
-In order to get more than 10 items or start from a particular item, count and offset parameters need to be applied when calling HTTP GET.
-
-For example, in order to get more than 10 lists (e.g. get 500 lists at once), append the `count=500` to the uri like this:
+当调用 HTTP GET API 时为了得到超过 10 条（例如：500 条）的数据可以在 uri 添加 `count=500`：
 
 ```
 https://us10.api.mailchimp.com/3.0/lists?count=500
 ```
 
-In order to get items from the 11th entry and ignore the first 10 items, append the `offset=10` to the uri as query string like this:
+为了得到第 11 个 entry 而忽略之前的 10 项，可以在 uri 添加 `offset=10`：
 
 ```
 https://us10.api.mailchimp.com/3.0/lists?offset=10

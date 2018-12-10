@@ -23,6 +23,8 @@ description:
 5. 再次重从乱序数组里挑选下一个数字也将它放到新数组里，并将数字放在正确的位置。
 6. 一直如此进行直到乱序数组中没有数字。这时也将等到一个排序好的新数组。
 
+<!-- more -->
+
 自己的一个实现：
 
 ```
@@ -202,7 +204,7 @@ insertionSort(objects) { $0.priority < $1.priority }
 
 将 `insertSort()` 与 Swift 的内置 `sort()` 进行比较。在大约 `100` 元素左右的阵列上，速度差异很小。但是，随着输入变大，`O(n^2)` 快速开始执行比 `O(n log n)` 差很多，并且插入排序无法跟上。
 
-文章代码：[GitHub - imzyf/data-structure-and-algorithm](https://github.com/imzyf/data-structure-and-algorithm)。
+文章代码：[GitHub - imzyf/data-structure-and-algorithm/003-Insertion Sort/](https://github.com/imzyf/data-structure-and-algorithm/tree/master/003-Insertion%20Sort)。
 
 > Reference:
 > - [raywenderlich/swift-algorithm-club/Insertion Sort](https://github.com/raywenderlich/swift-algorithm-club/tree/master/Insertion%20Sort)
