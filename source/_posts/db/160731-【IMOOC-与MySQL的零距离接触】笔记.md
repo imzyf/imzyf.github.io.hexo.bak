@@ -91,11 +91,11 @@ show warnings;
 
 ## 四、数据类型
 
-![数据类型 int](http://7xs09x.com1.z0.glb.clouddn.com/160731-imooc-mysql-tutorials-notes-int.png)
+![数据类型 int](https://cdn-qn.yifans.com/160731-imooc-mysql-tutorials-notes-int.png)
 
-![数据类型 float](http://7xs09x.com1.z0.glb.clouddn.com/160731-imooc-mysql-tutorials-notes-float.png)
+![数据类型 float](https://cdn-qn.yifans.com/160731-imooc-mysql-tutorials-notes-float.png)
 
-![数据类型 char](http://7xs09x.com1.z0.glb.clouddn.com/160731-imooc-mysql-tutorials-notes-char.png)
+![数据类型 char](https://cdn-qn.yifans.com/160731-imooc-mysql-tutorials-notes-char.png)
 
 - char 型字符串有 0-255 之间的字节，通常被称作定长类型。所存字节不满 char 型所给它的字节，剩下的以空格补齐，仍会存储满你所给它的字节。
 - varchar 型的字符串是变长类型，存多少字节它就存储多少字节，不会在后面补上空格。字节长度在 0-65535 之间。
@@ -103,7 +103,7 @@ show warnings;
 - ENUM 枚举值 就是给他几个选项，它从这几个选项中做选择，最多有 65535 个值。
 - SET 我们称之为集合，集合最多有 64 个成员，它在这些集合成员中做任意的排列组合。
 
-![imooc-mysql-tutorials-notes-time](http://7xs09x.com1.z0.glb.clouddn.com/160731-imooc-mysql-tutorials-notes-time.png?v=1)
+![imooc-mysql-tutorials-notes-time](https://cdn-qn.yifans.com/160731-imooc-mysql-tutorials-notes-time.png?v=1)
 
 - YEAR：2 位或者 4 位，1970 到 2069 年，允许 70 到 69
 - TIME：-8385959 到 8385959

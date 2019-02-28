@@ -12,6 +12,8 @@ categories:
 description:
 ---
 
+<img src="https://ws3.sinaimg.cn/large/006tKfTcly1g0m5z8b2cfj31y00u01l1.jpg" alt="binary-search" /> 
+
 快速从一个数组中查找一个元素。
 
 ## Linear Search 线性查找

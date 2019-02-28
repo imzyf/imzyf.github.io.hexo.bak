@@ -171,6 +171,6 @@ ctrl + r
 ctrl + g
 ```
 
-> reference:
+> Reference:
 > - [12 Favorite Atom Tips and Shortcuts to Improve Your Workflow](https://www.sitepoint.com/12-favorite-atom-tips-and-shortcuts-to-improve-your-workflow/)
 > - [Atom技巧总结 · Issue #30 · Wscats/Good-text-Share](https://github.com/Wscats/Good-text-Share/issues/30)

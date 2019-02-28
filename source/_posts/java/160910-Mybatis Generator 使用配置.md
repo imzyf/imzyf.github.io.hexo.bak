@@ -9,7 +9,7 @@ tags:
    - maven
 description:
 ---
-![Mybatis Generator 使用配置](http://7xs09x.com1.z0.glb.clouddn.com/160910-mybatis-generator-tutorial-index.jpg)
+![Mybatis Generator 使用配置](https://cdn-qn.yifans.com/160910-mybatis-generator-tutorial-index.jpg)
 
 MyBatis Generator (MBG) 是一个 Mybatis 的代码生成器。MBG 可以内省数据库的表（或多个表）然后生成可以用来访问（多个）表的基础对象。 这样和数据库表进行交互时不需要创建对象和配置文件。MBG 的解决了对数据库操作有最大影响的一些简单的 CRUD（插入、查询、更新、删除）操作。
 

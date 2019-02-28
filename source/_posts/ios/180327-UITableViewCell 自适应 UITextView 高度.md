@@ -54,7 +54,7 @@ func textViewDidChange(textView: UITextView) {
 }
 ```
 
-disabling animations and re-setting the contentOffset of the table view fixes the stuttering.
+禁用动画和重建表视图的内容偏移修正抖动。
 
 > Reference:
 > - [Self-sizing UITextView in a UITableView using Auto Layout - like Reminders.app](http://candycode.io/self-sizing-uitextview-in-a-uitableview-using-auto-layout-like-reminders-app/)

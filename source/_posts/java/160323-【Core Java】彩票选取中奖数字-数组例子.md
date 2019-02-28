@@ -40,7 +40,6 @@ public class LotteryDrawing {
             harr[random] = harr[h - 1];
             //数组长度减1
             h--;
-
         }
         Arrays.sort(karr);
         System.out.println(Arrays.toString(karr));

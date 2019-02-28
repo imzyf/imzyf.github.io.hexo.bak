@@ -34,3 +34,15 @@ hexo s
 2. 移除 `source` 中的 `favicon.ico` `robots.txt`
 3. 修改 `source/image/reward` 打赏图片。
 4. 修改 `layout/_partial/footer.swig` 添加 `statcounter` 统计代码。
+
+`layout/_partial/head.swig` 添加： 
+
+```
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2330747317815601",
+    enable_page_level_ads: true
+  });
+</script>
+```

@@ -17,7 +17,7 @@ git log 中的一个清晰的提交线图是很方便进行 code review 和代�
 ### 状况
 Git 作为分布式版本控制系统，所有修改操作都是基于本地的，在团队协作过程中，假设你和你的同伴在本地中分别有各自的新提交，而你的同伴先于你 push 了代码到远程分支上，所以你必须先执行 `git pull` 来获取同伴的提交，然后才能 push 自己的提交到远程分支。
 
-![pull rebase](http://7xs09x.com1.z0.glb.clouddn.com/170317-git-pull-rebase-and-merge-no-ff-to-keep-clear-commit-graph-01.jpg)
+![pull rebase](https://cdn-qn.yifans.com/170317-git-pull-rebase-and-merge-no-ff-to-keep-clear-commit-graph-01.jpg)
 
 按照 Git 的默认策略，如果远程分支和本地分支之间的提交线图有分叉的话（即不是 fast-forwarded），Git 会执行一次 merge 操作，因此产生**一次没意义的提交记录**，从而造成了像上图那样的混乱。
 
@@ -60,7 +60,7 @@ F G 两个提交通过 `rebase` 方式重新拼接在 C 之后，多余的分叉
 
 执行 `git merge --no-ff <branch-name>` 的结果大概会是这样的：
 
-![pull no-ff](http://7xs09x.com1.z0.glb.clouddn.com/170317-git-pull-rebase-and-merge-no-ff-to-keep-clear-commit-graph-02.jpg)
+![pull no-ff](https://cdn-qn.yifans.com/170317-git-pull-rebase-and-merge-no-ff-to-keep-clear-commit-graph-02.jpg)
 
 中间的分叉线路图很清晰的显示这些提交都是为了实现：**complete adjusting user domains and tags**
 
@@ -73,7 +73,7 @@ git log feature..dev # 对比
 ```
 如果没有输出任何提交信息的话，即表示 feature 对于 dev 分支是 up-to-date 的。如果有输出的话而马上执行了 `git merge --no-ff` 的话，提交线图会变成这样：
 
-![pull no-ff 2](http://7xs09x.com1.z0.glb.clouddn.com/170317-git-pull-rebase-and-merge-no-ff-to-keep-clear-commit-graph-03.jpg)
+![pull no-ff 2](https://cdn-qn.yifans.com/170317-git-pull-rebase-and-merge-no-ff-to-keep-clear-commit-graph-03.jpg)
 
 所以这时在合并前，通常先执行：
 ```

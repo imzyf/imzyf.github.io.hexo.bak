@@ -39,7 +39,7 @@ description:
 
 其实不必取扣是值传递还是引用传递的字眼，理解其中的原因是最好。
 
-![Java 对象采用的是值传递还是引用传递](http://7xs09x.com1.z0.glb.clouddn.com/160419-core-java-method-parameter-001.jpg)
+![Java 对象采用的是值传递还是引用传递](https://cdn-qn.yifans.com/160419-core-java-method-parameter-001.jpg)
 
 在调用 swap 时，a 将一个引用的副本传递给了 x，让 x也指向了，相同与a指向的内存单元中的Employee对象"Alice"，b将一个引用的副本传递给了y，让y也指向了，相同与b指向的内存单元中的Employee对象"Bob"，这时执行swap方法内部的内容，交换了x，y的引用指向，这是x指向的时"Bob"，y是"Alice"，但是在方法结束后，方法外的a,b的指向是仍然没有变化，a是"Alice"，b是"Bob。
 

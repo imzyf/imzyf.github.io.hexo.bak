@@ -12,12 +12,15 @@ description:
 自己总结的比较规范的 Eclipse Java 注释模板
 
 ## Eclipse Java 注释模板设置
+
 Window -> Preference -> Java -> CodeStyle -> Code Template 然后展开 Comments 节点就是所有需设置注释的元素
 
 <!-- more -->
 
 ## 各项注释模板
+
 ### Files
+
 ```
 /**
  * Copyright © ${year}. All rights reserved.
@@ -32,6 +35,7 @@ Window -> Preference -> Java -> CodeStyle -> Code Template 然后展开 Comments
 ```
 
 ### Types
+
 ```
 /**
  *
@@ -45,6 +49,7 @@ Window -> Preference -> Java -> CodeStyle -> Code Template 然后展开 Comments
 ```
 
 ### Fields
+
 ```
 /**
  * @fieldName: ${field}
@@ -54,6 +59,7 @@ Window -> Preference -> Java -> CodeStyle -> Code Template 然后展开 Comments
 ```
 
 ### Constructors
+
 ```
 /**
  * @Title:${enclosing_type}
@@ -63,6 +69,7 @@ Window -> Preference -> Java -> CodeStyle -> Code Template 然后展开 Comments
 ```
 
 ### Methods
+
 ```
 /**
  *
@@ -76,6 +83,7 @@ Window -> Preference -> Java -> CodeStyle -> Code Template 然后展开 Comments
 ```
 
 ### Overriding methods
+
 ```
 /* (no Javadoc)
  * <p>Title: ${enclosing_method}</p>
@@ -88,6 +96,7 @@ Window -> Preference -> Java -> CodeStyle -> Code Template 然后展开 Comments
 ## 定制 ${user} 显示内容
 
 找到你的 Eclipse 安装路径，打开 `eclipse.ini` 文件，在 -vmargs 下面添加
+
 ```
 -Duser.name=姓名 + 空格 + 邮箱地址
 ```

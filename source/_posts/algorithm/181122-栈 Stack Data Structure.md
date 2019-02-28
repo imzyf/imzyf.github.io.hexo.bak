@@ -12,6 +12,8 @@ categories:
 description:
 ---
 
+<img src="https://ws4.sinaimg.cn/large/006tKfTcly1g0m6nyisa7j31y00u0npe.jpg" alt="queue-data-structure" />
+
 加入 [Swift Algorithm Club](https://github.com/raywenderlich/swift-algorithm-club) /'ælgə'rɪðəm/，回炉重新学习数据结构与算法。
 
 自己创建的项目：[GitHub - imzyf/data-structure-and-algorithm](https://github.com/imzyf/data-structure-and-algorithm)。

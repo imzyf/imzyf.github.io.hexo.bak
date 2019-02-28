@@ -5,7 +5,7 @@ layout: page
 
 我是 Yifan，一名在帝都的软件工程师，对前端非常感兴趣。这里记录了我开发过程中的一些经验或是人生感悟，希望对你有帮助。
 
-I’m Zhao Yifan, a software engineer in Beijing. My biggest interest is in the world of front-end. Hopefully you’ll find some of my thoughts, discoveries, and experiences helpful.
+I’m Yifan, a software engineer in Beijing. My biggest interest is in the world of front-end. Hopefully you’ll find some of my thoughts, discoveries, and experiences helpful.
 
 ## Motto
 
@@ -13,9 +13,9 @@ I’m Zhao Yifan, a software engineer in Beijing. My biggest interest is in the 
 
 ## Hobby
 
-- 初入 Switch 感觉掌机比想象中有意思的多。（2018-09）
 - 时不时撸橡皮章子。
 - 狼人杀爱好者。
+- 初入 Switch 感觉掌机比想象中有意思的多。（2018-09）
 
 ## Timeline
 
@@ -37,9 +37,13 @@ I’m Zhao Yifan, a software engineer in Beijing. My biggest interest is in the 
 - 01/05：[2017 不要再孤单](/2018/01/05/dont-be-lonely-in-2017/)
 - 03/13：完全属于 Swift、属于我的 1.4.2 上线。
 - 11/18：「你愿意嫁给我吗？」
+- 12/31：蜈支洲 - 丽禾温德姆跨年。
+
+### 2019
+- 01/03：[回顾 2018]()
+
 
 ## Others
 
 - [My Project](./project)
-- [My Technology Stack](./technology-stack)
 - [My Booklist](./booklist)

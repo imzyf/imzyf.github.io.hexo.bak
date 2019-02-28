@@ -7,7 +7,7 @@ Yifans_Z 的技术栈、工具集。
 
 ## iOS
 
-- Swift 4.*
+- Swift 4.2
 - CocoaPods
 
 ### Firebase
