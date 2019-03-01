@@ -63,15 +63,11 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-#theme: maupassant
 theme: even
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type:
-
-#baidu_analytics: 8b913a9ab9fd59ff248ad7d2408f7080
-#google_analytics: UA-84666938-1
 
 search:
   path: search.xml
