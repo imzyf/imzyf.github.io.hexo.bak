@@ -11,6 +11,8 @@ categories:
 description:
 ---
 
+<img src="https://ws3.sinaimg.cn/large/006tKfTcly1g0me5scy5zj31y10u0u0z.jpg" alt="correct-too-many-symbol-files-issues" />
+
 在上传 App 到 App Store 后收到邮件，有 issues **Too many symbol files**。在之前看到 *Your delivery was successful*，此 issues 不影响发布，所以一直搁置了。
 
 今天决定彻底处理下。
@@ -72,3 +74,5 @@ end
 ](https://stackoverflow.com/questions/34313049/too-many-symbol-files-warnning-when-submitting-app)
 > - [App提交iTunes Connect,"二进制无效"问题解决方案。](https://www.jianshu.com/p/3511ec38ca20)
 > - [Bugly iOS 符号表配置](https://bugly.qq.com/docs/user-guide/symbol-configuration-ios/?v=20180709165613#_2)
+
+-- EOF --

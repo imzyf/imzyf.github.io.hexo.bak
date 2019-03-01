@@ -1,5 +1,5 @@
 ---
-title: fastlane 入门教程
+title: fastlane 入门使用
 permalink: fastlane-getting-started
 date: 2019-02-28 10:00:00
 updated: 2019-02-28 10:00:00
@@ -14,7 +14,7 @@ description:
 
 <img src="https://ws1.sinaimg.cn/large/006tKfTcly1g0m615tonuj31y00u0u0x.jpg" alt="fastlane-getting-started" />
 
-这次以 [fastlane](https://fastlane.tools/) 为例，尝试下项目中有什么事情可以被自动完成。
+这次以 [fastlane](https://fastlane.tools/) 为例，尝试项目中有什么事情可以被自动完成。
 
 fastlane 是 Ruby scripts 的集合，安装方法不多说了见 [官网文档](https://docs.fastlane.tools/)。
 
@@ -337,3 +337,5 @@ bundle exec fastlane do_everything
 
 > Reference:
 > - [fastlane Tutorial: Getting Started](https://www.raywenderlich.com/233168-fastlane-tutorial-getting-started)
+
+-- EOF --

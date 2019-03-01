@@ -18,20 +18,26 @@ rss: default
 # ===========================================
 menu:
   Home: /
-  Tags: /tags
   Archives: /archives/
-  Links : /links
+  Tags: /tags
+  # Categories: /categories
   About: /about
 
 # ===========================================
 # Theme Settings
 # ===========================================
-# theme styling
-# color: Default | Mint Green | Cobalt Blue | Hot Pink | Dark Violet
-theme:
-  color: Cobalt Blue
-  toc: true
-  fancybox: true
+# color: default | mint green | cobalt blue | hot pink | dark violet
+color: Cobalt Blue
+
+# default page mode: default | archives
+mode: default
+
+toc: true
+
+# jQuery fancybox
+fancybox: true
+
+pjax: true
 
 copyright:
   enable: true
@@ -41,8 +47,8 @@ copyright:
 reward:
   enable: true
   qrCode:
-    wechat: /image/reward/wechat.png
-  # alipay: /image/reward/alipay.png
+    wechat: https://ws1.sinaimg.cn/large/006tKfTcly1g0n8z42nvrj30go0go0v0.jpg
+    # alipay: https://ws4.sinaimg.cn/large/006tKfTcly1g0n8z48lutj30go0go0vg.jpg
 
 # ===========================================
 # Social links Settings
@@ -89,7 +95,10 @@ changyan:
   appid:
   appkey:
 
+#LiveRe
+livere_datauid:
+
 # ===========================================
 # Version
 # ===========================================
-version: 2.6.0
+version: 2.10.2

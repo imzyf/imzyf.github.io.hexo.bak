@@ -1,5 +1,5 @@
 ---
-title: SpringMVC 入门教程
+title: SpringMVC 入门使用
 permalink: springmvc-getting-started-tutorial
 date: 2016-09-07 14:00:00
 comments: true
