@@ -4,7 +4,7 @@ permalink: stack-data-structure
 date: 2018-11-22 14:00:00
 updated: 2018-11-22 14:00:00
 comments: true
-toc: true
+toc: false
 tags:
    - swift
    - algorithm

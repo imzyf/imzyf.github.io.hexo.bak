@@ -4,7 +4,7 @@ permalink: queue-data-structure
 date: 2018-11-22 16:00:00
 updated: 2018-11-22 16:00:00
 comments: true
-toc: true
+toc: false
 tags:
    - swift
    - algorithm

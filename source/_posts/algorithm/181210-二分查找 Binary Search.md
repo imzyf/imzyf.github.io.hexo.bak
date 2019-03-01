@@ -4,7 +4,7 @@ permalink: binary-search
 date: 2018-12-10 14:00:00
 updated: 2018-12-10 14:00:00
 comments: true
-toc: true
+toc: false
 tags:
    - swift
    - algorithm
@@ -12,7 +12,7 @@ categories:
 description:
 ---
 
-<img src="https://ws3.sinaimg.cn/large/006tKfTcly1g0m5z8b2cfj31y00u01l1.jpg" alt="binary-search" /> 
+<img src="https://ws3.sinaimg.cn/large/006tKfTcly1g0m5z8b2cfj31y00u01l1.jpg" alt="binary-search" />
 
 快速从一个数组中查找一个元素。
 

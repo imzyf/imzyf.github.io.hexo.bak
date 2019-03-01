@@ -4,7 +4,7 @@ permalink: insertion-sort
 date: 2018-11-24 16:00:00
 updated: 2018-11-24 16:00:00
 comments: true
-toc: true
+toc: false
 tags:
    - swift
    - algorithm

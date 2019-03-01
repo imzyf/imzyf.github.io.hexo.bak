@@ -92,7 +92,7 @@ fastlane create_app
 
 完成后登陆 Apple Developer Center 和 App Store Connect，app 在二者已经都被创建了。
 
-再次打开 Appfile 将 app_identifier 填写刚才创建的 bundle ID。
+再次打开 Appfile 将 `app_identifier` 填写刚才创建的 bundle ID。
 
 ## 生成交付文件
 
@@ -100,19 +100,19 @@ fastlane create_app
 bundle exec fastlane deliver
 ```
 
-根据提醒暂不使用 Swift 代替 Ruby，因为 fastlane.swift 现在为 beta。
+根据提醒暂不使用 Swift 代替 Ruby，因为 `fastlane.swift` 现在为 beta。
 
 完成后 fastlane 文件夹中新增：
 
-- metadata 这个文件夹存放了 app 大部分的 metadata 元数据
-- Deliverfile 保存这剩余小部分的元数据
-- screenshots 将保存 app 截图
+- `metadata` 这个文件夹存放了 app 大部分的 metadata 元数据
+- `Deliverfile` 保存这剩余小部分的元数据
+- `screenshots` 将保存 app 截图
 
 <img src="https://ws2.sinaimg.cn/large/006tKfTcly1g0lz3u80l5j31eb0e6q8a.jpg" alt="fastlane-getting-started-metadata"/>
 
-metadata 文件夹中文件内容就是提交给 App Store Connect，多语言 app 可以手动创建对应的语言文件夹。
+`metadata` 文件夹中文件内容就是提交给 App Store Connect，多语言 app 可以手动创建对应的语言文件夹。
 
-更多 deliver 参数见 [这里](https://docs.fastlane.tools/actions/deliver/#more-options)
+更多 `deliver` 参数见 [这里](https://docs.fastlane.tools/actions/deliver/#more-options)
 
 ## 自动截图
 
@@ -122,7 +122,7 @@ metadata 文件夹中文件内容就是提交给 App Store Connect，多语言 a
 fastlane snapshot init
 ```
 
-fastlane 文件夹中新增：Snapfile，将里面的所有内容替换为一下：
+fastlane 文件夹中新增：`Snapfile`，将里面的所有内容替换为一下：
 
 ```
 # 1 - 想截图的设备列表
@@ -166,7 +166,7 @@ fastlane snapshot init
 
 <img src="https://ws2.sinaimg.cn/large/006tKfTcly1g0m6hxg0dej30m80g0781.jpg" alt="fastlane-getting-started-screenshots" style="width: 600px; display: block; margin: auto;" />
 
-Product Name 输入上面 scheme 填写的名字 MZone Poker UITests 点击 Finish。
+Product Name 输入上面 `scheme` 填写的名字 MZone Poker UITests 点击 Finish。
 
 之后将 fastlane 文件夹中的 SnapshotHelper.swift 拖到 mZone Poker UITests 中。
 
@@ -192,11 +192,11 @@ app.buttons["what should i do"].tap()
 snapshot("02Suggestion")    
 ```
 
-之后创建 mZone Poker UITests scheme，点击 run stop 右边的按钮选择 Manage Schemes...  
+之后创建 mZone Poker UITests scheme，点击 run stop 右边的按钮选择 `Manage Schemes...`
 
 <img src="https://ws1.sinaimg.cn/large/006tKfTcly1g0m88o46ovj30m80ccdit.jpg" alt="fastlane-getting-started-create-test-target" style="width: 600px; display: block; margin: auto;" />
 
-选择 Edit Schemes... 勾选 Test 和 Run
+选择 `Edit Schemes...` 勾选 `Test` 和 `Run`
 
 <img src="https://ws2.sinaimg.cn/large/006tKfTcly1g0m8eq3o8uj30m80c0di3.jpg" alt="fastlane-getting-started-create-test-target" style="width: 600px; display: block; margin: auto;" />
 
@@ -221,7 +221,7 @@ bundle exec fastlane screenshot
 
 ## 创建 IPA 文件
 
-首先要确保已经 target 设置 bundle identifier 和 signing identity。
+首先要确保已经 `target` 设置 `bundle identifier` 和 `signing identity`。
 
 命令行执行：
 
@@ -229,7 +229,7 @@ bundle exec fastlane screenshot
 fastlane gym init
 ```
 
-打开 Gymfile 替换为以下内容：
+打开 `Gymfile` 替换为以下内容：
 
 ```
 # 1 指定 scheme
@@ -244,7 +244,7 @@ include_symbols(false)
 export_xcargs("-allowProvisioningUpdates")
 ```
 
-打开 Fastfile 添加：
+打开 `Fastfile` 添加：
 
 ```
 desc "Create ipa"
@@ -268,9 +268,9 @@ bundle exec fastlane build
 
 ## 上传到 App Store Connect
 
-使用 deliver 将截图、元数据、.ipa 文件上传到 App Store Connect。
+使用 `deliver` 将截图、元数据、.ipa 文件上传到 App Store Connect。
 
-替换 Deliverfile 内容：
+替换 `Deliverfile` 内容：
 
 ```
 # 1 价格为 0 则是免费应用
@@ -292,7 +292,7 @@ submit_for_review(true)
 automatic_release(false)
 ```
 
-在 Fastfile 中添加：
+在 `Fastfile` 中添加：
 
 ```
 desc "Upload to App Store"
@@ -311,7 +311,7 @@ bundle exec fastlane upload
 
 ## 将命令放在一起
 
-打开 Fastfile 添加：
+打开 `Fastfile` 添加：
 
 ```
 desc "Create app, take screenshots, build and upload to App Store"
@@ -323,7 +323,7 @@ lane :do_everything do
 end
 ```
 
-在 Deliverfile 添加：
+在 `Deliverfile` 添加：
 
 ```
 force(true)
