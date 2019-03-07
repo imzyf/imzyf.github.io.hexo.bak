@@ -12,7 +12,7 @@ categories:
 description:
 ---
 
-<img src="https://ws4.sinaimg.cn/large/006tKfTcly1g0m6327qu1j31y00u0e87.jpg" alt="queue-data-structure" />
+<img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g0u8qq92s9j30u00cvgp7.jpg" alt="queue-data-structure" />
 
 实现一个 `队列`，包括 `enqueue`、`dequeue`、`peek`。
 

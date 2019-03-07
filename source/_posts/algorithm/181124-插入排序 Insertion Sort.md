@@ -12,7 +12,7 @@ categories:
 description:
 ---
 
-<img src="https://ws2.sinaimg.cn/large/006tKfTcly1g0m5wy6fuwj31y10u04qs.jpg" alt="queue-data-structure" />
+<img src="https://ws2.sinaimg.cn/large/006tKfTcgy1g0u8pvjy8zj30u00cvq4n.jpg" alt="queue-data-structure" />
 
 将一个数组从高到低或者从低到高排序。
 

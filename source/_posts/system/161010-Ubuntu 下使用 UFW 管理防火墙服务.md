@@ -2,6 +2,7 @@
 title: Ubuntu 下使用 UFW 管理防火墙服务
 permalink: manage-iptables-using-ufw-in-ubuntu
 date: 2016-10-10 13:00:00
+updated: 2019-03-07 14:00:00
 comments: true
 toc: true
 tags:
@@ -10,7 +11,9 @@ tags:
 description:
 ---
 
-UFW (Uncomplicated Firewall) 作为 iptables 的前端应用，给用户提供了简单的接口界面。使用着不需要去记非常复杂的 iptables 语法。UFW 也使用了 简单英语 作为它的参数。像 allow、deny、reset 就是他们当中的一部分。UFW 绝对是那些想要快速、简单的就建立自己的防火墙，而且还很安全的用户的最佳替代品之一。
+<img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g0u8m88n8gj30u00cvq9x.jpg" alt="manage-iptables-using-ufw-in-ubuntu" />
+
+UFW (Uncomplicated Firewall) 作为 `iptables` 的前端应用，给用户提供了简单的接口界面。使用着不需要去记非常复杂的 `iptables` 语法。UFW 也使用了 简单英语 作为它的参数。像 allow、deny、reset 就是他们当中的一部分。UFW 绝对是那些想要快速、简单的就建立自己的防火墙，而且还很安全的用户的最佳替代品之一。
 
 ## 检查系统上是否已经安装 UFW
 
@@ -32,6 +35,12 @@ sudo apt-get install ufw
 
 ``` bash
 sudo ufw status
+```
+
+### see configured rules even when inactive
+
+```
+ufw show added
 ```
 
 ### 启用/禁用 UFW
@@ -148,3 +157,4 @@ sudo ufw reset
 
 > Reference:
 > - [Debian/Ubuntu系统中安装和配置UFW－简单的防火墙-技术 ◆ 学习|Linux.中国-开源社区](https://linux.cn/article-2489-1.html)
+> - [See configured rules even when inactive](https://askubuntu.com/questions/30781/see-configured-rules-even-when-inactive)
