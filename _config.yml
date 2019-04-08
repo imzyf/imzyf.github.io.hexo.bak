@@ -82,6 +82,9 @@ nofollow:
   enable: true
   exclude:
     - zyf.im
+    - vien.tech
+    - imbotao.top
+    - feilong.tech
 
 archive_generator:
   per_page: 0

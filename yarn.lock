@@ -894,7 +894,7 @@ find-up@^1.0.0:
 
 findup-sync@^3.0.0:
   version "3.0.0"
-  resolved "http://registry.npm.taobao.org/findup-sync/download/findup-sync-3.0.0.tgz#17b108f9ee512dfb7a5c7f3c8b27ea9e1a9c08d1"
+  resolved "http://registry.npm.taobao.org/findup-sync/download/findup-sync-3.0.0.tgz?cache=0&other_urls=http%3A%2F%2Fregistry.npm.taobao.org%2Ffindup-sync%2Fdownload%2Ffindup-sync-3.0.0.tgz#17b108f9ee512dfb7a5c7f3c8b27ea9e1a9c08d1"
   integrity sha1-F7EI+e5RLft6XH88iyfqnhqcCNE=
   dependencies:
     detect-file "^1.0.0"
@@ -2092,9 +2092,9 @@ node-pre-gyp@^0.10.0:
     tar "^4"
 
 node-sass-magic-importer@^5.1.1:
-  version "5.3.0"
-  resolved "http://registry.npm.taobao.org/node-sass-magic-importer/download/node-sass-magic-importer-5.3.0.tgz#01a35f7db1233d4b15c179d8b42d912a12b57b74"
-  integrity sha1-AaNffbEjPUsVwXnYtC2RKhK1e3Q=
+  version "5.3.1"
+  resolved "http://registry.npm.taobao.org/node-sass-magic-importer/download/node-sass-magic-importer-5.3.1.tgz#a34d786399820a425b6dbcfa49ae47439d94e12b"
+  integrity sha1-o014Y5mCCkJbbbz6Sa5HQ52U4Ss=
   dependencies:
     css-node-extract "^2.1.3"
     css-selector-extract "^3.3.6"
@@ -2102,7 +2102,7 @@ node-sass-magic-importer@^5.1.1:
     glob "^7.1.3"
     object-hash "^1.3.1"
     postcss-scss "^2.0.0"
-    resolve "^1.9.0"
+    resolve "^1.10.0"
 
 node-sass@^4.7.2:
   version "4.11.0"
@@ -2426,7 +2426,7 @@ postcss-scss@^2.0.0:
 
 postcss@^6.0.14:
   version "6.0.23"
-  resolved "http://registry.npm.taobao.org/postcss/download/postcss-6.0.23.tgz#61c82cc328ac60e677645f979054eb98bc0e3324"
+  resolved "http://registry.npm.taobao.org/postcss/download/postcss-6.0.23.tgz?cache=0&other_urls=http%3A%2F%2Fregistry.npm.taobao.org%2Fpostcss%2Fdownload%2Fpostcss-6.0.23.tgz#61c82cc328ac60e677645f979054eb98bc0e3324"
   integrity sha1-YcgswyisYOZ3ZF+XkFTrmLwOMyQ=
   dependencies:
     chalk "^2.4.1"
@@ -2435,7 +2435,7 @@ postcss@^6.0.14:
 
 postcss@^7.0.0:
   version "7.0.14"
-  resolved "http://registry.npm.taobao.org/postcss/download/postcss-7.0.14.tgz#4527ed6b1ca0d82c53ce5ec1a2041c2346bbd6e5"
+  resolved "http://registry.npm.taobao.org/postcss/download/postcss-7.0.14.tgz?cache=0&other_urls=http%3A%2F%2Fregistry.npm.taobao.org%2Fpostcss%2Fdownload%2Fpostcss-7.0.14.tgz#4527ed6b1ca0d82c53ce5ec1a2041c2346bbd6e5"
   integrity sha1-RSftaxyg2CxTzl7BogQcI0a71uU=
   dependencies:
     chalk "^2.4.2"
@@ -2632,7 +2632,7 @@ resolve-url@^0.2.1:
   version "0.2.1"
   resolved "http://registry.npm.taobao.org/resolve-url/download/resolve-url-0.2.1.tgz#2c637fe77c893afd2a663fe21aa9080068e2052a"
 
-resolve@^1.10.0, resolve@^1.5.0, resolve@^1.9.0:
+resolve@^1.10.0, resolve@^1.5.0:
   version "1.10.0"
   resolved "http://registry.npm.taobao.org/resolve/download/resolve-1.10.0.tgz#3bdaaeaf45cc07f375656dfd2e54ed0810b101ba"
   dependencies:
@@ -2845,7 +2845,7 @@ source-map@^0.5.6, source-map@~0.5.1:
 
 source-map@^0.6.1:
   version "0.6.1"
-  resolved "http://registry.npm.taobao.org/source-map/download/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
+  resolved "http://registry.npm.taobao.org/source-map/download/source-map-0.6.1.tgz?cache=0&other_urls=http%3A%2F%2Fregistry.npm.taobao.org%2Fsource-map%2Fdownload%2Fsource-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
   integrity sha1-dHIq8y6WFOnCh6jQu95IteLxomM=
 
 spdx-correct@^3.0.0:

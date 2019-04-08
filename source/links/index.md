@@ -9,6 +9,7 @@ layout: page
 
 - [Feilong](http://feilong.tech/) 同门师兄弟，健身成功者；PHP。
 - [wave](http://imbotao.top/) 带过的实习小弟，理想主义者；Java。
+- [Vien](https://vien.tech/) 小白一键搭建 VPN 系列教程。
 
 ## Friends
 

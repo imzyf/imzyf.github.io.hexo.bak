@@ -81,3 +81,21 @@ reward.swig
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 ```
+
+footer.swig
+
+```
+<span class="power-by">
+  {{ __('footer.powered', '<a class="hexo-link" rel="nofollow" href="https://hexo.io/">Hexo</a>') }}
+</span>
+<span class="division">|</span>
+<span class="theme-info">
+  {{ __('footer.theme') }} -
+  <a class="theme-link" rel="nofollow" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+</span>
+
+{% if is_home() %}
+    <span class="division">|</span>
+    <span><a href="https://vien.tech/" target="_blank" rel="noopener">Vien Blog</a></span>
+{% endif %}
+```
