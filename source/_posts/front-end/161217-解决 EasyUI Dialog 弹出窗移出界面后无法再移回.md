@@ -8,7 +8,8 @@ tags:
    - easyui
 description:
 ---
-当不小心将 EasyUI Dialog 头部移出页面后，将无法再次移动弹出框，便只好刷新页面。
+
+当不小心将 `EasyUI` `Dialog` 头部移出页面后，将无法再次移动弹出框，便只好刷新页面。
 
 <!-- more -->
 
@@ -62,5 +63,5 @@ $.fn.window.defaults.onMove = easyuiPanelOnMove;
 $.fn.dialog.defaults.onMove = easyuiPanelOnMove;
 ```
 
-> reference:
+> Reference:
 > - [easyui dialog移动出界面问题](http://www.iteye.com/topic/1134739)
