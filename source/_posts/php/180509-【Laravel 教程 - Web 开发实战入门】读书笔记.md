@@ -17,7 +17,7 @@ description:
 
 ### Laravel 与 PHP
 
-Ruby on Rails 有以下原则：
+`Ruby on Rails` 有以下原则：
 
 - 强调与注重敏捷开发；
 - 约定高于配置（Convention over configuration）；
@@ -57,7 +57,6 @@ $ heroku login
 
 # 添加 SSH Key 到 Heroku 上
 $ heroku keys:add
-
 
 # 创建配置文件来告诉 Heroku 应当使用什么命令来启动 Web 服务器
 $ echo web: vendor/bin/heroku-php-apache2 public/ > Procfile

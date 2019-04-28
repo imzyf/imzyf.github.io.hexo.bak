@@ -32,7 +32,9 @@ description:
 ![Preferences > Keymap](https://cdn-qn.yifans.com/180416-use-php-cs-fixer-in-phpstorm-002.png)
 
 相关阅读：
+
 - [Yifans_Z - Atom 插件 PHP-CS-Fixer 规范代码格式](/2017/06/13/atom-plugin-php-cs-fixer/)
 
 > References:
+>
 > - [Use PHP-CS-Fixer in PHPStorm](https://gist.github.com/nienkedekker/3ddb9ece42233698c0e3f3e42cf1ff34)

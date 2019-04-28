@@ -2,19 +2,24 @@
 title: IMOOC 如何用 CSS 进行网页布局
 permalink: imooc-how-to-use-css-for-web-layout
 date: 2017-03-12 12:00:00
+updated: 2019-04-10 19:05:00
 comments: true
 toc: true
 tags:
-   - html
-   - css
+categories:
 description:
+---
+
+**2019-04-10 重要：** 文章内容已经过时。页面布局现在使用：`栅栏` `flex`。
+
+<!-- more -->
+
 ---
 
 慕课网上【如何用 CSS 进行网页布局】学习笔记。一列布局、两列布局、三列布局、混合布局。
 
-<!-- more -->
-
 ## 一列布局
+
 ```
 <style type="text/css">
 body{marin:0;padding:0;}
@@ -26,7 +31,9 @@ body{marin:0;padding:0;}
 <div class="main"></div>
 <div class="foot"></div>
 ```
+
 ## 两列布局
+
 ```
 <style type="text/css">
 .main{width:800px;margin: 0 auto;}
@@ -41,8 +48,11 @@ body{margin:0; padding:0; font-size:30px}
 	</div>
 </body>
 ```
+
 ## 三列布局
+
 中间自适应；注意 `position:absolute` 使用
+
 ```
 <style type="text/css">
 .left{ height:600px; width:200px; background:#ccc; position:absolute; left:0; top:0}
@@ -54,7 +64,9 @@ body{margin:0; padding:0; font-size:30px}
 <div class="main">设计首页的第一步是设计版面布局。</div>
 <div class="right">right</div>
 ```
+
 ## 混合布局
+
 ```
 <style>
 body{ margin:0; padding:0; font-size:30px; font-weight:bold}
@@ -83,4 +95,5 @@ div{ text-align:center; line-height:50px}
 </div>
 <div class="footer">footer</div>
 ```
+
 ![混合布局](http://img.mukewang.com/58525eb80001417a12800720.jpg)

@@ -10,7 +10,7 @@ tags:
   - hexo
 ---
 
-Wordpress 这类博客系统功能强大，可对与我只想划拉的写点东西的人，感觉大材小用了。而且 Wordpress 需要部署，网站的服务器也会带来问题，国内的服务器首先需要备案，费用不低；国外服务器访问速度受影响。
+`Wordpress` 这类博客系统功能强大，可对与我只想划拉的写点东西的人，感觉大材小用了。而且 `Wordpress` 需要部署，网站的服务器也会带来问题，国内的服务器首先需要备案，费用不低，国外服务器访问速度受影响。
 
 近来接触到一种新的博客系统 Hexo，它的不同地方就是将：**在上线编写博客和页面渲染的过程在线下完成**。
 
@@ -68,6 +68,7 @@ $ cd <folder>
 $ npm install
 ```
 新建完成后，指定文件夹的目录如下：
+
 ```
 ├── _config.yml
 ├── package.json
@@ -79,6 +80,7 @@ $ npm install
 ```
 
 ### 新建一篇文章
+
 ```
 hexo new [layout] <title>
 ```
@@ -86,24 +88,30 @@ hexo new [layout] <title>
 如果没有设置 layout 的话，默认使用 `_config.yml` 中的 default_layout 参数代替。如果标题包含空格的话，请使用引号括起来。
 
 ### 生成静态文件
+
 ```
 hexo generate
 ```
 
 ### 启动服务器
+
 ```
 hexo server
 ```
 网站会在 [http://localhost:4000]() 下启动。在服务器启动期间，Hexo 会监视文件变动并自动更新，您无须重启服务器。
 
 ## 部署静态网页到 GitHub
+
 ### 注册设置 GitHub
+
 1. 登录 GitHub，注册自定义用户名如：`imzyf`
 2. 在主页右下角创建 New repository，name 必须和用户名一致如：`imzyf.github.io`
 3. 首次创建耐心等待10分钟左右审核，之后即可访问静态主页如：`http://imzyf.github.io`
 
 ### 同步内容至 GitHub
-1. 在Hexo目录下 `git clone git@github.com:imzyf/imzyf.github.io.git`
+
+1. 在Hexo目录下 `git cl
+one git@github.com:imzyf/imzyf.github.io.git`
 2. 将`public`文件下的所有文件拷贝到`imzyf.github.io`下
 3. `git add .`增加当前子目录下所有更改过的文件至index
 4. `git commit -m 'xxx'`提交到本地
@@ -111,7 +119,9 @@ hexo server
 6. 最后访问主页`http://imzyf.github.io`观察效果
 
 ## 绑定个人域名
+
 ### 设置 CNAME
+
 1. 在Github的网站目录下创建CNAME文件
 2. 填写自己的域名如`zyf.im`，保存结束
 3. 登录域名服务商，然后添加记录，记录类型选择`CNAME`，记录值`imzyf.github.io.`(有个点)

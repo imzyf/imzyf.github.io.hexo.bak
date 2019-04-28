@@ -10,10 +10,11 @@ description:
 ---
 
 ## for member variable
+
 - `$this` 调用非静态变量
 - `self::` 调用静态变量
 
-``` php
+```php
 <?php
 class X {
     private $non_static_member = 1;
@@ -29,12 +30,14 @@ new X();
 ```
 
 ## for functions
+
 - `self::` 调用的是本类方法；可以抑制方法多态性
 - `parent::` 调用的是父类方法
 - `$this` 调用本实例的方法；可以体现多态性；`$this` 调用静态方法语法上是完全可以的
 
 polymorphism with `$this` for member functions:
-``` php
+
+```php
 <?php
 class X {
     function foo() {
@@ -53,6 +56,7 @@ $x = new Y();
 $x->bar();
 ?>
 ```
+
 ```
 Y::foo()
 ```
@@ -61,7 +65,7 @@ Y::foo()
 
 suppressing polymorphic behaviour by using `self::` for member:
 
-``` php
+```php
 <?php
 class X {
     function foo() {
@@ -87,4 +91,5 @@ X::foo()
 ```
 
 > Reference:
-> - [php - When to use self over $this? - Stack Overflow](https://stackoverflow.com/questions/151969/when-to-use-self-over-this)
+>
+> - [php - When to use self over \$this? - Stack Overflow](https://stackoverflow.com/questions/151969/when-to-use-self-over-this)
