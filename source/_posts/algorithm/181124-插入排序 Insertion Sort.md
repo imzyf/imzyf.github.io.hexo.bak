@@ -12,7 +12,7 @@ categories:
 description:
 ---
 
-<img src="https://ws2.sinaimg.cn/large/006tKfTcgy1g0u8pvjy8zj30u00cvq4n.jpg" alt="queue-data-structure" />
+<img src="https://cdn-qn.yifans.com/imzyf/jordane-mathieu-539965-unsplash.jpg" alt="insertion-sort" />
 
 将一个数组从高到低或者从低到高排序。
 
@@ -50,7 +50,7 @@ for (k, v) in array.enumerated() {
 
 ## In-place sort
 
-上面的排序需要两个数组，一个原始的，一个排好顺序的。但是我们也可以 *就地排序* 无需创建一个额外的数组。我们只需要跟踪记录原始数组中哪里部分排好顺序了，哪一部分还没有排序。
+上面的排序需要两个数组，一个原始的，一个排好顺序的。但是我们也可以 _就地排序_ 无需创建一个额外的数组。我们只需要跟踪记录原始数组中哪里部分排好顺序了，哪一部分还没有排序。
 
 举例：`[ 8, 3, 5, 4, 6 ]` 使用 `|` 分割是否排好顺序的部分。
 
@@ -65,7 +65,7 @@ for (k, v) in array.enumerated() {
 [ 3, 8 | 5, 4, 6 ]
 [ 3, 5, 8 | 4, 6 ]
 [ 3, 4, 5, 8 | 6 ]
-[ 3, 4, 5, 6, 8 |]  
+[ 3, 4, 5, 6, 8 |]
 ```
 
 每次 `|` 移动，都对左侧进行排序，未排序的部分逐渐减少，排序部分增加。直到未排序部分为零。
@@ -152,11 +152,11 @@ func insertionSort(_ array: [Int]) -> [Int] {
         // tip
         while y > 0 && temp < a[y - 1] {
             // 1
-            a[y] = a[y - 1]                
+            a[y] = a[y - 1]
             y -= 1
         }
         // 2
-        a[y] = temp                      
+        a[y] = temp
     }
     return a
 }
@@ -209,4 +209,5 @@ insertionSort(objects) { $0.priority < $1.priority }
 文章代码：[GitHub - imzyf/data-structure-and-algorithm/003-Insertion Sort/](https://github.com/imzyf/data-structure-and-algorithm/tree/master/003-Insertion%20Sort)。
 
 > Reference:
+>
 > - [raywenderlich/swift-algorithm-club/Insertion Sort](https://github.com/raywenderlich/swift-algorithm-club/tree/master/Insertion%20Sort)

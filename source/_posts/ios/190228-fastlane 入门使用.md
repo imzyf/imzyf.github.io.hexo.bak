@@ -12,7 +12,7 @@ categories:
 description:
 ---
 
-<img src="https://ws1.sinaimg.cn/large/006tKfTcly1g0m615tonuj31y00u0u0x.jpg" alt="fastlane-getting-started" />
+<img src="https://cdn-qn.yifans.com/imzyf/caleb-george-352-unsplash.jpg" alt="fastlane-getting-started" />
 
 这次以 [fastlane](https://fastlane.tools/) 为例，尝试项目中有什么事情可以被自动完成。
 
@@ -31,12 +31,12 @@ fastlane 中有但不限于以下工具集：
 - [spaceship](https://github.com/fastlane/fastlane/tree/master/spaceship) 一个 Ruby 库能够访问苹果开发者中心和应用商店连接 api。
 - [pilot](https://docs.fastlane.tools/actions/pilot/) 自动化 TestFlight 部署并管理测试用户。
 - [boarding](https://github.com/fastlane/boarding) 邀请 beta 测试人员。
-- [match](https://docs.fastlane.tools/actions/match/) 使用Git同步整个团队的证书和配置文件。
+- [match](https://docs.fastlane.tools/actions/match/) 使用 Git 同步整个团队的证书和配置文件。
 - [scan](https://docs.fastlane.tools/actions/scan/) 运行 app 测试。
 
 <!-- more -->
 
-> 实验环境：Xcode 10.1、Swift 4.2、fastlane 2.116.1、$99 开发者账户
+> 实验环境：Xcode 10.1、Swift 4.2、fastlane 2.116.1、\$99 开发者账户
 
 ## 项目添加 fastlane
 
@@ -186,10 +186,10 @@ let bigBlindTextField = app.textFields["big blind"]
 bigBlindTextField.tap()
 bigBlindTextField.typeText("100")
 // 4 截图
-snapshot("01UserEntries")    
+snapshot("01UserEntries")
 // 5 点击 what should i do 再进行截图
 app.buttons["what should i do"].tap()
-snapshot("02Suggestion")    
+snapshot("02Suggestion")
 ```
 
 之后创建 mZone Poker UITests scheme，点击 run stop 右边的按钮选择 `Manage Schemes...`
@@ -336,6 +336,7 @@ bundle exec fastlane do_everything
 ```
 
 > Reference:
+>
 > - [fastlane Tutorial: Getting Started](https://www.raywenderlich.com/233168-fastlane-tutorial-getting-started)
 
 -- EOF --

@@ -12,7 +12,7 @@ categories:
 description:
 ---
 
-<img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g0u8ovxyv5j30u00cvq59.jpg" alt="binary-search" />
+<img src="https://cdn-qn.yifans.com/imzyf/anelale-najera-764022-unsplash.jpg" alt="binary-search" />
 
 快速从一个数组中查找一个元素。
 
@@ -123,4 +123,5 @@ func binarySearch(_ a: [Int], key: Int) -> Int? {
 文章代码：[GitHub - imzyf/data-structure-and-algorithm/004-Binary Search/](https://github.com/imzyf/data-structure-and-algorithm/tree/master/004-Binary%20Search)。
 
 > Reference:
+>
 > - [raywenderlich/swift-algorithm-club/Binary Search](https://github.com/raywenderlich/swift-algorithm-club/tree/master/Binary%20Search)

@@ -11,7 +11,7 @@ categories:
 description:
 ---
 
-<img src="https://ws3.sinaimg.cn/large/006tKfTcly1g0me5rnttbj31xz0u01l0.jpg" alt="promisekit-getting-started" />
+<img src="https://cdn-qn.yifans.com/imzyf/rawpixel-1054574-unsplash.jpg" alt="promisekit-getting-started" />
 
 在 GitHub Trending 中总是看到 [mxcl/PromiseKit](https://github.com/mxcl/PromiseKit) 它是主要解决的是 “回调地狱” 的问题，决定尝试用一下。
 
@@ -377,7 +377,8 @@ foo.then { baz -> Promise<String> in
 - 在网上有一些 PMK < 5 的文章，里面的 API 有些不同要注意
 
 > Reference:
+>
 > - [Getting Started](https://github.com/mxcl/PromiseKit/blob/master/Documentation/GettingStarted.md)
-> - [Swift - 异步编程库PromiseKit使用详解1（安装配置、基本用法）](https://www.hangge.com/blog/cache/detail_2231.html)
+> - [Swift - 异步编程库 PromiseKit 使用详解 1（安装配置、基本用法）](https://www.hangge.com/blog/cache/detail_2231.html)
 
 -- EOF --

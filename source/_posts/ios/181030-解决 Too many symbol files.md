@@ -10,8 +10,8 @@ tags:
 categories:
 description:
 ---
-
-<img src="https://ws3.sinaimg.cn/large/006tKfTcly1g0me5scy5zj31y10u0u0z.jpg" alt="correct-too-many-symbol-files-issues" />
+ 
+<img src="https://cdn-qn.yifans.com/imzyf/mika-baumeister-703680-unsplash.jpg" alt="correct-too-many-symbol-files-issues" />
 
 在上传 App 到 App Store 后收到邮件，有 issues **Too many symbol files**。在之前看到 *Your delivery was successful*，此 issues 不影响发布，所以一直搁置了。
 

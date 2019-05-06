@@ -7,8 +7,7 @@ comments: true
 toc: true
 tags:
    - php
-   - composer
-   - autoload
+   - composer 
 categories:
 description:
 ---
@@ -29,7 +28,7 @@ require __DIR__.'/../vendor/autoload.php';
 
 `autoload_real.php` 中的类名为 `ComposerAutoloaderInit...` 这可能是为防止与用户自定义类名跟这个类重复冲突，加上了哈希值。
 
-其实还有一个做法我们更加熟悉，那就是不直接定义类名，而是定义一个命名空间。这里为什么不定义一个命名空间呢？个人理解：命名空间一般都是为了复用，而这个类只需要运行一次即可，以后也不会用得到，用哈希值更加合适。
+其实还有一个做法我们更加熟悉，是定义一个命名空间。这里为什么不定义一个命名空间呢？一种理解：命名空间一般都是为了复用，而这个类只需要运行一次即可，以后也不会用得到，用哈希值更加合适。
 
 <!-- more -->
 
@@ -121,13 +120,9 @@ public static function loadClassLoader($class)
 
 那为什么不跟引导类一样用个哈希值呢？原因是：这个类是可以复用的，框架允许用户使用这个类。
 
-> 个人疑问：为什么这样就解决了与用户命名空间的冲突？
-
 ## 初始化核心类对象 3
 
-对自动加载类的初始化，主要是给自动加载核心类初始化顶级命名空间映射。
-
-初始化的方法有两种：
+对自动加载类的初始化，主要是给自动加载核心类初始化顶级命名空间映射。初始化的方法有两种：
 
 1. 使用 `autoload_static` 进行静态初始化
 2. 调用核心类接口初始化
@@ -573,6 +568,35 @@ if (isset($this->prefixesPsr0[$first])) {
 }
 ```
 
+## Q&A
+
+个人一些疑问：
+
+### 防止用户自定义与 ClassLoader 命名空间冲突
+
+```php
+spl_autoload_register(array('ComposerAutoloaderInit76e88f0b305cd64c7c84b90b278c31db', 'loadClassLoader'), true, true);
+self::$loader = $loader = new \Composer\Autoload\ClassLoader();
+spl_autoload_unregister(array('ComposerAutoloaderInit76e88f0b305cd64c7c84b90b278c31db', 'loadClassLoader'));
+```
+
+为什么这样可以解决：与用户也定义了个 `\Composer\Autoload\ClassLoader` 命名空间，导致自动加载错误文件。
+
+与第四个参数 `$prepend` `true` 有关吗？
+
+### composer StaticLoader 有什么优势
+
+`composer` 在加载类和加载全局方法时，都有两种方式。
+
+```
+$useStaticLoader = PHP_VERSION_ID >= 50600 && !defined('HHVM_VERSION') && (!function_exists('zend_loader_file_encoded') || !zend_loader_file_encoded());
+```
+
+以 `$useStaticLoader` 的值进行选择，为什么一定分两种，静态方法是有什么优势吗？
+
 ## References
 
 > - [PHP Composer - 初始化源码分析](https://github.com/LeoYang90/laravel-source-analysis/blob/master/PHP%20Composer%E2%80%94%E2%80%94%20%E5%88%9D%E5%A7%8B%E5%8C%96%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90.md)
+
+
+-- EOF --
