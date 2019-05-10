@@ -12,17 +12,16 @@ categories:
 description:
 ---
 
+> - [imzyf/reboot-php - relearning PHP](https://github.com/imzyf/reboot-php)
+
 ## 启动
 
 `public/index.php`：
 
 ```php
-
 // Register The Auto Loader
 require __DIR__.'/../vendor/autoload.php';
 ```
-
-`vendor/composer/autoload_real.php'`：
 
 `autoload.php` 不负责具体功能逻辑，只做了两件事：初始化自动加载类、注册自动加载类。
 
@@ -597,6 +596,5 @@ $useStaticLoader = PHP_VERSION_ID >= 50600 && !defined('HHVM_VERSION') && (!func
 ## References
 
 > - [PHP Composer - 初始化源码分析](https://github.com/LeoYang90/laravel-source-analysis/blob/master/PHP%20Composer%E2%80%94%E2%80%94%20%E5%88%9D%E5%A7%8B%E5%8C%96%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90.md)
-
 
 -- EOF --

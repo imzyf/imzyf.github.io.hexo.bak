@@ -46,3 +46,5 @@ if (strpos($mystring, $findme) !== false) {
 > Reference:
 >
 > - [php.net - strpos](https://www.php.net/manual/zh/function.strpos.php)
+
+-- EOF --

@@ -79,7 +79,7 @@ Yifans_Z 的技术栈、工具集。
 ### Build
 
 - Docker
- - Laradock
+- Laradock
 
 ## Cloud
 

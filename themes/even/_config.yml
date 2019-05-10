@@ -55,13 +55,13 @@ reward:
 # ===========================================
 social:
   email: 168@yifans.com
-  stack-overflow: https://stackoverflow.com/users/5958443/yifan-zhao
-  twitter: https://twitter.com/zhaoyifans
+  github: https://github.com/imzyf
+  stack-overflow: https://stackoverflow.com/users/5958443/yifan
+  # twitter: https://twitter.com/zhaoyifans
   facebook:
   linkedin:
-  google:
-  github: https://github.com/imzyf
-  weibo: https://weibo.com/zhaoyifans
+  google: 
+  # weibo: https://weibo.com/zhaoyifans
   zhihu:
   douban:
   pocket:

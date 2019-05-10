@@ -15,17 +15,17 @@ I’m Yifan, a software engineer in Beijing. My biggest interest is in the world
 
 - 时不时撸橡皮章子。
 - 狼人杀爱好者。
-- 初入 Switch 感觉掌机比想象中有意思的多。（2018-09）
+- 初入 `Switch` 感觉掌机比想象中有意思的多。（2018-09）
 
 ## Timeline
 
 ### 2019
-- 01/03：[回顾 2018]()
+- 01/03：回顾 2018 
 
 ### 2018
 
 - 01/05：[2017 不要再孤单](/2018/01/05/dont-be-lonely-in-2017/)
-- 03/13：完全属于 Swift、属于我的 1.4.2 上线。
+- 03/13：完全属于 `Swift`、属于我的 `1.4.2` 上线。
 - 11/18：「你愿意嫁给我吗？」
 - 12/31：蜈支洲 - 丽禾温德姆跨年。
 
@@ -43,3 +43,5 @@ I’m Yifan, a software engineer in Beijing. My biggest interest is in the world
 - 08/31：[刚刚毕业的两月个小结](/2016/08/31/20160601-20160831-report/)
 
 ## Others
+
+- [友链](/links)
