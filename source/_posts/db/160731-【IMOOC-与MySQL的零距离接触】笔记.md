@@ -31,6 +31,13 @@ MySQL 客户端的默认提示符是 `mysql>`，基本上没什么实际作用�
 mysql --prompt="(\u@\h) [\d]> "
 ```
 
+`my.cnf`
+
+```
+[mysql]
+prompt=mysql(\\u@\\h:\\d)>
+```
+
 这样提示符就会变成 `(user@host) [database]>`。其中常用的字符参数有：
 
 - `\D` 完整的日期
