@@ -13,13 +13,13 @@ description:
 
 ## 安装 sysv-rc-conf
 
-``` bash
+```bash
 sudo apt-get install sysv-rc-conf
 ```
 
 ## 使用 sysv-rc-conf
 
-``` bash
+```bash
 sudo sysv-rc-conf
 ```
 
@@ -47,7 +47,7 @@ Ubuntu 的系统运行级别：
 
 查看当前运行级别，执行命令：
 
-``` bash
+```bash
 runlevel
 ```
 
@@ -55,13 +55,13 @@ runlevel 显示上次的运行级别和当前的运行级别，“N”表示没�
 
 切换运行级别，执行命令：
 
-``` bash
+```bash
 int [0123456Ss]
 ```
 
 即在 init 命令后跟一个参数，此参数是要切换到的运行级的运行级代号，如：用 init 0 命令关机；用 init 6 命令重新启动。
 
-``` bash
+```bash
 ls /etc/rc*
 ```
 
@@ -154,6 +154,7 @@ xinetd 管理其他守护进程的一个 inetd 超级守护程序
 ```
 
 > Reference:
-> - [Ubuntu下使用sysv-rc-conf管理服务 » 冰河的博客](https://www.binghe.org/2009/12/manage-services-using-sysv-rc-conf-in-ubuntu/)
-> - [Ubuntu下使用sysv-rc-conf管理服务 - AderStep](http://blog.csdn.net/gatieme/article/details/45251389)
-> - [启动 - Ubuntu中文](http://wiki.ubuntu.org.cn/%E5%90%AF%E5%8A%A8)
+>
+> - [Ubuntu 下使用 sysv-rc-conf 管理服务 » 冰河的博客](https://www.binghe.org/2009/12/manage-services-using-sysv-rc-conf-in-ubuntu/)
+> - [Ubuntu 下使用 sysv-rc-conf 管理服务 - AderStep](http://blog.csdn.net/gatieme/article/details/45251389)
+> - [启动 - Ubuntu 中文](http://wiki.ubuntu.org.cn/%E5%90%AF%E5%8A%A8)

@@ -12,7 +12,9 @@ categories:
 description:
 ---
 
-> 2018-04-12 更新：开发环境或是生产环境推荐 Docker
+**2018-04-12 更新：** 开发环境或是生产环境推荐 Docker。
+
+<!-- more -->
 
 Vagrant 入门教程。Vagrant 安装、配置管理、打包分发
 
@@ -24,7 +26,7 @@ Vagrant 可以为你提供可配置、可再生、便携的工作环境，它主
 
 对于开发人员来说，Vagrant 可以帮你统一团队成员的开发环境。如果你或者你的伙伴创建了一个 Vagrantfile，那么你只需要执行 vagrant up 就行了，所有的软件都会统一安装并且配置好。同时还避免令人烦躁的 “在我的机器上是可以的” 问题。
 
-*实践环境：Ubuntu 16.04、IBM X200 laptops*
+_实践环境：Ubuntu 16.04、IBM X200 laptops_
 
 ## Vagrant 文档
 
@@ -40,8 +42,6 @@ Vagrant 可以为你提供可配置、可再生、便携的工作环境，它主
 在刚启动电脑时，按 F1 进入 BIOS，Config->CPU->Intel Virtualization Technology 中 `Intel VT-d Feature` 改成 `Enabled`，保存退出。
 
 **注意：** 这里有一个坑，修改后需要 **关机再启动**，直接重启电脑，配置不生效。
-
-<!-- more -->
 
 ## 新建虚拟机
 
@@ -91,6 +91,7 @@ vagrant up
 ## 配置虚拟机环境
 
 ### SSH 登陆虚拟机
+
 ```
 vagrant ssh
 ```
@@ -134,7 +135,7 @@ sudo apt-get update
 
 #### Ngnix
 
-``` bash
+```bash
 # search
 apt-cache search nginx
 # install
@@ -149,13 +150,13 @@ curl -I 'http://127.0.0.1'
 
 #### MySQL
 
-``` bash
+```bash
 sudo apt-get install mysql-server-5.6
 ```
 
 #### PHP
 
-``` bash
+```bash
 sudo apt-get install php5-cli
 php -v
 #PHP 5.5.9-1ubuntu4.21 (cli)
@@ -173,7 +174,7 @@ sudo apt-get install php5-cgi php5-fpm -y
 
 首先挂起虚拟机：
 
-``` bash
+```bash
 vagrant suspend
 ```
 
@@ -189,12 +190,14 @@ vagrant suspend
 > [Forwarded Ports - Networking](https://www.vagrantup.com/docs/networking/forwarded_ports.html)
 
 This will allow accessing port 80 on the guest via port 8080 on the host.
-``` ruby
+
+```ruby
 Vagrant.configure("2") do |config|
   config.vm.network "forwarded_port", guest: 80, host: 8080
 end
 ```
-``` bash
+
+```bash
 vagrant reload
 ```
 
@@ -208,7 +211,7 @@ vagrant reload
 
 Static IP
 
-``` ruby
+```ruby
 Vagrant.configure("2") do |config|
   config.vm.network "private_network", ip: "192.168.50.4"
 end
@@ -230,15 +233,17 @@ config.vm.network "public_network", ip: "192.168.0.17"
 
 > [Basic Usage - Synced Folders](https://www.vagrantup.com/docs/synced-folders/basic_usage.html)
 
-``` ruby
+```ruby
 Vagrant.configure("2") do |config|
   # other config here
 
   config.vm.synced_folder "src/", "/srv/website"
 end
 ```
+
 Enabling NFS Synced Folders, To enable NFS, just add the `type: "nfs"` flag onto your synced folder:
-``` ruby
+
+```ruby
 Vagrant.configure("2") do |config|
   config.vm.synced_folder ".", "/vagrant", type: "nfs"
 end
@@ -246,7 +251,7 @@ end
 
 使用 NFS 需要配置 private network，如果遇到：
 
-``` bash
+```bash
 It appears your machine doesn't support NFS, or there is not an
 adapter to enable NFS on this machine for Vagrant. Please verify
 that `nfsd` is installed on your machine, and try again.
@@ -255,7 +260,7 @@ It appears your machine doesn't support NFS
 
 try to：
 
-``` bash
+```bash
 sudo apt-get install nfs-common nfs-kernel-server
 ```
 
@@ -300,7 +305,7 @@ config.vm.hostname = "mooc"
 
 ### Overwrite host locale in ssh session
 
-``` ruby
+```ruby
 ENV["LC_ALL"] = "en_US.UTF-8"
 
 Vagrant.configure("2") do |config|
@@ -344,6 +349,7 @@ vagrant reload --provision
 ```
 
 > Reference:
+>
 > - [mooc/vagrant at master · apanly/mooc](https://github.com/apanly/mooc/tree/master/vagrant)
-> - [vagrant打造跨平台可移动的开发环境](http://www.imooc.com/learn/805)
-> - [Vagrant介绍](http://weizhifeng.net/learn-vagrant-01.html)
+> - [vagrant 打造跨平台可移动的开发环境](http://www.imooc.com/learn/805)
+> - [Vagrant 介绍](http://weizhifeng.net/learn-vagrant-01.html)

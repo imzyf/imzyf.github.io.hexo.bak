@@ -14,7 +14,7 @@ description:
 
 ## Installation
 
-``` bash
+```bash
 sudo pip install dict-cli
 ```
 
@@ -24,7 +24,7 @@ sudo pip install dict-cli
 
 ### English To Chinese
 
-``` bash
+```bash
 $ dict test
 
 ###################################
@@ -51,7 +51,7 @@ $ dict I love you
 
 ### Chinese To English
 
-``` bash
+```bash
 $ dict 测试
 
 ###################################

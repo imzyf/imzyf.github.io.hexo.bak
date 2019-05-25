@@ -2,21 +2,25 @@
 title: Sublime Text killer - Atom 的使用技巧和快捷键
 permalink: sublime-text-killer-atom-tips-and-shortcuts
 date: 2016-12-08 19:00:00
-updatetime: 2016-12-22 19:00:00
+updatetime: 2019-05-25 16:51:33
 comments: true
 toc: true
 tags:
-   - atom
+categories:
 description:
 ---
 
-Atom 是由 GitHub 团队发布和维护的代码编辑器。发布于2014年，“Sublime Text killer” 拥有每月超过 110 万的用户，这并不奇怪：Atom 易于扩展，可定制和 hackable，Atom 已成为许多开发人员的最爱。
+**2019-05-25 更新：** 已经抛弃 Atom，使用 VSCode 代替。
+
+<!-- more -->
+
+---
+
+Atom 是由 GitHub 团队发布和维护的代码编辑器。发布于 2014 年，“Sublime Text killer” 拥有每月超过 110 万的用户，这并不奇怪：Atom 易于扩展，可定制和 hackable，Atom 已成为许多开发人员的最爱。
 
 尽管它的广泛使用，我经常看到有能力的开发者采用绕远的方式做事，却不知道它的真正潜力。这篇文章探讨了一些改进你的 Atom 工作流的技巧。我希望当你阅读完时，你会学到至少一个你原来没有使用的新技巧。
 
 注：虽然这篇文章是为 Atom 用户，但很多技巧和快捷方式也可以用在 Sublime Text 中。
-
-<!-- more -->
 
 ## Tips 技巧
 
@@ -35,6 +39,7 @@ Atom 是由 GitHub 团队发布和维护的代码编辑器。发布于2014年，
 ![Auto Indent](https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2016/05/1464357903autoindent.gif)
 
 为了提高效率可以将此设置快捷键，Edit > Keymap，`ctrl-}` 可以设置为任何你想的快捷键
+
 ```
 'atom-text-editor':
     'ctrl-}': 'editor:auto-indent'
@@ -103,6 +108,7 @@ Ctrl + Up (or Down) Arrow (Windows/Linux)
 Cmd + D (Mac)
 Ctrl + D (Windows/Linux)
 ```
+
 此命令可以允许你选中下一匹配的字符，并以高亮显示。然后你可以（使用自动生成的多个光标）删除、编辑或更新这些值字符。
 
 ![Select the next matching characters](https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2016/05/1464358146matching.gif)
@@ -125,7 +131,7 @@ Cmd + Ctrl + G (Mac)
 Alt + F3 (Windows/Linux)
 ```
 
-有时你想批量编辑文档中的所有匹配字符，而不是每次按 Cmd / Ctrl + D。 此快捷方式选择与您选择的内容相匹配的所有内容。（警告：大量的选择将严重减慢Atom！）
+有时你想批量编辑文档中的所有匹配字符，而不是每次按 Cmd / Ctrl + D。 此快捷方式选择与您选择的内容相匹配的所有内容。（警告：大量的选择将严重减慢 Atom！）
 
 ### Toggle comments (on and off) 切换注释（开启和关闭）
 
@@ -133,7 +139,8 @@ Alt + F3 (Windows/Linux)
 Cmd + / (Mac)
 Ctrl + / (Windows/Linux)
 ```
-有些情况下，你想要注释掉一行或多行。 此快捷方式使用正确的注释语法为当前行（或行的选择）适当地注释。你不再需要再次记住 `<!----> ` 或 `/**/`。
+
+有些情况下，你想要注释掉一行或多行。 此快捷方式使用正确的注释语法为当前行（或行的选择）适当地注释。你不再需要再次记住 `<!---->` 或 `/**/`。
 
 ### 函数括号前后之间的切换
 
@@ -172,5 +179,6 @@ ctrl + g
 ```
 
 > Reference:
+>
 > - [12 Favorite Atom Tips and Shortcuts to Improve Your Workflow](https://www.sitepoint.com/12-favorite-atom-tips-and-shortcuts-to-improve-your-workflow/)
-> - [Atom技巧总结 · Issue #30 · Wscats/Good-text-Share](https://github.com/Wscats/Good-text-Share/issues/30)
+> - [Atom 技巧总结 · Issue #30 · Wscats/Good-text-Share](https://github.com/Wscats/Good-text-Share/issues/30)

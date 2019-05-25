@@ -5,25 +5,26 @@ date: 2017-04-10 15:00:00
 comments: true
 toc: true
 tags:
-   - ubuntu
-   - sudo
+   - ubuntu 
 description:
 ---
-The approach to solve your problem is to put your user in sudoers file.
 
-Open terminal window and type:
-``` bash
+解决你的问题的方法是将你的用户加入 sudoers 文件。
+
+```bash
 sudo visudo
 ```
-In the bottom of the file, type the follow:
+
+在文件底部输入：
+
 ```
 username ALL=(ALL) NOPASSWD: ALL
 ```
 
-Note:
-This only applies, to sudo command in terminal window. For example, when you try to install a package in software center, you will be prompted to insert your password
+这只适用于终端窗口中的 sudo 命令。例如，当你尝试在 software center 中安装软件包时，将提示你输入密码。
 
 <!--more -->
 
 > Reference:
+>
 > - [command line - Execute sudo without Password? - Ask Ubuntu](http://askubuntu.com/questions/147241/execute-sudo-without-password)

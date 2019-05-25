@@ -2,12 +2,13 @@
 title: Ubuntu SSH 密钥登陆免密码
 permalink: ubuntu-ssh-key-login-without-password
 date: 2016-07-29 10:00:00
-updated: 2018-01-14 11:00:00
+updated: 2019-05-25 16:19:06
 comments: true
 toc: true
 tags:
    - ubuntu
    - ssh
+categories:
 description:
 ---
 
@@ -18,7 +19,7 @@ description:
 - 本机 ip：192.168.1.1
 - 服务器 ip：192.168.1.2
 
-欲实现本机免密码登录服务器，执行如下命令：
+要实现本机免密码登录服务器，执行如下命令：
 
 ```
 ssh-copy-id username@192.168.1.2
@@ -28,7 +29,7 @@ ssh-copy-id username@192.168.1.2
 
 <!-- more -->
 
-## 本地配置方法
+## 本地配置步骤
 
 ### 客户端生成公钥、私钥
 
@@ -36,32 +37,47 @@ ssh-copy-id username@192.168.1.2
 ssh-keygen -t rsa -P ''
 ```
 
-`-t` 表示 `key` 的类型，`-P` 表示密码，`-P ''` 就表示空密码，也可以不用 `-P` 参数，这样就要三车回车，用 `-P` 就一次回车。运行完之后在 `~/.ssh` 目录下生成私钥 `id_rsa` 和公钥` id_rsa.pub`。
+- `-t` 表示 `key` 的类型
+- `-P` 表示密码，`-P ''` 就表示空密码，也可以不用 `-P` 参数
+
+运行完之后在 `~/.ssh` 目录下生成私钥 `id_rsa` 和公钥 `id_rsa.pub`。
 
 ### 将公钥添加到服务器
 
-将客户端公钥 id_rsa.pub 复制到服务端。
+将客户端公钥 `id_rsa.pub` 写入到服务端 `~/.ssh/authorzied_keys` 之中。
 
 ```
-scp ~/.ssh/id_rsa.pub user@192.168.1.140:~
+cat ~/.ssh/id_rsa.pub
 ```
 
-将上传到服务端的公钥添加到 `~/.ssh/authorzied_keys` 之中。
+复制输出的内容，登陆服务端：
 
 ```
-cat ~/id_rsa.pub >> ~/.ssh/authorized_keys
+vim ~/.ssh/authorized_keys
 ```
 
-如果没有这个 `authorzied_keys` 文件，可以创建一个。
+粘贴到最后一行。如果没有这个 `authorzied_keys` 文件，可以创建一个。
 
 ### 设置文件权限
+
+服务端，非必须。
 
 ```
 sudo chmod 755 ~/.ssh
 sudo chmod 600 ~/.ssh/authorized_keys
 ```
 
-### 设置用户以证书登录后，使用 sudo 操作
+### 客户端重启服务
+
+```
+$ sudo service ssh restart
+```
+
+此时就可以不免密码登陆服务端了。
+
+## 以证书登录后 使用 sudo 操作
+
+设置用户以证书登录后，使用 sudo 操作。在服务端设置：
 
 ```
 $ sudo visudo
@@ -75,29 +91,9 @@ $ sudo visudo
 %sudo ALL=(ALL) NOPASSWD:ALL
 ```
 
-### 客户端以私钥 id_rsa 登录
-
-SSH 证书登录命令：
-
-```
-ssh -i ~/.ssh/id_rsa username@<ssh_server_ip>
-```
-
-SCP 远程拷贝命令：
-
-```
-scp -i ~/.ssh/id_rsa filename username@<ssh_server_ip>:/username
-```
-
-**Tips：还是需要密码登陆**
-
-我在这里遇到了一个问题，就是登陆时还是需要密码，注销后再登陆问题解决。
-
 ## 类似 AWS PEM 配置方法
 
-亚马逊 AWS 虚拟服务器使用一个预先生成的 `*.pem` 证书文件（密钥）为客户端和服务器之间建立连接。
-
-例如：
+亚马逊 AWS 虚拟服务器使用一个预先生成的 `*.pem` 证书文件（密钥）为客户端和服务器之间建立连接。 例如：
 
 ```
 $ ssh -i ~/ec2.pem ubuntu@12.34.56.78
@@ -108,8 +104,6 @@ $ ssh -i ~/ec2.pem ubuntu@12.34.56.78
 ```
 $ sudo ssh root@12.34.56.78
 ```
-
-生成 `.pem` 步骤如下
 
 ### 客户端生成验证没有密码密钥对
 
@@ -175,7 +169,9 @@ PasswordAuthentication no
 $ sudo service ssh restart
 ```
 
-> Reference:
-> - [Better-ubuntu配置SSH免密码登录](http://bosschow.github.io/2016/03/31/ubuntu-ssh-without-passwd-login/)
-> - [韩世磊-ubuntu 生成 .pem 证书连接服务器，取消OpenSSH密钥密码认证](http://blog.csdn.net/hanshileiai/article/details/51141638)
+> References:
+>
+> - [韩世磊-ubuntu 生成 .pem 证书连接服务器，取消 OpenSSH 密钥密码认证](http://blog.csdn.net/hanshileiai/article/details/51141638)
 > - [韩世磊-ubuntu ssh 证书登录（不输入密码）](http://blog.csdn.net/hanshileiai/article/details/50381467)
+
+-- EOF --

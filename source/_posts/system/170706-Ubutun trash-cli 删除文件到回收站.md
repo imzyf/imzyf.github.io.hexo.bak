@@ -14,13 +14,13 @@ description:
 
 ## Installation
 
-``` bash
+```bash
 easy_install trash-cli
 ```
 
 ## Usage
 
-``` bash
+```bash
 trash-put           trash files and directories.
 trash-empty         empty the trashcan(s).
 trash-list          list trashed files.
@@ -36,7 +36,7 @@ trash-rm            remove individual files from the trashcan.
 
 在不少网站上看到：建议将 `trash-put` 命令通过别名的方式代替 `rm`
 
-``` bash
+```bash
 alias rm="trush-put"
 ```
 
@@ -50,13 +50,13 @@ alias rm="trush-put"
 
 可以通过建立 `rm` 的 alias 提醒你不要使用它：
 
-``` bash
+```bash
 alias rm='echo "This is not the command you are looking for."; false'
 ```
 
 如果你真的想使用 `rm`，只需先加一个斜线来绕过 alias：
 
-``` bash
+```bash
 \rm file-without-hope
 ```
 

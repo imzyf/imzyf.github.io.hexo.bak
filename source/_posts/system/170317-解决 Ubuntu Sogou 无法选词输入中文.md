@@ -30,7 +30,7 @@ try to lastest version
 
 clean `fcitx`, `SogouPY*`, `sogou-qimpanel` in `~/.config`, then relogin and try again
 
-``` bash
+```bash
 cd ~/.config
 sudo rm -rf  fcitx SogouPY sogou-qimpanel
 ```
@@ -38,4 +38,7 @@ sudo rm -rf  fcitx SogouPY sogou-qimpanel
 <!--more -->
 
 > Reference:
+>
 > - [ubuntu-sogou-不能显示候选词 | Color Win's Notes](https://colorwin.github.io/2017/02/17/ubuntu-sogou/)
+
+-- EOF --

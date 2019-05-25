@@ -95,3 +95,5 @@ description:
 - brew cask
 - dict
 - git
+- zsh
+- oh-my-zsh

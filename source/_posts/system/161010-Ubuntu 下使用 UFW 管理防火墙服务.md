@@ -17,13 +17,13 @@ UFW (Uncomplicated Firewall) 作为 `iptables` 的前端应用，给用户提供
 
 ## 检查系统上是否已经安装 UFW
 
-``` bash
+```bash
 sudo dpkg --get-selections | grep ufw
 ```
 
 ## 安装 UFW
 
-``` bash
+```bash
 sudo apt-get install ufw
 ```
 
@@ -33,7 +33,7 @@ sudo apt-get install ufw
 
 ### 查看 UFW 状态
 
-``` bash
+```bash
 sudo ufw status
 ```
 
@@ -45,7 +45,7 @@ ufw show added
 
 ### 启用/禁用 UFW
 
-``` bash
+```bash
 # 启用
 sudo ufw enable
 # 禁用
@@ -58,13 +58,13 @@ sudo ufw disable
 
 需要先启用 UFW
 
-``` bash
+```bash
 sudo ufw status verbose
 ```
 
 在每条规则上加个序号数字
 
-``` bash
+```bash
 sudo ufw status numbered
 ```
 
@@ -72,43 +72,43 @@ sudo ufw status numbered
 
 允许特定服务程序
 
-``` bash
+```bash
 sudo ufw allow ssh
 ```
 
 允许特定服务程序特定协议
 
-``` bash
+```bash
 sudo ufw allow ssh/tcp
 ```
 
 允许特定端口
 
-``` bash
+```bash
 sudo ufw allow 8080
 ```
 
 允许特定端口特定协议
 
-``` bash
+```bash
 sudo ufw allow 8080/tcp
 ```
 
 允许范围端口特定协议，必须指明协议 udp 或 tcp
 
-``` bash
+```bash
 sudo ufw allow 2290:2300/tcp
 ```
 
 允许特定 IP
 
-``` bash
+```bash
 sudo ufw allow from 192.168.0.104
 ```
 
 允许范围 IP
 
-``` bash
+```bash
 sudo ufw allow from 192.168.0.0/24
 ```
 
@@ -127,7 +127,7 @@ sudo ufw allow from 192.168.0.104 proto tcp to any port 22
 
 创建拒绝规则的命令和允许的规则类似，仅需要把 `allow` 参数换成 `deny` 参数就可以。
 
-``` bash
+```bash
 sudo ufw deny ftp
 ```
 
@@ -156,5 +156,6 @@ sudo ufw reset
 ```
 
 > Reference:
-> - [Debian/Ubuntu系统中安装和配置UFW－简单的防火墙-技术 ◆ 学习|Linux.中国-开源社区](https://linux.cn/article-2489-1.html)
+>
+> - [Debian/Ubuntu 系统中安装和配置 UFW－简单的防火墙-技术 ◆ 学习|Linux.中国-开源社区](https://linux.cn/article-2489-1.html)
 > - [See configured rules even when inactive](https://askubuntu.com/questions/30781/see-configured-rules-even-when-inactive)
