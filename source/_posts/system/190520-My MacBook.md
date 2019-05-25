@@ -11,6 +11,8 @@ categories:
 description:
 ---
 
+<img src="https://cdn-qn.yifans.com/imzyf/robert-richarz-263241-unsplash.jpg" alt="my-macbook" />
+
 个人 MacBook 食用说明。
 
 ## Software
@@ -54,7 +56,6 @@ description:
 - Launchpad Manager Yosemite - 清理 Launchpad 图标
 - Itsycal - 日历扩展
 - Pap.er - 桌面壁纸
- 
 
 ### 效率
 
