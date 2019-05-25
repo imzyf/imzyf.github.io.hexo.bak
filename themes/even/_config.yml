@@ -47,7 +47,7 @@ copyright:
 reward:
   enable: true
   qrCode:
-    wechat: https://ws1.sinaimg.cn/large/006tKfTcly1g0n8z42nvrj30go0go0v0.jpg
+    wechat: https://cdn-qn.yifans.com/imzyf/reward_wechat.jpg
     # alipay: https://ws4.sinaimg.cn/large/006tKfTcly1g0n8z48lutj30go0go0vg.jpg
 
 # ===========================================
@@ -60,7 +60,7 @@ social:
   # twitter: https://twitter.com/zhaoyifans
   facebook:
   linkedin:
-  google: 
+  google:
   # weibo: https://weibo.com/zhaoyifans
   zhihu:
   douban:
@@ -101,4 +101,4 @@ livere_datauid:
 # ===========================================
 # Version
 # ===========================================
-version: 2.10.2
+version: 2.10.3

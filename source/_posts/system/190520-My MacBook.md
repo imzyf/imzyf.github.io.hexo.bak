@@ -15,6 +15,8 @@ description:
 
 个人 MacBook 食用说明。
 
+<!-- more -->
+
 ## Software
 
 ### Web 开发
@@ -30,8 +32,6 @@ description:
 - Postman - API 管理
 - Navicat for MySQL
 - Dash
-
-<!-- more -->
 
 ### iOS 开发
 
