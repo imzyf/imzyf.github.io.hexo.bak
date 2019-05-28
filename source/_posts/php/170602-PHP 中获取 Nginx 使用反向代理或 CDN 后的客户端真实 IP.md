@@ -106,7 +106,7 @@ proxy_set_header X-Real-IP $remote_addr;    # 针对首层代理，拿到真实I
 proxy_set_header X-Real-IP $http_x_real_ip; # 针对非首层代理，一直传下去
 ```
 
-2、从首层开始，将用户的真实IP 放在 X-Forwarded-For 中，而不是累加各层服务器的 IP，但这样也不够合理，因为丢掉了整个链路信息。配置为：
+2、从首层开始，将用户的真实 IP 放在 X-Forwarded-For 中，而不是累加各层服务器的 IP，但这样也不够合理，因为丢掉了整个链路信息。配置为：
 
 ```
 proxy_set_header X-Forwarded-For $remote_addr; # 针对首层代理
@@ -124,9 +124,9 @@ proxy_set_header X-Forwarded-For $http_x_forwarded_for; # 针对非首层代理
 
 ## Nginx realip 模块获取真实 IP
 
-秉承一个原则：*能通过配置让事情变的更简单和通用的事儿，就不要用程序去解决。即环境对程序透明。* 这当然少不了系统运维人员的辛苦。
+秉承一个原则：_能通过配置让事情变的更简单和通用的事儿，就不要用程序去解决。即环境对程序透明。_ 这当然少不了系统运维人员的辛苦。
 
-如果能在配置中理清，就不必用复杂的程序去解决，因为 Server 上可能有各种应用都要来获取用户IP，如果规则不统一，结果会不一致。
+如果能在配置中理清，就不必用复杂的程序去解决，因为 Server 上可能有各种应用都要来获取用户 IP，如果规则不统一，结果会不一致。
 
 程序不知道链路到底经过了几层才转到 WEB Server 上，所以让程序去做兼容并不是个好主意。索性就让程序把所有的代理都当成透明的好了。
 
@@ -144,7 +144,7 @@ real_ip_header     X-Forwarded-For;
 real_ip_recursive on;
 ```
 
-`set_real_ip_from` 后面是可信 IP 规则，可以有多条。如果启用 CDN，知道 CDN 的溯源 IP，也要加进来，除排掉可信的，就是用户的真实IP，会写入 `remote_addr` 这个变量中。
+`set_real_ip_from` 后面是可信 IP 规则，可以有多条。如果启用 CDN，知道 CDN 的溯源 IP，也要加进来，除排掉可信的，就是用户的真实 IP，会写入 `remote_addr` 这个变量中。
 
 在 PHP 中可以使用 `$_SERVER['REMOTE_ADDR']` 来获取。而 WEB Server 不使用任何反向代理时，也是取这个值，这就达到了我们之前所说的原则。
 
@@ -199,6 +199,7 @@ access_log /usr/local/nginx/logs/access.log porxy;
 文章称 `nginx reload` 配置并不生效，需要 `restart`。
 
 > Reference:
-> - [使用PHP获取客户端真实IP地址？——不可能！ - 也就这样](http://blog.zhengshuiguang.com/php/php-ip.html)
-> - [NGINX多层转发或使用CDN之后如何获取用户真实IP | Snow Blog](http://www.wkii.org/nginx-cdn-get-user-real-ip.html)
+>
+> - [使用 PHP 获取客户端真实 IP 地址？——不可能！ - 也就这样](http://blog.zhengshuiguang.com/php/php-ip.html)
+> - [NGINX 多层转发或使用 CDN 之后如何获取用户真实 IP | Snow Blog](http://www.wkii.org/nginx-cdn-get-user-real-ip.html)
 > - [Nginx 日志配置详情解析](https://juejin.im/post/59f94f626fb9a045023af34c)

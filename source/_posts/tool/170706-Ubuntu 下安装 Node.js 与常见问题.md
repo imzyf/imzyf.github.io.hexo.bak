@@ -20,7 +20,7 @@ description:
 
 To install or update nvm.
 
-``` bash
+```bash
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
 ```
 
@@ -28,12 +28,12 @@ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | b
 
 The script clones the nvm repository to `~/.nvm` and adds the source line to your profile (`~/.bash_profile`, `~/.zshrc`, `~/.profile`, or `~/.bashrc`).
 
-``` bash
+```bash
 export NVM_DIR="/home/moma/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 ```
 
-``` bash
+```bash
 # Uses automatic LTS (long-term support) alias `lts/*`, if available.
 nvm ls-remote --lts
 # 安装指定版本
@@ -63,7 +63,7 @@ npm install -g cnpm --registry=https://registry.npm.taobao.org
 
 出现了这个报错提示：
 
-``` bash
+```bash
 N/A: version "N/A -> N/A" is not yet installed.
 
 You need to run "nvm install N/A" to install it before using it
@@ -71,7 +71,7 @@ You need to run "nvm install N/A" to install it before using it
 
 List installed versions
 
-``` bash
+```bash
 $ nvm ls
 ->      v6.11.0
          v8.2.1
@@ -86,7 +86,7 @@ lts/boron -> v6.11.1 (-> N/A)
 
 Try nvm install in that directory to ensure it's installed.
 
-``` bash
+```bash
 nvm install --lts
 
 nvm install iojs
@@ -95,4 +95,5 @@ nvm alias default v6.11.1
 ```
 
 > Reference:
+>
 > - [How To Install Node.js on Ubuntu 16.04 | DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04)

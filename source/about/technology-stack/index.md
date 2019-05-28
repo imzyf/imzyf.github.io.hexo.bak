@@ -7,89 +7,22 @@ Yifans_Z 的技术栈、工具集。
 
 ## iOS
 
-- Swift 4.2
-- CocoaPods
-
-### Firebase
-
-- Crashlytice
-
-### View
-
-- Charts
-- SnapKit
-- PPBadgeViewSwift
-- SVProgressHUD
-- MJRefresh
-- Kingfisher
-- Typist 键盘管理
-
-### Animation
-
-- Spring
-
-### Network
-
-- Alamofire
-- Moya
-- ReachabilitySwift
-
-### Utility
-
-- R.swift
-- SwifterSwift
-- CryptoSwift
-- SwiftyJSON
-- ObjectMapper
-- Zip
-
-### DataBase
-
-- RealmSwift
-
-### Test
-
-- Quick
-- Nimble
-
----
+- RxSwift
+- Google Firebase
+- PromistKit
+- Realm
+- Swiftlint
 
 ## Web
 
 - Laravel
-- PageSpeed
-- Varnish
-- SSL
-- Statcounter
-
-### Front-end
-
+- laravel-admin
 - Vue.js
-- webpack
-
-### 工具包
-
-- Carbon 时间处理
-
-### DataBase
-
 - MySQL
 - Redis
+- Statcounter
 
 ### Build
 
 - Docker
 - Laradock
-
-## Cloud
-
-- UFOVPS
-
-## Source Control
-
-- GitHub
-- GitLab
-
-## Documents
-
-- Markdown

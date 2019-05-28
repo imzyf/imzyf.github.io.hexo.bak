@@ -3,13 +3,11 @@ title: About Yifans_Z
 layout: page
 ---
 
-我是 Yifan，一名在帝都的软件工程师，对前端非常感兴趣。这里记录了我开发过程中的一些经验或是人生感悟，希望对你有帮助。
-
-I’m Yifan, a software engineer in Beijing. My biggest interest is in the world of front-end. Hopefully you’ll find some of my thoughts, discoveries, and experiences helpful.
+我是 Yifan，一名在帝都的软件工程师，~~对前端非常感兴趣~~ 现在专注于后端服务。这里记录了我开发过程中的一些经验或是人生感悟，希望对你有帮助。
 
 ## Motto
 
-> The limits of my language means the limits of my world.  -- Ludwig Wittgenstein
+> The limits of my language means the limits of my world. -- Ludwig Wittgenstein
 
 ## Hobby
 
@@ -20,7 +18,8 @@ I’m Yifan, a software engineer in Beijing. My biggest interest is in the world
 ## Timeline
 
 ### 2019
-- 01/03：回顾 2018 
+
+- 01/03：回顾 2018
 
 ### 2018
 
@@ -45,3 +44,4 @@ I’m Yifan, a software engineer in Beijing. My biggest interest is in the world
 ## Others
 
 - [友链](/links)
+- [只言片语](/about/quotes)

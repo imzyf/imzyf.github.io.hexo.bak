@@ -10,22 +10,26 @@ tags:
    - awesome
 description:
 ---
+
 [ksky521/nodeppt: This is probably the best web presentation tool so far!](https://github.com/ksky521/nodeppt)
 
 ## 安装
-``` bash
+
+```bash
 npm install -g nodeppt
 ```
 
 ## 创建
-``` bash
+
+```bash
 nodeppt create ppt-name
 ```
 
 <!-- more -->
 
 ## 启动
-``` bash
+
+```bash
 # 获取帮助
 nodeppt start -h
 # 绑定端口
@@ -38,12 +42,17 @@ nodeppt start -p 8080 -d path/for/ppts -H 127.0.0.1
 ```
 
 ## 演示
+
 有一个小坑的地方，如果你指定特别的端口，使用的则是默认的 `8080`，这时：
-``` bash
+
+```bash
 netstat -antpl | grep 8080
 ```
+
 可以看到：
-``` bash
+
+```bash
 tcp        0      0 192.168.8.149:8080      0.0.0.0:*               LISTEN      4801/node
 ```
+
 访问 `192.168.8.149:8080` 才可以，`localhost:8080` 不可以

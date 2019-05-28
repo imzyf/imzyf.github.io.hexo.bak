@@ -123,7 +123,8 @@ sudo service nginx restart
 ```
 
 > Reference:
-> - [如何正确配置Nginx+PHP | 火丁笔记](https://huoding.com/2013/10/23/290)
+>
+> - [如何正确配置 Nginx+PHP | 火丁笔记](https://huoding.com/2013/10/23/290)
 > - [fastcgi_params Versus fastcgi.conf - Nginx Config History](http://blog.martinfjordvald.com/2013/04/nginx-config-history-fastcgi_params-versus-fastcgi-conf/)
 > - [How To Install Nginx on Ubuntu 16.04 | DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-16-04)
 > - [nginx-build/fastcgi-php.conf at master · EasyEngine/nginx-build](https://github.com/EasyEngine/nginx-build/blob/master/nginx/debian/conf/snippets/fastcgi-php.conf)

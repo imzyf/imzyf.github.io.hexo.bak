@@ -11,7 +11,7 @@ categories:
 description:
 ---
 
-现在自己的开发主力机是：2015 版的 MacBook Pro。对于工程师来讲，MacBook 绝对是用来提高生产力的，不是装*的。如果条件允许十分推荐，反正我是回不来了。
+现在自己的开发主力机是：2015 版的 MacBook Pro。对于工程师来讲，MacBook 绝对是用来提高生产力的，不是装\*的。如果条件允许十分推荐，反正我是回不来了。
 
 ## 一些感受
 
@@ -31,12 +31,14 @@ description:
 > 设置安装源允许任何 `sudo spctl --master-disable`
 
 ### 开发
+
 - [JetBrains Developer Tools](https://www.jetbrains.com/) 全家桶。
-- `Laravel` 开发，推荐用 [Valet](http://blog.csdn.net/qq_32457355/article/details/76572495)。
+- `Laravel` 开发，~~推荐用 [Valet](http://blog.csdn.net/qq_32457355/article/details/76572495)~~。
 - [Docker](https://www.docker.com/)
 - iTerm 2 + Zsh + Oh My Zsh
 
 ### 工具
+
 - ShadowsocksX
 - Charles - 抓包。
 - [Transmit 5](https://panic.com/transmit/) [FileZilla](https://filezilla-project.org/) - FTP / SFTP。
@@ -46,29 +48,33 @@ description:
 - [LICEcap](https://www.cockos.com/licecap/) - GIF 录屏。
 
 ### 效率
+
 - Alferd 3
 - [Go2Shell](http://zipzapmac.com/go2shell) - 在当前 Finder 路径打开命令行。
 - [ResuceTime](https://www.rescuetime.com/) - 时间管理。
 - [Scroll Reverser](http://pilotmoon.com/scrollreverser/) - 翻转设备滚动方向。
 
 ### 其他
-- [IINA](https://lhc70000.github.io/iina/) - The modern video player.
 
-<!-- more -->
+- [IINA](https://lhc70000.github.io/iina/) - The modern video player.
+ 
 
 ## 快捷键
 
 - [Mac 键盘快捷键](https://support.apple.com/zh-cn/HT201236)
 - [Chrome 键盘快捷键](https://support.google.com/chrome/answer/157179?hl=zh-Hans)
-- [iTerm2快捷键](http://blog.csdn.net/qq_32457355/article/details/75043812)
+- [iTerm2 快捷键](http://blog.csdn.net/qq_32457355/article/details/75043812)
 
 ### Mac
+
 截屏：
+
 - 全屏 `command + shift + 3`
 - 指定区域 `command + shift + 4`
 - 当前窗口 `command + shift+ 4 + 空格`
 
 Finder：
+
 - 前往文件夹 `command + shift + g`
 - 显示简介 `command + i`
 - 新建文件夹 `command + n`
@@ -77,6 +83,7 @@ Finder：
 - 清空回收站 `command + shift + delete`（全局可用）
 
 切换：
+
 - 所有应用之间切换 `command + tab`
 - 部分应用内切换 tab `command + option + ←/→`（通常为浏览器）或者 `command + ←/→`
 - 触摸板
@@ -84,29 +91,33 @@ Finder：
   - 上滑，出现目前运行的窗口
 
 前进/后退：
-- 浏览器中 `command + ←` `command + ←`（这就解释了为什么浏览器不用这个切换tab）
+
+- 浏览器中 `command + ←` `command + ←`（这就解释了为什么浏览器不用这个切换 tab）
 - 触摸板
   - 两指左滑
   - 两指右滑
 
 浏览器:
+
 - 放大缩小 `command + +` `command + -`
 - 刷新 `command+r` 强制刷新：`command+shift+r`
 - 进入开发者模式 `command+option+i`
 - 打开上次关闭页面 `command+shift+t`
 
 系统通用：
+
 - 隐藏窗口 `command+h`
 - 最小化窗口 `command+m`
 - 新建窗口 `command+n`
 - 新建 tab `command+t`
 - 另存为 `command+shift+S`
-- 关闭tab `command+w`
+- 关闭 tab `command+w`
 - 退出窗口 `command + q`
 - 复制粘贴 `command + c` `command + v`
 
 其他：
-- 单词跳跃 `option + ← ` `option + →`
+
+- 单词跳跃 `option + ←` `option + →`
 - 到开头 `command + ←` 到结尾 `command + →`，有的时候 `command` 不行换成 `fn`
 
 ## 手势
@@ -114,11 +125,15 @@ Finder：
 可以在 `系统偏好设置 -> 触控板` 中了解。
 
 ## 个性化设置
+
 ### 触发角
+
 `系统偏好设置 -> 桌面与屏幕保护程序 -> 屏幕保护程序 -> 触发角`
 
 ### Night Shift
+
 `系统偏好设置 -> 显示器 -> Night Shift`
 
 > Reference:
-> - [Vien - Mac使用指南1.0](http://vien.xn--6qq986b3xl/)
+>
+> - [Vien - Mac 使用指南 1.0](http://vien.xn--6qq986b3xl/)

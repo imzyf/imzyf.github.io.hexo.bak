@@ -15,48 +15,49 @@ description:
 
 解决方法如下：
 
-``` javascript
+```javascript
 /**
-* add by cgh
-* 针对panel window dialog三个组件拖动时会超出父级元素的修正
-* 如果父级元素的overflow属性为hidden，则修复上下左右个方向
-* 如果父级元素的overflow属性为非hidden，则只修复上左两个方向
-* @param left
-* @param top
-* @returns
-*/
-var easyuiPanelOnMove = function(left, top){
-    if ($(this).panel('options').closed)
-        return;
-    var parentObj = $(this).panel('panel').parent();
-    var width = $(this).panel('options').width;
-    var height = $(this).panel('options').height;
-    var right = left + width;
-    var buttom = top + height;
-    var parentWidth = parentObj.width();
-    var parentHeight = parentObj.height();
+ * add by cgh
+ * 针对panel window dialog三个组件拖动时会超出父级元素的修正
+ * 如果父级元素的overflow属性为hidden，则修复上下左右个方向
+ * 如果父级元素的overflow属性为非hidden，则只修复上左两个方向
+ * @param left
+ * @param top
+ * @returns
+ */
+var easyuiPanelOnMove = function(left, top) {
+  if ($(this).panel("options").closed) return;
+  var parentObj = $(this)
+    .panel("panel")
+    .parent();
+  var width = $(this).panel("options").width;
+  var height = $(this).panel("options").height;
+  var right = left + width;
+  var buttom = top + height;
+  var parentWidth = parentObj.width();
+  var parentHeight = parentObj.height();
 
-    if (left < 1) {
-        $(this).panel('move', {
-            left: 1
-        });
-    }
-    if (top < 1) {
-        $(this).panel('move', {
-            top: 1
-        });
-    }
-    if (parentWidth < right) {
-        $(this).panel('move', {
-            left: parentWidth-width
-        });
-    }
+  if (left < 1) {
+    $(this).panel("move", {
+      left: 1
+    });
+  }
+  if (top < 1) {
+    $(this).panel("move", {
+      top: 1
+    });
+  }
+  if (parentWidth < right) {
+    $(this).panel("move", {
+      left: parentWidth - width
+    });
+  }
 
-    if (parentHeight < buttom) {
-        $(this).panel('move', {
-            top: parentHeight-height
-        });
-    }
+  if (parentHeight < buttom) {
+    $(this).panel("move", {
+      top: parentHeight - height
+    });
+  }
 };
 $.fn.window.defaults.onMove = easyuiPanelOnMove;
 //$.fn.panel.defaults.onMove = easyuiPanelOnMove;
@@ -64,4 +65,5 @@ $.fn.dialog.defaults.onMove = easyuiPanelOnMove;
 ```
 
 > Reference:
-> - [easyui dialog移动出界面问题](http://www.iteye.com/topic/1134739)
+>
+> - [easyui dialog 移动出界面问题](http://www.iteye.com/topic/1134739)

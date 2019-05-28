@@ -5,11 +5,11 @@ date: 2017-06-06 21:00:00
 comments: true
 toc: true
 tags:
-   - nginx
-   - https
+  - nginx
+  - https
 ---
 
-2015年5月14日 HTTP/2 协议正式版的发布，越来越多的网站开始部署 HTTP/2 了。
+2015 年 5 月 14 日 HTTP/2 协议正式版的发布，越来越多的网站开始部署 HTTP/2 了。
 
 HTTP/2 协议是从 SPDY 演变而来，SPDY 已经完成了使命并很快就会退出历史舞台（例如 Chrome 在 2016 年初结束对 SPDY 的支持；Nginx 在 15 年年底正式支持 HTTP/2 后，也不再支持 SPDY）。
 
@@ -27,7 +27,7 @@ HTTP/2 协议是从 SPDY 演变而来，SPDY 已经完成了使命并很快就�
 
 ## install OpenSSL
 
-``` bash
+```bash
 sudo wget openssl.org/source/openssl-1.0.2l.tar.gz
 sudo tar -xvzfopenssl-1.0.2l.tar.gz
 cd openssl-1.0.2l
@@ -41,20 +41,24 @@ openssl version
 
 ### apt-get
 
-``` bash
+```bash
 # 添加源
 sudo vim /etc/apt/sources.list.d/nginx.list
 ```
+
 add:
+
 ```
 deb http://nginx.org/packages/ubuntu/ trusty nginx
 deb-src http://nginx.org/packages/ubuntu/ trusty nginx
 ```
-``` bash
+
+```bash
 # 添加签名
 wget -q "http://nginx.org/packages/keys/nginx_signing.key" -O-| sudo apt-key add -
 sudo apt-get update
 ```
+
 这样可以安装上比较新的 Nginx 版本应该就够用了。
 
 ### make
@@ -63,12 +67,14 @@ sudo apt-get update
 
 [nginx: download](http://nginx.org/en/download.html) 下载源码，编译 [Module ngx_http_v2_module](http://nginx.org/en/docs/http/ngx_http_v2_module.html)
 
-``` bash
+```bash
 # 需要添加 http_v2_module 和 --with-openssl
 sudo ./configure --with-http_v2_module --with-openssl=../openssl-1.0.2l
 ```
+
 这里只写了 HTTP/2 涉及的模块，其他参数按需添加
-``` bash
+
+```bash
 sudo make
 sudo make install
 ```
@@ -89,11 +95,12 @@ server {
 
 ## other
 
-根据 [&#12302;  Nginx启用HTTP/2&#12303; 有槽必吐 - 不吐槽，毋宁死](https://tsukkomi.org/post/enable-http-2-on-nginx) 的经验，在 Ubuntu 16.04 LTS 下只要配置 Nginx server 块就可以了。
+根据 [&#12302; Nginx 启用 HTTP/2&#12303; 有槽必吐 - 不吐槽，毋宁死](https://tsukkomi.org/post/enable-http-2-on-nginx) 的经验，在 Ubuntu 16.04 LTS 下只要配置 Nginx server 块就可以了。
 
-Chrome 插件 [HTTP/2 and SPDY indicator](https://chrome.google.com/webstore/detail/http2-and-spdy-indicator/mpbpobfflnpcgagjijhmgnchggcjblin?hl=en-US) 如果网站是 HTTP/2 就会显示蓝色，如果是 SPDY（HTTP/2的前身）就会显示绿色，如果没有则显示灰色。
+Chrome 插件 [HTTP/2 and SPDY indicator](https://chrome.google.com/webstore/detail/http2-and-spdy-indicator/mpbpobfflnpcgagjijhmgnchggcjblin?hl=en-US) 如果网站是 HTTP/2 就会显示蓝色，如果是 SPDY（HTTP/2 的前身）就会显示绿色，如果没有则显示灰色。
 
 > Reference:
-> - [HTTP/2.0 相比1.0有哪些重大改进？ - 知乎](https://www.zhihu.com/question/34074946)
-> - [&#12302;  Nginx启用HTTP/2&#12303; 有槽必吐 - 不吐槽，毋宁死](https://tsukkomi.org/post/enable-http-2-on-nginx)
-> - [http2讲解 · GitBook](https://www.gitbook.com/book/ye11ow/http2-explained/details)
+>
+> - [HTTP/2.0 相比 1.0 有哪些重大改进？ - 知乎](https://www.zhihu.com/question/34074946)
+> - [&#12302; Nginx 启用 HTTP/2&#12303; 有槽必吐 - 不吐槽，毋宁死](https://tsukkomi.org/post/enable-http-2-on-nginx)
+> - [http2 讲解 · GitBook](https://www.gitbook.com/book/ye11ow/http2-explained/details)
