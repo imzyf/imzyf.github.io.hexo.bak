@@ -2,7 +2,7 @@
 title: Git 在工作目录之间使用 push 进行同步
 permalink: git-synchronizing-between-working-directories-by-push
 date: 2017-03-30 18:00:00
-updatetime: 2018-01-18 19:00:00
+updated: 2018-01-18 19:00:00
 comments: true
 toc: true
 tags:
@@ -10,7 +10,7 @@ tags:
 description:
 ---
 
-*Pushing to a non-bare repo is now possible (Git 2.3.0 February 2015).*
+_Pushing to a non-bare repo is now possible (Git 2.3.0 February 2015)._
 
 And it is possible when you are pushing the branch currently checked out at the remote repo!
 
@@ -45,5 +45,6 @@ git config receive.denyCurrentBranch updateInstead
 and then you can use `git push` to synchronize between working directories in local repo.
 
 > Reference:
+>
 > - [cannot push into git repository - Stack Overflow](http://stackoverflow.com/questions/3221859/cannot-push-into-git-repository)
 > - [receive-pack: add another option for receive.denyCurrentBranch](https://github.com/git/git/commit/1404bcbb6b3bdb248d32024430644e55faec91ce)

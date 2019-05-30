@@ -2,7 +2,7 @@
 title: IMOOC HTML+CSS 基础课程 Part 3
 permalink: imooc-html-css-basic-course-part3
 date: 2017-02-26 13:00:00
-updatetime: 2017-03-01 00:00:00
+updated: 2017-03-01 00:00:00
 comments: true
 toc: true
 tags:

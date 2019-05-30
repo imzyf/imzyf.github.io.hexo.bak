@@ -348,7 +348,7 @@ SHELL
 vagrant reload --provision
 ```
 
-> Reference:
+> References:
 >
 > - [mooc/vagrant at master · apanly/mooc](https://github.com/apanly/mooc/tree/master/vagrant)
 > - [vagrant 打造跨平台可移动的开发环境](http://www.imooc.com/learn/805)

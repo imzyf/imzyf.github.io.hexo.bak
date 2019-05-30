@@ -9,7 +9,7 @@ tags:
    - ubuntu
 description:
 ---
-
+ß
 推荐使用 nvm 安装管理 node.js
 
 > the nvm method is definitely much more flexible.
@@ -21,7 +21,7 @@ description:
 To install or update nvm.
 
 ```bash
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 ```
 
 <!-- more -->
@@ -29,15 +29,21 @@ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | b
 The script clones the nvm repository to `~/.nvm` and adds the source line to your profile (`~/.bash_profile`, `~/.zshrc`, `~/.profile`, or `~/.bashrc`).
 
 ```bash
-export NVM_DIR="/home/moma/.nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 ```
 
 ```bash
 # Uses automatic LTS (long-term support) alias `lts/*`, if available.
 nvm ls-remote --lts
+
+# 安装最新 lts
+nvm install --lts
+
 # 安装指定版本
 nvm install v6.11.0
+
 # 安装最新稳定版
 nvm install stable
 
@@ -55,7 +61,7 @@ nvm help
 
 npm client for China mirror of npm.
 
-```
+```bash
 npm install -g cnpm --registry=https://registry.npm.taobao.org
 ```
 

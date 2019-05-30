@@ -13,7 +13,7 @@ description:
 
 禁止 IP 访问，其他域名跳转到 `www.xxx.com`：
 
-```
+```nginx
 server {
     listen 80;
     server_name 55.66.77.88;

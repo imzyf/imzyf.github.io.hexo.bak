@@ -13,7 +13,7 @@ description:
 
 ## 修改主题
 
-Plugin -> Browse repositories -> Material Theme UI
+`Plugin` -> `Browse repositories` -> `Material Theme UI`
 
 ## Preferences
 

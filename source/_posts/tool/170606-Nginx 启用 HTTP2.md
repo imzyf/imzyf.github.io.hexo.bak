@@ -99,7 +99,7 @@ server {
 
 Chrome 插件 [HTTP/2 and SPDY indicator](https://chrome.google.com/webstore/detail/http2-and-spdy-indicator/mpbpobfflnpcgagjijhmgnchggcjblin?hl=en-US) 如果网站是 HTTP/2 就会显示蓝色，如果是 SPDY（HTTP/2 的前身）就会显示绿色，如果没有则显示灰色。
 
-> Reference:
+> References:
 >
 > - [HTTP/2.0 相比 1.0 有哪些重大改进？ - 知乎](https://www.zhihu.com/question/34074946)
 > - [&#12302; Nginx 启用 HTTP/2&#12303; 有槽必吐 - 不吐槽，毋宁死](https://tsukkomi.org/post/enable-http-2-on-nginx)
