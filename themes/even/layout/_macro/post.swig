@@ -1,4 +1,6 @@
-{% macro render(post) %}
+{% macro render(post) %} 
+{% set isSameday = full_date(post.date, 'YYYY-MM-DD') == full_date(post.updated, 'YYYY-MM-DD') %}
+
   <article class="post">
     <header class="post-header">
       <h1 class="post-title">
@@ -26,6 +28,12 @@
              data-title="{{ post.title }}">
           {{ __('posts.visits') }} 0
         </span>
+        {% endif %}
+
+        {% if post.updated and not isSameday %}
+          <span class="post-visits">
+            最后更新: {{ full_date(post.updated, 'YYYY-MM-DD') }}
+          </span>
         {% endif %}
       </div>
     </header>
