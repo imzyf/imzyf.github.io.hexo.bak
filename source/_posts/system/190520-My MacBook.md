@@ -2,7 +2,7 @@
 title: My MacBook
 permalink: my-macbook
 date: 2019-05-20 17:14:59
-updated: 2019-05-20 17:14:59
+updated: 2019-06-14 16:22:46
 comments: true
 toc: true
 tags:
