@@ -40,6 +40,8 @@ nvm ls-remote --lts
 
 # 安装最新 lts
 nvm install --lts
+# v8 lts
+nvm install --lts=Carbon
 
 # 安装指定版本
 nvm install v6.11.0

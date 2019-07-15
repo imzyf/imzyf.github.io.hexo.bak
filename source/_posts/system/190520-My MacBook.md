@@ -54,6 +54,10 @@ $ brew cask info iterm2
 $ brew cask install docker google-chrome visual-studio-code imageoptim dash sourcetree firefox sublime-text postman
 ```
 
+```
+$ brew install php@7.2
+```
+
 ### iOS 开发
 
 - OpenSim - 快速打开模拟器应用文件夹 - 5 星
@@ -132,3 +136,8 @@ $ brew cask install iterm2 alfred iina licecap rescuetime baidunetdisk
 - git
 - zsh
 - oh-my-zsh
+- autojump
+
+```
+$ brew install autojump
+```

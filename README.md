@@ -5,9 +5,9 @@
 ```bash
 yarn install hexo-cli -g
 yarn
-mkdir public && cd public
+hexo g
 git init .
-git remote add origin ubuntu@zyf.im:/home/ubuntu/imzyf/blog
+git remote add origin git@github.com:imzyf/imzyf.github.io.git
 ```
 
 ## Tips
