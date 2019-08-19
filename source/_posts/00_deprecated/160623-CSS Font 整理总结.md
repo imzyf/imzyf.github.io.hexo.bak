@@ -2,13 +2,21 @@
 title: CSS Font 整理总结
 permalink: css-font-summary
 date: 2016-06-23 19:30:00
-tags: css
+updated: 2019-08-08 17:24:32
+comments: true
+toc: true
+tags:
+categories:
 description:
 ---
 
-对于 web 页面来说，字体就是计算机上存储的一套文字显示方式。通过对文字进行一些特殊处理（比如末端加强）来提高不同环境中文字的可读性。
+**2019-08-08 更新：** 内容价值低，不再维护。
 
 <!-- more -->
+
+---
+
+对于 web 页面来说，字体就是计算机上存储的一套文字显示方式。通过对文字进行一些特殊处理（比如末端加强）来提高不同环境中文字的可读性。
 
 ## font-family
 

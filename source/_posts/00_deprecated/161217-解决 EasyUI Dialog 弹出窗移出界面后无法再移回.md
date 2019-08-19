@@ -2,16 +2,21 @@
 title: 解决 EasyUI Dialog 弹出窗移出界面后无法再移回
 permalink: resolving-easyui-dialog-out-of-windows-can-not-be-moved-back
 date: 2016-12-17 10:00:00
+updated: 2019-08-08 17:26:00
 comments: true
-toc: false
+toc: true
 tags:
-   - easyui
+categories:
 description:
 ---
 
-当不小心将 `EasyUI` `Dialog` 头部移出页面后，将无法再次移动弹出框，便只好刷新页面。
+**2019-08-08 更新：** 内容价值低，不再维护。
 
 <!-- more -->
+
+---
+
+当不小心将 `EasyUI` `Dialog` 头部移出页面后，将无法再次移动弹出框，便只好刷新页面。
 
 解决方法如下：
 

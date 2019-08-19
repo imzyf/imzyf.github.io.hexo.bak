@@ -6,7 +6,6 @@ updated: 2018-04-12 19:00:00
 comments: true
 toc: true
 tags:
-   - ubuntu
    - vagrant
 categories:
 description:
