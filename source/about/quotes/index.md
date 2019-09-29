@@ -14,3 +14,5 @@ layout: page
 > 在微信“盲约”。 —— 深圳培训
 
 > 博客名为“不立不破”。不轻谈建立和打破，世界上有太多的问题都是源自于“看的书太少而想的太多”。 —— [kxxoling/blog](https://github.com/kxxoling/blog)
+
+> 希望姐夫可以挣大钱，常带我姐回家。 —— Ni

@@ -1,6 +1,6 @@
 ---
 title: About Yifans_Z
-layout: about
+layout: page
 ---
 
 > 如若我从未成功，我想我会顺其自然，

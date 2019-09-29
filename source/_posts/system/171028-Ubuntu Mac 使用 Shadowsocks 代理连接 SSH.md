@@ -6,7 +6,7 @@ comments: true
 toc: true
 tags:
    - mac
-   - ubuntu
+categories:
 description:
 ---
 
