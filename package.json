@@ -1,12 +1,19 @@
 {
-  "name": "hexo-site",
-  "version": "0.0.0",
+  "name": "zyf_im_blog",
+  "version": "1.0.0",
   "private": true,
   "hexo": {
     "version": "3.9.0"
   },
-  "dependencies": {
-    "hexo": "^3.8.0",
+  "scripts": {
+    "g": "hexo g",
+    "s": "hexo s"
+  },
+  "author": "Yifans_Z",
+  "license": "MIT",
+  "devDependencies": {
+    "hexo": "^3.9.0",
+    "hexo-cli": "^3.1.0",
     "hexo-generator-archive": "^0.1.5",
     "hexo-generator-baidu-sitemap": "^0.1.2",
     "hexo-generator-category": "^0.1.3",

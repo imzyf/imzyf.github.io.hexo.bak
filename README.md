@@ -3,9 +3,13 @@
 ## 初始化环境
 
 ```bash
-yarn install hexo-cli -g
-yarn
-hexo g
+# 安装包
+npm i
+# 下载主题
+git clone git@github.com:imzyf/hexo-theme-zisir.git themes/zisir
+# 生成文件
+npm run g
+cd public
 git init .
 git remote add origin git@github.com:imzyf/imzyf.github.io.git
 ```
@@ -13,16 +17,6 @@ git remote add origin git@github.com:imzyf/imzyf.github.io.git
 ## Tips
 
 按 `t` 进入搜索模式。
-
-## Hexo command
-
-```bash
-# generate
-hexo g
-
-# server
-hexo s
-```
 
 ## 博文
 
