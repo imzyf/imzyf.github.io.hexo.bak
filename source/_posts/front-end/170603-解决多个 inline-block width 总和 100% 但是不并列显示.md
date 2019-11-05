@@ -6,6 +6,7 @@ comments: true
 toc: true
 tags:
    - css
+categories:
 description:
 ---
 
@@ -115,7 +116,7 @@ div {
 }
 ```
 
-> Reference:
+> References:
 >
 > - [html - Two inline-block elements, each 50% wide, do not fit side by side in a single row - Stack Overflow](https://stackoverflow.com/questions/18262300/two-inline-block-elements-each-50-wide-do-not-fit-side-by-side-in-a-single-row)
 > - [Fighting the Space Between Inline Block Elements | CSS-Tricks](https://css-tricks.com/fighting-the-space-between-inline-block-elements/)

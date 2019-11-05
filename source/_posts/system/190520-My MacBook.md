@@ -13,7 +13,7 @@ description:
 
 <img src="https://cdn-qn.yifans.com/imzyf/robert-richarz-263241-unsplash.jpg" alt="my-macbook" />
 
-个人 MacBook 食用说明。
+个人 MacBook 食用说明。推荐自动脚本项目 [imzyf/dotfiles](https://github.com/imzyf/dotfiles)。
 
 <!-- more -->
 
@@ -113,6 +113,7 @@ $ brew cask install slowquitapps
 - IINA - 5 星
 - LICEcap - GIF 录屏 - 5 星
 - RescueTime - 时间统计
+- Paper - 壁纸
 - Evernote - 印象笔记
 - 微信
 - QQ
@@ -126,7 +127,7 @@ $ brew cask install slowquitapps
 - 迅雷
 
 ```bash
-$ brew cask install iina licecap rescuetime
+$ brew cask install iina licecap rescuetime paper
 ```
 
 ### 产品

@@ -62,6 +62,6 @@ $('jquery-selector').each((index, element) => {
 })
 ```
 
-> Reference:
+> References:
 >
 > - [Using jQuery \$(this) with ES6 Arrow Functions (lexical this binding)](https://stackoverflow.com/questions/27670401/using-jquery-this-with-es6-arrow-functions-lexical-this-binding)
