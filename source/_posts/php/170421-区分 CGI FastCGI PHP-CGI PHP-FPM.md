@@ -5,9 +5,7 @@ date: 2017-04-21 11:00:00
 comments: true
 toc: true
 tags:
-   - php
-   - php-fpm
-   - fastcgi
+  - php
 description:
 ---
 

@@ -5,20 +5,21 @@ date: 2016-09-07 14:00:00
 comments: true
 toc: true
 tags:
-   - springmvc
+  - java
 description:
 ---
 
-本文主要参考了 [imooc-SpringMVC 起步](http://www.imooc.com/video/7237) 视频教程和 [SpringMVC从入门到精通 系列 - HansonQ](http://www.imooc.com/article/3804) ，还有自己的一些总结。
+本文主要参考了 [imooc-SpringMVC 起步](http://www.imooc.com/video/7237) 视频教程和 [SpringMVC 从入门到精通 系列 - HansonQ](http://www.imooc.com/article/3804) ，还有自己的一些总结。
 
 主要内容：MVC 简介、前端控制器模式、SpringMVC 基本概念、SpringMVC 配置、SpringMVC 中的注解、SpringMVC 数据绑定。
 
 ## MVC 简介
+
 1、MVC 是一种架构模式
 程序分层，分工合作，既相互独立，又协同工作，分为三层：模型层、视图层和控制层
 
 2、MVC 是一种思考方式
-View：视图层，为用户提供UI，重点关注数据的呈现，为用户提供界面
+View：视图层，为用户提供 UI，重点关注数据的呈现，为用户提供界面
 Model：模型层，业务数据的信息表示，关注支撑业务的信息构成，通常是多个业务实体的组合
 Controller：控制层，调用业务逻辑产生合适的数据（Model），传递数据给视图用于呈现
 
@@ -35,6 +36,7 @@ MVC 设计模式在 B/S 下的应用：
 <!-- more -->
 
 ## 前端控制器模式
+
 前端控制器模式（Front Controller Pattern）是用来提供一个集中的请求处理机制，所有的请求都将由一个单一的处理程序处理。该处理程序可以做认证/授权/记录日志，或者跟踪请求，然后把请求传给相应的处理程序。
 
 - 前端控制器（Front Controller）- 处理应用程序所有类型请求的单个处理程序，应用程序可以是基于 web 的应用程序，也可以是基于桌面的应用程序。
@@ -42,12 +44,14 @@ MVC 设计模式在 B/S 下的应用：
 - 视图（View） - 视图是为请求而创建的对象。
 
 前端控制器的主要作用：
+
 - 指前端控制器将我们的请求分发给我们的控制器去生成业务数据
 - 将生成的业务数据分发给恰当的视图模版来生成最终的视图界面
 
 ![Front Controller(MVC)](https://cdn-qn.yifans.com/160907-springmvc-getting-started-tutorial-front-controller.jpg)
 
 ## SpringMVC 基本概念
+
 ![SpringMVC 基本概念](https://cdn-qn.yifans.com/160907-springmvc-getting-started-tutorial-springmvc01.jpg)
 
 对组件说明：
@@ -56,17 +60,17 @@ MVC 设计模式在 B/S 下的应用：
 2. HandlerMapping：处理器映射器 它的作用就好比去看电影要拿着电影票根据电影票上面的座位号找到座位其中座位就是 Handler，电影票以及上面的座位号就是 URL HandlerMapping 负责根据用户请求找到 Handler 即处理器，SpringMVC 提供了不同的映射器实现不同的映射方式，例如：配置文件方式，实现接口方式，注解方式等。
 3. Handler：处理器 Handler 是后端控制器，在前端控制器的控制下后端控制器对具体的用户请求进行处理，Handler 涉及到具体的用户业务请求，所以一般情况下需要程序员根据业务需求开发。
 4. HandlerAdapter：处理器适配器 通过 HandlerAdapter 对处理器进行执行，这是适配器模式的应用，通过适配器可以对更多类型的处理器进行执行。播放的电影是 3D 的你看不清楚，因此电影院跟你说你要想看清电影就必须戴 3D 眼镜。也就是说 Handler 满足一定的要求才可以被执行。
-5. ViewResolver：视图解析器 ViewResolver 负责将处理结果生成 View 视图，ViewResolver 首先根据逻辑视图名解析成物理视图名即具体的页面地址，再生成View视图对象，最后对View进行渲染将处理结果通过页面展示给用户。
+5. ViewResolver：视图解析器 ViewResolver 负责将处理结果生成 View 视图，ViewResolver 首先根据逻辑视图名解析成物理视图名即具体的页面地址，再生成 View 视图对象，最后对 View 进行渲染将处理结果通过页面展示给用户。
 
 ![SpringMVC 基本概念](https://cdn-qn.yifans.com/160907-springmvc-getting-started-tutorial-springmvc02.jpg)
 
 工作原理解释说明：
-1、用户发送请求到 SpringMVC 框架提供的 DispatcherServlet 这个前端控制器（了解 struts2 的朋友也都知道其实 struts2也有一个前端控制器 web.xml 中的 filter 标签就是）。
+1、用户发送请求到 SpringMVC 框架提供的 DispatcherServlet 这个前端控制器（了解 struts2 的朋友也都知道其实 struts2 也有一个前端控制器 web.xml 中的 filter 标签就是）。
 2、前端控制器会去找处理器映射器（HandlerMapping），处理器映射器根据请求 url 找到具体的处理器，生成处理器对象及处理器拦截器（如果有则生成）一并返回给 DispatcherServlet 。
 3、根据处理器映射器返回的处理器，DispatcherServlet 会找“合适”的处理器适配器（HandlerAdapter）
-4、处理器适配器 HandlerAdpater 会去执行处理器（Handler 开发的时候会被叫成 Controller 也叫后端控制器在 struts2 中action 也是一个后端控制器）执行之前会有转换器、数据绑定、校验器等等完成上面这些才会去正在执行 Handler
+4、处理器适配器 HandlerAdpater 会去执行处理器（Handler 开发的时候会被叫成 Controller 也叫后端控制器在 struts2 中 action 也是一个后端控制器）执行之前会有转换器、数据绑定、校验器等等完成上面这些才会去正在执行 Handler
 5、后端控制器 Handler 执行完成之后返回一个 ModelAndView 对象 。
-6、处理器适配器 HandlerAdpater 会将这个 ModelAndView 返回前端控制器 DispatcherServlet。前端控制器会将ModelAndView 对象交给视图解析器 ViewResolver。
+6、处理器适配器 HandlerAdpater 会将这个 ModelAndView 返回前端控制器 DispatcherServlet。前端控制器会将 ModelAndView 对象交给视图解析器 ViewResolver。
 7、视图解析器 ViewResolver 解析 ModelAndView 对象之后返回逻辑视图。
 8、前端控制器 DispatcherServlet 对逻辑视图进行渲染（数据填充）之后返回真正的物理 View 并响应给浏览器。
 
@@ -75,7 +79,8 @@ MVC 设计模式在 B/S 下的应用：
 ## SpringMVC 配置
 
 1、前端控制器需要在 web.xml 中配置
-``` xml
+
+```xml
 <!-- 配置前端控制器 -->
 <servlet>
 	<servlet-name>web-dispatcher</servlet-name>
@@ -106,7 +111,8 @@ MVC 设计模式在 B/S 下的应用：
 ```
 
 2、在 `spring/spring-web.xml` 配置视图解析器
-``` xml
+
+```xml
 <!-- 配置视图解析器 -->
 <!-- InternalResourceViewResolver：支持JSP视图解析 -->
 <!-- viewClass：JstlView 表示JSP模板页面需要使用JSTL标签库，所以classpath中必须包含jstl的相关jar包； -->
@@ -124,23 +130,28 @@ MVC 设计模式在 B/S 下的应用：
 ```
 
 3、在 `spring/spring-web.xml` 配置 注解模式
+
 ```
 <!-- 自动加载RequestMappingHandlerMapping和RequestMappingHandlerAdapter， -->
 <!-- 可用在xml配置文件中使用<mvc:annotation-driven>替代注解处理器和适配器的配置。 -->
 <mvc:annotation-driven/>
 ```
 
-4、在 `spring/spring-web.xml` 配置 扫描web 相关的 bean
+4、在 `spring/spring-web.xml` 配置 扫描 web 相关的 bean
+
 ```
 <!-- 组件扫描器：可以扫描 @Controller、@Service、@Repository 等等 -->
 <context:component-scan base-package="com.controller" />
 ```
 
 ## SpringMVC 中的注解
+
 ### `@Controller`
-@Controller 注解，用于标识这个类是一个后端控制器（类似struts中的action），主要作用就是接受页面的参数，转发页面。
+
+@Controller 注解，用于标识这个类是一个后端控制器（类似 struts 中的 action），主要作用就是接受页面的参数，转发页面。
 @Controller 源码：
-``` java
+
+```java
 @Target({ElementType.TYPE}) // 表明只能定义在类上面
 @Retention(RetentionPolicy.RUNTIME) //保留策略是RUNTIME，在JVM加载类时，会把注解加载到JVM内存中（它是唯一可以用反射来读取注解的策略）
 @Documented //@Documented用于描述其它类型的annotation应该被作为被标注的程序成员的公共API，因此可以被例如javadoc此类的工具文档化。Documented是一个标记注解，没有成员。
@@ -156,8 +167,10 @@ public @interface Controller {
 ```
 
 ### `@RequestMapping`
+
 这个注解的作用目标就跟 @Controller 不一样了，这个注解可以定义在类上面也可以定义在方法上面。
-``` java
+
+```java
 /**
 * 1.@RequestMapping：除了修饰方法,还可以修饰类
 * 2.类定义处：提供初步的请求信息映射.相对于WEB应用的根目录(窄化请求)
@@ -225,14 +238,14 @@ public class IndexController {
 //slug = sss
 ```
 
-我们熟悉的请求应该是 POST 和 GET 请求，这两个请求也是最常用的而实际上 HTTP1.1 请求还有 PUT、DELETE 等8种来表名请求的动作。
+我们熟悉的请求应该是 POST 和 GET 请求，这两个请求也是最常用的而实际上 HTTP1.1 请求还有 PUT、DELETE 等 8 种来表名请求的动作。
 
 在 SpringMVC 中要实现 PUT 和 DELETE 请求需要在 web.xml 额外配置一个过滤器，这个过滤器的作用就是把 POST 请求变为 PUT 和 DELETE 请求。
-*关于 Restful 的内容计划单独写。*
+_关于 Restful 的内容计划单独写。_
 
 ### `@RequestParam`
 
-``` java
+```java
 @Target(ElementType.PARAMETER)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
@@ -243,7 +256,7 @@ public @interface RequestParam {
 }
 ```
 
-``` java
+```java
 // http://localhost:8080/demo/para?slug=google
 @RequestMapping(value = "/para", method = RequestMethod.GET)
 public String index3(@RequestParam(value = "slug", defaultValue = "") String slug, Model model) {
@@ -260,7 +273,7 @@ slug = google
 
 ### `@ResponseBody`
 
-``` java
+```java
 /**
  * Annotation that indicates a method return value should be bound to the web
  * response body. Supported for annotated handler methods in Servlet environments.
@@ -279,7 +292,7 @@ public @interface ResponseBody {
 
 代码
 
-``` java
+```java
 // http://localhost:8080/demo/json
 @RequestMapping(value = "/json", method = RequestMethod.POST)
 public @ResponseBody Domain index7(HttpServletRequest request, Model model) {
@@ -303,21 +316,21 @@ public @ResponseBody Domain index7(HttpServletRequest request, Model model) {
 */
 ```
 
-
 ## SpringMVC 数据绑定
+
 简单说一下场景：
-对于一个注册页面有很多信息譬如：用户名、密码、确认密码、邮箱、手机、兴趣等等。这时候就会想能不能将这些个参数包装在一个对象中（POJO），用这个POJO来做目标方法的形参上面。
+对于一个注册页面有很多信息譬如：用户名、密码、确认密码、邮箱、手机、兴趣等等。这时候就会想能不能将这些个参数包装在一个对象中（POJO），用这个 POJO 来做目标方法的形参上面。
 
 可以说的是 SpringMVC 是支持将 POJO 作为目标参数的。当然也是要遵循一些规则的，就是表单的 name 属性值要和 POJO 的属性值要一致。当然了，这样又会有一个新的疑问支不支持级联属性答案是支持的。
 
-``` java
+```java
 public class Address {
 	private String city;
 	...
 }
 ```
 
-``` java
+```java
 public class Persion {
 	private String name;
 	private Address address;
@@ -325,14 +338,16 @@ public class Persion {
 }
 ```
 
-``` html
+```html
 <form action="/demo/pojo">
-	NAME:<input type="text" name="name" />
-	CITY:<input type="text" name="address.city" />
+  NAME:<input type="text" name="name" /> CITY:<input
+    type="text"
+    name="address.city"
+  />
 </form>
 ```
 
-``` java
+```java
 @RequestMapping(value = "/pojo", method = RequestMethod.POST)
 public String index4(Persion persion, Model model) {
 	model.addAttribute("originURL", "demo/");
@@ -342,10 +357,12 @@ public String index4(Persion persion, Model model) {
 	return "demo";
 }
 ```
-### SpringMVC 使用 Servlet API
-可以使用 Servlet 原生的API作为目标方法的参数。具体支持以下类型：HttpServletRequest、HttpServletResponse、HttpSession、java.security.Principal、Locale、InputStream、OutputStream、Reader、Writer
 
-``` java
+### SpringMVC 使用 Servlet API
+
+可以使用 Servlet 原生的 API 作为目标方法的参数。具体支持以下类型：HttpServletRequest、HttpServletResponse、HttpSession、java.security.Principal、Locale、InputStream、OutputStream、Reader、Writer
+
+```java
 // http://localhost:8080/demo/req?slug=facebook
 @RequestMapping(value = "/req", method = RequestMethod.GET)
 public String index5(HttpServletRequest request, Model model) {
@@ -359,5 +376,6 @@ public String index5(HttpServletRequest request, Model model) {
 ```
 
 > Reference:
+>
 > - [IMOOC-SpringMVC 起步](http://www.imooc.com/video/7237)
-> - [SpringMVC从入门到精通 系列 - HansonQ](http://www.imooc.com/article/3804)
+> - [SpringMVC 从入门到精通 系列 - HansonQ](http://www.imooc.com/article/3804)

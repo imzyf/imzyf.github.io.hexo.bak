@@ -5,30 +5,33 @@ date: 2016-06-27 07:00:00
 comments: true
 toc: true
 tags:
-  - springmvc
-  - maven
+  - java
 description:
 ---
 
-新项目自己撘框架，想着用点新的。看慕课网 [Java高并发秒杀API](http://www.imooc.com/index/search?words=%E7%A7%92%E6%9D%80) 的系列课程时很受益。所以想着仿着来使用：Mavan-Spring-SpringMVC-Mybatis 的架构。框架整合的代码我已上传到我的 Github：[maven-mybatis-spring-springmvc](https://github.com/imzyf/maven-mybatis-spring-springmvc)。
+新项目自己撘框架，想着用点新的。看慕课网 [Java 高并发秒杀 API](http://www.imooc.com/index/search?words=%E7%A7%92%E6%9D%80) 的系列课程时很受益。所以想着仿着来使用：Mavan-Spring-SpringMVC-Mybatis 的架构。框架整合的代码我已上传到我的 Github：[maven-mybatis-spring-springmvc](https://github.com/imzyf/maven-mybatis-spring-springmvc)。
 
 本示例是在：Ubuntu15 上实现的；Windows 上安装 Maven 将不太相同。
 
 ## Maven Install
-> 2016年09月10日 更新：较新版 Eclipse 都有集成 Maven，所以并不需要安装
+
+> 2016-09-10 更新：较新版 Eclipse 都有集成 Maven，所以并不需要安装
 
 1. Run command `sudo apt-get install maven`, to install the latest Apache Maven.
 2. Run command `mvn -version to verify` your installation.
 3. Where is Maven installed?
-The command `apt-get` install the Maven in `/usr/share/maven`
-The Maven configuration files are stored in `/etc/maven`
+   The command `apt-get` install the Maven in `/usr/share/maven`
+   The Maven configuration files are stored in `/etc/maven`
 
 ## Eclipse Maven Plugin - m2e
-> 2016年09月10日 更新：较新版 Eclipse 都有集成 Maven，所以并不需要安装
+
+> 2016 年 09 月 10 日 更新：较新版 Eclipse 都有集成 Maven，所以并不需要安装
 
 1. open Eclipse -> Help -> click "Install New Software" -> click "add"
- - Name:m2e
- - Location:http://download.eclipse.org/technology/m2e/releases
+
+- Name:m2e
+- Location:http://download.eclipse.org/technology/m2e/releases
+
 2. click "ok" -> click "Maven Integration for Eclipse" -> click "Next"
 3. restrat Eclipse
 4. config m2e -> Window -> Preferences -> Maven -> Installations -> click "Add…" -> select Maven
@@ -36,23 +39,26 @@ The Maven configuration files are stored in `/etc/maven`
 <!-- more -->
 
 ## Create a Maven Project
+
 1. File -> New -> New Maven project
 2. select "Use default Workspace location"
 3. select "maven-archetype-j2ee-simple"
 4. input info -> Finish
-5. 选中项目右键菜单中选择Properties -> Project Facets -> select "Dynamic Web Module" Version "3.1"
+5. 选中项目右键菜单中选择 Properties -> Project Facets -> select "Dynamic Web Module" Version "3.1"
 
 Tips:
+
 - 如果在 `Project Facets` 选择版本时“can not change”，可以在项目目录下手动修改 `.settings/org.eclipse.wst.common.project.facet.core.xml` 文件配置
 - 项目自动生成的 `web.xml` 版本较低，手动修改
 
-``` xml
+```xml
 <web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
                       http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
 	version="3.1" metadata-complete="true">
 </web-app>
 ```
+
 - 项目结构
 
 ```
@@ -67,8 +73,10 @@ Tips:
 ```
 
 ## pom.xml Config
+
 [Github-maven-mybatis-spring-springmvc pom.xml](https://github.com/imzyf/maven-mybatis-spring-springmvc/blob/master/pom.xml)
-``` xml
+
+```xml
 <!-- junit4 -->
 <dependency>
 	<groupId>junit</groupId>
@@ -88,7 +96,8 @@ Tips:
 ```
 
 ## logback.xml Config
-``` xml
+
+```xml
 <configuration>
 	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
 		<!-- encoders are assigned the type ch.qos.logback.classic.encoder.PatternLayoutEncoder
@@ -105,8 +114,10 @@ Tips:
 ```
 
 ## Mybatis Config
+
 [Github-maven-mybatis-spring-springmvc mybatis-config.xml](https://github.com/imzyf/maven-mybatis-spring-springmvc/blob/master/src/main/resources/mybatis-config.xml)
-``` xml
+
+```xml
 <configuration>
 	<settings>
 		<!-- 使用jdbc的getGeneratedKays 获取数据库自增主键 -->
@@ -120,10 +131,12 @@ Tips:
 ```
 
 ## Spring Config
+
 [Github-maven-mybatis-spring-springmvc spring](https://github.com/imzyf/maven-mybatis-spring-springmvc/tree/master/src/main/resources/spring)
 
 ### Spring-DAO Config
-``` xml
+
+```xml
 <!-- 1 数据库配置文件位置 -->
 <context:property-placeholder location="classpath:jdbc.properties" />
 
@@ -169,8 +182,10 @@ Tips:
 	<property name="basePackage" value="com.moma.dmv.dao" />
 </bean>
 ```
+
 ### Spring-Service Config
-``` xml
+
+```xml
 <!-- 扫描service包下 所有使用注解的类型 -->
 <context:component-scan base-package="com.moma.dmv.service" />
 
@@ -191,7 +206,8 @@ Tips:
 ```
 
 ### Spring-Web Config
-``` xml
+
+```xml
 <!-- 1:开启springMVC 注解模式 -->
 <mvc:annotation-driven />
 
@@ -217,7 +233,8 @@ Tips:
 ```
 
 ## DAO Mapper Example
-``` xml
+
+```xml
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
@@ -241,7 +258,8 @@ Tips:
 ```
 
 ## web.xml Config
-``` xml
+
+```xml
 <servlet>
 	<servlet-name>dmv-dispatcher</servlet-name>
 	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -260,7 +278,8 @@ Tips:
 ```
 
 ## JUnit Example
-``` java
+
+```java
 import javax.annotation.Resource;
 
 import org.junit.Test;
@@ -291,5 +310,6 @@ public class InfoDaoTest {
 ```
 
 > Reference:
+>
 > - [MKyong-How to install Maven on Ubuntu](http://www.mkyong.com/maven/how-to-install-maven-in-ubuntu/)
-> - [Java之道-使用Eclipse构建Maven项目 (step-by-step)](http://blog.csdn.net/qjyong/article/details/9098213)
+> - [Java 之道-使用 Eclipse 构建 Maven 项目 (step-by-step)](http://blog.csdn.net/qjyong/article/details/9098213)

@@ -5,25 +5,28 @@ date: 2016-09-10 19:00:00
 comments: true
 toc: true
 tags:
-   - mybatis
-   - maven
+  - java
 description:
 ---
+
 ![Mybatis Generator 使用配置](https://cdn-qn.yifans.com/160910-mybatis-generator-tutorial-index.jpg)
 
 MyBatis Generator (MBG) 是一个 Mybatis 的代码生成器。MBG 可以内省数据库的表（或多个表）然后生成可以用来访问（多个）表的基础对象。 这样和数据库表进行交互时不需要创建对象和配置文件。MBG 的解决了对数据库操作有最大影响的一些简单的 CRUD（插入、查询、更新、删除）操作。
 
 ## Mybatis Generator 文档
+
 - [Mybatis Generator 官方原版](http://www.mybatis.org/generator/index.html)
 - [Mybatis Generator 中文版](http://mbg.cndocs.tk/index.html)
 
 ## 通过 Maven 运行 MBG
+
 MyBatis Generator (MBG) 包含了一个可以集成到 Maven 构建的 Maven 插件，按照 Maven 的配置惯例，将 MBG 集成到 Maven 很容易。
 
 <!-- more -->
 
 ### `pom.xml` 配置
-``` xml
+
+```xml
 ...
 <properties>
 	...
@@ -56,12 +59,15 @@ MyBatis Generator (MBG) 包含了一个可以集成到 Maven 构建的 Maven 插
 ```
 
 ### `generatorConfig.xml` 核心配置
+
 非常完整的 MBG 核心配置文件，配合文档效果更佳。因为有大量的注释篇幅长，建议复制到 xml 文件中查看
 generatorConfig.xml 的文件位置要对应在 pom.xml 中的：
-``` xml
+
+```xml
 <mybatis.generator.generatorConfig.xml>${basedir}/src/test/resources/generatorConfig.xml</mybatis.generator.generatorConfig.xml>
 ```
-``` xml
+
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE generatorConfiguration
   PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
@@ -268,10 +274,13 @@ generatorConfig.xml 的文件位置要对应在 pom.xml 中的：
 ```
 
 ### 相关的 properties 文件 `generatorConfig.properties`
+
 generatorConfig.properties 要对应在 pom.xml 中的：
-``` xml
+
+```xml
 <mybatis.generator.generatorConfig.properties>file:///${basedir}/src/test/resources/generatorConfig.properties</mybatis.generator.generatorConfig.properties>
 ```
+
 ```
 # 数据库驱动 jar 路径
 mbg.drive.class.path=/home/yifan/.m2/repository/mysql/mysql-connector-java/5.1.39/mysql-connector-java-5.1.39.jar
@@ -287,26 +296,30 @@ mbg.xml.mapper.package=com.test.demo.mybatis
 ```
 
 ### 生成代码 方法一：Eclipse Maven 运行
+
 如果是在 Eclipse 中，选择 pom.xml 文件，击右键先择：
-Run AS > Maven Build… > 在Goals框中输入：`mybatis-generator:generate`
+Run AS > Maven Build… > 在 Goals 框中输入：`mybatis-generator:generate`
 在 `Console` 中可以看 log
 
 ### 生成代码 方法二：Shell 运行
-如果在命令行输入Maven命令即可，注意：一定是当前项目目录下运行该命令：
+
+如果在命令行输入 Maven 命令即可，注意：一定是当前项目目录下运行该命令：
+
 ```
 mvn mybatis-generator:generate
 ```
 
 ## Eclipse Plugin 运行 MGB
+
 详细见：[MyBatis Generator - Running MyBatis Generator with Eclipse](http://www.mybatis.org/generator/running/runningWithEclipse.html)
 
 1、如果使用这种方法，将不在依靠 Maven，pox.xml 中的配置将可以省去
 2、加载 properties 文件需变化，自己一直没搞清楚 properties 的路径应该怎么写，后来变量就直接写在 generatorConfig.xml 中了。要是有明白的小伙伴，可以在下面留言
 3、需要下载 plugin：Help > Eclipse Marketplace... > Search for "MyBatis Generator"；这个也是个局限，就是用的人还需要下载 Eclipse plugin，所以推荐上面使用 Maven 的方法
 
-
 > Reference:
+>
 > - [Mybatis Generator 官方原版](http://www.mybatis.org/generator/index.html)
 > - [Mybatis Generator 中文版](http://mbg.cndocs.tk/index.html)
-> - [Mybatis Generator最完整配置详解 - 简书](http://www.jianshu.com/p/e09d2370b796)
-> - [用Maven插件生成Mybatis代码 -  边城刀客的博客](http://my.oschina.net/lilw/blog/168304)
+> - [Mybatis Generator 最完整配置详解 - 简书](http://www.jianshu.com/p/e09d2370b796)
+> - [用 Maven 插件生成 Mybatis 代码 - 边城刀客的博客](http://my.oschina.net/lilw/blog/168304)

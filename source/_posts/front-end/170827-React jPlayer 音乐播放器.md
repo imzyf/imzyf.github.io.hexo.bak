@@ -5,8 +5,7 @@ date: 2017-08-27 23:00:00
 comments: true
 toc: true
 tags:
-   - react
-   - jplayer
+  - react
 description:
 ---
 

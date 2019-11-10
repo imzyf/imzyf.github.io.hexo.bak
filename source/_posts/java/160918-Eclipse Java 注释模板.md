@@ -5,7 +5,7 @@ date: 2016-09-18 19:00:00
 comments: true
 toc: true
 tags:
-   - eclipse
+  - java
 description:
 ---
 
@@ -93,7 +93,7 @@ Window -> Preference -> Java -> CodeStyle -> Code Template 然后展开 Comments
  */
 ```
 
-## 定制 ${user} 显示内容
+## 定制 \${user} 显示内容
 
 找到你的 Eclipse 安装路径，打开 `eclipse.ini` 文件，在 -vmargs 下面添加
 

@@ -2,11 +2,14 @@
 title: 使用 MailChimp API 3.0 的分页查询
 permalink: work-with-mailchimp-api-3-pagination
 date: 2017-07-06 15:00:00
+updated:
+tags:
+categories:
+description:
 comments: true
 toc: true
-tags:
-   - mailchimp
-description:
+cover_img:
+feature_img:
 ---
 
 ## Situation
