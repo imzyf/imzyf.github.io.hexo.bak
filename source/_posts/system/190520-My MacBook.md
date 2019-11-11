@@ -6,9 +6,11 @@ updated: 2019-06-17 14:15:22
 comments: true
 toc: true
 tags:
-   - mac
+  - mac
 categories:
 description:
+cover_img: https://cdn-qn.yifans.com/imzyf/robert-richarz-263241-unsplash.jpg
+feature_img:
 ---
 
 <img src="https://cdn-qn.yifans.com/imzyf/robert-richarz-263241-unsplash.jpg" alt="my-macbook" />

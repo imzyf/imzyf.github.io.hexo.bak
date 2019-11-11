@@ -7,7 +7,6 @@ toc: true
 tags:
   - ubuntu
   - nginx
-  - ngx-pagespeed
 ---
 
 ## 题外话

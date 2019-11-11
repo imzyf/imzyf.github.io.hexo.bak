@@ -6,8 +6,7 @@ updated: 2019-06-17 14:15:22
 comments: true
 toc: true
 tags:
-   - ubuntu
-   - awesome-linux
+  - ubuntu
 description:
 ---
 

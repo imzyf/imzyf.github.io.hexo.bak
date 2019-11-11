@@ -5,9 +5,8 @@ date: 2017-07-06 17:00:00
 comments: true
 toc: true
 tags:
-   - node-js
-   - ubuntu
-   - awesome
+  - node-js
+  - ubuntu
 description:
 ---
 

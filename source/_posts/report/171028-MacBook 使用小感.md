@@ -6,8 +6,6 @@ comments: true
 toc: true
 tags:
   - mac
-categories:
-  - report
 description:
 ---
 
@@ -57,7 +55,6 @@ description:
 ### 其他
 
 - [IINA](https://lhc70000.github.io/iina/) - The modern video player.
- 
 
 ## 快捷键
 

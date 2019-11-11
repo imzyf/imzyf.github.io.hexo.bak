@@ -5,8 +5,7 @@ date: 2017-03-17 17:00:00
 comments: true
 toc: true
 tags:
-   - ubuntu
-   - sogou
+  - ubuntu
 description:
 ---
 

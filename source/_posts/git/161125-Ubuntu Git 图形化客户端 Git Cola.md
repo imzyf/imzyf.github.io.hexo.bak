@@ -5,9 +5,8 @@ date: 2016-11-25 15:00:00
 comments: true
 toc: false
 tags:
-   - ubuntu
-   - git
-   - awesome-linux
+  - ubuntu
+  - git
 description:
 ---
 
