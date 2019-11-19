@@ -5,7 +5,6 @@ date: 2017-05-10 19:00:00
 comments: true
 toc: true
 tags:
-  - ubuntu
   - nginx
 ---
 

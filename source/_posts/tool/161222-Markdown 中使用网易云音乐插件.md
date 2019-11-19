@@ -2,11 +2,15 @@
 title: Markdown 中使用网易云音乐插件
 permalink: 163-music-in-markdown
 date: 2016-12-22 20:00:00
-comments: true
-toc: false
+updated:
 tags:
-   - markdown
+  - markdown
+categories:
 description:
+comments: true
+toc: true
+cover_img:
+feature_img:
 ---
 
 一直大爱网易云音乐，也想着在 markdown 中插入音乐播放组件。研究了下，发现实现很容易。

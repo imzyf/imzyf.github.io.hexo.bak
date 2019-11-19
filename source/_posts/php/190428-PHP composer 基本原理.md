@@ -3,13 +3,15 @@ title: PHP composer 基本原理
 permalink: php-composer-basic
 date: 2019-04-28 19:21:12
 updated: 2019-04-28 19:21:12
-comments: true
-toc: true
 tags:
-   - php
-   - composer 
+  - php
+  - composer
 categories:
 description:
+comments: true
+toc: true
+cover_img: https://cdn-qn.yifans.com/imzyf/dayne-topkin-60559-unsplash.jpg
+feature_img:
 ---
 
 <img src="https://cdn-qn.yifans.com/imzyf/dayne-topkin-60559-unsplash.jpg" alt="php-composer-basic" />
