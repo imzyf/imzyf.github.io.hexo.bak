@@ -2,11 +2,15 @@
 title: Git checkout --theirs 解决冲突文件
 permalink: git-checkout-theirs-resolve-conflict
 date: 2017-08-30 20:00:00
+updated:
+tags:
+  - git
+categories:
+description:
 comments: true
 toc: true
-tags:
-   - git
-description:
+cover_img:
+feature_img:
 ---
 
 在代码合并时遇到 `conflict` 是常有的事情，有些内容是自动生成的资源文件，手工处理起来很麻烦，某一文件如何全部以某一分支的内容为准？

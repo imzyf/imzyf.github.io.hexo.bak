@@ -2,11 +2,15 @@
 title: Git pull rebase 和 merge no-ff 保持提交线图整洁
 permalink: git-pull-rebase-and-merge-no-ff-to-keep-clear-commit-graph
 date: 2017-03-17 16:00:00
+updated:
+tags:
+  - git
+categories:
+description:
 comments: true
 toc: true
-tags:
-   - git
-description:
+cover_img:
+feature_img:
 ---
 
 git log 中的一个清晰的提交线图是很方便进行 code review 和代码回退

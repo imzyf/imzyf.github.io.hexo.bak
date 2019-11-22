@@ -2,11 +2,15 @@
 title: 关于 GitHub README.md 中图片加载失败
 permalink: github-readme-content-length-exceeded
 date: 2017-11-22 16:00:00
+updated:
+tags:
+  - git
+categories:
+description:
 comments: true
 toc: true
-tags:
-   - github
-description:
+cover_img:
+feature_img:
 ---
 
 ## 遇到的问题

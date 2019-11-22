@@ -2,12 +2,16 @@
 title: Ubuntu Git 图形化客户端 Git Cola
 permalink: git-client-gui-in-ubuntu-git-cola
 date: 2016-11-25 15:00:00
-comments: true
-toc: false
+updated:
 tags:
-  - ubuntu
   - git
+  - ubuntu
+categories:
 description:
+comments: true
+toc: true
+cover_img:
+feature_img:
 ---
 
 Git Cola 是一个 Ubuntu 下的 Git 图形化客户端。在不熟悉 Git 命令时和在进行代码比对的情况下，可以很方便协助完成操作。

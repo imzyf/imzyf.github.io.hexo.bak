@@ -3,11 +3,14 @@ title: Git 提交 message 规范
 permalink: git-commit-message-style-guide
 date: 2019-06-04 14:07:46
 updated: 2019-06-04 14:07:46
+tags:
+  - git
+categories:
+description:
 comments: true
 toc: true
-tags:
-   - git
-description:
+cover_img:
+feature_img:
 ---
 
 commit message 应该清晰明了，说明本次提交的目的。基本公式：

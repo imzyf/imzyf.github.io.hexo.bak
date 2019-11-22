@@ -1,13 +1,18 @@
 ---
 title: GitHub Webhook 自动部署 Hexo
 permalink: github-webhook-example
-comments: true
-toc: true
 date: 2016-07-01 20:00:00
+updated:
 tags:
   - github
   - hexo
   - git
+categories:
+description:
+comments: true
+toc: true
+cover_img:
+feature_img:
 ---
 
 在 [GitHub Pages 不被百度收录解决方案](/2016/06/30/github-pages-forbidden-baiduspide-solution/) 中，思路二是通过 Dnspod 的智能 DNS 服务。简而言之就是搭建一个 Server，做一个 Blog 的镜像站，专为百度收录使用。

@@ -2,11 +2,15 @@
 title: Git clean 从工作区中删除未跟踪的文件
 permalink: git-clean-remove-untracked-files-from-the-working-tree
 date: 2017-02-22 14:00:00
+updated:
+tags:
+  - git
+categories:
+description:
 comments: true
 toc: true
-tags:
-   - git
-description:
+cover_img:
+feature_img:
 ---
 
 从当前目录开始，通过递归删除不在版本控制之下的文件来清除工作树。

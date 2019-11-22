@@ -3,11 +3,14 @@ title: Git 在工作目录之间使用 push 进行同步
 permalink: git-synchronizing-between-working-directories-by-push
 date: 2017-03-30 18:00:00
 updated: 2018-01-18 19:00:00
+tags:
+  - git
+categories:
+description:
 comments: true
 toc: true
-tags:
-   - git
-description:
+cover_img:
+feature_img:
 ---
 
 _Pushing to a non-bare repo is now possible (Git 2.3.0 February 2015)._

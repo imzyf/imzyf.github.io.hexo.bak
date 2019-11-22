@@ -1,12 +1,18 @@
 ---
 title: GitHub Pages 不被百度收录解决方案
 permalink: github-pages-forbidden-baiduspide-solution
-comments: true
 date: 2016-06-30 20:00:00
+updated:
 tags:
   - github
-  - git
   - hexo
+  - git
+categories:
+description:
+comments: true
+toc: true
+cover_img:
+feature_img:
 ---
 
 在 [使用 Hexo 和 Github 搭建个人独立博客](/2016/06/24/hexo-github-blog/) 几天后，发现百度并不对博客进行收录。

@@ -2,12 +2,17 @@
 title: 使用 GitHub 和 Hexo 搭建个人独立博客
 permalink: hexo-github-blog
 date: 2016-06-24 18:30:00
-comments: true
-toc: true
+updated:
 tags:
   - github
-  - git
   - hexo
+  - git
+categories:
+description:
+comments: true
+toc: true
+cover_img:
+feature_img:
 ---
 
 `Wordpress` 这类博客系统功能强大，可对与我只想划拉的写点东西的人，感觉大材小用了。而且 `Wordpress` 需要部署，网站的服务器也会带来问题，国内的服务器首先需要备案，费用不低，国外服务器访问速度受影响。
