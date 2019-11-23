@@ -5,8 +5,6 @@ date: 2019-04-10 17:09:23
 updated: 2019-04-10 17:09:32
 tags:
   - js
-  - es6
-  - jquery
 categories:
 description:
 comments: true

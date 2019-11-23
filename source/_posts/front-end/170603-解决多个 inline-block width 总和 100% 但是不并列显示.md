@@ -2,12 +2,15 @@
 title: 解决多个 inline-block width 总和 100% 但是不并列显示
 permalink: resolving-multiple-inline-block-not-in-a-single-row
 date: 2017-06-03 09:00:00
-comments: true
-toc: true
+updated:
 tags:
-   - css
+  - css
 categories:
 description:
+comments: true
+toc: true
+cover_img:
+feature_img:
 ---
 
 今天遇到一个问题：两个宽度和为 100% 的内联块，没有能在同一行并列显示，第二个内联块跑到了下一行，很奇怪。查其原因竟是：空格、换行造成的。

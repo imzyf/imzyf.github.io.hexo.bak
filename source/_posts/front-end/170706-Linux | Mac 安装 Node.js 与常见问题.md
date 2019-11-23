@@ -3,13 +3,14 @@ title: Linux | Mac 安装 Node.js 与常见问题
 permalink: install-node-js-in-ubuntu-and-faq
 date: 2017-07-06 17:00:00
 updated: 2019-10-31 18:29:57
-comments: true
-toc: true
 tags:
-  - node-js
-  - mac
+  - node-js 
 categories:
 description:
+comments: true
+toc: true
+cover_img:
+feature_img:
 ---
 
 ## Node.js 安装

@@ -2,12 +2,16 @@
 title: React Native 入门
 permalink: react-native-getting-started
 date: 2017-08-21 10:00:00
+updated:
+tags:
+  - react
+  - react-native
+categories:
+description:
 comments: true
 toc: true
-tags:
-   - react
-   - react-native
-description:
+cover_img:
+feature_img:
 ---
 
 React Native 入门学习练习 - Mac 环境
@@ -218,7 +222,7 @@ eg: [RefTest.js](https://github.com/imzyf/react-native-started/blob/master/sampl
 
 ```javascript
 balloonSize: this.refStateTest.getSize(),
-  <StateTest ref={refStateTest => (this.refStateTest = refStateTest)} />;
+  (<StateTest ref={refStateTest => (this.refStateTest = refStateTest)} />);
 ```
 
 `getSize()` 是 `<StateTest/>` 中定义的一个方法。S

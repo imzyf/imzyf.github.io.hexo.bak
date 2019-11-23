@@ -6,7 +6,6 @@ comments: true
 toc: true
 description:
 tags:
-  - gif
   - photoshop
 categories:
 ---

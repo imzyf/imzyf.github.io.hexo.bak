@@ -2,11 +2,15 @@
 title: React jPlayer 音乐播放器
 permalink: music-player-by-react
 date: 2017-08-27 23:00:00
-comments: true
-toc: true
+updated:
 tags:
   - react
+categories:
 description:
+comments: true
+toc: true
+cover_img:
+feature_img:
 ---
 
 ## 介绍
