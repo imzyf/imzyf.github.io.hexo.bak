@@ -1,5 +1,5 @@
 ---
-title: Ubuntu SSH 密钥登陆免密码
+title: Ubuntu | MAC SSH 密钥登陆免密码
 permalink: ubuntu-ssh-key-login-without-password
 date: 2016-07-29 10:00:00
 updated: 2019-05-25 16:19:06

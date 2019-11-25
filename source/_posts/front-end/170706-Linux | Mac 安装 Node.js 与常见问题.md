@@ -4,11 +4,10 @@ permalink: install-node-js-in-ubuntu-and-faq
 date: 2017-07-06 17:00:00
 updated: 2019-10-31 18:29:57
 comments: true
-toc: true 
+toc: true
 tags:
-   - node-js
-   - ubuntu
-   - mac
+  - node-js
+  - mac
 categories:
 description:
 ---

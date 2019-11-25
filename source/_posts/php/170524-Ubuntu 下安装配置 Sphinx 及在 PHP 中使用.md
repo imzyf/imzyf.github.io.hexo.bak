@@ -5,9 +5,9 @@ comments: true
 date: 2017-05-24 16:00:00
 toc: true
 tags:
-   - sphinx
-   - php
-   - ubuntu
+  - sphinx
+  - php
+  - ubuntu
 description:
 ---
 
