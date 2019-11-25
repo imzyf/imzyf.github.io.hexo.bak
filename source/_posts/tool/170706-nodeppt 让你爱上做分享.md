@@ -2,12 +2,15 @@
 title: nodeppt 让你爱上做分享
 permalink: nodeppt-make-you-fall-in-love-with-to-share
 date: 2017-07-06 17:00:00
-comments: true
-toc: true
+updated:
 tags:
   - node-js
-  - ubuntu
+categories:
 description:
+comments: true
+toc: true
+cover_img:
+feature_img:
 ---
 
 [ksky521/nodeppt: This is probably the best web presentation tool so far!](https://github.com/ksky521/nodeppt)
@@ -55,3 +58,5 @@ tcp        0      0 192.168.8.149:8080      0.0.0.0:*               LISTEN      
 ```
 
 访问 `192.168.8.149:8080` 才可以，`localhost:8080` 不可以
+
+-- EOF --

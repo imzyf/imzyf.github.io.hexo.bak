@@ -3,13 +3,15 @@ title: Docker UFW 失效
 permalink: docker-ufw-not-work
 date: 2018-04-24 14:00:00
 updated: 2018-04-24 14:00:00
-comments: true
-toc: true
 tags:
-   - docker
-   - ufw
+  - docker
+  - ufw
 categories:
 description:
+comments: true
+toc: true
+cover_img:
+feature_img:
 ---
 
 今日遇到 Docker 中的项目绕过了宿主机 UFW 的配置，可以被任意 IP 访问，甚是奇怪。查找资料发现：
@@ -18,7 +20,7 @@ description:
 
 如何修复：
 
-```
+```bash
 $ sudo vi /etc/default/docker
 
 # add the following line:
@@ -30,7 +32,7 @@ DOCKER_OPTS="--iptables=false"
 
 Restart the docker daemon:
 
-```
+```bash
 $ sudo systemctl restart docker
 
 # or
@@ -44,6 +46,8 @@ $ docker/etc/init.d/docker restart
 
 - [Yifans_Z Ubuntu 下使用 UFW 管理防火墙服务](/2016/10/10/manage-iptables-using-ufw-in-ubuntu/)
 
-> Reference:
+> References:
 >
 > - [How to fix the Docker and UFW security flaw](https://www.techrepublic.com/article/how-to-fix-the-docker-and-ufw-security-flaw/)
+
+-- EOF --

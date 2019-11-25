@@ -3,13 +3,15 @@ title: 二分查找 Binary Search
 permalink: binary-search
 date: 2018-12-10 14:00:00
 updated: 2018-12-10 14:00:00
-comments: true
-toc: true
 tags:
-   - swift
-   - algorithm
+  - algorithm
+  - swift
 categories:
 description:
+comments: true
+toc: true
+cover_img: https://cdn-qn.yifans.com/imzyf/anelale-najera-764022-unsplash.jpg
+feature_img:
 ---
 
 <img src="https://cdn-qn.yifans.com/imzyf/anelale-najera-764022-unsplash.jpg" alt="binary-search" />

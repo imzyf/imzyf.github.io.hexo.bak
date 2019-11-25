@@ -2,10 +2,15 @@
 title: Ubuntu 安装配置 ngx_pagespeed
 permalink: install-and-setting-ngx-pagespeed-in-ubuntu
 date: 2017-05-10 19:00:00
-comments: true
-toc: true
+updated:
 tags:
   - nginx
+categories:
+description:
+comments: true
+toc: true
+cover_img:
+feature_img:
 ---
 
 ## 题外话
@@ -413,3 +418,5 @@ curl 'http://localhost/pagespeed_admin/cache?purge=*'
 > - [Levantado/ngx_pagespeed-install-script: Install nginx and pagespeed latest version on clean Ubuntu 14.04, 15.04, 16.04](https://github.com/Levantado/ngx_pagespeed-install-script)
 > - [给后台人员的前端优化 &middot; Atom](https://fixatom.com/pagespeed-for-backend-developer/)
 > - [Nginx ngx_pagespeed nginx 前端优化模块编译 - Phodal | Phodal - A Growth Engineer](https://www.phodal.com/blog/nginx-with-ngx-pagespeed-module-improve-website-cache/)
+
+-- EOF --

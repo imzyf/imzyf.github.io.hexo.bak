@@ -34,8 +34,7 @@ font-family: Times New Roman, "open-sans", "幼圆", sans-serif;
 </p>
 ```
 
-![][1]
-[1]: https://cdn-qn.yifans.com/160623-css-font-summary-001.png
+![font-family](https://cdn-qn.yifans.com/160623-css-font-summary-001.png)
 
 比如上面这段代码，对于汉字部分浏览器会先去 Times New Roman 中查找，没有找到，接着再去 open-sans 中查找，仍然没有找到，继续到“幼圆”中寻找，幼圆中可以找到对应字符则用该字体来显示。对于英文部分可以在 Times New Roman 中寻找则会用该字体来显示。
 
@@ -48,14 +47,14 @@ w3c 建议在定义字体是最后以一个类别结尾，例如 sans-serif，�
 一种字体族代表了拥有某类特性的多种字体，字体族中字体的选择完全有浏览器决定。设计者给出的字体应该尽可能覆盖所有系统，而不应该依赖字体族。字体族一定要放到 font-family 的最后一位。
 
 serif 衬线字体，通常是指使用末端加强原则的字体，通过在文字末端加入细小变化来改变小号文字的可读性。
-![][2]
-[2]: https://cdn-qn.yifans.com/160623-css-font-summary-002.png
+
+![通用字体族 衬线字体](https://cdn-qn.yifans.com/160623-css-font-summary-002.png)
 
 上述字体都是衬线字体，文字的末端使用了衬线。陈贤字体具有较高的可读性，通常用于以大段文字作为表现形式的作品如报纸、书籍等。常见的衬线字体有 Georgia, Garamond, Times New Roman, 中文的宋体等等。
 
 sans-serif 非衬线字体，衬线字体以外的所有字体都成为非衬线字体。非衬线字体的线条比较均匀，通常在艺术字、标题中的使用较多。
-![][3]
-[3]: https://cdn-qn.yifans.com/160623-css-font-summary-002.png
+
+![通用字体族 非衬线字体](https://cdn-qn.yifans.com/160623-css-font-summary-002.png)
 
 由于非衬线字体字条比较均匀，所以在小号文字下的可读性不如衬线字体。常见的非衬线字体有 Trebuchet MS, Tahoma, Verdana, Arial, Helvetica, 中文的幼圆、隶书等等。
 
@@ -79,9 +78,9 @@ font-face {
 `<string>`：此值指的是你自定义的字体的格式，主要用来帮助浏览器识别，其值主要有以下几种类型：truetype, opentype,Web Open Font Format， embedded-opentype, svg 等
 `<font>`：定义字体相关样式,符合该样式设定的文本会使用该字体显示
 
-&emsp;&emsp;truetype(.ttf)、opentype(.otf)这两种格式在绝大多数浏览器上都能正常工作。Web Open Font Format(.woff)是 Web 字体中最佳格式，他是一个开放的 TrueType/OpenType 的压缩版本，同时也支持元数据包的分离。Embedded Open Type(.eot)为 IE 的私有字体格式。svg(.svg)字体是基于 SVG 字体渲染的一种格式。下表中列出了这些格式的浏览器兼容性。
-![][6]
-[6]: https://cdn-qn.yifans.com/160623-css-font-summary-table01.png
+truetype(.ttf)、opentype(.otf)这两种格式在绝大多数浏览器上都能正常工作。Web Open Font Format(.woff)是 Web 字体中最佳格式，他是一个开放的 TrueType/OpenType 的压缩版本，同时也支持元数据包的分离。Embedded Open Type(.eot)为 IE 的私有字体格式。svg(.svg)字体是基于 SVG 字体渲染的一种格式。下表中列出了这些格式的浏览器兼容性。
+
+![font-face](https://cdn-qn.yifans.com/160623-css-font-summary-table01.png)
 
 #### @font-face example
 
@@ -109,24 +108,23 @@ font-face {
 }
 ```
 
-```
-<p style='font-family: open-sans,sans-serif'>
-    <span>时间就是金钱</span><span>Time is money.</span>
+```html
+<p style="font-family: open-sans,sans-serif">
+  <span>时间就是金钱</span><span>Time is money.</span>
 </p>
-<p style='font-family: open-sans,sans-serif;font-weight:bold;'>
-    <span>时间就是金钱</span><span>Time is money.</span>
+<p style="font-family: open-sans,sans-serif;font-weight:bold;">
+  <span>时间就是金钱</span><span>Time is money.</span>
 </p>
 ```
 
-![][4]
-[4]: https://cdn-qn.yifans.com/160623-css-font-summary-004.png
-&emsp;&emsp;上述代码中两次@font-face 命令定义了一个字体族，在普通情况下使用 OpenSans-Regular 字体，粗体时使用 OpenSans-Bold 字体。这也印证了我们上文所说，对于字体族中的字体由浏览器根据当前设置自动选择。
+![font-face example](https://cdn-qn.yifans.com/160623-css-font-summary-004.png)
 
-&emsp;&emsp;如果要使用@font-face 通常需要做一些优化工作，比如有的字体库太大就需要只保留网页中用到的文字，对于中文字体更是如此，这时候[字蛛(FontSpider)](http://font-spider.org/)工具可以来帮助我们；对于进一步优化，可以将字体文件以 base64 编码方式嵌入到 css 文件中来减少一次 http 请求，小米主页就是采用这种方式（[这里](http://www.mi.com/minote/)和[这里](http://www.mi.com/css/webfont/product-minote-overall.min.css)）。
+上述代码中两次@font-face 命令定义了一个字体族，在普通情况下使用 OpenSans-Regular 字体，粗体时使用 OpenSans-Bold 字体。这也印证了我们上文所说，对于字体族中的字体由浏览器根据当前设置自动选择。
 
-![][5]
-[5]: https://cdn-qn.yifans.com/160623-css-font-summary-005.png
+如果要使用@font-face 通常需要做一些优化工作，比如有的字体库太大就需要只保留网页中用到的文字，对于中文字体更是如此，这时候[字蛛(FontSpider)](http://font-spider.org/)工具可以来帮助我们；对于进一步优化，可以将字体文件以 base64 编码方式嵌入到 css 文件中来减少一次 http 请求，小米主页就是采用这种方式（[这里](http://www.mi.com/minote/)和[这里](http://www.mi.com/css/webfont/product-minote-overall.min.css)）。
 
-&emsp;&emsp;对于字体库的压缩可以使用这款[工具](https://www.fontsquirrel.com/tools/webfont-generator)。
+![font-face](https://cdn-qn.yifans.com/160623-css-font-summary-005.png)
+
+对于字体库的压缩可以使用这款[工具](https://www.fontsquirrel.com/tools/webfont-generator)。
 
 > 参考转自 [我的小树林-CSS Font 知识整理总结](http://www.cnblogs.com/dojo-lzz/p/4375347.html)

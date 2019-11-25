@@ -6,8 +6,7 @@ updated: 2019-02-28 10:00:00
 comments: true
 toc: true
 tags:
-   - ios
-   - fastlane
+  - ios
 categories:
 description:
 ---

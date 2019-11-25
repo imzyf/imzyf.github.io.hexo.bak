@@ -2,13 +2,15 @@
 title: Nginx 禁止 IP 访问
 permalink: nginx-ip-forbidden
 date: 2018-05-20 21:00:00
-updated: 2018-05-20 21:00:00
-comments: true
-toc: true
+updated:
 tags:
-   - nginx
+  - nginx
 categories:
 description:
+comments: true
+toc: true
+cover_img:
+feature_img:
 ---
 
 禁止 IP 访问，其他域名跳转到 `www.xxx.com`：
@@ -42,3 +44,5 @@ server {
     ...
 }
 ```
+
+-- EOF --

@@ -3,13 +3,15 @@ title: 插入排序 Insertion Sort
 permalink: insertion-sort
 date: 2018-11-24 16:00:00
 updated: 2018-11-24 16:00:00
-comments: true
-toc: true
 tags:
-   - swift
-   - algorithm
+  - algorithm
+  - swift
 categories:
 description:
+comments: true
+toc: true
+cover_img: https://cdn-qn.yifans.com/imzyf/jordane-mathieu-539965-unsplash.jpg
+feature_img:
 ---
 
 <img src="https://cdn-qn.yifans.com/imzyf/jordane-mathieu-539965-unsplash.jpg" alt="insertion-sort" />

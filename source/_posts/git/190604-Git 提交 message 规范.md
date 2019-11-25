@@ -9,7 +9,7 @@ categories:
 description:
 comments: true
 toc: true
-cover_img:
+cover_img: https://images.unsplash.com/photo-1493124071986-cccebebe4cc3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=480&q=80
 feature_img:
 ---
 

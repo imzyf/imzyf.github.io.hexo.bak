@@ -3,19 +3,22 @@ title: 使用 Let's Encrypt 通配符证书
 permalink: lets-encrypt-wildcard-certificates
 date: 2018-04-26 16:00:00
 updated: 2018-04-26 16:00:00
-comments: true
-toc: true
 tags:
-   - https
+  - nginx
+  - https
 categories:
 description:
+comments: true
+toc: true
+cover_img:
+feature_img:
 ---
 
 一直在使用 [Let's Encrypt](https://letsencrypt.org/) 的免费 SSL 证书，但是一直没做笔记。今天看到 Let's Encrypt 支持了通配符证书（Wildcard Certificates），也就是说二级子域名和主域名可以共用一个证书。
 
 ## 申请证书
 
-```
+```bash
 # 下载证书申请客户端
 cd /opt
 git clone https://github.com/certbot/certbot
@@ -29,7 +32,7 @@ cd /opt/certbot
 
 `-preferred-challenges dns` 使用 DNS 方式校验域名所有权，所以会遇到：
 
-```
+```bash
 -------------------------------------------------------------------------------
 Please deploy a DNS TXT record under the name
 _acme-challenge.zyf.im with the following value:
@@ -45,7 +48,7 @@ Press Enter to Continue
 
 使用 `host -t txt _acme-challenge.zyf.im` 验证记录是否已经生效，如果看到对应的值，按 Enter 继续。
 
-```
+```bash
 ...
  - Congratulations!
 ...
@@ -53,7 +56,7 @@ Press Enter to Continue
 
 生成的证书会放置在 `/etc/letsencrypt/live/`，可以使用 openssl 验证一下：
 
-```
+```bash
 $ openssl x509 -in /etc/letsencrypt/live/zyf.im/cert.pem -noout -text | grep zyf.im
 
 Subject: CN=zyf.im
@@ -62,7 +65,7 @@ Subject: CN=zyf.im
 
 ## 配置证书
 
-```
+```conf
 server {
     listen 80;
     server_name zyf.im design.zyf.im;
@@ -70,7 +73,7 @@ server {
 }
 ```
 
-```
+```conf
 server {
     listen 443 ssl http2;
     listen [::]:443 ssl http2;
@@ -105,11 +108,13 @@ server {
 
 证书的有效期只有三个月，所以要利用 `crontab` 定时续期：
 
-```
+```conf
 30 2 * * 1 /opt/certbot/certbot-auto renew >> /var/log/le-renew.log 2>&1
 35 2 * * 1 /etc/init.d/nginx reload
 ```
 
-> Reference:
+> References:
 >
 > - [配置使用免费的通配符证书](https://blog.laisky.com/p/letsencrypt/)
+
+-- EOF --

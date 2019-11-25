@@ -40,3 +40,5 @@ var uri = string.Format("https://{0}.api.mailchimp.com/3.0/lists/{1}/members?off
 > Reference:
 >
 > - [Work with MailChimp API 3.0&#39;s pagination | Yi Zeng’s Blog](http://yizeng.me/2016/04/30/work-with-mailchimp-api-3-0s-pagination/)
+
+-- EOF --

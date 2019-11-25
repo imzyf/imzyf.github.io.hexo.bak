@@ -64,3 +64,5 @@ Step 2：在页面左侧点击 [生成外链播放器](http://music.163.com/#/ou
 ### flash 插件效果
 
 <embed src="//music.163.com/style/swf/widget.swf?sid=27836172&type=2&auto=0&width=320&height=66" width="340" height="86"  allowNetworking="all"></embed>
+
+-- EOF --

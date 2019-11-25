@@ -6,9 +6,8 @@ updated: 2018-05-15 14:00:00
 comments: true
 toc: true
 tags:
-   - nginx
-   - cdn
-   - php
+  - nginx
+  - php
 categories:
 description:
 ---

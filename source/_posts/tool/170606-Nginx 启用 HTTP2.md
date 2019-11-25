@@ -2,11 +2,16 @@
 title: Nginx 启用 HTTP/2
 permalink: nginx-enable-http2
 date: 2017-06-06 21:00:00
-comments: true
-toc: true
+updated:
 tags:
   - nginx
   - https
+categories:
+description:
+comments: true
+toc: true
+cover_img:
+feature_img:
 ---
 
 2015 年 5 月 14 日 HTTP/2 协议正式版的发布，越来越多的网站开始部署 HTTP/2 了。
@@ -104,3 +109,5 @@ Chrome 插件 [HTTP/2 and SPDY indicator](https://chrome.google.com/webstore/det
 > - [HTTP/2.0 相比 1.0 有哪些重大改进？ - 知乎](https://www.zhihu.com/question/34074946)
 > - [&#12302; Nginx 启用 HTTP/2&#12303; 有槽必吐 - 不吐槽，毋宁死](https://tsukkomi.org/post/enable-http-2-on-nginx)
 > - [http2 讲解 · GitBook](https://www.gitbook.com/book/ye11ow/http2-explained/details)
+
+-- EOF --

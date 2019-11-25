@@ -3,15 +3,17 @@ title: 栈 Stack Data Structure
 permalink: stack-data-structure
 date: 2018-11-22 14:00:00
 updated: 2018-11-22 14:00:00
-comments: true
-toc: false
 tags:
-   - swift
-   - algorithm
+  - algorithm
+  - swift
 categories:
 description:
+comments: true
+toc: true
+cover_img: https://cdn-qn.yifans.com/imzyf/johnson-wang-20675-unsplash.jpg
+feature_img:
 ---
- 
+
 <img src="https://cdn-qn.yifans.com/imzyf/johnson-wang-20675-unsplash.jpg" alt="queue-data-structure" />
 
 加入 [Swift Algorithm Club](https://github.com/raywenderlich/swift-algorithm-club) /'ælgə'rɪðəm/，回炉重新学习数据结构与算法。
@@ -86,4 +88,5 @@ public var count: Int {
 ```
 
 > Reference:
+>
 > - [Swift Algorithm Club: Swift Stack Data Structure](https://www.raywenderlich.com/800-swift-algorithm-club-swift-stack-data-structure)

@@ -3,13 +3,15 @@ title: 队列 Queue Data Structure
 permalink: queue-data-structure
 date: 2018-11-22 16:00:00
 updated: 2018-11-22 16:00:00
-comments: true
-toc: true
 tags:
-   - swift
-   - algorithm
+  - algorithm
+  - swift
 categories:
 description:
+comments: true
+toc: true
+cover_img: https://cdn-qn.yifans.com/imzyf/mael-balland-1389916-unsplash.jpg
+feature_img:
 ---
 
 <img src="https://cdn-qn.yifans.com/imzyf/mael-balland-1389916-unsplash.jpg" alt="queue-data-structure" />
@@ -21,7 +23,7 @@ description:
 `队列` 核心也是 array，A queue gives you a FIFO or first-in, first-out order. 队列是：先进先出的。
 
 ```
-public struct Queue<T> {    
+public struct Queue<T> {
     fileprivate var array = [T]()
 }
 ```
@@ -134,4 +136,5 @@ public struct OptimizedQueue<T> {
 文章代码：[GitHub - imzyf/data-structure-and-algorithm/002-Queue/](https://github.com/imzyf/data-structure-and-algorithm/tree/master/002-Queue)。
 
 > Reference:
+>
 > - [raywenderlich/swift-algorithm-club/Queue](https://github.com/raywenderlich/swift-algorithm-club/tree/master/Queue)
