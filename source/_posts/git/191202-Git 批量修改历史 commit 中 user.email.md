@@ -17,6 +17,14 @@ feature_img:
 
 <!-- more -->
 
+查询都有什么：
+
+```bash
+git log --format='%aN %aE' | sort -u
+```
+
+注：一个特殊情况如果 email 没被设置过 OLD_EMAIL 可以填 `user.name`。
+
 - OLD_EMAIL 原来的邮箱
 - CORRECT_NAME 更正的名字
 - CORRECT_EMAIL 更正的邮箱
@@ -25,7 +33,7 @@ feature_img:
 git filter-branch -f --env-filter '
 OLD_EMAIL="old@qq.com"
 CORRECT_NAME="MyName"
-CORRECT_EMAIL="new@qq.com"
+CORRECT_EMAIL="new@gmail.com"
 if [ "$GIT_COMMITTER_EMAIL" = "$OLD_EMAIL" ]
 then
     export GIT_COMMITTER_NAME="$CORRECT_NAME"

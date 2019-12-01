@@ -14,12 +14,10 @@ description:
 
 获取 Nginx 反向代理后的客户端 IP，基本是按一定顺序检测以下参数中的信息：
 
-```
-HTTP_CLIENT_IP
-HTTP_X_REAL_FORWARDED_FOR
-HTTP_X_FORWARDED_FOR
-REMOTE_ADDR
-```
+- HTTP_CLIENT_IP
+- HTTP_X_REAL_FORWARDED_FOR
+- HTTP_X_FORWARDED_FOR
+- REMOTE_ADDR
 
 ## 在未使用 CDN 和反向代理情况下
 

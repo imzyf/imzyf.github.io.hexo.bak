@@ -2,13 +2,15 @@
 title: PHP 请小心判断 strpos
 permalink: php-strpos-warning
 date: 2019-04-10 20:27:21
-updated: 2019-04-10 17:09:32
-comments: true
-toc: true
+updated:
 tags:
-   - php
+  - php
 categories:
 description:
+comments: true
+toc: true
+cover_img:
+feature_img:
 ---
 
 有开始写世界上最后的语言 PHP 了（狗头保命）。一个很简单的字符串是否包含判断就掉坑了。
