@@ -16,6 +16,8 @@ feature_img:
 
 Git Cola 是一个 Ubuntu 下的 Git 图形化客户端。在不熟悉 Git 命令时和在进行代码比对的情况下，可以很方便协助完成操作。
 
+<!-- more -->
+
 ## Install Git Cola
 
 ```bash
@@ -33,8 +35,6 @@ sudo apt-get install git-core git-cola
 ## 一点经验
 
 当发现 `Status` 面板中的内容没有刷新时，可以 `ctrl + r` 进行刷新
-
-<!-- more -->
 
 下面的这篇文章介绍的很好，就不再累述了：
 

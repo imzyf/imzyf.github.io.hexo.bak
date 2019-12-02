@@ -21,7 +21,7 @@ And it is possible when you are pushing the branch currently checked out at the 
 
 只需要再远程仓库配置：
 
-```
+```bash
 git config receive.denyCurrentBranch updateInstead
 ```
 
@@ -41,7 +41,7 @@ The new option is:
 
 in remote repo:
 
-```
+```bash
 git config receive.denyCurrentBranch updateInstead
 ```
 

@@ -108,13 +108,13 @@ Edit repos.json to configure repositories, each repository must be registered un
 sudo apt-get install python-pip
 ```
 
-#### Set environment variable for the repos.json config.
+#### Set environment variable for the repos.json config
 
 ```
 export REPOS_JSON_PATH=/path/to/repos.json
 ```
 
-#### Start the server.
+#### Start the server
 
 ```
 python index.py 80
@@ -155,12 +155,10 @@ https://github.com/[ 用户名 ]/[ 仓库名称 ]/settings/hooks
 
 ## 最后想说的
 
-为了一个百度收录大可不必这么麻烦，刚刚查到这些解决方案时心里也是烦的、虚的，但还是硬的头皮搞了。
-
-过程中已经不单单是为了百度收录自己的博客，而是变成学习了东西、思考问题。这些解决方案网上都有，也不是自己创造的，但是别人的东西自己不尝试，就还是别人的。
+为了一个百度收录大可不必这么麻烦，刚刚查到这些解决方案时心里也是烦的、虚的，但还是硬的头皮搞了。过程中已经不单单是为了百度收录自己的博客，而是变成学习了东西、思考问题。这些解决方案网上都有，也不是自己创造的，但是别人的东西自己不尝试，就还是别人的。
 
 现在百度已经收录我的博客了，imzyf.github.io 到 Server 也是自动部署的。解决问题后的快乐和信心，才是我这次最大的收获。
 
-> Reference
+> References
 >
 > - [jerryzou-Webhook 实践 —— 自动部署](http://jerryzou.com/posts/webhook-practice/)

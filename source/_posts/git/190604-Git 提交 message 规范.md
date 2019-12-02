@@ -15,7 +15,7 @@ feature_img:
 
 commit message 应该清晰明了，说明本次提交的目的。基本公式：
 
-```
+```txt
 <type>(<scope>): <subject>
 ```
 
@@ -23,7 +23,7 @@ commit message 应该清晰明了，说明本次提交的目的。基本公式�
 
 完整公式：
 
-```
+```txt
 <type>(<scope>): <subject>
 <BLANK LINE>
 <body>
@@ -65,20 +65,20 @@ commit message 应该清晰明了，说明本次提交的目的。基本公式�
 
 全局安装（首选）：
 
-```
+```bash
 $ npm install -g commitizen cz-conventional-changelog
 $ echo '{ "path": "cz-conventional-changelog" }' > ~/.czrc
 ```
 
 项目级安装（首选）：
 
-```
+```bash
 npm install -D commitizen cz-conventional-changelog
 ```
 
 `package.json` 中配置：
 
-```
+```bash
 "script": {
    ...,
    "commit": "git-cz",

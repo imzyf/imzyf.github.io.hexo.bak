@@ -63,6 +63,6 @@ git clean -f
 git clean -df
 ```
 
-> reference:
+> Reference:
 >
 > - [Git 清除未跟踪文件 - GLGJing&#8217;s Blog](http://glgjing.github.io/blog/2015/01/09/git-qing-chu-wei-gen-zong-wen-jian/)
