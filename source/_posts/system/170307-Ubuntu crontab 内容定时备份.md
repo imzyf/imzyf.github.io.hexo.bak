@@ -2,12 +2,15 @@
 title: Ubuntu crontab 内容定时备份
 permalink: ubuntu-crontab-content-backup
 date: 2017-03-07 12:00:00
+updated:
+tags:
+  - ubuntu
+categories:
+description:
 comments: true
 toc: true
-tags:
-   - ubuntu
-   - crontab
-description:
+cover_img:
+feature_img:
 ---
 
 `crontab -r` 是一个很危险的命令，它将直接重置 crontab 中的内容；输入 `crontab` 后，使用 `ctrl + d` 退出也将清空 crontab 中的内容。所以 crontab 内容的定时备份也变得有必要了。

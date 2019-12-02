@@ -6,8 +6,8 @@ updated: 2019-03-13 10:00:00
 comments: true
 toc: true
 tags:
-   - ios
-   - swift
+  - ios
+  - swift
 categories:
 description:
 ---
@@ -29,37 +29,6 @@ for number in oneTwoThree {
 
 <!-- more -->
 
-
 - 重复访问 Repeated Access. sequence 可以被多次迭代，而且不会被消耗。
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 r

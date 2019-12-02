@@ -2,11 +2,15 @@
 title: Ubuntu 下使用 sendmail mail 发送邮件
 permalink: using-sendmail-mail-in-ubuntu
 date: 2017-04-06 11:00:00
+updated:
+tags:
+  - ubuntu
+categories:
+description:
 comments: true
 toc: true
-tags:
-   - ubuntu
-description:
+cover_img:
+feature_img:
 ---
 
 使用邮件发送程序的执行情况、运行日志都非常方便，Ubuntu 下搭建邮件服务也不复杂。

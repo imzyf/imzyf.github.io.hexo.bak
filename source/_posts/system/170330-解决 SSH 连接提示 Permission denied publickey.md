@@ -2,12 +2,16 @@
 title: 解决 SSH 连接提示 Permission denied publickey
 permalink: resolving-ssh-permission-denied-publickey
 date: 2017-03-30 17:00:00
-comments: true
-toc: true
+updated:
 tags:
   - ubuntu
   - ssh
+categories:
 description:
+comments: true
+toc: true
+cover_img:
+feature_img:
 ---
 
 服务器是使用 publickey 进行连接，当在 git push 时发生 `Permission denied (publickey)`。同时解决 ssh-add 重启后失效。

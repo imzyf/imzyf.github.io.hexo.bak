@@ -6,9 +6,9 @@ updated: 2019-02-15 17:00:00
 comments: true
 toc: true
 tags:
-   - ios
-   - swift
-   - reading-notes
+  - ios
+  - swift
+  - reading-notes
 categories:
 description:
 ---
@@ -24,6 +24,7 @@ description:
 自己的理解就是：把接受多个参数的函数变换为，先接受一个参数，然后返回一个函数，这个函数再接受其他参数。
 
 两个细节：
+
 - 只有一个参数，并且这个参数是该函数的第一个参数。必须按照参数的定义顺序来调用柯里化函数。
 - 柯里化函数的函数体只会执行一次，只会在调用完最后一个参数的时候执行柯里化函数体。
 
@@ -48,7 +49,8 @@ addTen(6) // 16
 书中还提到了一个封装 [Selector](https://oleb.net/blog/2014/07/swift-instance-methods-curried-functions/?utm_campaign=iOS_Dev_Weekly_Issue_157&utm_medium=email&utm_source=iOS%252BDev%252BWeekly) 的例子，但是没懂，欢迎指教。
 
 > Reference:
-> - [Swift函数柯里化介绍及使用场景](https://www.jianshu.com/p/5b27fec8c616)
+>
+> - [Swift 函数柯里化介绍及使用场景](https://www.jianshu.com/p/5b27fec8c616)
 
 ## 将 protocol 的方法声明为 mutating
 
@@ -111,7 +113,7 @@ func ??<T>(optional: T?, defaultValue: @autoclosure() -> T) -> T {
         return value
     default:
         return defaultValue()
-    }   
+    }
 }
 ```
 

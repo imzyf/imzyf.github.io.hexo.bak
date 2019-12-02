@@ -2,11 +2,15 @@
 title: 解决 Ubuntu Sogou 无法选词输入中文
 permalink: resolving-ubuntu-sogou-can-not-select-word
 date: 2017-03-17 17:00:00
-comments: true
-toc: true
+updated:
 tags:
   - ubuntu
+categories:
 description:
+comments: true
+toc: true
+cover_img:
+feature_img:
 ---
 
 sogou 输入法突然无法选词输入中文，候选词位置出现白框，多次重重装 fcitx 和 sogou 也没有解决。尝试使用 google pinyin 代替，但是感觉很不顺手

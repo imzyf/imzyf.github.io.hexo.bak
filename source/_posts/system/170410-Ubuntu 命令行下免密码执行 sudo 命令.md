@@ -2,11 +2,15 @@
 title: Ubuntu 命令行下免密码执行 sudo 命令
 permalink: execute-sudo-without-password-in-ubuntu-terminal
 date: 2017-04-10 15:00:00
+updated:
+tags:
+  - ubuntu
+categories:
+description:
 comments: true
 toc: true
-tags:
-   - ubuntu 
-description:
+cover_img:
+feature_img:
 ---
 
 解决你的问题的方法是将你的用户加入 sudoers 文件。

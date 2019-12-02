@@ -1,13 +1,16 @@
 ---
-title: Ubutun dict 中英文翻译 cli
+title: Ubuntu dict 中英文翻译 cli
 permalink: chinese-and-english-translation-tools-cli
 date: 2017-07-06 11:00:00
 updated: 2019-06-17 14:15:22
-comments: true
-toc: true
 tags:
   - ubuntu
+categories:
 description:
+comments: true
+toc: true
+cover_img:
+feature_img:
 ---
 
 [FeeiCN/dict: 命令行下中英文翻译工具（Chinese and English translation tools in the command line）](https://github.com/FeeiCN/dict)

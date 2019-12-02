@@ -6,7 +6,7 @@ updated: 2019-07-30 16:24:49
 comments: true
 toc: true
 tags:
-   - php
+  - php
 categories:
 description:
 ---
@@ -62,7 +62,7 @@ $ ls
 
 bin     etc     include lib     php     sbin    var
 
-$ cd bin && ls 
+$ cd bin && ls
 
 pear       peardev    pecl       phar       phar.phar  php        php-cgi    php-config phpdbg     phpize
 ```

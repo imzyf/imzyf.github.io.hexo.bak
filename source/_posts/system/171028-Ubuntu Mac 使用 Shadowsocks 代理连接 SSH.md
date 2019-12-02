@@ -3,12 +3,14 @@ title: Ubuntu Mac 使用 Shadowsocks 代理连接 SSH
 permalink: ubuntu-or-mac-ssh-by-shadowsocks
 date: 2017-10-28 15:00:00
 updated: 2019-11-05 10:29:30
-comments: true
-toc: true
 tags:
-   - mac
+  - mac
 categories:
 description:
+comments: true
+toc: true
+cover_img:
+feature_img:
 ---
 
 ## Ubuntu
@@ -39,7 +41,7 @@ export http_proxy=http://127.0.0.1:1087;export https_proxy=http://127.0.0.1:1087
 
 ## 鉴别自己是否真的使用了代理来登陆服务器
 
-```
+```bash
 root@ubuntu:~# who
 root     pts/2        2017-05-13 18:13 (xxx.xxx.xxx.xxx)
 ```

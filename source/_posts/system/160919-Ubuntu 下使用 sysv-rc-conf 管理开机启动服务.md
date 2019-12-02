@@ -2,11 +2,15 @@
 title: Ubuntu 下使用 sysv-rc-conf 管理开机启动服务
 permalink: manage-startup-program-using-sysv-rc-conf-in-ubuntu
 date: 2016-09-19 14:00:00
+updated:
+tags:
+  - ubuntu
+categories:
+description:
 comments: true
 toc: true
-tags:
-   - ubuntu
-description:
+cover_img:
+feature_img:
 ---
 
 `sysv-rc-conf` gives an easy to use interface for managing "/etc/rc{runlevel}.d/" symlinks. The interface comes in two different flavors, one that simply allows turning services on or off and another that allows for more fine tuned management of the symlinks.

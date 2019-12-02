@@ -1,12 +1,16 @@
 ---
-title: Ubutun trash-cli 删除文件到回收站
+title: Ubuntu trash-cli 删除文件到回收站
 permalink: trash-cli-move-files-to-trash
 date: 2017-07-06 14:00:00
-comments: true
-toc: true
+updated:
 tags:
   - ubuntu
+categories:
 description:
+comments: true
+toc: true
+cover_img:
+feature_img:
 ---
 
 [andreafrancia/trash-cli: Command line interface to the freedesktop.org trashcan.](https://github.com/andreafrancia/trash-cli)
@@ -17,6 +21,8 @@ description:
 easy_install trash-cli
 ```
 
+<!-- more -->
+
 ## Usage
 
 ```bash
@@ -26,8 +32,6 @@ trash-list          list trashed files.
 trash-restore       restore a trashed file.
 trash-rm            remove individual files from the trashcan.
 ```
-
-<!-- more -->
 
 ## FAQ
 

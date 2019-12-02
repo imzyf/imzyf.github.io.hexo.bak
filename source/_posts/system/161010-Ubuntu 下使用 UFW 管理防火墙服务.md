@@ -3,12 +3,14 @@ title: Ubuntu 下使用 UFW 管理防火墙服务
 permalink: manage-iptables-using-ufw-in-ubuntu
 date: 2016-10-10 13:00:00
 updated: 2019-03-07 14:00:00
+tags:
+  - ubuntu
+categories:
+description:
 comments: true
 toc: true
-tags:
-   - ubuntu
-   - ufw
-description:
+cover_img:
+feature_img:
 ---
 
 <img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g0u8m88n8gj30u00cvq9x.jpg" alt="manage-iptables-using-ufw-in-ubuntu" />

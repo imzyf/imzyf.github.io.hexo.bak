@@ -2,11 +2,15 @@
 title: 解决 Ubuntu warning Setting locale failed
 permalink: resolving-ubuntu-warning-setting-locale-failed
 date: 2017-03-03 17:00:00
+updated:
+tags:
+  - ubuntu
+categories:
+description:
 comments: true
 toc: true
-tags:
-   - ubuntu
-description:
+cover_img:
+feature_img:
 ---
 
 在配置新服务器时遇到 `Setting locale failed` 的警告，要求 `Please check that your locale settings`
