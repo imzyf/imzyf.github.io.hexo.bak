@@ -2,11 +2,15 @@
 title: MacBook 使用小感
 permalink: simple-macbook-report
 date: 2017-10-28 14:00:00
-comments: true
-toc: true
+updated:
 tags:
   - mac
+categories:
 description:
+comments: true
+toc: true
+cover_img:
+feature_img:
 ---
 
 现在自己的开发主力机是：2015 版的 MacBook Pro。对于工程师来讲，MacBook 绝对是用来提高生产力的，不是装\*的。如果条件允许十分推荐，反正我是回不来了。

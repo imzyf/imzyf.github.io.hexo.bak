@@ -2,13 +2,16 @@
 title: 2017 Happy New Year
 permalink: 2017-happy-new-year
 date: 2017-01-04 22:00:00
-comments: true
-toc: false
+updated:
 tags:
   - report
 categories:
   - report
 description:
+comments: true
+toc: true
+cover_img:
+feature_img:
 ---
 
 2016 肯定是很特别的一年。年初离开了老师的队伍，来北京找实习。年中和 318 告别，大学毕业了。年末换房学做饭，开始另种生活。对于 2017 更多了对自己的期待。

@@ -18,7 +18,7 @@ feature_img:
 
 ## 启动
 
-`public/index.php`：
+入口文件 `public/index.php`：
 
 ```php
 // Register The Auto Loader
