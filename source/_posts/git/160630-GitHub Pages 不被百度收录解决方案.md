@@ -2,7 +2,7 @@
 title: GitHub Pages 不被百度收录解决方案
 permalink: github-pages-forbidden-baiduspide-solution
 date: 2016-06-30 20:00:00
-updated:
+updated: 2019-12-02 19:32:06
 tags:
   - github
   - hexo
@@ -15,9 +15,17 @@ cover_img:
 feature_img:
 ---
 
+2019 年 12 月 02 日 更新：现在我的 Blog 还是用的 GitHub Pages，反正没有备案的域名不会被百度收录。
+
+2017 年 04 月 22 日 更新：现在我的 Blog 使用的是 [UFOVPS](https://www.ufovps.com/) 直接部署的。
+
+---
+
 在 [使用 Hexo 和 Github 搭建个人独立博客](/2016/06/24/hexo-github-blog/) 几天后，发现百度并不对博客进行收录。
 
 在天朝使用百度搜索毕竟多数，使用百度站长工具-抓取诊断，在百度 Spider 抓取结果返回 HTTP 头：HTTP/1.1 403 Forbidden，原来是 GitHub 禁止了百度爬虫的爬去。
+
+<!-- more -->
 
 Google 后早已有许多热心网友给出了解决方案，自己在这里总结下。
 
@@ -32,19 +40,22 @@ Google 后早已有许多热心网友给出了解决方案，自己在这里总�
 那么问题又来了，既然我可以搭一个反向代理服务器了，那我为什么不直接把博客放在这台服务器上？放 Github Pages 上不就是为了少一台服务器，少一点费用吗？
 
 那有没有免费的第三方反向代理服务呢？当然有，其实现在各种 **CDN 服务** 不就是吗？而且还额外提供了各种网络环境下的加速功能。
+
 但是使用 CDN 也会有一个非常大的缺点：只能对 **静态资源** 做，因为 CDN 和反向代理有一个很大的不同就是：它会做缓存，并向各个节点分发。
+
 所以 CDN 一般都是用来给静态资源做加速的。如果你对动态页面做加速，用户看到的页面在一段时间内就一直不会变了。但是我们不怕！因为 Github Pages 本来就是全静态的！
 
-国内提供 CDN 服务的有：加速乐、七牛云存储、又拍云等
+国内提供 CDN 服务的有：加速乐、七牛云存储、又拍云等。
+
 最后选择了 [**又拍云**](https://www.upyun.com/index.html)
 
 CDN 回源配置
+
 有设置缓存时间的功能，上面明确写了：CDN 缓存时间是指 UPYUN 回源取得文件后，文件在 UPYUN CDN 网络中的缓存的时间，超过缓存时间则重新回源获取文件。
+
 是的，这才是真正满足我需求的功能！
 
 这个解决方案我尝试了，但是在 CDN 域名配置时，有天朝特色要求域名必须备案，我的域名 `zyf.im` 是在 [name.com](http://www.name.com) 上注册的，`.im` 的尾缀也无法在国内备案。所以这个方案不适合我。
-
-<!-- more -->
 
 ## 思路二：通过 Dnspod 的智能 DNS 服务
 
@@ -59,9 +70,6 @@ CDN 回源配置
 请参看：[GitHub Webhook 自动部署 Hexo](/2016/06/30/github-webhook-example/)
 
 经过这么一配置，我的博客现在已经被百度收录了。百度搜索：`site:zyf.im`
-
-**2017 年 04 月 22 日 Updated**：
-现在我的 Blog 使用的是 [UFOVPS](https://www.ufovps.com/) 直接部署的
 
 > Reference:
 >

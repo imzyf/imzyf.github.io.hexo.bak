@@ -2,7 +2,7 @@
 title: 使用 GitHub 和 Hexo 搭建个人独立博客
 permalink: hexo-github-blog
 date: 2016-06-24 18:30:00
-updated:
+updated: 2019-12-02 18:32:51
 tags:
   - github
   - hexo
@@ -29,60 +29,31 @@ feature_img:
 
 > A fast, simple & powerful blog framework
 
-[Hexo](https://hexo.io/) 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。
-
-[Hexo 官方文档](https://hexo.io/zh-cn/docs/setup.html)
+[Hexo](https://hexo.io/) 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页，[Hexo setup 官方文档](https://hexo.io/zh-cn/docs/setup.html)。
 
 <!--more-->
 
 ## 安装 Git
 
-Linux (Ubuntu, Debian):
-
-```
-sudo apt-get install git-core
-```
-
-Linux (Fedora, Red Hat, CentOS):
-
-```
-sudo yum install git-core
-```
+> [Download for Linux and Unix | git-scm](https://git-scm.com/download/linux)
 
 ## 安装 Node.js
 
-安装 Node.js 的最佳方式是使用 nvm。
-cURL:
-
-```
-curl https://raw.github.com/creationix/nvm/master/install.sh | sh
-```
-
-Wget:
-
-```
-wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh
-```
-
-安装完成后，重启终端并执行下列命令即可安装 Node.js。
-
-```
-nvm install 4
-```
+> [Linux | Mac 安装 Node.js 与常见问题 | zyf.im](/2017/07/06/install-node-js-in-ubuntu-and-faq/)
 
 ## 安装 Hexo
 
-所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。
+所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo：
 
-```
+```bash
 npm install -g hexo-cli
 ```
 
 ## 建站
 
-安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。
+安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件：
 
-```
+```bash
 $ hexo init <folder>
 $ cd <folder>
 $ npm install
@@ -90,19 +61,19 @@ $ npm install
 
 新建完成后，指定文件夹的目录如下：
 
-```
+```txt
 ├── _config.yml
 ├── package.json
 ├── scaffolds
 ├── source
-|   ├── _drafts
-|   └── _posts
+| ├── _drafts
+| └── _posts
 └── themes
 ```
 
 ### 新建一篇文章
 
-```
+```bash
 hexo new [layout] <title>
 ```
 
@@ -110,17 +81,25 @@ hexo new [layout] <title>
 
 ### 生成静态文件
 
-```
+```bash
 hexo generate
+
+# 可以简写为
+
+hexo g
 ```
 
 ### 启动服务器
 
-```
+```bash
 hexo server
+
+# 可以简写为
+
+hexo s
 ```
 
-网站会在 [http://localhost:4000]() 下启动。在服务器启动期间，Hexo 会监视文件变动并自动更新，您无须重启服务器。
+网站会在 [http://localhost:4000](http://localhost:4000) 下启动。在服务器启动期间，Hexo 会监视文件变动并自动更新，您无须重启服务器。
 
 ## 部署静态网页到 GitHub
 
@@ -128,25 +107,23 @@ hexo server
 
 1. 登录 GitHub，注册自定义用户名如：`imzyf`
 2. 在主页右下角创建 New repository，name 必须和用户名一致如：`imzyf.github.io`
-3. 首次创建耐心等待 10 分钟左右审核，之后即可访问静态主页如：`http://imzyf.github.io`
+3. 等待 3 分钟左右，之后即可访问静态主页如：`https://imzyf.github.io`
 
 ### 同步内容至 GitHub
 
-1. 在 Hexo 目录下 `git cl one git@github.com:imzyf/imzyf.github.io.git`
-2. 将`public`文件下的所有文件拷贝到`imzyf.github.io`下
-3. `git add .`增加当前子目录下所有更改过的文件至 index
-4. `git commit -m 'xxx'`提交到本地
-5. `git push origin master`将当前分支 push 到远程 master 分支
-6. 最后访问主页`http://imzyf.github.io`观察效果
+1. 在 Hexo 目录下 `git clone git@github.com:imzyf/imzyf.github.io.git`
+2. 将 `public` 文件下的所有文件拷贝到 `imzyf.github.io` 下
+3. `git add .` 增加当前子目录下所有更改过的文件至 index
+4. `git commit -m 'xxx'` 提交到本地
+5. `git push origin master` 将当前分支 push 到远程 master 分支
+6. 最后访问主页`http://imzyf.github.io` 观察效果
 
 ## 绑定个人域名
 
-### 设置 CNAME
+在 GitHub 项目页面，Settings -> GitHub Pages，Source 选择 master branch，Custom domain 填写自己的域名，同时勾选 Enforce HTTPS 让你的网址支持 HTTPS。
 
-1. 在 Github 的网站目录下创建 CNAME 文件
-2. 填写自己的域名如`zyf.im`，保存结束
-3. 登录域名服务商，然后添加记录，记录类型选择`CNAME`，记录值`imzyf.github.io.`(有个点)
+在你的域名服务商那里，将填写的域名解析到：`<username>.github.io` 利于 `imzyf.github.io`。
 
-> Reference
->
-> - [HellDog-使用 GitHub 和 Hexo 搭建免费静态 Blog](https://wsgzao.github.io/post/hexo-guide/)
+## References
+
+- [HellDog-使用 GitHub 和 Hexo 搭建免费静态 Blog](https://wsgzao.github.io/post/hexo-guide/)
