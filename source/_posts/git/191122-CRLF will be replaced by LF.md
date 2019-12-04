@@ -2,7 +2,7 @@
 title: CRLF will be replaced by LF
 permalink: crlf-will-be-replaced-by-lf
 date: 2019-11-22 17:30:37
-updated:
+updated: 2019-12-04 11:43:48
 tags:
   - git
 categories:
@@ -26,10 +26,25 @@ warning: CRLF will be replaced by LF in X.
 
 <!-- more -->
 
-但是我项目中是配置了 `.gitattributes` 的：
+首先推荐扩展阅读：[配置 Git 处理行结束符 | GitHub](https://help.github.com/cn/github/using-git/configuring-git-to-handle-line-endings)
+
+我项目中是配置了 `.gitattributes` 的：
 
 ```txt
-* text=auto eol=lf
+# Set the default behavior, in case people don't have core.autocrlf set.
+* text=auto
+
+# Explicitly declare text files you want to always be normalized and converted
+# to native line endings on checkout.
+*.c text
+*.h text
+
+# Declare files that will always have CRLF line endings on checkout.
+*.sln text eol=crlf
+
+# Denote all files that are truly binary and should not be modified.
+*.png binary
+*.jpg binary
 ```
 
 ## .gitattributes
@@ -56,9 +71,11 @@ warning: CRLF will be replaced by LF in X.
 
 ```txt
 *.jpg -text
+
+*.jpg binary
 ```
 
-对于 jpg 文件，标记为非文本文件，不进行任何的行尾转换。
+对于 jpg 文件，标记为非文本文件，不进行任何的行尾转换。`*.jpg -text` 可能是旧版本的写法。
 
 ### 示例 4
 
@@ -84,17 +101,22 @@ warning: CRLF will be replaced by LF in X.
 
 对于 py 文件，只针对工作目录中的文件，行尾为 LF。
 
-### 推荐配置
-
-```text
-* text=auto eol=lf
-```
-
 ## 还是有问题
 
 在项目中已经添加 `.gitattributes` 文件，但是还是出现了报错，这时要检查 git 的版本。（CentOS 自带的 git 版本较低）
+
+> 可以参考：[CentOS yum 升级 git 版本](https://zyf.im/2019/11/25/centos-upgrade-git-by-yum/)
+
+后来还查到了一个方法，`.gitattributes`：
+
+```txt
+* -crlf
+```
 
 ## References
 
 - [Git 的 gitattributes 文件详解 | csdn](https://blog.csdn.net/taiyangdao/article/details/78484623)
 - [gitattributes - Defining attributes per path | git-scm](https://git-scm.com/docs/gitattributes)
+- [How to make Git ignore different line endings | rtuin](https://www.rtuin.nl/2013/02/how-to-make-git-ignore-different-line-endings/)
+
+-- EOF --

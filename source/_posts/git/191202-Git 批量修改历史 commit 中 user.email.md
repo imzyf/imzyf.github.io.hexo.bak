@@ -24,7 +24,7 @@ feature_img:
 ```bash
 git filter-branch -f --env-filter '
 OLD_EMAIL="old@qq.com"
-CORRECT_NAME="MyNane"
+CORRECT_NAME="MyName"
 CORRECT_EMAIL="new@qq.com"
 if [ "$GIT_COMMITTER_EMAIL" = "$OLD_EMAIL" ]
 then
@@ -56,3 +56,5 @@ remote: GitLab: You are not allowed to force push code to a protected branch on 
 > References:
 >
 > - [Git 批量修改历史 commit 中的 user.name 和 user.email | segmentfault](https://segmentfault.com/a/1190000008032330)
+
+-- EOF --

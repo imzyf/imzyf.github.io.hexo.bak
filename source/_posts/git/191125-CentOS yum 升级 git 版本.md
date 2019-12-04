@@ -2,7 +2,7 @@
 title: CentOS yum 升级 git 版本
 permalink: centos-upgrade-git-by-yum
 date: 2019-11-25 15:36:16
-updated:
+updated: 2019-12-04 12:04:56
 tags:
   - git
   - centos
@@ -24,7 +24,7 @@ RHEL and derivatives typically ship older versions of git. You can download a ta
 
 RHEL 和衍生通常提供较老版本的 git。您可以下载 tarball 并从源代码构建，或者使用第三方存储库，如 [IUS Community Project](https://ius.io/) 来获得最新版本的 git。
 
-## 安装 IUS
+## 使用 IUS
 
 RHEL/CentOS 7
 
@@ -34,7 +34,7 @@ https://repo.ius.io/ius-release-el7.rpm \
 https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 ```
 
-## 安装新版 git
+安装新版 git：
 
 ius 通常会在高版本的软件名后面 + 'u'
 
@@ -42,7 +42,7 @@ ius 通常会在高版本的软件名后面 + 'u'
 yum list git git\*u
 ```
 
-如果你已经装有低版本的 git，你需要先 remove (否则安装的时候会报错)
+如果你已经装有低版本的 git，你需要先 remove（否则安装的时候会报错）
 
 ```bash
 yum remove git
@@ -54,6 +54,41 @@ yum remove git
 yum install git2u
 ```
 
+## WANdisco
+
+另一个源：[WANdisco Replication Binaries](http://docs.wandisco.com/git/binaries/)
+
+```bash
+sudo vi /etc/yum.repos.d/wandisco-git.repo
+```
+
+wandisco-git.repo
+
+```txt
+[wandisco-git]
+name=Wandisco GIT Repository
+baseurl=http://opensource.wandisco.com/centos/7/git/$basearch/
+enabled=1
+gpgcheck=1
+gpgkey=http://opensource.wandisco.com/RPM-GPG-KEY-WANdisco
+```
+
+Import the repository GPG keys with:
+
+```bash
+sudo rpm --import http://opensource.wandisco.com/RPM-GPG-KEY-WANdisco
+```
+
+```bash
+sudo yum remove git
+
+sudo yum install git
+git --version
+```
+
 ## References
 
-- [ius 第三方源推荐—— 在 centos 上用 yum 安装最新的包 | jiebaby](http://jiebaby.com/index.php/archives/42/)
+- [How To Install Git on CentOS 7 | linuxize](https://linuxize.com/post/how-to-install-git-on-centos-7/)
+- [How to install latest version of git on CentOS 7.x/6.x | stackoverflow](https://stackoverflow.com/questions/21820715/how-to-install-latest-version-of-git-on-centos-7-x-6-x)
+
+-- EOF --

@@ -2,7 +2,7 @@
 title: Git 提交 message 规范
 permalink: git-commit-message-style-guide
 date: 2019-06-04 14:07:46
-updated: 2019-06-04 14:07:46
+updated:
 tags:
   - git
 categories:
@@ -112,3 +112,5 @@ npm install -D commitizen cz-conventional-changelog
 > - [优雅的提交你的 Git Commit Message - juejin](https://juejin.im/post/5afc5242f265da0b7f44bee4)
 > - [Commit message 和 Change log 编写指南 - ruanyifeng](http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html)
 > - [AngularJS Git Commit Message Conventions - google docs](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#)
+
+-- EOF --
