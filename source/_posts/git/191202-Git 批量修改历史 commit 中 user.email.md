@@ -50,7 +50,7 @@ fi
 因为修改了 Git 历史所有要使用强制推送：
 
 ```bash
-git push --f
+git push --f --tags
 ```
 
 GitLab 有 master 分支保护的策略：

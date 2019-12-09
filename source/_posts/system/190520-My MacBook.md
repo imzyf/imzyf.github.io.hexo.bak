@@ -26,13 +26,13 @@ feature_img:
 安装 [brew](https://brew.sh/)：
 
 ```bash
-$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # 查找软件
-$ brew cask info iterm2
+brew cask info iterm2
 
 # 安装软件
-$ brew cask install iterm2
+brew cask install iterm2
 ```
 
 ## 软件清单
@@ -46,12 +46,12 @@ $ brew cask install iterm2
 - ImageOptim
 - iHosts - 管理 Host - 
 - The Unarchiver - 
-- ~ShadowsocksX-NG~
 - V2rayU
 - 百度云 - BaiduNetdisk
+- ~ShadowsocksX-NG~
 
 ```bash
-$ brew cask install iterm2 alfred google-chrome visual-studio-code imageoptim v2rayu baidunetdisk
+brew cask install iterm2 alfred google-chrome visual-studio-code imageoptim v2rayu baidunetdisk
 ```
 
 ### Web 开发
@@ -67,11 +67,11 @@ $ brew cask install iterm2 alfred google-chrome visual-studio-code imageoptim v2
 - ~~Paw - API 管理~~
 
 ```bash
-$ brew cask install docker dash sourcetree postman firefox
+brew cask install docker dash sourcetree postman firefox
 ```
 
 ```bash
-$ brew install php@7.2
+brew install php@7.2
 ```
 
 ### iOS 开发
@@ -84,7 +84,7 @@ $ brew install php@7.2
 - Wireshark
 
 ```bash
-$ brew cask install opensim reveal charles
+brew cask install opensim reveal charles
 ```
 
 ### 系统
@@ -95,8 +95,8 @@ $ brew cask install opensim reveal charles
 - Proxifier - 代理 - ✨✨✨ - 💰
 - fliqlo - 时钟屏保 - 可以配合 `触发角` 使用 - ✨✨✨
 - QuicklookStephen - QuickLook plugin - ✨✨✨
-- PopClip - ✨✨
-- typora - Markdown 编辑器 - ✨✨
+- PopClip - ✨
+- typora - Markdown 编辑器 - 导出 PDF 的样式出色 - ✨✨✨
 - Pap.er - 桌面壁纸
 - Mounty
 - Launchpad Manager Yosemite - 清理 Launchpad 图标
@@ -105,12 +105,12 @@ $ brew cask install opensim reveal charles
 - Cyberduck - FTP
 
 ```bash
-$ brew cask install go2shell itsycal fliqlo qlstephen PopClip typora paper
+brew cask install go2shell itsycal fliqlo qlstephen PopClip typora paper
 ```
 
 ```bash
-$ brew tap dteoh/sqa
-$ brew cask install slowquitapps
+brew tap dteoh/sqa
+brew cask install slowquitapps
 ```
 
 ### 效率
@@ -132,7 +132,7 @@ $ brew cask install slowquitapps
 - ~~网易云音乐~~
 
 ```bash
-$ brew cask install iina licecap
+brew cask install iina licecap
 ```
 
 ### 产品
@@ -155,5 +155,7 @@ $ brew cask install iina licecap
 - fish
 
 ```bash
-$ brew install autojump
+brew install autojump
 ```
+
+-- EOF --
