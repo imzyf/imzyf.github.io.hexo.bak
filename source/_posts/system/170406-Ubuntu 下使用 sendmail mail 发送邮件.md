@@ -57,7 +57,7 @@ echo 'test-email-content' | mail -s 'email title' xxx@gmail.com
 
 sedmail 是负责邮件传输的 MTA，类似 apache、nginx 的作用。mail 是用户使用客户端 MUA，类似 foxmail。
 
-> References:
->
-> - [Install and configure Sendmail on Ubuntu](https://gist.github.com/adamstac/7462202)
-> - [Linux 下 mail、mailx 和 sendmail 的区别？ - 知乎](https://www.zhihu.com/question/19728556)
+## References
+
+- [Install and configure Sendmail on Ubuntu](https://gist.github.com/adamstac/7462202)
+- [Linux 下 mail、mailx 和 sendmail 的区别？ - 知乎](https://www.zhihu.com/question/19728556)

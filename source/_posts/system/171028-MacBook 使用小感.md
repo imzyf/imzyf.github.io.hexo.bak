@@ -135,6 +135,8 @@ Finder：
 
 `系统偏好设置 -> 显示器 -> Night Shift`
 
-> Reference:
->
-> - [Vien - Mac 使用指南 1.0](http://vien.xn--6qq986b3xl/)
+## References
+
+- [Vien - Mac 使用指南 1.0](http://vien.xn--6qq986b3xl/)
+
+-- EOF --

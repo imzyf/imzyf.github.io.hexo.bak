@@ -35,7 +35,7 @@ trash-rm            remove individual files from the trashcan.
 
 ## FAQ
 
-### Can I alias rm to trash-put?
+### Can I alias rm to trash-put
 
 在不少网站上看到：建议将 `trash-put` 命令通过别名的方式代替 `rm`
 
@@ -49,7 +49,7 @@ alias rm="trush-put"
 
 所以就使用 `trush` 来删除文件/文件夹到回收站
 
-### But sometimes I forget to use trash-put, really can't I?
+### But sometimes I forget to use trash-put, really can't I
 
 可以通过建立 `rm` 的 alias 提醒你不要使用它：
 
@@ -64,3 +64,5 @@ alias rm='echo "This is not the command you are looking for."; false'
 ```
 
 注意：bash alias 仅在交互式 shell 中使用，因此使用 alias 不影响脚本中使用的 rm 命令。
+
+-- EOF --

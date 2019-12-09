@@ -2,7 +2,7 @@
 title: Ubuntu dict 中英文翻译 cli
 permalink: chinese-and-english-translation-tools-cli
 date: 2017-07-06 11:00:00
-updated: 2019-06-17 14:15:22
+updated:
 tags:
   - ubuntu
 categories:
@@ -55,3 +55,5 @@ $ dict 测试
 #...
 ###################################
 ```
+
+-- EOF --

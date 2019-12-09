@@ -4,7 +4,7 @@ permalink: install-node-js-in-ubuntu-and-faq
 date: 2017-07-06 17:00:00
 updated: 2019-10-31 18:29:57
 tags:
-  - node-js 
+  - node-js
 categories:
 description:
 comments: true
@@ -111,10 +111,10 @@ nvm install iojs
 nvm alias default v6.11.1
 ```
 
-> References:
->
-> - [How To Install Node.js on Ubuntu 16.04 | DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04)
-> - [nvm node is recognised by npm install script. | GitHub](https://github.com/sass/node-sass/issues/2470)
-> - [npm 的 --unsafe-perm 参数是有何作用呢？| segmentfault](https://segmentfault.com/q/1010000019365121)
+## References
+
+- [How To Install Node.js on Ubuntu 16.04 | DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04)
+- [nvm node is recognised by npm install script. | GitHub](https://github.com/sass/node-sass/issues/2470)
+- [npm 的 --unsafe-perm 参数是有何作用呢？| segmentfault](https://segmentfault.com/q/1010000019365121)
 
 -- EOF --
