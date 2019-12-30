@@ -113,3 +113,6 @@ jsonContent:
     excerpt: false
     categories: true
     tags: true
+
+html_minifier:
+  exclude:
