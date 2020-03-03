@@ -6,7 +6,7 @@ updated: 2018-05-08 17:00:00
 comments: true
 toc: true
 tags:
-   - php
+  - php
 categories:
 description:
 ---
@@ -21,14 +21,14 @@ description:
 
 声明命名空间：
 
-```
+```php
 <?php
 namespace Oreilly\ModernPHP;
 ```
 
 导入和别名：
 
-```
+```php
 <?php
 use Symfony\Component\HttpFoundation\Response as Res;
 

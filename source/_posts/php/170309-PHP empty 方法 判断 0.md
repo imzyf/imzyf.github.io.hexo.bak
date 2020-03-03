@@ -5,13 +5,15 @@ date: 2017-03-09 17:00:00
 comments: true
 toc: true
 tags:
-   - php
+  - php
 description:
 ---
 
 在使用 `empty(mixed $var)` 时要考虑 `$var` 的 **类型**，尤其是在判断数据库查询后的字段。
 
-```
+<!-- more -->
+
+```txt
 bool empty(mixed $var)
 ```
 
@@ -33,5 +35,3 @@ $str = '0.0';
 echo empty($str); // false 很可能和预期是相反的
 echo empty((float)$str); // true
 ```
-
-<!-- more -->

@@ -18,7 +18,7 @@ feature_img:
 
 ## 启动
 
-入口文件 `public/index.php`：
+文章以 Laravel 学习。入口文件 `public/index.php`：
 
 ```php
 // Register The Auto Loader

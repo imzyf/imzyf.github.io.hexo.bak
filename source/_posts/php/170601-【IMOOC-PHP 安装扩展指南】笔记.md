@@ -1,12 +1,12 @@
 ---
-title: 【IMOOC-PHP安装扩展指南】笔记
+title: 【IMOOC-PHP 安装扩展指南】笔记
 permalink: imooc-install-php-extension-guide-notes
 date: 2017-06-01 12:00:00
 updated: 2017-06-01 12:00:00
 comments: true
 toc: true
 tags:
-   - php
+  - php
 categories:
 description:
 ---

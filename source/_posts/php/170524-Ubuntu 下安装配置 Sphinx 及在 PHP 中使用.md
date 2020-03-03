@@ -211,15 +211,15 @@ sudo /etc/init.d/php5-fpm restart
 ```php
 public function testSphinx()
 {
-	$s = new \SphinxClient;
-	$s->setServer("localhost", 9312);
-	$s->SetArrayResult (true);
-	$s->setMatchMode(SPH_MATCH_ANY);
-	$s->setMaxQueryTime(3);
-	$result = $s->query("test");
-	$result = $result['matches'];
-	$result = array_column($result,'id');
-	dump($result);
+  $s = new \SphinxClient;
+  $s->setServer("localhost", 9312);
+  $s->SetArrayResult (true);
+  $s->setMatchMode(SPH_MATCH_ANY);
+  $s->setMaxQueryTime(3);
+  $result = $s->query("test");
+  $result = $result['matches'];
+  $result = array_column($result,'id');
+  dump($result);
 }
 ```
 

@@ -5,11 +5,11 @@ date: 2017-04-11 11:00:00
 comments: true
 toc: true
 tags:
-   - php
+  - php
 description:
 ---
 
-在进行大量统计运算时，PHP 可能产生内存不足的情况
+在进行大量统计运算时，PHP 可能产生内存不足的情况。
 
 ## 查看 memory_limit
 
