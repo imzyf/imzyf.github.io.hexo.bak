@@ -16,6 +16,8 @@ feature_img:
 
 一直在使用 [Let's Encrypt](https://letsencrypt.org/) 的免费 SSL 证书，但是一直没做笔记。今天看到 Let's Encrypt 支持了通配符证书（Wildcard Certificates），也就是说二级子域名和主域名可以共用一个证书。
 
+<!-- more -->
+
 ## 申请证书
 
 ```bash
@@ -27,8 +29,6 @@ cd /opt/certbot
 # 注意通配符并不包含主域名，所以要配置两个
 ./certbot-auto certonly -d *.zyf.im -d zyf.im --manual --preferred-challenges dns --server "https://acme-v02.api.letsencrypt.org/directory"
 ```
-
-<!-- more -->
 
 `-preferred-challenges dns` 使用 DNS 方式校验域名所有权，所以会遇到：
 
@@ -113,8 +113,8 @@ server {
 35 2 * * 1 /etc/init.d/nginx reload
 ```
 
-> References:
->
+## References
+
 > - [配置使用免费的通配符证书](https://blog.laisky.com/p/letsencrypt/)
 
 -- EOF --

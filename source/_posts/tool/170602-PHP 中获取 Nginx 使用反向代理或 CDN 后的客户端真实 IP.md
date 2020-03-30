@@ -195,8 +195,10 @@ access_log /usr/local/nginx/logs/access.log porxy;
 
 文章称 `nginx reload` 配置并不生效，需要 `restart`。
 
-> Reference:
->
+## References
+
 > - [使用 PHP 获取客户端真实 IP 地址？——不可能！ - 也就这样](http://blog.zhengshuiguang.com/php/php-ip.html)
 > - [NGINX 多层转发或使用 CDN 之后如何获取用户真实 IP | Snow Blog](http://www.wkii.org/nginx-cdn-get-user-real-ip.html)
 > - [Nginx 日志配置详情解析](https://juejin.im/post/59f94f626fb9a045023af34c)
+
+-- EOF --

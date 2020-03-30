@@ -61,8 +61,8 @@ remote: GitLab: You are not allowed to force push code to a protected branch on 
 
 在 GitLab 中：Project(项目) -> Setting -> Repository 菜单下面的 Protected branches 把 master 的保护去掉就可以了。
 
-> References:
->
+## References
+
 > - [Git 批量修改历史 commit 中的 user.name 和 user.email | segmentfault](https://segmentfault.com/a/1190000008032330)
 
 -- EOF --

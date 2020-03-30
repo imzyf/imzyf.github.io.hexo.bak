@@ -106,8 +106,8 @@ npm install -D commitizen cz-conventional-changelog
 
 还看到一个有意思的库 [📦🚀 semantic-release](https://github.com/semantic-release/semantic-release) 待研究。
 
-> References:
->
+## References
+
 > - [你可能会忽略的 Git 提交规范 - juejin](https://juejin.im/entry/5b429be75188251ac85830ff)
 > - [优雅的提交你的 Git Commit Message - juejin](https://juejin.im/post/5afc5242f265da0b7f44bee4)
 > - [Commit message 和 Change log 编写指南 - ruanyifeng](http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html)

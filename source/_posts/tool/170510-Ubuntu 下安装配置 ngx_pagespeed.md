@@ -413,8 +413,8 @@ curl 'http://localhost/pagespeed_admin/cache?purge=*'
 - 通读一遍官方的 [FAQ](https://modpagespeed.com/doc/faq)，很多情况里面都有说明
 - 对于 Nginx 的 HTTPS HTTP/2 安装配置可以参看我的其他文章
 
-> References:
->
+## References
+
 > - [Levantado/ngx_pagespeed-install-script: Install nginx and pagespeed latest version on clean Ubuntu 14.04, 15.04, 16.04](https://github.com/Levantado/ngx_pagespeed-install-script)
 > - [给后台人员的前端优化 &middot; Atom](https://fixatom.com/pagespeed-for-backend-developer/)
 > - [Nginx ngx_pagespeed nginx 前端优化模块编译 - Phodal | Phodal - A Growth Engineer](https://www.phodal.com/blog/nginx-with-ngx-pagespeed-module-improve-website-cache/)
