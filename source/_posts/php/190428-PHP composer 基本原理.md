@@ -10,11 +10,9 @@ categories:
 description:
 comments: true
 toc: true
-cover_img: https://cdn-qn.yifans.com/imzyf/dayne-topkin-60559-unsplash.jpg
+cover_img: https://images.unsplash.com/photo-1584907797015-7554cd315667?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80
 feature_img:
 ---
-
-<img src="https://cdn-qn.yifans.com/imzyf/dayne-topkin-60559-unsplash.jpg" alt="php-composer-basic" />
 
 ## 启动
 

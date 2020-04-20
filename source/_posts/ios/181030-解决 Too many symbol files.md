@@ -3,17 +3,19 @@ title: 解决 Too many symbol files
 permalink: correct-too-many-symbol-files-issues
 date: 2018-10-30 14:00:00
 updated: 2018-10-30 14:00:00
-comments: true
-toc: true
 tags:
-   - ios
+  - ios
 categories:
 description:
+comments: true
+toc: true
+cover_img: https://images.unsplash.com/photo-1571577275698-54f36820ee9b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80
+feature_img:
 ---
- 
-<img src="https://cdn-qn.yifans.com/imzyf/mika-baumeister-703680-unsplash.jpg" alt="correct-too-many-symbol-files-issues" />
 
-在上传 App 到 App Store 后收到邮件，有 issues **Too many symbol files**。在之前看到 *Your delivery was successful*，此 issues 不影响发布，所以一直搁置了。
+<img src="https://images.unsplash.com/photo-1571577275698-54f36820ee9b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80" />
+
+在上传 App 到 App Store 后收到邮件，有 issues **Too many symbol files**。在之前看到 _Your delivery was successful_，此 issues 不影响发布，所以一直搁置了。
 
 今天决定彻底处理下。
 
@@ -28,7 +30,7 @@ description:
 
 为什么要配置符号表？
 
-为了能快速并准确地定位用户 App 发生 **Crash 的代码位置**，使用符号表对 App 发生 Crash 的程序 *堆栈* 进行 *解析* 和 *还原*。
+为了能快速并准确地定位用户 App 发生 **Crash 的代码位置**，使用符号表对 App 发生 Crash 的程序 _堆栈_ 进行 _解析_ 和 _还原_。
 
 ![为什么要配置符号表](https://ws3.sinaimg.cn/large/006tNbRwly1fwq98vcjeoj30i00383yh.jpg)
 
@@ -69,10 +71,11 @@ end
 在 build Settings 搜索 `valid architecture` 中，填写 `arm64`
 
 > Reference:
+>
 > - [“Too many symbol files” after successfully submitting my apps](https://stackoverflow.com/questions/25755240/too-many-symbol-files-after-successfully-submitting-my-apps)
 > - [“Too many symbol files” warnning when submitting app
-](https://stackoverflow.com/questions/34313049/too-many-symbol-files-warnning-when-submitting-app)
-> - [App提交iTunes Connect,"二进制无效"问题解决方案。](https://www.jianshu.com/p/3511ec38ca20)
+>   ](https://stackoverflow.com/questions/34313049/too-many-symbol-files-warnning-when-submitting-app)
+> - [App 提交 iTunes Connect,"二进制无效"问题解决方案。](https://www.jianshu.com/p/3511ec38ca20)
 > - [Bugly iOS 符号表配置](https://bugly.qq.com/docs/user-guide/symbol-configuration-ios/?v=20180709165613#_2)
 
 -- EOF --

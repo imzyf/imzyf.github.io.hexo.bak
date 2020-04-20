@@ -9,11 +9,11 @@ categories:
 description:
 comments: true
 toc: true
-cover_img: https://cdn-qn.yifans.com/imzyf/robert-richarz-263241-unsplash.jpg
+cover_img: https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80
 feature_img:
 ---
 
-<img src="https://cdn-qn.yifans.com/imzyf/robert-richarz-263241-unsplash.jpg" alt="my-macbook" />
+<img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80" />
 
 个人 MacBook 食用说明。推荐自动化环境配置脚本项目 [imzyf/dotfiles](https://github.com/imzyf/dotfiles)。
 

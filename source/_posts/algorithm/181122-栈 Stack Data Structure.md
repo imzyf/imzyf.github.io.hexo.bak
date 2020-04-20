@@ -10,11 +10,11 @@ categories:
 description:
 comments: true
 toc: true
-cover_img: https://cdn-qn.yifans.com/imzyf/johnson-wang-20675-unsplash.jpg
+cover_img: https://images.unsplash.com/photo-1433439216031-9571132ce719?ixlib=rb-1.2.1&auto=format&fit=crop&w=320&q=80
 feature_img:
 ---
 
-<img src="https://cdn-qn.yifans.com/imzyf/johnson-wang-20675-unsplash.jpg" alt="queue-data-structure" />
+<img src="https://images.unsplash.com/photo-1433439216031-9571132ce719?ixlib=rb-1.2.1&auto=format&fit=crop&w=320&q=80" />
 
 加入 [Swift Algorithm Club](https://github.com/raywenderlich/swift-algorithm-club) /'ælgə'rɪðəm/，回炉重新学习数据结构与算法。
 

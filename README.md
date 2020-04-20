@@ -120,3 +120,9 @@ analytics"
 // Global width of '<body>'.
 $global-body-width: 900px !default;
 ```
+
+## image base cdn
+
+```txt
+https://cdn-qn.yifans.com/imzyf/
+```

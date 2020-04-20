@@ -14,7 +14,7 @@ layout: page
 
 ### 2020
 
-- 01/02：成都、丽江、大理。
+- 01/02：[成都、丽江、大理](https://www.bilibili.com/video/BV1K7411o73B)。
 
 ### 2019
 

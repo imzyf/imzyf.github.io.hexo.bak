@@ -10,11 +10,11 @@ categories:
 description:
 comments: true
 toc: true
-cover_img: https://cdn-qn.yifans.com/imzyf/mael-balland-1389916-unsplash.jpg
+cover_img: cover_img:https://images.unsplash.com/photo-1518414922567-9da8c8461366?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80
 feature_img:
 ---
 
-<img src="https://cdn-qn.yifans.com/imzyf/mael-balland-1389916-unsplash.jpg" alt="queue-data-structure" />
+<img src="https://images.unsplash.com/photo-1518414922567-9da8c8461366?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80" />
 
 实现一个 `队列`，包括 `enqueue`、`dequeue`、`peek`。
 

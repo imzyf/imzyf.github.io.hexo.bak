@@ -3,15 +3,17 @@ title: fastlane 入门使用
 permalink: fastlane-getting-started
 date: 2019-02-28 10:00:00
 updated: 2019-02-28 10:00:00
-comments: true
-toc: true
 tags:
   - ios
 categories:
 description:
+comments: true
+toc: true
+cover_img: https://images.unsplash.com/37/QAdTsSj8TOOWzlyLn3Rg_14248396556_aefcd9a926_o.jpg?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80
+feature_img:
 ---
 
-<img src="https://cdn-qn.yifans.com/imzyf/caleb-george-352-unsplash.jpg" alt="fastlane-getting-started" />
+<img src="https://images.unsplash.com/37/QAdTsSj8TOOWzlyLn3Rg_14248396556_aefcd9a926_o.jpg?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80" />
 
 这次以 [fastlane](https://fastlane.tools/) 为例，尝试项目中有什么事情可以被自动完成。
 

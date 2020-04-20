@@ -3,15 +3,17 @@ title: PromiseKit 入门使用
 permalink: promisekit-getting-started
 date: 2019-01-19 14:00:00
 updated: 2019-01-19 14:00:00
-comments: true
-toc: true
 tags:
-   - ios
+  - ios
 categories:
 description:
+comments: true
+toc: true
+cover_img: https://images.unsplash.com/photo-1579208570378-8c970854bc23?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80
+feature_img:
 ---
 
-<img src="https://cdn-qn.yifans.com/imzyf/rawpixel-1054574-unsplash.jpg" alt="promisekit-getting-started" />
+<img src="https://images.unsplash.com/photo-1579208570378-8c970854bc23?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80" />
 
 在 GitHub Trending 中总是看到 [mxcl/PromiseKit](https://github.com/mxcl/PromiseKit) 它是主要解决的是 “回调地狱” 的问题，决定尝试用一下。
 
