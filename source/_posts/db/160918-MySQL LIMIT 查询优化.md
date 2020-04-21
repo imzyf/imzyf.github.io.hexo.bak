@@ -9,6 +9,8 @@ tags:
   - mysql
 categories:
 description:
+cover_img:
+feature_img:
 ---
 
 最近常在 SQL 中使用到 `LIMIT ? ?`，在执行 `LIMIT 0, 1000` 与 `LIMIT 100000, 1000` 时，查询速度明显有很大的区别，而且随着 LIMIT 的偏移量的增加，查询速度越来越慢。是否有办法对 SQL 中 LIMIT 查询进行优化呢？

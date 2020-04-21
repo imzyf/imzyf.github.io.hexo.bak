@@ -10,7 +10,7 @@ categories:
 description: 【PHP 核心技术与最佳实践】第二版 第 6 章 读书笔记
 comments: true
 toc: true
-cover_img: https://images.unsplash.com/photo-1500293333195-9d3fe158b9e4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80
+cover_img: https://images.unsplash.com/photo-1500293333195-9d3fe158b9e4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=640&q=80
 feature_img:
 ---
 

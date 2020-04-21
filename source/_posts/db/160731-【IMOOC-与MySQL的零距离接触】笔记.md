@@ -1,12 +1,16 @@
 ---
 title: 【IMOOC-与MySQL的零距离接触】笔记
 permalink: imooc-meet-mysql-notes
-comments: true
 date: 2016-07-31 10:00:00
+updated:
+comments: true
 toc: true
 tags:
-   - mysql
+  - mysql
+categories:
 description:
+cover_img:
+feature_img:
 ---
 
 涵盖全部 MySQL 数据库的基础，MySQL 数据库的基础知识、数据表的常用操作及各种约束的使用，以及综合的运用各种命令实现记录进行 CURD 等操作。

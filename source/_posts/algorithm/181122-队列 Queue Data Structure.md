@@ -10,11 +10,9 @@ categories:
 description:
 comments: true
 toc: true
-cover_img: cover_img:https://images.unsplash.com/photo-1518414922567-9da8c8461366?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80
+cover_img: https://images.unsplash.com/photo-1518414922567-9da8c8461366?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=640&q=80
 feature_img:
 ---
-
-<img src="https://images.unsplash.com/photo-1518414922567-9da8c8461366?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80" />
 
 实现一个 `队列`，包括 `enqueue`、`dequeue`、`peek`。
 
@@ -22,7 +20,7 @@ feature_img:
 
 `队列` 核心也是 array，A queue gives you a FIFO or first-in, first-out order. 队列是：先进先出的。
 
-```
+```swift
 public struct Queue<T> {
     fileprivate var array = [T]()
 }
@@ -34,7 +32,7 @@ public struct Queue<T> {
 
 进队，在数组尾部追加元素。
 
-```
+```swift
 public mutating func enqueue(_ element: T) {
     array.append(element)
 }
@@ -44,7 +42,7 @@ public mutating func enqueue(_ element: T) {
 
 出队，将首位的元素移除。因为首位元素移除后，其他元素依次向前移动，所以是 O(n)。
 
-```
+```swift
 public var isEmpty: Bool {
     // 使用数组自身的方法，而不是 array.count > 0
     return array.isEmpty
@@ -64,7 +62,7 @@ public mutating func dequeue() -> T? {
 
 查看队首元素。
 
-```
+```swift
 /// peek() 改为更有语义话的只读变量
 public var front: T? {
     return array.first
@@ -75,7 +73,7 @@ public var front: T? {
 
 在出队后不移动元素而是移动 `起始索引`，就像动的收银台而不是排队的人。
 
-```
+```swift
 /// 优化 队列 的出队
 public struct OptimizedQueue<T> {
 
@@ -135,6 +133,6 @@ public struct OptimizedQueue<T> {
 
 文章代码：[GitHub - imzyf/data-structure-and-algorithm/002-Queue/](https://github.com/imzyf/data-structure-and-algorithm/tree/master/002-Queue)。
 
-> Reference:
->
-> - [raywenderlich/swift-algorithm-club/Queue](https://github.com/raywenderlich/swift-algorithm-club/tree/master/Queue)
+## References
+
+- [raywenderlich/swift-algorithm-club/Queue](https://github.com/raywenderlich/swift-algorithm-club/tree/master/Queue)

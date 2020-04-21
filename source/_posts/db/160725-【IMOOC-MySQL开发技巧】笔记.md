@@ -1,15 +1,19 @@
 ---
 title: 【IMOOC-MySQL开发技巧】笔记
 permalink: imooc-mysql-development-skills-notes
-comments: true
 date: 2016-07-25 10:00:00
+updated:
+comments: true
 toc: true
 tags:
-   - mysql
+  - mysql
+categories:
 description:
+cover_img:
+feature_img:
 ---
 
-主要涉及：JOIN 、JOIN 更新、GROUP BY HAVING 数据查重/去重
+主要涉及：JOIN 、JOIN 更新、GROUP BY HAVING 数据查重/去重。
 
 <!-- more -->
 

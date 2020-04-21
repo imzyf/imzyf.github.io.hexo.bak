@@ -2,18 +2,16 @@
 title: My MacBook
 permalink: my-macbook
 date: 2019-05-20 17:14:59
-updated: 2019-12-02 11:39:29
+updated: 2020-04-21 11:26:42
 tags:
   - mac
 categories:
 description:
 comments: true
 toc: true
-cover_img: https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80
+cover_img: https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=640&q=80
 feature_img:
 ---
-
-<img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80" />
 
 个人 MacBook 食用说明。推荐自动化环境配置脚本项目 [imzyf/dotfiles](https://github.com/imzyf/dotfiles)。
 
@@ -46,11 +44,10 @@ brew cask install iterm2
 - Google Chrome
 - Visual Studio Code
 - ImageOptim
-- iHosts - 管理 Host - 
 - The Unarchiver - 
 - V2rayU
 - 百度云 - BaiduNetdisk
-- ~ShadowsocksX-NG~
+- ~ShadowsocksX-NG~ SS 没啥活路了
 
 ```bash
 brew cask install iterm2 alfred google-chrome visual-studio-code imageoptim v2rayu baidunetdisk
@@ -64,20 +61,26 @@ brew cask install iterm2 alfred google-chrome visual-studio-code imageoptim v2ra
 - [Sourcetree](https://www.sourcetreeapp.com/) - ✨✨✨
 - Postman - API 管理 - ✨✨✨
 - Firefox - ✨✨
-- QQ 游览器 Lite -  - ✨
-- [JetBrains Developer Tools](https://www.jetbrains.com/) 全家桶。
-- ~~Sublime Text~~
-- ~~Paw - API 管理~~
+- [JetBrains Developer Tools](https://www.jetbrains.com/) 全家桶
+- iHosts - 管理 Host - 
+- Chromium
+- cosborwser - 腾讯云 COS 客户端
+- ~~Kodo Browser - 七牛对象存储客户端~~
+- ~~QQ 游览器 Lite - ~~ 太菜了，啥也干不了
+- ~~Sublime Text~~ 还是 VSCode 香
+- ~~Paw - API 管理~~ Postman 够用了
 
 ```bash
 brew cask install docker dash sourcetree postman firefox
 ```
 
 ```bash
-brew install php@7.2
+brew install php@7.1
 ```
 
 ### iOS 开发
+
+> 我已不写 iOS 很多年
 
 - OpenSim - 快速打开模拟器应用文件夹 - ✨✨✨
 - Reveal - UI 调试 - ✨✨✨ - 💰
@@ -94,12 +97,9 @@ brew cask install opensim reveal charles
 
 - [Go2Shell](http://zipzapmac.com/go2shell) - 在当前 Finder 路径打开命令行 - ✨✨✨
 - SecureCRT - SSH 管理 - ✨✨✨ - 💰
-- ~~ShellCraft - SSH - 💰~~
-- ~~[Transmit 5](https://panic.com/transmit/)~~
 - [FileZilla](https://filezilla-project.org/) - FTP / SFTP
-- ~~Shimo - 全局代理，命令行和开发软件内依然可以翻墙，支持 PPTP~~
 - Itsycal - 日历扩展 - ✨✨✨
-- Proxifier - 代理 - ✨✨✨ - 💰
+- Proxifier - 可用作代理 - ✨✨✨ - 💰
 - fliqlo - 时钟屏保 - 可以配合 `触发角` 使用 - ✨✨✨
 - QuicklookStephen - QuickLook plugin - ✨✨✨
 - PopClip - ✨
@@ -110,6 +110,9 @@ brew cask install opensim reveal charles
 - CleanMyMac X
 - [SlowQuitApps](https://github.com/dteoh/SlowQuitApps) - 延迟 `⌘ + q`
 - Cyberduck - FTP
+- ~~ShellCraft - SSH - 💰~~
+- ~~[Transmit 5](https://panic.com/transmit/)~~
+- ~~Shimo - 全局代理，命令行和开发软件内依然可以翻墙，支持 PPTP~~
 
 ```bash
 brew cask install go2shell itsycal fliqlo qlstephen PopClip typora paper
@@ -128,7 +131,7 @@ brew cask install slowquitapps
 - Evernote - 印象笔记
 - 微信 - 
 - QQ - 
-- QQ 音乐 - 
+- QQ 音乐 -  - ✨✨✨✨✨ TME 雄起
 - 网易有道词典 - 
 - TeamViewer
 - ~~Kindle - ~~
@@ -152,6 +155,7 @@ brew cask install iina licecap
 
 - Zeplin
 - Sip - 拾色
+- PixeStyle
 
 ## CLI
 

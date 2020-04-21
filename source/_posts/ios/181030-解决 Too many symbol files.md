@@ -9,11 +9,11 @@ categories:
 description:
 comments: true
 toc: true
-cover_img: https://images.unsplash.com/photo-1571577275698-54f36820ee9b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80
+cover_img: https://images.unsplash.com/photo-1571577275698-54f36820ee9b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=640&q=80
 feature_img:
 ---
 
-<img src="https://images.unsplash.com/photo-1571577275698-54f36820ee9b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80" />
+<img src="https://images.unsplash.com/photo-1571577275698-54f36820ee9b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=640&q=80" />
 
 在上传 App 到 App Store 后收到邮件，有 issues **Too many symbol files**。在之前看到 _Your delivery was successful_，此 issues 不影响发布，所以一直搁置了。
 

@@ -21,7 +21,7 @@ sudo visudo
 
 在文件底部输入：
 
-```
+```txt
 username ALL=(ALL) NOPASSWD: ALL
 ```
 

@@ -9,7 +9,7 @@ categories:
 description:
 comments: true
 toc: true
-cover_img: https://images.unsplash.com/photo-1566699270403-3f7e3f340664?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80
+cover_img: https://images.unsplash.com/photo-1566699270403-3f7e3f340664?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=640&q=80
 feature_img:
 ---
 
@@ -27,7 +27,7 @@ iconv [OPTION...] [-f ENCODING] [-t ENCODING] [INPUTFILE...]
 iconv -f GB18030 -t utf-8 < infile.txt > outfile.txt
 ```
 
-## Reference
+## References
 
 - [文本文件从 Windows 拷贝到 Mac 乱码 | super2bai](https://super2bai.github.io/codec/w2m.html)
 

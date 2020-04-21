@@ -2,12 +2,15 @@
 title: Photoshop 编辑 GIF
 permalink: photoshop-edit-gif
 date: 2017-11-23 9:00:00
-comments: true
-toc: true
-description:
+updated:
 tags:
   - photoshop
 categories:
+description:
+comments: true
+toc: true
+cover_img:
+feature_img:
 ---
 
 ## 录制 GIF
