@@ -12,6 +12,8 @@ description:
 
 使用了很久的 PHP，但是如何在 Ubuntu 下正确的安装 PHP 总是不清不白。本篇文章就是汇总、积累安装 PHP 和安装时遇到的常见问题。
 
+<!-- more -->
+
 ## Ubuntu 16.04 安装 php5.6
 
 ```bash
@@ -63,8 +65,6 @@ sudo apt-get install php5.6 php5.6-cgi php5.6-cli php5.6-common php5.6-curl php5
 ```bash
 sudo apt-get purge php5.6 php5.6-cgi php5.6-cli php5.6-common php5.6-curl php5.6-dev php5.6-fpm php5.6-gd php5.6-json php5.6-mbstring php5.6-mcrypt php5.6-mysql php5.6-readline php5.6-soap php5.6-xml php5.6-xmlrpc php5.6-xsl php5.6-zip
 ```
-
-<!-- more -->
 
 > Reference:
 >
