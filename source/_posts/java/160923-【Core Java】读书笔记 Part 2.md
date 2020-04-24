@@ -2,12 +2,16 @@
 title: 【Core Java】读书笔记 Part 2
 permalink: core-java-reading-notes-part2
 date: 2016-09-23 16:00:00
-comments: true
-toc: true
+updated:
 tags:
   - java
   - reading-notes
+categories:
 description:
+comments: true
+toc: true
+cover_img:
+feature_img:
 ---
 
 本文总结的是书中的：第 5 章 继承

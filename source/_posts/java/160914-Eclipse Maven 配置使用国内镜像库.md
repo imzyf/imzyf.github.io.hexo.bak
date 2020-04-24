@@ -2,11 +2,15 @@
 title: Eclipse Maven 配置使用国内镜像库
 permalink: eclipse-maven-settings-mirror-in-china
 date: 2016-09-14 15:00:00
-comments: true
-toc: false
+updated:
 tags:
   - java
+categories:
 description:
+comments: true
+toc: true
+cover_img:
+feature_img:
 ---
 
 Windows 下因为 Eclipse 自带了 Maven 插件，还算够用就懒得安装 Maven 了。在不使用代理的情况下，用 Maven 的下载库不是一般的慢。Eclipse Maven 的插件怎么配置国内的镜像库呢？其实很简单。

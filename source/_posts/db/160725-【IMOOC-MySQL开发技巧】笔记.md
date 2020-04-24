@@ -25,9 +25,11 @@ INNER JOIN、LEFT JOIN、RIGHT JOIN、FULL JOIN(MySQL 不支持)、CROSS JOIN
 
 > [CODING HORROR-A Visual Explanation of SQL Joins](https://blog.codinghorror.com/a-visual-explanation-of-sql-joins/)
 
-下图可以很清楚的明白，JOIN 的数据选取范围
+下图可以很清楚的明白，JOIN 的数据选取范围：
 
-![IMOOC-MySQL开发技巧 - JOIN](https://cdn-qn.yifans.com/160725-imooc-mysql-development-skills-notes-001.png)
+![160725-imooc-mysql-development-skills-notes-001](https://user-images.githubusercontent.com/9289792/80199172-9d701f80-8653-11ea-8d20-498f54e41708.png)
+
+![160725-imooc-mysql-development-skills-notes-002](https://user-images.githubusercontent.com/9289792/80199188-9fd27980-8653-11ea-9386-e76dca7b4d0c.jpeg)
 
 ## 更新使用过滤条件中包括本身的表
 

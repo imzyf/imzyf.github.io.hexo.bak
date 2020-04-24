@@ -37,7 +37,7 @@ mysql --prompt="(\u@\h) [\d]> "
 
 `my.cnf`
 
-```
+```conf
 [mysql]
 prompt=mysql(\\u@\\h:\\d)>
 ```
@@ -116,11 +116,11 @@ show warnings;
 
 ## 四、数据类型
 
-![数据类型 int](https://cdn-qn.yifans.com/160731-imooc-mysql-tutorials-notes-int.png)
+![160731-imooc-mysql-tutorials-notes-int](https://user-images.githubusercontent.com/9289792/80199388-d5776280-8653-11ea-9182-29a23e53ba50.png)
 
-![数据类型 float](https://cdn-qn.yifans.com/160731-imooc-mysql-tutorials-notes-float.png)
+![160731-imooc-mysql-tutorials-notes-float](https://user-images.githubusercontent.com/9289792/80199384-d4decc00-8653-11ea-88ea-81e6e1f29f5a.png)
 
-![数据类型 char](https://cdn-qn.yifans.com/160731-imooc-mysql-tutorials-notes-char.png)
+![160731-imooc-mysql-tutorials-notes-char](https://user-images.githubusercontent.com/9289792/80199382-d3150880-8653-11ea-9c7c-2385530649ad.png)
 
 - char 型字符串有 0-255 之间的字节，通常被称作定长类型。所存字节不满 char 型所给它的字节，剩下的以空格补齐，仍会存储满你所给它的字节。
 - varchar 型的字符串是变长类型，存多少字节它就存储多少字节，不会在后面补上空格。字节长度在 0-65535 之间。
@@ -128,7 +128,7 @@ show warnings;
 - ENUM 枚举值 就是给他几个选项，它从这几个选项中做选择，最多有 65535 个值。
 - SET 我们称之为集合，集合最多有 64 个成员，它在这些集合成员中做任意的排列组合。
 
-![imooc-mysql-tutorials-notes-time](https://cdn-qn.yifans.com/160731-imooc-mysql-tutorials-notes-time.png?v=1)
+![160731-imooc-mysql-tutorials-notes-time](https://user-images.githubusercontent.com/9289792/80199391-d60ff900-8653-11ea-9836-4fa28ac1cb33.png)
 
 - YEAR：2 位或者 4 位，1970 到 2069 年，允许 70 到 69
 - TIME：-8385959 到 8385959
@@ -189,7 +189,7 @@ SELECT DATABASE();
 
 查看数据表结构
 
-```
+```sql
 SHOW COLUMNS FROM table_name;
 ```
 
@@ -197,13 +197,13 @@ SHOW COLUMNS FROM table_name;
 
 插入记录
 
-```
+```sql
 INSERT [INTO] tb_name [(col_name,col_name,...)] VALUES (va1,...)
 ```
 
 查找记录
 
-```
+```sql
 SELECT expr,.. FROM tb_name
 ```
 
@@ -212,7 +212,7 @@ SELECT expr,.. FROM tb_name
 NULL，字段值可以为空
 NOT NULL，字段值禁止为空
 
-```
+```sql
 CREATE TABLE tb2(
 username VARCHAR(20) NOT NULL;
 age TINYINT UNSIGNE NULL;
@@ -229,7 +229,7 @@ age TINYINT UNSIGNE NULL;
 2、类型必须为整型（可以是 FLOAT(5,0)等，小数点后必须为 0），必须和主键 PRIMARY KEY 组合使用
 3、默认情况下，起始值为 1，每次的增量为 1
 
-```
+```sql
 CREATE TABLE tb3(
 id SMALLINT UNSIGNED AUTO_INCREMENT,
 username VARCHAR(30) NOT NULL);
@@ -244,7 +244,7 @@ username VARCHAR(30) NOT NULL);
 3、主键自动为`NOT NULL`，即必须要为主键赋值。但如果记录中添加了`AUTO_INCREMENT`，那么不需要手动赋值
 4、`auto_increment`必须和主键`primary key`一起使用，但主键`primary key`不一定要和`auto_increment`一块使用
 
-```
+```sql
 CREATE TABLE tb3(
 id SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 username VARCHAR(30) NOT NULL);
@@ -261,7 +261,7 @@ username VARCHAR(30) NOT NULL);
 3、唯一约束的字段可以为空值
 4、每张数据表可以存在多个唯一约束
 
-```
+```sql
 CREATE TABLE tb3(
 id SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 username VARCHAR(30) NOT NULL UNIQUE KEY,
@@ -275,7 +275,7 @@ age tinyint UNSIGNED
 
 `DEFAULT` 当插入记录时，如果没有明确为字段赋值，则自动赋予默认值。
 
-```
+```sql
 CREATE TABLE tb6(
 id SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 username VARCHAR(20) NOT NULL UNIQUE KEY,
@@ -294,14 +294,14 @@ sex ENUM('1','2','3') DEFAULT '3'
 - 查看表是否有索引：SHOW INDEXS FROM table_name；
 - 以网格查看表是否有索引：SHOW INDEXS FROM table_name\G；
 
-```
+```sql
 CREATE TABLE table_name1(
 id SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 name VARCHAR(20) NOT NULL
 )
 ```
 
-```
+```sql
 CREATE TABLE table_name2(
 id SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 username VARCHAR(20) NOT NULL,

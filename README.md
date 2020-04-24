@@ -121,8 +121,6 @@ analytics"
 $global-body-width: 900px !default;
 ```
 
-## image base cdn
+## 图床
 
-```txt
-https://cdn-qn.yifans.com/imzyf/
-```
+GitHub issues

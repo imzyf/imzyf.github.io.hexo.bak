@@ -2,38 +2,45 @@
 title: SpringMVC 入门使用
 permalink: springmvc-getting-started-tutorial
 date: 2016-09-07 14:00:00
-comments: true
-toc: true
+updated:
 tags:
   - java
+categories:
 description:
+comments: true
+toc: true
+cover_img:
+feature_img:
 ---
 
 本文主要参考了 [imooc-SpringMVC 起步](http://www.imooc.com/video/7237) 视频教程和 [SpringMVC 从入门到精通 系列 - HansonQ](http://www.imooc.com/article/3804) ，还有自己的一些总结。
 
 主要内容：MVC 简介、前端控制器模式、SpringMVC 基本概念、SpringMVC 配置、SpringMVC 中的注解、SpringMVC 数据绑定。
 
+<!-- more -->
+
 ## MVC 简介
 
 1、MVC 是一种架构模式
+
 程序分层，分工合作，既相互独立，又协同工作，分为三层：模型层、视图层和控制层
 
 2、MVC 是一种思考方式
-View：视图层，为用户提供 UI，重点关注数据的呈现，为用户提供界面
-Model：模型层，业务数据的信息表示，关注支撑业务的信息构成，通常是多个业务实体的组合
-Controller：控制层，调用业务逻辑产生合适的数据（Model），传递数据给视图用于呈现
+
+- View：视图层，为用户提供 UI，重点关注数据的呈现，为用户提供界面
+- Model：模型层，业务数据的信息表示，关注支撑业务的信息构成，通常是多个业务实体的组合
+- Controller：控制层，调用业务逻辑产生合适的数据（Model），传递数据给视图用于呈现
 
 MVC 设计模式在 B/S 下的应用：
-![MVC设计模式在B/S下的应用](https://cdn-qn.yifans.com/160907-springmvc-getting-started-tutorial-mvc.gif)
+
+![160907-springmvc-getting-started-tutorial-mvc](https://user-images.githubusercontent.com/9289792/80199601-1cfdee80-8654-11ea-8328-9d74c174b2bc.gif)
 
 ①：浏览器发送请求到控制器(这里要知道控制器的作用)
 ②：控制器不能处理请求必须交给模型层来处理接着去访问数据库
 ③：模型层将处理好的结果返回给控制层
 ④：控制层将逻辑视图响应给浏览器(浏览器显示的是渲染过的视图)
 
-**MVC 本质：MVC 的核心思想是业务数据抽取同业务数据呈现相分离；分离有利于程序简化，方便编程**
-
-<!-- more -->
+MVC 本质：**MVC 的核心思想是业务数据抽取同业务数据呈现相分离；分离有利于程序简化，方便编程**
 
 ## 前端控制器模式
 
@@ -48,11 +55,11 @@ MVC 设计模式在 B/S 下的应用：
 - 指前端控制器将我们的请求分发给我们的控制器去生成业务数据
 - 将生成的业务数据分发给恰当的视图模版来生成最终的视图界面
 
-![Front Controller(MVC)](https://cdn-qn.yifans.com/160907-springmvc-getting-started-tutorial-front-controller.jpg)
+![160907-springmvc-getting-started-tutorial-front-controller](https://user-images.githubusercontent.com/9289792/80201864-63a11800-8657-11ea-91cb-2b2a2f55f6a6.jpg)
 
 ## SpringMVC 基本概念
 
-![SpringMVC 基本概念](https://cdn-qn.yifans.com/160907-springmvc-getting-started-tutorial-springmvc01.jpg)
+![160907-springmvc-getting-started-tutorial-springmvc01](https://user-images.githubusercontent.com/9289792/80199605-1d968500-8654-11ea-8f05-57d4685934bb.jpg)
 
 对组件说明：
 
@@ -62,7 +69,7 @@ MVC 设计模式在 B/S 下的应用：
 4. HandlerAdapter：处理器适配器 通过 HandlerAdapter 对处理器进行执行，这是适配器模式的应用，通过适配器可以对更多类型的处理器进行执行。播放的电影是 3D 的你看不清楚，因此电影院跟你说你要想看清电影就必须戴 3D 眼镜。也就是说 Handler 满足一定的要求才可以被执行。
 5. ViewResolver：视图解析器 ViewResolver 负责将处理结果生成 View 视图，ViewResolver 首先根据逻辑视图名解析成物理视图名即具体的页面地址，再生成 View 视图对象，最后对 View 进行渲染将处理结果通过页面展示给用户。
 
-![SpringMVC 基本概念](https://cdn-qn.yifans.com/160907-springmvc-getting-started-tutorial-springmvc02.jpg)
+![160907-springmvc-getting-started-tutorial-springmvc02](https://user-images.githubusercontent.com/9289792/80199609-1d968500-8654-11ea-997b-67a5862bfd25.jpg)
 
 工作原理解释说明：
 1、用户发送请求到 SpringMVC 框架提供的 DispatcherServlet 这个前端控制器（了解 struts2 的朋友也都知道其实 struts2 也有一个前端控制器 web.xml 中的 filter 标签就是）。
@@ -74,7 +81,7 @@ MVC 设计模式在 B/S 下的应用：
 7、视图解析器 ViewResolver 解析 ModelAndView 对象之后返回逻辑视图。
 8、前端控制器 DispatcherServlet 对逻辑视图进行渲染（数据填充）之后返回真正的物理 View 并响应给浏览器。
 
-![SpringMVC 基本概念](https://cdn-qn.yifans.com/160907-springmvc-getting-started-tutorial-springmvc03.jpg)
+![160907-springmvc-getting-started-tutorial-springmvc03](https://user-images.githubusercontent.com/9289792/80199612-1e2f1b80-8654-11ea-9245-65a4470bc5f5.jpg)
 
 ## SpringMVC 配置
 
@@ -83,30 +90,30 @@ MVC 设计模式在 B/S 下的应用：
 ```xml
 <!-- 配置前端控制器 -->
 <servlet>
-	<servlet-name>web-dispatcher</servlet-name>
-	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-	<!--加载前端控制器配置文件 上下文配置位置-->
-	<init-param>
-		<!-- 备注：
+  <servlet-name>web-dispatcher</servlet-name>
+  <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+  <!--加载前端控制器配置文件 上下文配置位置-->
+  <init-param>
+    <!-- 备注：
             contextConfigLocation：指定 SpringMVC 配置的加载位置，如果不指定则默认加载
             WEB-INF/[DispatcherServlet 的 Servlet 名字]-servlet.xml
-         -->
-		<param-name>contextConfigLocation</param-name>
-		<param-value>classpath:spring/spring-*.xml</param-value>
-	</init-param>
-	<!-- 表示随WEB服务器启动 -->
-	<load-on-startup>1</load-on-startup>
+          -->
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath:spring/spring-*.xml</param-value>
+  </init-param>
+  <!-- 表示随WEB服务器启动 -->
+  <load-on-startup>1</load-on-startup>
 </servlet>
 <servlet-mapping>
 <servlet-name>web-dispatcher</servlet-name>
-	<!-- 备注：可以拦截三种请求
+  <!-- 备注：可以拦截三种请求
         第一种：拦截固定后缀的url，比如设置为 *.do、*.action， 例如：/user/add.action 此方法最简单,不会导致静态资源（jpg,js,css）被拦截
         第二种：拦截所有,设置为/，例如：/user/add  /user/add.action此方法可以实现REST风格的url,
         很多互联网类型的应用使用这种方式.但是此方法会导致静态文件(jpg,js,css)被拦截后不能正常显示.需要特殊处理
         第三种：拦截所有,设置为/*，此设置方法错误,因为请求到Action,当action转到jsp时再次被拦截,提示不能根据jsp路径mapping成功
     -->
-	<!-- 默认匹配所有的请求 -->
-	<url-pattern>/</url-pattern>
+  <!-- 默认匹配所有的请求 -->
+  <url-pattern>/</url-pattern>
 </servlet-mapping>
 ```
 
@@ -120,18 +127,18 @@ MVC 设计模式在 B/S 下的应用：
 <!-- 前缀+逻辑视图名+后缀，逻辑视图名需要在controller中返回ModelAndView指定，比如逻辑视图名为hello，-->
 <!-- 则最终返回的jsp视图地址 "WEB-INF/jsp/hello.jsp" -->
 <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-	<!-- 决定视图类型，如果添加了jstl支持（即有jstl.jar），那么默认就是解析为jstl视图 -->
-	<property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
-	<!-- 视图前缀 -->
-	<property name="prefix" value="/WEB-INF/jsp/" />
-	<!-- 视图后缀 -->
-	<property name="suffix" value=".jsp" />
+  <!-- 决定视图类型，如果添加了jstl支持（即有jstl.jar），那么默认就是解析为jstl视图 -->
+  <property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
+  <!-- 视图前缀 -->
+  <property name="prefix" value="/WEB-INF/jsp/" />
+  <!-- 视图后缀 -->
+  <property name="suffix" value=".jsp" />
 </bean>
 ```
 
 3、在 `spring/spring-web.xml` 配置 注解模式
 
-```
+```xml
 <!-- 自动加载RequestMappingHandlerMapping和RequestMappingHandlerAdapter， -->
 <!-- 可用在xml配置文件中使用<mvc:annotation-driven>替代注解处理器和适配器的配置。 -->
 <mvc:annotation-driven/>
@@ -139,7 +146,7 @@ MVC 设计模式在 B/S 下的应用：
 
 4、在 `spring/spring-web.xml` 配置 扫描 web 相关的 bean
 
-```
+```xml
 <!-- 组件扫描器：可以扫描 @Controller、@Service、@Repository 等等 -->
 <context:component-scan base-package="com.controller" />
 ```
@@ -157,12 +164,12 @@ MVC 设计模式在 B/S 下的应用：
 @Documented //@Documented用于描述其它类型的annotation应该被作为被标注的程序成员的公共API，因此可以被例如javadoc此类的工具文档化。Documented是一个标记注解，没有成员。
 @Component //spring框架规定当一个类不好归类（service、dao、controller）的时候可以使用这个注解，由此可见即便好归类内部还是使用的@Component注解
 public @interface Controller {
-	/**
-	 * The value may indicate a suggestion for a logical component name,
-	 * to be turned into a Spring bean in case of an autodetected component.
-	 * @return the suggested component name, if any
-	 */
-	String value() default "";
+  /**
+    * The value may indicate a suggestion for a logical component name,
+    * to be turned into a Spring bean in case of an autodetected component.
+    * @return the suggested component name, if any
+    */
+  String value() default "";
 }
 ```
 
@@ -182,31 +189,31 @@ public @interface Controller {
 @Documented
 @Mapping
 public @interface RequestMapping {
-	String[] value() default {};
-	RequestMethod[] method() default {}; //限制请求方式
-	String[] params() default {}; //要求请求的URL包含指定的参数
+  String[] value() default {};
+  RequestMethod[] method() default {}; //限制请求方式
+  String[] params() default {}; //要求请求的URL包含指定的参数
 }
 ```
 
 代码实例
 
-```
+```java
 @Controller
 @RequestMapping("/demo")
 public class IndexController {
-	@RequestMapping(value = "/test", method = RequestMethod.GET)
-	public String index(Model model, HttpServletRequest request) {
-		// 在游览器访问 http://localhost:8080/demo/test 将进入这里
-		model.addAttribute("originURL", "");
-		model.addAttribute("controllerName", "index");
-		return "index";
-	}
+  @RequestMapping(value = "/test", method = RequestMethod.GET)
+  public String index(Model model, HttpServletRequest request) {
+    // 在游览器访问 http://localhost:8080/demo/test 将进入这里
+    model.addAttribute("originURL", "");
+    model.addAttribute("controllerName", "index");
+    return "index";
+  }
 }
 ```
 
 @RequestMapping 还支持 Ant 方格的请求
 
-```
+```txt
 ?：匹配文件中的一个字符
 *：匹配文件中任意字符
 **：**匹配多层路径
@@ -222,17 +229,17 @@ public class IndexController {
 
 代码实例
 
-```
+```java
 // http://localhost:8080/demo/sss
 @RequestMapping(value = "/{slug:.+}", method = RequestMethod.GET)
-	public String index2(@PathVariable("slug") String slug, Model model) {
-	LOG.info("DemoController index2 slug  " + slug);
-	// common
-	model.addAttribute("originURL", "demo/");
-	model.addAttribute("controllerName", "demo");
-	model.addAttribute("controllerMethod", "index2");
-	model.addAttribute("slug", slug);
-	return "demo";
+public String index2(@PathVariable("slug") String slug, Model model) {
+  LOG.info("DemoController index2 slug  " + slug);
+  // common
+  model.addAttribute("originURL", "demo/");
+  model.addAttribute("controllerName", "demo");
+  model.addAttribute("controllerMethod", "index2");
+  model.addAttribute("slug", slug);
+  return "demo";
 }
 
 //slug = sss
@@ -250,9 +257,9 @@ _关于 Restful 的内容计划单独写。_
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 public @interface RequestParam {
-	String value() default "";//值即为请求参数的参数名
-	boolean required() default true;//该参数是否是必须。默认值为true
-	String defaultValue() default ValueConstants.DEFAULT_NONE;//请求参数的默认值
+  String value() default "";//值即为请求参数的参数名
+  boolean required() default true;//该参数是否是必须。默认值为true
+  String defaultValue() default ValueConstants.DEFAULT_NONE;//请求参数的默认值
 }
 ```
 
@@ -260,11 +267,11 @@ public @interface RequestParam {
 // http://localhost:8080/demo/para?slug=google
 @RequestMapping(value = "/para", method = RequestMethod.GET)
 public String index3(@RequestParam(value = "slug", defaultValue = "") String slug, Model model) {
-	model.addAttribute("originURL", "demo/");
-	model.addAttribute("controllerName", "demo");
-	model.addAttribute("controllerMethod", "index3");
-	model.addAttribute("slug", slug);
-	return "demo";
+  model.addAttribute("originURL", "demo/");
+  model.addAttribute("controllerName", "demo");
+  model.addAttribute("controllerMethod", "index3");
+  model.addAttribute("slug", slug);
+  return "demo";
 }
 slug = google
 ```
@@ -296,22 +303,21 @@ public @interface ResponseBody {
 // http://localhost:8080/demo/json
 @RequestMapping(value = "/json", method = RequestMethod.POST)
 public @ResponseBody Domain index7(HttpServletRequest request, Model model) {
+  LOG.info("DemoController demo index7");
+  model.addAttribute("originURL", "demo/");
+  model.addAttribute("controllerName", "demo");
+  model.addAttribute("controllerMethod", "index7");
 
-	LOG.info("DemoController demo index7");
-	model.addAttribute("originURL", "demo/");
-	model.addAttribute("controllerName", "demo");
-	model.addAttribute("controllerMethod", "index7");
-
-	Domain domain = new Domain();
-	domain.setDomain("gggoogle.com");
-	domain.setId(100);
-	return domain;
+  Domain domain = new Domain();
+  domain.setDomain("gggoogle.com");
+  domain.setId(100);
+  return domain;
 }
 
 /* response body
 {
-	"id": 100,
-	"domain": "gggoogle.com"
+  "id": 100,
+  "domain": "gggoogle.com"
 }
 */
 ```
@@ -325,16 +331,16 @@ public @ResponseBody Domain index7(HttpServletRequest request, Model model) {
 
 ```java
 public class Address {
-	private String city;
-	...
+  private String city;
+  ...
 }
 ```
 
 ```java
 public class Persion {
-	private String name;
-	private Address address;
-	...
+  private String name;
+  private Address address;
+  ...
 }
 ```
 
@@ -350,11 +356,11 @@ public class Persion {
 ```java
 @RequestMapping(value = "/pojo", method = RequestMethod.POST)
 public String index4(Persion persion, Model model) {
-	model.addAttribute("originURL", "demo/");
-	model.addAttribute("controllerName", "demo");
-	model.addAttribute("controllerMethod", "index4");
-	model.addAttribute("persion", persion);
-	return "demo";
+  `model.addAttribute("originURL", "demo/");
+  model.addAttribute("controllerName", "demo");
+  model.addAttribute("controllerMethod", "index4");
+  model.addAttribute("persion", persion);
+  return "demo";`
 }
 ```
 
@@ -366,16 +372,16 @@ public String index4(Persion persion, Model model) {
 // http://localhost:8080/demo/req?slug=facebook
 @RequestMapping(value = "/req", method = RequestMethod.GET)
 public String index5(HttpServletRequest request, Model model) {
-	String slug = request.getParameter("slug");
-	model.addAttribute("originURL", "demo/");
-	model.addAttribute("controllerName", "demo");
-	model.addAttribute("controllerMethod", "index5");
-	model.addAttribute("slug", slug);
-	return "demo";
+  String slug = request.getParameter("slug");
+  model.addAttribute("originURL", "demo/");
+  model.addAttribute("controllerName", "demo");
+  model.addAttribute("controllerMethod", "index5");
+  model.addAttribute("slug", slug);
+  return "demo";
 }
 ```
 
-> Reference:
->
-> - [IMOOC-SpringMVC 起步](http://www.imooc.com/video/7237)
-> - [SpringMVC 从入门到精通 系列 - HansonQ](http://www.imooc.com/article/3804)
+## References
+
+- [IMOOC-SpringMVC 起步](http://www.imooc.com/video/7237)
+- [SpringMVC 从入门到精通 系列 - HansonQ](http://www.imooc.com/article/3804)

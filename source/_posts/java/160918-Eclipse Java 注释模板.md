@@ -2,11 +2,15 @@
 title: Eclipse Java 注释模板
 permalink: eclipse-java-comments-templates
 date: 2016-09-18 19:00:00
-comments: true
-toc: true
+updated:
 tags:
   - java
+categories:
 description:
+comments: true
+toc: true
+cover_img:
+feature_img:
 ---
 
 自己总结的比较规范的 Eclipse Java 注释模板

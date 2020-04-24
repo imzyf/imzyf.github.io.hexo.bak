@@ -1,12 +1,16 @@
 ---
 title: Ubuntu JDK Nginx WildFly MySQL 环境配置
 permalink: ubuntu-jdk-nginx-wildfly-mysql-config
-comments: true
 date: 2016-07-07 10:00:00
-toc: true
+updated:
 tags:
   - java
+categories:
 description:
+comments: true
+toc: true
+cover_img:
+feature_img:
 ---
 
 新项目部署上线，主要参考 [世雷博客](http://blog.csdn.net/hanshileiai) 的内容，自己也总结了下。从 JDK 安装、Web 容器、数据库，都有涉及比较全面。

@@ -13,8 +13,6 @@ categories:
 description:
 ---
 
-<img src="https://ws2.sinaimg.cn/large/006tKfTcly1g0uddfdy56j30u00cvaap.jpg" alt="swifter-tips-reading-notes" />
-
 再读王巍的【Swifter - Swift 开发者必备 Tips】，看看有什么新收获。
 
 ## 柯里化（Currying）

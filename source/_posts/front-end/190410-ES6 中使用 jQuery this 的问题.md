@@ -9,7 +9,7 @@ categories:
 description:
 comments: true
 toc: true
-cover_img: https://images.unsplash.com/photo-1573510746018-be027b8f6f8e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=640&q=80
+cover_img: https://images.unsplash.com/photo-1562184242-2b39bde0ab6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=640&q=80
 feature_img:
 ---
 
@@ -62,8 +62,8 @@ $("jquery-selector").each((index, element) => {
 });
 ```
 
-> References:
->
-> - [Using jQuery \$(this) with ES6 Arrow Functions (lexical this binding)](https://stackoverflow.com/questions/27670401/using-jquery-this-with-es6-arrow-functions-lexical-this-binding)
+## References:
+
+- [Using jQuery \$(this) with ES6 Arrow Functions (lexical this binding)](https://stackoverflow.com/questions/27670401/using-jquery-this-with-es6-arrow-functions-lexical-this-binding)
 
 -- EOF --

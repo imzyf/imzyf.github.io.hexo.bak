@@ -1,11 +1,19 @@
 ---
 title: 【Core Java】彩票选取中奖数字-数组例子
-date: 2016-03-23 20:00:00
 permalink: core-java-array-dome
+date: 2016-03-23 20:00:00
+updated:
 tags:
-   - reading-notes
-   - java
+  - java
+  - reading-notes
+categories:
+description:
+comments: true
+toc: true
+cover_img:
+feature_img:
 ---
+
 从 1,2,3...h 中随机取 k 个中奖号码。
 
 <!-- more -->
@@ -48,7 +56,8 @@ public class LotteryDrawing {
 ```
 
 Console:
-```
+
+```bash
 how many numbers do you need?
 3
 what is the highest number?
@@ -57,8 +66,12 @@ what is the highest number?
 ```
 
 有几个点：
+
 - 取过的数不能再取
 - 取后升序排列
 
 关键点：
+
 - 每次取的都是下标，而不是实际的值。下标指向包含尚未抽取的数组元素
+
+-- EOF --

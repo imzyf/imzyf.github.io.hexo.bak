@@ -6,8 +6,8 @@ updated: 2018-04-16 9:00:00
 comments: true
 toc: true
 tags:
-   - php
-   - phpstorm
+  - php
+  - phpstorm
 categories:
 description:
 ---
@@ -18,7 +18,7 @@ description:
 
 打开 PhpStorm `Preferences > Tools > External Tools` 添加：
 
-![Preferences > Tools > External Tools](https://cdn-qn.yifans.com/180416-use-php-cs-fixer-in-phpstorm-001.png)
+![180416-use-php-cs-fixer-in-phpstorm-001](https://user-images.githubusercontent.com/9289792/80202885-de1e6780-8658-11ea-904b-3ea7e393182c.png)
 
 <!-- more -->
 
@@ -29,12 +29,12 @@ description:
 
 设置快捷键 `Preferences > Keymap`：
 
-![Preferences > Keymap](https://cdn-qn.yifans.com/180416-use-php-cs-fixer-in-phpstorm-002.png)
+![180416-use-php-cs-fixer-in-phpstorm-002](https://user-images.githubusercontent.com/9289792/80202900-e5de0c00-8658-11ea-826f-b4d058fa2209.png)
 
 相关阅读：
 
 - [Yifans_Z - Atom 插件 PHP-CS-Fixer 规范代码格式](/2017/06/13/atom-plugin-php-cs-fixer/)
 
-> References:
->
-> - [Use PHP-CS-Fixer in PHPStorm](https://gist.github.com/nienkedekker/3ddb9ece42233698c0e3f3e42cf1ff34)
+## References
+
+- [Use PHP-CS-Fixer in PHPStorm](https://gist.github.com/nienkedekker/3ddb9ece42233698c0e3f3e42cf1ff34)

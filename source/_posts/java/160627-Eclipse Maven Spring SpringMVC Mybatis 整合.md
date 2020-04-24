@@ -2,11 +2,15 @@
 title: Eclipse Maven Spring SpringMVC Mybatis 整合
 permalink: eclipse-maven-spring-springmvc-mybatis-example
 date: 2016-06-27 07:00:00
-comments: true
-toc: true
+updated:
 tags:
   - java
+categories:
 description:
+comments: true
+toc: true
+cover_img:
+feature_img:
 ---
 
 新项目自己撘框架，想着用点新的。看慕课网 [Java 高并发秒杀 API](http://www.imooc.com/index/search?words=%E7%A7%92%E6%9D%80) 的系列课程时很受益。所以想着仿着来使用：Mavan-Spring-SpringMVC-Mybatis 的架构。框架整合的代码我已上传到我的 Github：[maven-mybatis-spring-springmvc](https://github.com/imzyf/maven-mybatis-spring-springmvc)。
@@ -29,8 +33,10 @@ description:
 
 1. open Eclipse -> Help -> click "Install New Software" -> click "add"
 
-- Name:m2e
-- Location:http://download.eclipse.org/technology/m2e/releases
+```txt
+Name:m2e
+Location:http://download.eclipse.org/technology/m2e/releases
+```
 
 2. click "ok" -> click "Maven Integration for Eclipse" -> click "Next"
 3. restrat Eclipse

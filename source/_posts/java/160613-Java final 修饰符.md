@@ -1,11 +1,16 @@
 ---
 title: Java final 修饰符
 permalink: java-modifier-final
-comments: true
 date: 2016-06-13 14:00:00
+updated:
 tags:
   - java
-description: final 修饰符表示不可变。类似 C 中的 constant。用于修饰变量表示不可变的变量。用于修饰方法表示不可被重写。用于修饰类表示不可被继承。
+categories:
+description:
+comments: true
+toc: true
+cover_img:
+feature_img:
 ---
 
 ## final 修饰符
