@@ -51,7 +51,13 @@ PHP Configure Error: Please specify the install prefix of iconv with --with-icon
 $ brew install libiconv
 
 $ ./configure --prefix=$HOME/php/php-7.1.30/output --enable-fpm --enable-debug --with-iconv=$(brew --prefix libiconv)
+
+./configure --with-openssl --enable-mbstring --enable-fpm --with-mysqli --with-pdo-mysql
 ```
+
+yum groupinstall "Development tools"
+
+./configure --prefix=/data/home/v_yfanzhao/php56 --with-openssl --enable-mbstring --enable-fpm --with-mysqli --with-pdo-mysql --enable-ftp
 
 继续编译安装：
 

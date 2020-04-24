@@ -40,7 +40,7 @@ $r->send();
 
 PHP 5.6 开始可以导入函数和常量：
 
-```
+```php
 <?php
 use func Namespace\functionName;
 use constant Namespace\CONST_NAME;
