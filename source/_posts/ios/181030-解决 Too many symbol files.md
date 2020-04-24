@@ -13,8 +13,6 @@ cover_img: https://images.unsplash.com/photo-1571577275698-54f36820ee9b?ixlib=rb
 feature_img:
 ---
 
-<img src="https://images.unsplash.com/photo-1571577275698-54f36820ee9b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=640&q=80" />
-
 在上传 App 到 App Store 后收到邮件，有 issues **Too many symbol files**。在之前看到 _Your delivery was successful_，此 issues 不影响发布，所以一直搁置了。
 
 今天决定彻底处理下。
@@ -32,7 +30,7 @@ feature_img:
 
 为了能快速并准确地定位用户 App 发生 **Crash 的代码位置**，使用符号表对 App 发生 Crash 的程序 _堆栈_ 进行 _解析_ 和 _还原_。
 
-![为什么要配置符号表](https://ws3.sinaimg.cn/large/006tNbRwly1fwq98vcjeoj30i00383yh.jpg)
+![006tNbRwly1fwq98vcjeoj30i00383yh](https://user-images.githubusercontent.com/9289792/80204521-9ea54a80-865b-11ea-9420-7d8a2d32e910.jpg)
 
 ## 项目情况
 
@@ -46,7 +44,7 @@ feature_img:
 
 在 `Podfile` 中：
 
-```
+```txt
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
@@ -61,7 +59,7 @@ end
 
 在 `info.plist` 中：
 
-```
+```plist
 <key>UIRequiredDeviceCapabilities</key>
 <array>
     <string>arm64</string>
@@ -70,12 +68,11 @@ end
 
 在 build Settings 搜索 `valid architecture` 中，填写 `arm64`
 
-> Reference:
->
-> - [“Too many symbol files” after successfully submitting my apps](https://stackoverflow.com/questions/25755240/too-many-symbol-files-after-successfully-submitting-my-apps)
-> - [“Too many symbol files” warnning when submitting app
->   ](https://stackoverflow.com/questions/34313049/too-many-symbol-files-warnning-when-submitting-app)
-> - [App 提交 iTunes Connect,"二进制无效"问题解决方案。](https://www.jianshu.com/p/3511ec38ca20)
-> - [Bugly iOS 符号表配置](https://bugly.qq.com/docs/user-guide/symbol-configuration-ios/?v=20180709165613#_2)
+## References
+
+- [“Too many symbol files” after successfully submitting my apps](https://stackoverflow.com/questions/25755240/too-many-symbol-files-after-successfully-submitting-my-apps)
+- [“Too many symbol files” warnning when submitting app](https://stackoverflow.com/questions/34313049/too-many-symbol-files-warnning-when-submitting-app)
+- [App 提交 iTunes Connect,"二进制无效"问题解决方案。](https://www.jianshu.com/p/3511ec38ca20)
+- [Bugly iOS 符号表配置](https://bugly.qq.com/docs/user-guide/symbol-configuration-ios/?v=20180709165613#_2)
 
 -- EOF --

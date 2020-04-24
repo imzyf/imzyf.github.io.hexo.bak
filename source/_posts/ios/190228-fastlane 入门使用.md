@@ -109,7 +109,7 @@ bundle exec fastlane deliver
 - `Deliverfile` 保存这剩余小部分的元数据
 - `screenshots` 将保存 app 截图
 
-<img src="https://ws2.sinaimg.cn/large/006tKfTcly1g0lz3u80l5j31eb0e6q8a.jpg" alt="fastlane-getting-started-metadata"/>
+<img src="https://tva1.sinaimg.cn/large/006tKfTcly1g0lz3u80l5j31eb0e6q8a.jpg" alt="fastlane-getting-started-metadata"/>
 
 `metadata` 文件夹中文件内容就是提交给 App Store Connect，多语言 app 可以手动创建对应的语言文件夹。
 
@@ -159,13 +159,13 @@ clear_previous_screenshots(true)
 fastlane snapshot init
 ```
 
-<img src="https://ws1.sinaimg.cn/large/006tKfTcly1g0m3olslyhj30vq0ft44l.jpg" alt="fastlane-getting-started-screenshots" style="width: 600px; display: block; margin: auto;" />
+<img src="https://tva1.sinaimg.cn/large/006tKfTcly1g0m3olslyhj30vq0ft44l.jpg" alt="fastlane-getting-started-screenshots" style="width: 600px; display: block; margin: auto;" />
 
 ### 创建 Test Target
 
 在 Xcode 选择 File -> New -> Target 选择 iOS UI Testing Bundle 点击 Next。
 
-<img src="https://ws2.sinaimg.cn/large/006tKfTcly1g0m6hxg0dej30m80g0781.jpg" alt="fastlane-getting-started-screenshots" style="width: 600px; display: block; margin: auto;" />
+<img src="https://tva1.sinaimg.cn/large/006tKfTcly1g0m6hxg0dej30m80g0781.jpg" alt="fastlane-getting-started-screenshots" style="width: 600px; display: block; margin: auto;" />
 
 Product Name 输入上面 `scheme` 填写的名字 MZone Poker UITests 点击 Finish。
 
@@ -195,11 +195,11 @@ snapshot("02Suggestion")
 
 之后创建 mZone Poker UITests scheme，点击 run stop 右边的按钮选择 `Manage Schemes...`
 
-<img src="https://ws1.sinaimg.cn/large/006tKfTcly1g0m88o46ovj30m80ccdit.jpg" alt="fastlane-getting-started-create-test-target" style="width: 600px; display: block; margin: auto;" />
+<img src="https://tva1.sinaimg.cn/large/006tKfTcly1g0m88o46ovj30m80ccdit.jpg" alt="fastlane-getting-started-create-test-target" style="width: 600px; display: block; margin: auto;" />
 
 选择 `Edit Schemes...` 勾选 `Test` 和 `Run`
 
-<img src="https://ws2.sinaimg.cn/large/006tKfTcly1g0m8eq3o8uj30m80c0di3.jpg" alt="fastlane-getting-started-create-test-target" style="width: 600px; display: block; margin: auto;" />
+<img src="https://tva1.sinaimg.cn/large/006tKfTcly1g0m8eq3o8uj30m80c0di3.jpg" alt="fastlane-getting-started-create-test-target" style="width: 600px; display: block; margin: auto;" />
 
 打开 Fastfile 添加：
 
@@ -218,7 +218,7 @@ bundle exec fastlane screenshot
 
 完成后将自动打开：
 
-<img src="https://ws4.sinaimg.cn/large/006tKfTcly1g0m8gy5vl9j30df0dwgpb.jpg" alt="fastlane-getting-started-create-test-target" style="width: 600px; display: block; margin: auto;" />
+<img src="https://tva1.sinaimg.cn/large/006tKfTcly1g0m8gy5vl9j30df0dwgpb.jpg" alt="fastlane-getting-started-create-test-target" style="width: 600px; display: block; margin: auto;" />
 
 ## 创建 IPA 文件
 
@@ -265,7 +265,7 @@ end
 bundle exec fastlane build
 ```
 
-<img src="https://ws1.sinaimg.cn/large/006tKfTcly1g0m8ua4im3j30xy0ceaca.jpg" alt="fastlane-getting-started-create-test-target" style="width: 600px; display: block; margin: auto;" />
+<img src="https://tva1.sinaimg.cn/large/006tKfTcly1g0m8ua4im3j30xy0ceaca.jpg" alt="fastlane-getting-started-create-test-target" style="width: 600px; display: block; margin: auto;" />
 
 ## 上传到 App Store Connect
 

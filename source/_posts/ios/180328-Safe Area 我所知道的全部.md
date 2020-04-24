@@ -6,7 +6,7 @@ updated: 2018-03-29 11:00:00
 comments: true
 toc: true
 tags:
-   - ios
+  - ios
 categories:
 description:
 ---
@@ -27,23 +27,23 @@ open var safeAreaLayoutGuide: UILayoutGuide { get }
 
 `safeAreaInsets` 属性意味着屏幕可以覆盖从四个方向，而不仅仅是顶部和底部。当被 iPhone X 呈现时，我们就明白了为什么我们需要左右 insets。
 
-<img src="https://ws4.sinaimg.cn/large/006tNbRwly1fptmugww5wj30zs0x0jw8.jpg" alt="ios-safe-area" width="400" />
+<img src="https://tva1.sinaimg.cn/large/006tNbRwly1fptmugww5wj30zs0x0jw8.jpg" alt="ios-safe-area" width="400" />
 
-*iPhone 8 vs iPhone X safe area (portrait orientation)*
+_iPhone 8 vs iPhone X safe area (portrait orientation)_
 
 <!-- more -->
 
-<img src="https://ws1.sinaimg.cn/large/006tNbRwly1fptmv9csg7j30z0152ae6.jpg" alt="ios-safe-area" width="400" />
+<img src="https://tva1.sinaimg.cn/large/006tNbRwly1fptmv9csg7j30z0152ae6.jpg" alt="ios-safe-area" width="400" />
 
-*iPhone 8 vs iPhone X safe area (landscape orientation)*
+_iPhone 8 vs iPhone X safe area (landscape orientation)_
 
 iPhone X 在 portrait orientation 有 top 和 bottom 的 safe area，在 landscape orientation 有 left right 和 bottom。
 
 让我们来看一个例子。在 ViewController 的 View 的顶部和底部添加了两个带有文本标签和固定高度的 custom subviews，并附加 attached 到视图的边缘 edges。
 
-<img src="https://ws1.sinaimg.cn/large/006tNbRwly1fptnobrau6j30no14i13p.jpg" alt="ios-safe-area" width="300" />
+<img src="https://tva1.sinaimg.cn/large/006tNbRwly1fptnobrau6j30no14i13p.jpg" alt="ios-safe-area" width="300" />
 
-*Subviews are attached to the view’s edges*
+_Subviews are attached to the view’s edges_
 
 正如所看到的，subviews 内容与顶部的 notch 和底部的 home indicator 指示器重叠 overlapped。为了正确地定位 subviews，我们可以使用手动布局将它们附加到 safe area：
 
@@ -63,15 +63,15 @@ bottomSubview.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAn
 bottomSubview.heightAnchor.constraint(equalToConstant: 300).isActive = true
 ```
 
-<img src="https://ws4.sinaimg.cn/large/006tNbRwly1fptqg9si13j30no14iwq1.jpg" alt="ios-safe-area" width="300" />
+<img src="https://tva1.sinaimg.cn/large/006tNbRwly1fptqg9si13j30no14iwq1.jpg" alt="ios-safe-area" width="300" />
 
-*Subviews are attached to the superview safe area*
+_Subviews are attached to the superview safe area_
 
 上面看起来好很多。此外可以在 subview subclass 添加 subviews content 到 safe area。
 
-<img src="https://ws1.sinaimg.cn/large/006tNbRwly1fptquigdxjj30no14iqdh.jpg" alt="ios-safe-area" width="300" />
+<img src="https://tva1.sinaimg.cn/large/006tNbRwly1fptquigdxjj30no14iqdh.jpg" alt="ios-safe-area" width="300" />
 
-*Subviews are attached to the view’s edges. Labels are attached to the superview safe area.*
+_Subviews are attached to the view’s edges. Labels are attached to the superview safe area._
 
 在 subviews 层次结构 hierarchy 的任何地方都可以将 view 添加到 safe area。
 
@@ -102,7 +102,7 @@ open func viewSafeAreaInsetsDidChange()
 
 ### Simulate iPhone X safe area
 
-Additional safe area insets 也可以用来测试你的 app 是如何支持 iPhone X，如果你不能在模拟器上测试你的 app，而且没有iPhone X，那就很有用了。
+Additional safe area insets 也可以用来测试你的 app 是如何支持 iPhone X，如果你不能在模拟器上测试你的 app，而且没有 iPhone X，那就很有用了。
 
 ```
 //portrait orientation, status bar is shown
@@ -119,11 +119,12 @@ additionalSafeAreaInsets.bottom = 21.0
 additionalSafeAreaInsets.right = 44.0
 ```
 
-<img src="https://ws3.sinaimg.cn/large/006tNc79ly1fpw2l9aa64j31kw0z0q9t.jpg" alt="ios-safe-area" width="400" />
+<img src="https://tva1.sinaimg.cn/large/006tNc79ly1fpw2l9aa64j31kw0z0q9t.jpg" alt="ios-safe-area" width="400" />
 
 ## UIScrollView
 
 > 待续
 
-> Referenece:
-> - [iOS Safe Area](https://medium.com/rosberryapps/ios-safe-area-ca10e919526f)
+## Refereneces
+
+- [iOS Safe Area](https://medium.com/rosberryapps/ios-safe-area-ca10e919526f)
