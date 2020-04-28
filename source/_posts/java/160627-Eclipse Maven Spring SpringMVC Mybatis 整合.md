@@ -29,7 +29,7 @@ feature_img:
 
 ## Eclipse Maven Plugin - m2e
 
-> 2016 年 09 月 10 日 更新：较新版 Eclipse 都有集成 Maven，所以并不需要安装
+> 2016-09-10 更新：较新版 Eclipse 都有集成 Maven，所以并不需要安装
 
 1. open Eclipse -> Help -> click "Install New Software" -> click "add"
 

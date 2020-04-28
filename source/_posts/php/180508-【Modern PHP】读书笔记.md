@@ -3,12 +3,14 @@ title: 【Modern PHP】读书笔记
 permalink: modern-php-reading-notes
 date: 2018-05-08 17:00:00
 updated: 2018-05-08 17:00:00
-comments: true
-toc: true
 tags:
   - php
 categories:
 description:
+comments: true
+toc: true
+cover_img:
+feature_img:
 ---
 
 又回到 PHP Web 开发，使用 Laravel 框架，重读《Modern PHP》。

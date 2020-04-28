@@ -2,11 +2,15 @@
 title: PHP 中 this self parent 用法
 permalink: how-to-use-this-self-parent-in-php
 date: 2017-05-25 15:00:00
-comments: true
-toc: true
+updated:
 tags:
   - php
+categories:
 description:
+comments: true
+toc: true
+cover_img:
+feature_img:
 ---
 
 ## for member variable

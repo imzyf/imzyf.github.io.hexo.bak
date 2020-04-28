@@ -15,9 +15,9 @@ cover_img:
 feature_img:
 ---
 
-2019 年 12 月 02 日 更新：现在我的 Blog 还是用的 GitHub Pages，反正没有备案的域名不会被百度收录。
+2019-12-02 更新：现在我的 Blog 还是用的 GitHub Pages，反正没有备案的域名不会被百度收录。
 
-2017 年 04 月 22 日 更新：现在我的 Blog 使用的是 [UFOVPS](https://www.ufovps.com/) 直接部署的。
+2017-04-22 更新：现在我的 Blog 使用的是 [UFOVPS](https://www.ufovps.com/) 直接部署的。
 
 ---
 

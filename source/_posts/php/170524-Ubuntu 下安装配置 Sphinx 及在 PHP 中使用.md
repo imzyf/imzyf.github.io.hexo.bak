@@ -1,13 +1,17 @@
 ---
 title: Ubuntu 下安装配置 Sphinx 及在 PHP 中使用
 permalink: install-and-configre-sphinx-and-using-by-php-in-ubuntu
-comments: true
 date: 2017-05-24 16:00:00
-toc: true
+updated:
 tags:
   - php
   - ubuntu
+categories:
 description:
+comments: true
+toc: true
+cover_img:
+feature_img:
 ---
 
 ## what is Sphinx
@@ -225,7 +229,7 @@ public function testSphinx()
 
 ### using nilportugues/sphinx-search
 
-**2017 年 07 月 19 日 更新：**
+**2017-07-19 更新：**
 
 我在 Ubuntu 16.04 环境下，发现 `libsphinxclient-dev` `libsphinxclient-0.0.1` 无法正常安装，所以查找其他方法。
 

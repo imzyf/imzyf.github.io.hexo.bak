@@ -3,13 +3,15 @@ title: PHP 中获取 Nginx 使用反向代理或 CDN 后的客户端真实 IP
 permalink: php-get-real-ip-after-nginx-using-reverse-proxy-or-cdn
 date: 2017-06-02 16:00:00
 updated: 2018-05-15 14:00:00
-comments: true
-toc: true
 tags:
   - nginx
   - php
 categories:
 description:
+comments: true
+toc: true
+cover_img:
+feature_img:
 ---
 
 获取 Nginx 反向代理后的客户端 IP，基本是按一定顺序检测以下参数中的信息：

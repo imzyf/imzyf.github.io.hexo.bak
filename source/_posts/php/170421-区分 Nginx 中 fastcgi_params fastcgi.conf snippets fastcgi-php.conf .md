@@ -2,11 +2,15 @@
 title: 区分 Nginx 中 fastcgi_params fastcgi.conf snippets/fastcgi-php.conf
 permalink: what-is-fastcgi-params-fastcgi-conf-snippets-fastcgi-php-conf
 date: 2017-04-21 12:00:00
+updated:
+tags:
+  - php
+categories:
+description:
 comments: true
 toc: true
-tags:
-  - nginx
-description:
+cover_img:
+feature_img:
 ---
 
 Nginx 有两份 fastcgi 配置文件，分别是 `fastcgi_params` 和 `fastcgi.conf`，其区别只有一点点。到目前为止，由于 package managers，他们仍然引起新用户的混淆。

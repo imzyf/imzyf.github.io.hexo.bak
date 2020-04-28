@@ -2,14 +2,17 @@
 title: 【IMOOC-PHP 安装扩展指南】笔记
 permalink: imooc-install-php-extension-guide-notes
 date: 2017-06-01 12:00:00
-updated: 2017-06-01 12:00:00
-comments: true
-toc: true
+updated: 2020-04-28 18:04:53
 tags:
-  - php
 categories:
 description:
+comments: true
+toc: true
+cover_img:
+feature_img:
 ---
+
+2020-04-28 更新：此文章内容不确定是否已失效，价值低。
 
 ## PHP 扩展简介
 
@@ -35,8 +38,7 @@ description:
 
 ### PHP 扩展运行
 
-1. Extensions
-   1.2 初始化 - 内部变量、分配资源、注册资源句柄、注册 Zend 函数
+1. Extensions 初始化 - 内部变量、分配资源、注册资源句柄、注册 Zend 函数
 2. SAPI 请求初始化
 3. 执行
 4. 关闭 - 回收资源
@@ -99,6 +101,6 @@ phpinfo 中 `PHP Extension Build` 可以查看 PHP 版本信息。PHP 版本、V
 
 linux 的 PHP 扩展存放在安装目录下的 `lib/php/extensions` 下。
 
-> Reference:
->
-> - [imooc - PHP 扩展安装指南](https://www.imooc.com/learn/757)
+## References
+
+- [imooc - PHP 扩展安装指南](https://www.imooc.com/learn/757)

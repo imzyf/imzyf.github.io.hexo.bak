@@ -20,11 +20,11 @@ feature_img:
 
 ## 选歌、生成代码
 
-Step 1：打开 [网易云音乐网页版](http://music.163.com/) ，检索歌曲打开播放页面，例如 [G.E.M. - 偶尔](http://music.163.com/#/song?id=27836172) `http://music.163.com/#/song?id=27836172`
+Step 1：打开 [网易云音乐网页版](http://music.163.com/) ，检索歌曲打开播放页面，例如 [G.E.M. - 偶尔](http://music.163.com/#/song?id=27836172) `http://music.163.com/#/song?id=27836172`。
 
 <!-- more -->
 
-Step 2：在页面左侧点击 [生成外链播放器](http://music.163.com/#/outchain/2/27836172/)，有两种类型的插件：iframe、flash
+Step 2：在页面左侧点击 [生成外链播放器](http://music.163.com/#/outchain/2/27836172/)，有两种类型的插件：iframe、flash。
 
 ## iframe 插件
 

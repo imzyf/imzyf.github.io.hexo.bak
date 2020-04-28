@@ -3,12 +3,14 @@ title: 【Laravel 教程 - Web 开发实战入门】读书笔记
 permalink: laravel-essential-training-reading-notes
 date: 2018-05-09 17:00:00
 updated: 2018-05-16 14:00:00
-comments: true
-toc: true
 tags:
-   - php
+  - php
 categories:
 description:
+comments: true
+toc: true
+cover_img:
+feature_img:
 ---
 
 [Laravel 教程 - Web 开发实战入门](https://laravel-china.org/courses?rf=10678) 读书笔记。

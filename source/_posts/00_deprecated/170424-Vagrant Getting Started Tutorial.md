@@ -3,12 +3,16 @@ title: Vagrant Getting Started Tutorial
 permalink: vagrant-getting-started-tutorial
 date: 2017-04-24 20:00:00
 updated: 2018-04-12 19:00:00
-comments: true
-toc: true
 tags:
 categories:
 description:
+comments: true
+toc: true
+cover_img:
+feature_img:
 ---
+
+2020-04-28 更新：此文章内容不确定是否已失效。
 
 **2018-04-12 更新：** 开发环境或是生产环境推荐 Docker。
 
@@ -29,7 +33,10 @@ Vagrant 可以为你提供可配置、可再生、便携的工作环境，它主
 
 对于开发人员来说，Vagrant 可以帮你统一团队成员的开发环境。如果你或者你的伙伴创建了一个 Vagrantfile，那么你只需要执行 vagrant up 就行了，所有的软件都会统一安装并且配置好。同时还避免令人烦躁的 “在我的机器上是可以的” 问题。
 
-_实践环境：Ubuntu 16.04、IBM X200 laptops_
+实践环境：
+
+- IBM X200 laptops
+- Ubuntu 16.04
 
 ## Vagrant 文档
 
@@ -52,31 +59,31 @@ _实践环境：Ubuntu 16.04、IBM X200 laptops_
 
 在 [Discover Vagrant Boxes](https://atlas.hashicorp.com/boxes/search?utf8=%E2%9C%93&sort=&provider=&q=ubuntu) 查找 Ubuntu Server 14.04 64 box 安装命令
 
-```
+```bash
 vagrant init ubuntu/trusty64; vagrant up --provider virtualbox
 ```
 
 下载速度缓慢，可以在命令行中看到 box 链接，建议直接在游览器中下载
 
-```
+```bash
 https://atlas.hashicorp.com/ubuntu/boxes/trusty64/versions/20170405.0.0/providers/virtualbox.box
 ```
 
 ### 添加镜像
 
-```
+```bash
 vagrant box add ubuntu1404 ubuntu1404.box
 ```
 
 ### 初始化虚拟机配置
 
-```
+```bash
 vagrant init ubuntu1404
 ```
 
 可以在 Vagrantfile 中增加：
 
-```
+```bash
   config.vm.provider "virtualbox" do |vb|
     vb.memory = "1024"
     vb.cpus = 2
@@ -85,7 +92,7 @@ vagrant init ubuntu1404
 
 ### 启动虚拟机
 
-```
+```bash
 vagrant up
 ```
 
@@ -95,7 +102,7 @@ vagrant up
 
 ### SSH 登陆虚拟机
 
-```
+```bash
 vagrant ssh
 ```
 
@@ -103,19 +110,19 @@ vagrant ssh
 
 备份旧源：
 
-```
+```bash
 sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
 ```
 
 修改使用 aliyun 源：
 
-```
+```bash
 sudo vim /etc/apt/sources.list
 ```
 
 替换为：
 
-```
+```bash
 deb http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
 deb http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
 deb http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
@@ -130,7 +137,7 @@ deb-src http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted unive
 
 更新源：
 
-```
+```bash
 sudo apt-get update
 ```
 
@@ -226,7 +233,7 @@ Host 访问 Guest machine 将不需要端口转发
 
 > [Public Networks - Networking](https://www.vagrantup.com/docs/networking/public_network.html)
 
-```
+```bash
 config.vm.network "public_network", ip: "192.168.0.17"
 ```
 
@@ -275,7 +282,7 @@ There is a VirtualBox bug related to sendfile which can result in corrupted or n
 
 In Nginx:
 
-```
+```bash
 sendfile off;
 ```
 
@@ -285,7 +292,7 @@ sendfile off;
 
 #### Virtual Machine Name
 
-```
+```bash
 config.vm.provider "virtualbox" do |vb|
    vb.name = "my_vm"
 end
@@ -293,7 +300,7 @@ end
 
 #### VBoxManage Customizations
 
-```
+```bash
 config.vm.provider "virtualbox" do |vb|
   vb.memory = 1024
   vb.cpus = 2
@@ -320,19 +327,19 @@ end
 
 关闭虚拟机：
 
-```
+```bash
 vagrant halt
 ```
 
 打包时注意：Vagrantfile 中固定的 IP，可以先注释；打包：
 
-```
+```bash
 vagrant package --output mooc.box
 ```
 
 启动 box：
 
-```
+```bash
 vagrant box add mooc mooc.box
 vagrant init mooc
 vagrant up
@@ -340,19 +347,19 @@ vagrant up
 
 ### 通过 Vagrantfile 升级
 
-```
+```bash
 config.vm.provision "shell", inline: <<-SHELL
    apt-get update
    apt-get install -y redis-server
 SHELL
 ```
 
-```
+```bash
 vagrant reload --provision
 ```
 
-> References:
->
-> - [mooc/vagrant at master · apanly/mooc](https://github.com/apanly/mooc/tree/master/vagrant)
-> - [vagrant 打造跨平台可移动的开发环境](http://www.imooc.com/learn/805)
-> - [Vagrant 介绍](http://weizhifeng.net/learn-vagrant-01.html)
+## References
+
+- [mooc/vagrant at master · apanly/mooc](https://github.com/apanly/mooc/tree/master/vagrant)
+- [vagrant 打造跨平台可移动的开发环境](http://www.imooc.com/learn/805)
+- [Vagrant 介绍](http://weizhifeng.net/learn-vagrant-01.html)

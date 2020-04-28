@@ -3,11 +3,13 @@ title: IMOOC 如何用 CSS 进行网页布局
 permalink: imooc-how-to-use-css-for-web-layout
 date: 2017-03-12 12:00:00
 updated: 2019-04-10 19:05:00
-comments: true
-toc: true
 tags:
 categories:
 description:
+comments: true
+toc: true
+cover_img:
+feature_img:
 ---
 
 **2019-05-25 更新：** 文章内容已经过时。页面布局现在使用：`栅栏` `flex`。
@@ -187,4 +189,4 @@ description:
 <div class="footer">footer</div>
 ```
 
-![混合布局](http://img.mukewang.com/58525eb80001417a12800720.jpg)
+![混合布局](https://img.mukewang.com/58525eb80001417a12800720.jpg)

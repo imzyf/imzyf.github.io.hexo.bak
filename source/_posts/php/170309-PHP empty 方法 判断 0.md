@@ -2,11 +2,15 @@
 title: PHP empty 方法判断 0.0
 permalink: php-empty-method-judge-0
 date: 2017-03-09 17:00:00
-comments: true
-toc: true
+updated:
 tags:
   - php
+categories:
 description:
+comments: true
+toc: true
+cover_img:
+feature_img:
 ---
 
 在使用 `empty(mixed $var)` 时要考虑 `$var` 的 **类型**，尤其是在判断数据库查询后的字段。

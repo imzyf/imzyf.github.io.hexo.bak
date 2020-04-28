@@ -3,12 +3,16 @@ title: Atom 插件 PHP-CS-Fixer 规范代码格式
 permalink: atom-plugin-php-cs-fixer
 date: 2017-06-13 17:00:00
 updated: 2019-05-29 17:10:47
-comments: true
-toc: true
-tags: 
+tags:
 categories:
 description:
+comments: true
+toc: true
+cover_img:
+feature_img:
 ---
+
+2020-04-28 更新：此文章内容不确定是否已失效。
 
 **2019-05-25 更新：** 已经抛弃 Atom，使用 VSCode 代替。
 
@@ -60,7 +64,7 @@ You can configure php-cs-fixer from the Atom package manager or by editing `~/.a
 
 Here's an example configuration:
 
-```
+```txt
   "php-cs-fixer":
     executablePath: "/usr/local/bin/php-cs-fixer"
     executeOnSave: true

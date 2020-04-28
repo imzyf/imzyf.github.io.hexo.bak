@@ -2,11 +2,15 @@
 title: 区分 CGI FastCGI PHP-CGI PHP-FPM
 permalink: what-is-cgi-fastcgi-phpcgi-phpfpm
 date: 2017-04-21 11:00:00
-comments: true
-toc: true
+updated:
 tags:
   - php
+categories:
 description:
+comments: true
+toc: true
+cover_img:
+feature_img:
 ---
 
 CGI FastCGI PHP-CGI PHP-FPM 一直区分不清，Google 后总结下

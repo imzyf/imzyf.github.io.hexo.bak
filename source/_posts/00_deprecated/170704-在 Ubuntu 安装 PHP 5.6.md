@@ -1,20 +1,32 @@
 ---
-title: Ubuntu 下安装 PHP 与常见问题
-permalink: install-php-in-ubuntu-and-faq
+title: 在 Ubuntu 安装 PHP 5.6
+permalink: install-php-56-on-ubuntu
 date: 2017-07-04 17:00:00
-comments: true
-toc: true
+updated: 2020-04-28 17:32:51
 tags:
   - php
   - ubuntu
+categories:
 description:
+comments: true
+toc: true
+cover_img: https://images.unsplash.com/photo-1552846697-d2ea93825b7d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=640&q=80
+feature_img:
+---
+
+2020-04-28 更新：很久没有用 Ubuntu & PHP 5.6，此文章内容不确定是否已失效。
+
 ---
 
 使用了很久的 PHP，但是如何在 Ubuntu 下正确的安装 PHP 总是不清不白。本篇文章就是汇总、积累安装 PHP 和安装时遇到的常见问题。
 
 <!-- more -->
 
-## Ubuntu 16.04 安装 php5.6
+## 环境
+
+- Ubuntu 16.04
+
+## 安装 PHP 5.6
 
 ```bash
 sudo apt-get install python-software-properties
@@ -54,7 +66,7 @@ sudo apt-get install php5.6-fpm
 
 其他扩展没有 `.ini` 文件或者配置文件被误删除时，可以使用相同的方法，`purge` 后 `install`
 
-## php5.6 常用扩展安装
+## PHP 5.6 常用扩展安装
 
 ```bash
 sudo apt-get install php5.6 php5.6-cgi php5.6-cli php5.6-common php5.6-curl php5.6-dev php5.6-fpm php5.6-gd php5.6-json php5.6-mbstring php5.6-mcrypt php5.6-mysql php5.6-readline php5.6-soap php5.6-xml php5.6-xmlrpc php5.6-xsl php5.6-zip
@@ -66,7 +78,7 @@ sudo apt-get install php5.6 php5.6-cgi php5.6-cli php5.6-common php5.6-curl php5
 sudo apt-get purge php5.6 php5.6-cgi php5.6-cli php5.6-common php5.6-curl php5.6-dev php5.6-fpm php5.6-gd php5.6-json php5.6-mbstring php5.6-mcrypt php5.6-mysql php5.6-readline php5.6-soap php5.6-xml php5.6-xmlrpc php5.6-xsl php5.6-zip
 ```
 
-> Reference:
->
-> - [How to Install PHP 5.6 on Ubuntu 16.04 / 14.04 using PPA](https://tecadmin.net/install-php5-on-ubuntu/)
-> - [php - I deleted /etc/php5. How do I restore the folder? - Ask Ubuntu](https://askubuntu.com/questions/365750/i-deleted-etc-php5-how-do-i-restore-the-folder)
+## References
+
+- [How to Install PHP 5.6 on Ubuntu 16.04 / 14.04 using PPA | tecadmin](https://tecadmin.net/install-php5-on-ubuntu/)
+- [php - I deleted /etc/php5. How do I restore the folder? | askubuntu](https://askubuntu.com/questions/365750/i-deleted-etc-php5-how-do-i-restore-the-folder)
