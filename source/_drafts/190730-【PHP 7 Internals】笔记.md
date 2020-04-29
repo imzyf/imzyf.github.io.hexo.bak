@@ -30,67 +30,6 @@ description:
 8. intdiv 函数
 9. list 的方括号写法
 
-### PHP 7 安装和编译
-
-[PHP Download](https://www.php.net/downloads.php) 下载 7.1.\*。
-
-```
-$ cd php-7.1.30
-$ ./configure --prefix=$HOME/php/php-7.1.30/output --enable-fpm --enable-debug
-```
-
-遇到一个问题：
-
-```
-PHP Configure Error: Please specify the install prefix of iconv with --with-iconv=<DIR>
-```
-
-解决办法：
-
-```
-$ brew install libiconv
-
-$ ./configure --prefix=$HOME/php/php-7.1.30/output --enable-fpm --enable-debug --with-iconv=$(brew --prefix libiconv)
-
-./configure --with-openssl --enable-mbstring --enable-fpm --with-mysqli --with-pdo-mysql
-```
-
-yum groupinstall "Development tools"
-
-./configure --prefix=/data/home/v_yfanzhao/php56 --with-openssl --enable-mbstring --enable-fpm --with-mysqli --with-pdo-mysql --enable-ftp
-
-继续编译安装：
-
-```
-$ make && make install
-$ cd output
-$ ls
-
-bin     etc     include lib     php     sbin    var
-
-$ cd bin && ls
-
-pear       peardev    pecl       phar       phar.phar  php        php-cgi    php-config phpdbg     phpize
-```
-
-可能的另一个报错：
-
-```
-Undefined symbols for architecture x86_64:
-  "_libiconv", referenced from:
-      _zif_iconv_substr in iconv.o
-      _zif_iconv_mime_encode in iconv.o
-      _php_iconv_string in iconv.o
-...
-```
-
-解决方法：打开 Makefile 找到 `EXTRA_LDFALGS` `EXTRA_LDFLAGS_PROGRAMS` 删除 `L/Applications/Xcode.app...`
-
-```
-EXTRA_LDFLAGS = -L/usr/local/opt/libiconv/lib
-EXTRA_LDFLAGS_PROGRAM = -L/usr/local/opt/libiconv/lib
-```
-
 - `PEAR` PHP Extension and Application Repository，PHP 官方开源类库，`pear list` 列出已经安装的包，`pear install` 安装需要的包。
 - `PECL` PHP 扩展库，可以通过 PEAR 的 Package Manager 的管理方式来下载和安装扩展。
 - php-config 输出 PHP 编译信息的辅助命令。
@@ -98,3 +37,40 @@ EXTRA_LDFLAGS_PROGRAM = -L/usr/local/opt/libiconv/lib
 - phpize 命令用来动态安装扩展。
 
 GDB 调试 PHP 7。
+
+## PHP 5.6
+
+```bash
+==> Caveats
+To enable PHP in Apache add the following to httpd.conf and restart Apache:
+    LoadModule php5_module /usr/local/opt/php@5.6/lib/httpd/modules/libphp5.so
+
+    <FilesMatch \.php$>
+        SetHandler application/x-httpd-php
+    </FilesMatch>
+
+Finally, check DirectoryIndex includes index.php
+    DirectoryIndex index.php index.html
+
+The php.ini and php-fpm.ini file can be found in:
+    /usr/local/etc/php/5.6/
+
+php@5.6 is keg-only, which means it was not symlinked into /usr/local,
+because this is an alternate version of another formula.
+
+If you need to have php@5.6 first in your PATH run:
+  echo 'set -g fish_user_paths "/usr/local/opt/php@5.6/bin" $fish_user_paths' >> ~/.config/fish/config.fish
+  echo 'set -g fish_user_paths "/usr/local/opt/php@5.6/sbin" $fish_user_paths' >> ~/.config/fish/config.fish
+
+For compilers to find php@5.6 you may need to set:
+  set -gx LDFLAGS "-L/usr/local/opt/php@5.6/lib"
+  set -gx CPPFLAGS "-I/usr/local/opt/php@5.6/include"
+
+
+To have launchd start exolnet/deprecated/php@5.6 now and restart at login:
+  brew services start exolnet/deprecated/php@5.6
+Or, if you don't want/need a background service you can just run:
+  php-fpm
+==> Summary
+🍺  /usr/local/Cellar/php@5.6/5.6.40: 498 files, 60.5MB
+```
