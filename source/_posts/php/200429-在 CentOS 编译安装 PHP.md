@@ -16,7 +16,7 @@ feature_img:
 
 ## 环境
 
-- CentOS 10.15.4
+- CentOS 7.4
 - PHP 5.6.40
 
 <!-- more -->
