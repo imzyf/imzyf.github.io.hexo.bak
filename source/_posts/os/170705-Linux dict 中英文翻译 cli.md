@@ -1,10 +1,10 @@
 ---
-title: Ubuntu dict 中英文翻译 cli
+title: Linux dict 中英文翻译 cli
 permalink: chinese-and-english-translation-tools-cli
-date: 2017-07-06 11:00:00
+date: 2017-07-05 11:00:00
 updated:
 tags:
-  - ubuntu
+  - linux
 categories:
 description:
 comments: true

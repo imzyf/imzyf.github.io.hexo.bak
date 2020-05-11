@@ -40,8 +40,8 @@ sudo rm -rf  fcitx SogouPY sogou-qimpanel
 
 <!--more -->
 
-> Reference:
->
-> - [ubuntu-sogou-不能显示候选词 | Color Win's Notes](https://colorwin.github.io/2017/02/17/ubuntu-sogou/)
+## References
+
+- [ubuntu-sogou-不能显示候选词 | Color Win's Notes](https://colorwin.github.io/2017/02/17/ubuntu-sogou/)
 
 -- EOF --

@@ -1,10 +1,10 @@
 ---
-title: Ubuntu crontab 内容定时备份
-permalink: ubuntu-crontab-content-backup
+title: Linux crontab 内容定时备份
+permalink: linux-crontab-content-backup
 date: 2017-03-07 12:00:00
 updated:
 tags:
-  - ubuntu
+  - linux
 categories:
 description:
 comments: true
@@ -26,7 +26,7 @@ crontab -l > /home/tom/crontab_bak/bak`date '+%Y%m%d'`.txt
 
 config in crontab
 
-```
+```bash
 12 12 * * * /bin/bash /home/tom/crontab_bak/crontab_bak.sh
 ```
 
@@ -34,7 +34,7 @@ config in crontab
 
 ## crontab 常用命令
 
-```
+```bash
 crontab -l  # 列举 crontab 的任务
 crontab -e  # 编辑 crontab 的任务
 crontab -r  # 删除 crontab 的任务；风险

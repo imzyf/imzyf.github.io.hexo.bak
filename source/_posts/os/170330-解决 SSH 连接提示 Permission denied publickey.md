@@ -4,7 +4,7 @@ permalink: resolving-ssh-permission-denied-publickey
 date: 2017-03-30 17:00:00
 updated:
 tags:
-  - ubuntu
+  - linux
   - ssh
 categories:
 description:
@@ -24,7 +24,7 @@ ssh-add your_publickey
 
 如果遇到报错
 
-```
+```bash
 Could not open a connection to your authentication agent.
 ```
 
@@ -44,6 +44,6 @@ ssh-add your_publickey 2> /dev/null
 
 `2> /dev/null` 是为了保持静默运行
 
-> References:
->
-> - [ssh 连接提示 Permission denied (publickey) 怎么破？ | 吴川斌的博客](http://www.mr-wu.cn/ssh-permission-denied-publickey/)
+## References
+
+- [ssh 连接提示 Permission denied (publickey) 怎么破？ | 吴川斌的博客](http://www.mr-wu.cn/ssh-permission-denied-publickey/)

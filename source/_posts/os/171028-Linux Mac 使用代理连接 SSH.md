@@ -1,9 +1,10 @@
 ---
-title: Ubuntu Mac 使用代理连接 SSH
-permalink: ubuntu-or-mac-ssh-by-proxy
+title: Linux Mac 使用代理连接 SSH
+permalink: linux-or-mac-ssh-by-proxy
 date: 2017-10-28 15:00:00
 updated: 2020-03-25 22:59:22
 tags:
+  - linux
   - mac
 categories:
 description:
@@ -52,6 +53,6 @@ root     pts/2        2017-05-13 18:13 (xxx.xxx.xxx.xxx)
 
 ## References
 
-> - [Mac OS 使用 shadowsock 来代理 ssh 访问服务器](https://www.goodspb.net/mac-os-%E4%BD%BF%E7%94%A8-shadowsock-%E6%9D%A5%E4%BB%A3%E7%90%86-ssh-%E8%AE%BF%E9%97%AE%E6%9C%8D%E5%8A%A1%E5%99%A8/)
+- [Mac OS 使用 shadowsock 来代理 ssh 访问服务器](https://www.goodspb.net/mac-os-%E4%BD%BF%E7%94%A8-shadowsock-%E6%9D%A5%E4%BB%A3%E7%90%86-ssh-%E8%AE%BF%E9%97%AE%E6%9C%8D%E5%8A%A1%E5%99%A8/)
 
 -- EOF --

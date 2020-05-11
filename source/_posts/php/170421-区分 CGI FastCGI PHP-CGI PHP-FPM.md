@@ -1,6 +1,6 @@
 ---
 title: 区分 CGI FastCGI PHP-CGI PHP-FPM
-permalink: what-is-cgi-fastcgi-phpcgi-phpfpm
+permalink: cgi-fastcgi-phpcgi-php-fpm
 date: 2017-04-21 11:00:00
 updated:
 tags:

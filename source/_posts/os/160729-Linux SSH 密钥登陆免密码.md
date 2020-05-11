@@ -1,10 +1,10 @@
 ---
-title: Ubuntu | MAC SSH 密钥登陆免密码
-permalink: ubuntu-ssh-key-login-without-password
+title: Linux SSH 密钥登陆免密码
+permalink: linux-ssh-key-login-without-password
 date: 2016-07-29 10:00:00
 updated: 2019-05-25 16:19:06
 tags:
-  - ubuntu
+  - linux
   - ssh
 categories:
 description:
@@ -23,7 +23,7 @@ feature_img:
 
 要实现本机免密码登录服务器，执行如下命令：
 
-```
+```bash
 ssh-copy-id username@192.168.1.2
 ```
 
@@ -35,7 +35,7 @@ ssh-copy-id username@192.168.1.2
 
 ### 客户端生成公钥、私钥
 
-```
+```bash
 ssh-keygen -t rsa -P ''
 ```
 
@@ -48,13 +48,13 @@ ssh-keygen -t rsa -P ''
 
 将客户端公钥 `id_rsa.pub` 写入到服务端 `~/.ssh/authorzied_keys` 之中。
 
-```
+```bash
 cat ~/.ssh/id_rsa.pub
 ```
 
 复制输出的内容，登陆服务端：
 
-```
+```bash
 vim ~/.ssh/authorized_keys
 ```
 
@@ -64,15 +64,15 @@ vim ~/.ssh/authorized_keys
 
 服务端，非必须。
 
-```
+```bash
 sudo chmod 755 ~/.ssh
 sudo chmod 600 ~/.ssh/authorized_keys
 ```
 
 ### 客户端重启服务
 
-```
-$ sudo service ssh restart
+```bash
+sudo service ssh restart
 ```
 
 此时就可以不免密码登陆服务端了。
@@ -81,11 +81,11 @@ $ sudo service ssh restart
 
 设置用户以证书登录后，使用 sudo 操作。在服务端设置：
 
-```
-$ sudo visudo
+```bash
+sudo visudo
 ```
 
-```
+```bash
 %sudo ALL=(ALL:ALL) ALL
 
 # 将上一行替换为：
@@ -97,25 +97,25 @@ $ sudo visudo
 
 亚马逊 AWS 虚拟服务器使用一个预先生成的 `*.pem` 证书文件（密钥）为客户端和服务器之间建立连接。 例如：
 
-```
-$ ssh -i ~/ec2.pem ubuntu@12.34.56.78
+```bash
+ssh -i ~/ec2.pem ubuntu@12.34.56.78
 ```
 
 首先确定你可以以密码的形式连接远程服务器，也可以 [创建一个非超级管理员用户，并增加 sudo 权限](http://blog.csdn.net/hanshileiai/article/details/51141854)。
 
-```
-$ sudo ssh root@12.34.56.78
+```bash
+sudo ssh root@12.34.56.78
 ```
 
 ### 客户端生成验证没有密码密钥对
 
-```
-$ ssh-keygen -t rsa -b 2048 -v
+```bash
+ssh-keygen -t rsa -b 2048 -v
 ```
 
 执行上述命令首先会让你输入生成密钥的文件名：我这里输入的 `myPemKey` 之后一路回车。
 
-```
+```bash
 Generating public/private rsa key pair.
 Enter file in which to save the key (/home/anonymouse/.ssh/id_rsa): myPemKey
 Enter passphrase (empty for no passphrase):
@@ -133,47 +133,47 @@ The key's randomart image is:
 
 把生成的 `myPemKey.pub` 通过本地命令推送到服务器端，使服务器自动添加认证这个证书
 
-```
-$ ssh-copy-id -i ~/myPemKey.pub root@12.34.56.78
+```bash
+ssh-copy-id -i ~/myPemKey.pub root@12.34.56.78
 ```
 
 输入你的 `root` 用户密码
 
 ### 测试连接
 
-```
-$ sudo ssh -i ~/myPemKey root@12.34.56.78
+```bash
+sudo ssh -i ~/myPemKey root@12.34.56.78
 ```
 
 或者把 `myPemKey` 重命名为 `myPemKey.pem`
 
-```
-$ sudo ssh -i ~/myPemKey.pem root@12.34.56.78
+```bash
+sudo ssh -i ~/myPemKey.pem root@12.34.56.78
 ```
 
 ### 禁用密码连接
 
 **注意：要保证 .pem 连接成功的状态下，禁用密码连接。**
 
-```
-$ sudo vi /etc/ssh/sshd_config
+```bash
+sudo vi /etc/ssh/sshd_config
 ```
 
 找到这一行 `#PasswordAuthentication yes` 取消前边的 # 注释，改为：
 
-```
+```bash
 PasswordAuthentication no
 ```
 
 重启 ssh 服务
 
-```
-$ sudo service ssh restart
+```bash
+sudo service ssh restart
 ```
 
-> References:
->
-> - [韩世磊-ubuntu 生成 .pem 证书连接服务器，取消 OpenSSH 密钥密码认证](http://blog.csdn.net/hanshileiai/article/details/51141638)
-> - [韩世磊-ubuntu ssh 证书登录（不输入密码）](http://blog.csdn.net/hanshileiai/article/details/50381467)
+## References
+
+- [韩世磊-ubuntu 生成 .pem 证书连接服务器，取消 OpenSSH 密钥密码认证](http://blog.csdn.net/hanshileiai/article/details/51141638)
+- [韩世磊-ubuntu ssh 证书登录（不输入密码）](http://blog.csdn.net/hanshileiai/article/details/50381467)
 
 -- EOF --

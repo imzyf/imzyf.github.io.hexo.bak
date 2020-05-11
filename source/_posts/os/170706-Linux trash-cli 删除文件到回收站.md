@@ -1,10 +1,10 @@
 ---
-title: Ubuntu trash-cli 删除文件到回收站
+title: Linux trash-cli 删除文件到回收站
 permalink: trash-cli-move-files-to-trash
 date: 2017-07-06 14:00:00
 updated:
 tags:
-  - ubuntu
+  - linux
 categories:
 description:
 comments: true

@@ -29,6 +29,6 @@ username ALL=(ALL) NOPASSWD: ALL
 
 <!--more -->
 
-> Reference:
->
-> - [command line - Execute sudo without Password? - Ask Ubuntu](http://askubuntu.com/questions/147241/execute-sudo-without-password)
+## References
+
+- [command line - Execute sudo without Password? - Ask Ubuntu](http://askubuntu.com/questions/147241/execute-sudo-without-password)

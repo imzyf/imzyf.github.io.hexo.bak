@@ -127,6 +127,7 @@ brew cask install slowquitapps
 
 - [IINA](https://lhc70000.github.io/iina/) - The modern video player - ✨✨✨
 - [LICEcap](https://www.cockos.com/licecap/) - GIF 录屏 - ✨✨✨
+- 腾讯会议 - ✨✨✨
 - ~~[RescueTime](https://www.rescuetime.com/) - 时间统计~~
 - Evernote - 印象笔记
 - 微信 - 
