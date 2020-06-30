@@ -84,7 +84,7 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)
 make: *** [sapi/cli/php] Error 1
 ```
 
-解决方法：打开 Makefile 找到 `EXTRA_LDFALGS` `EXTRA_LDFLAGS_PROGRAMS` 删除后面的 `-L/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib`
+解决方法：打开 `Makefile` 找到 `EXTRA_LDFALGS` `EXTRA_LDFLAGS_PROGRAMS` 删除后面的 `-L/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib`
 
 ```bash
 vim Makefile

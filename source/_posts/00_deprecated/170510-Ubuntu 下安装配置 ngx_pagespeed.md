@@ -13,6 +13,10 @@ cover_img:
 feature_img:
 ---
 
+2020-06-30 更新：此文章内容不确定是否已失效。
+
+---
+
 ## 题外话
 
 前端优化大体上是：减小资源文件体积、减少请求、合理布置页面元素等；再具体些就是：开启 Gzip 压缩、合并 CSS 文件、合并 JavaScript 文件、长链接、减少 DNS 查询、使用 cookie-free 域名、JavaScript 放页面最下面、指定缓存时间、ETag、延迟加载、异步加载
@@ -24,8 +28,6 @@ feature_img:
 Google PageSpeed 对于 Apache 模块名是 `mod_pagespeed` 还提供各个平台编译完打好包的二进制文件，对于 Nginx 模块名是 `ngx_pagespeed`，需要自己去编译。
 
 ngx_pagespeed 自动使用最佳的方法，优化网页和相关资源文件 (CSS JavaScript images)，从而加快网站的速度，并减少页面加载时间，而无需修改现有内容或工作流。
-
-<!-- more -->
 
 ## 安装依赖库
 

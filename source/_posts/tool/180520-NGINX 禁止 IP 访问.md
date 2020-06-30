@@ -1,5 +1,5 @@
 ---
-title: Nginx 禁止 IP 访问
+title: NGINX 禁止 IP 访问
 permalink: nginx-ip-forbidden
 date: 2018-05-20 21:00:00
 updated:

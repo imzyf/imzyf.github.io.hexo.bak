@@ -2,7 +2,7 @@
 title: Docker UFW 失效
 permalink: docker-ufw-not-work
 date: 2018-04-24 14:00:00
-updated: 2018-04-24 14:00:00
+updated:
 tags:
   - docker
   - ufw

@@ -1,11 +1,10 @@
 ---
-title: Nginx 启用 HTTP/2
+title: NGINX 启用 HTTP/2
 permalink: nginx-enable-http2
 date: 2017-06-06 21:00:00
 updated:
 tags:
   - nginx
-  - https
 categories:
 description:
 comments: true
