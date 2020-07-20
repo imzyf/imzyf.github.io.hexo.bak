@@ -75,8 +75,6 @@ search:
 
 sitemap:
   path: sitemap.xml
-baidusitemap:
-  path: baidusitemap.xml
 
 nofollow:
   enable: true
