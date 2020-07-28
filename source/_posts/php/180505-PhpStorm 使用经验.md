@@ -2,7 +2,7 @@
 title: PhpStorm 使用经验
 permalink: phpstorm-using-experience
 date: 2018-05-05 14:00:00
-updated: 2020-04-28 17:55:17
+updated: 2020-07-28 11:27:50
 tags:
   - php
   - phpstorm
@@ -56,16 +56,24 @@ feature_img:
 
 打开 PhpStorm `Preferences > Tools > External Tools` 添加：
 
-![180416-use-php-cs-fixer-in-phpstorm-001](https://user-images.githubusercontent.com/9289792/80202885-de1e6780-8658-11ea-904b-3ea7e393182c.png)
+![180416-use-php-cs-fixer-in-phpstorm-001](https://user-images.githubusercontent.com/9289792/88664953-715fb100-d110-11ea-970e-9dcb72945ebb.png)
 
 - Program: `/usr/local/bin/php-cs-fixer`
-- Parameters: `--rules=@Symfony --verbose fix "$FileDir$/$FileName$"`（Note that previous verions of PHP-CS-Fixer used --levels instead of --rules. 未找到）
+- Arguments: `--verbose fix "$FileDir$/$FileName$" --dry-run --rules=@PSR1,@PSR2,@Symfony`（Note that previous verions of PHP-CS-Fixer used --levels instead of --rules. 未找到）
 - Working directory: `$ProjectFileDir$`
-- 我取消勾选了 Open console，可以不输出日志信息
+- 我取消勾选了 `Open console for tool output`，可以不输出日志信息
 
-设置快捷键 `Preferences > Keymap`：
+为了方便使用，保存文件时就可以格式化，设置快捷键 `Preferences > Keymap > Macros`：
 
-![180416-use-php-cs-fixer-in-phpstorm-002](https://user-images.githubusercontent.com/9289792/80202900-e5de0c00-8658-11ea-826f-b4d058fa2209.png)
+![180416-use-php-cs-fixer-in-phpstorm-002](https://user-images.githubusercontent.com/9289792/88665170-c996b300-d110-11ea-8acf-62dad3694f2d.png)
+
+设置 php-cs-fix 单独的快捷键 `Preferences > Keymap > External Tools`：
+
+![180416-use-php-cs-fixer-in-phpstorm-003](https://user-images.githubusercontent.com/9289792/80202900-e5de0c00-8658-11ea-826f-b4d058fa2209.png)
+
+## 关闭不常用的插件
+
+`Preferences > Plugins > Installed` 向下滚动，`Bundled` 中有不少预装但不常用的可以禁掉。
 
 ## References
 
