@@ -14,6 +14,8 @@ cover_img:
 feature_img:
 ---
 
+2020-08-10 更新：此文章内容不确定是否已失效。
+
 ## what is Sphinx
 
 Sphinx 是一个可全文搜索的开源搜索引擎。最大的特点是可以有效地执行大数据的搜索。要索引的数据可以来自完全不同的源：SQL 数据库，纯文本文件，HTML 文件，邮箱等。
@@ -31,7 +33,7 @@ sudo apt-get install sphinxsearch -y
 
 ## configuring Sphinx
 
-```
+```bash
 sudo vim /etc/sphinxsearch/sphinx.conf
 ```
 
@@ -45,7 +47,7 @@ The `source` block contains the type of source, username and password to the MyS
 
 - `sql_query`: This is the query thats dumps data to index.
 
-```
+```bash
 source src1
 {
   type          = mysql
@@ -74,7 +76,7 @@ The `index` component contains the source and the path to store the data.
 - `path`: This path to save the index.
 - `charset_type`: This is the charset of the index.
 
-```
+```bash
 index test1
 {
   source            = src1
@@ -96,7 +98,7 @@ The searchd component contains the port and other variables to run the Sphinx da
 - `preopen_indexes`: Whether to forcibly preopen all indexes on startup.
 - `unlink_old`: Whether to unlink old index copies on successful rotation.
 
-```
+```bash
 searchd
 {
   listen            = 9312   # Port to listen on
@@ -115,7 +117,7 @@ searchd
 
 ## adding data to the index
 
-```
+```bash
 sudo indexer -c /etc/sphinxsearch/sphinx.conf test1
 # sudo indexer --all
 ```
@@ -146,7 +148,7 @@ sudo vim /etc/default/sphinxsearch
 
 Find the line `START=no` and set it to yes.
 
-```
+```bash
 START=yes
 ```
 
@@ -170,7 +172,7 @@ sudo searchd --stop
 
 ## testing search
 
-```
+```bash
 sudo search -c /etc/sphinxsearch/sphinx.conf google
 ```
 
@@ -183,7 +185,7 @@ sudo search -c /etc/sphinxsearch/sphinx.conf google
 安装 PHP Sphinx 依赖库
 
 ```bash
-sudo apt-get install libsphinxclient-dev  libsphinxclient-0.0.1 -y
+sudo apt-get install libsphinxclient-dev libsphinxclient-0.0.1 -y
 ```
 
 安装 PHP Sphinx 扩展
@@ -198,7 +200,7 @@ sudo pecl install sphinx
 sudo vim /etc/php5/fpm/php.ini
 ```
 
-```
+```bash
 extension=sphinx.so
 ```
 
@@ -236,7 +238,7 @@ public function testSphinx()
 [Installing Sphinx PHP API on Ubuntu 16.04 | Sphinx](http://sphinxsearch.com/forum/view.html?id=15228) 中提到了 `sphinxapi.php`，联想到最近使用的 Composer，找到了 [nilportugues/sphinx-search - Packagist](https://packagist.org/packages/nilportugues/sphinx-search) `SphinxClient` 这个类中有很多 `set` 方法，我想这就和上面的 PHP 扩展的内容差不多，省去了安装扩展库。
 
 ```bash
-$ composer require nilportugues/sphinx-search
+composer require nilportugues/sphinx-search
 ```
 
 ```php
@@ -259,6 +261,6 @@ $sphinxSearch->removeFilter('year');
 $result = $sphinxSearch->query('Spiderman','movies');
 ```
 
-> Rerference:
->
-> - [How To Install and Configure Sphinx on Ubuntu 14.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-sphinx-on-ubuntu-14-04)
+## Rerferences
+
+- [How To Install and Configure Sphinx on Ubuntu 14.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-sphinx-on-ubuntu-14-04)

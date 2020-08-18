@@ -2,7 +2,7 @@
 title: MySQL Illegal mix of collations
 permalink: mysql-illegal-mix-of-collations
 date: 2020-04-14 17:05:01
-updated: 2020-04-23 17:04:53
+updated: 2020-08-17 21:34:58
 comments: true
 toc: true
 tags:
@@ -40,6 +40,10 @@ Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb4_unicode_ci,
 
 - utf8mb4_unicode_ci 在特殊情况下，Unicode 排序规则为了能够处理特殊字符的情况，实现了略微复杂的排序算法。但是在绝大多数情况下发，不会发生此类复杂比较。相比选择哪一 collation，使用者更应该关心字符集与排序规则在 db 里需要统一。
 - utf8mb4_general_ci 在比较和排序的时候更快。
+
+## utf8mb4
+
+mb4 是 most bytes 4 的意思，专门用来兼容四字节的 unicode。
 
 ## References
 

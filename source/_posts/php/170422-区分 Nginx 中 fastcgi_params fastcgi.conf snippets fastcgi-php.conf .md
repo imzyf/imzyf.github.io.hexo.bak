@@ -21,7 +21,7 @@ Nginx 有两份 fastcgi 配置文件，分别是 `fastcgi_params` 和 `fastcgi.c
 
 它们没有太大的差异，唯一的区别是 `fastcgi.conf` 比 `fastcgi_params` 多了一行 `SCRIPT_FILENAME` 的定义
 
-```
+```conf
 fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
 ```
 
@@ -39,7 +39,7 @@ fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
 
 ### 实例
 
-```
+```conf
 server {
     listen 80;
     server_name foo.com;
@@ -66,7 +66,7 @@ server {
 
 `fastcgi-php.conf`:
 
-```
+```conf
 # regex to split $uri to $fastcgi_script_name and $fastcgi_path
 fastcgi_split_path_info ^(.+\.php)(/.+)$;
 
@@ -86,7 +86,7 @@ include fastcgi.conf;
 
 ### 实例
 
-```
+```conf
 server {
 	...
     location ~ \.php$ {
@@ -100,11 +100,11 @@ server {
 
 ### PHP Nginx Unix sock 切换 TCP/IP
 
-```
+```conf
 sudo vim /etc/php5/fpm/pool.d/www.conf
 ```
 
-```
+```conf
 # 取消注释
 listen.backlog = 65536
 # 查找
@@ -115,20 +115,20 @@ listen = 127.0.0.1:9000
 
 and then, edit Nginx configuration file
 
-```
+```conf
 fastcgi_pass unix:/var/run/php5-fpm.sock;
 # 修改为
 fastcgi_pass 127.0.0.1:9000;
 ```
 
-```
+```conf
 sudo service php5-fpm restart
 sudo service nginx restart
 ```
 
-> Reference:
->
-> - [如何正确配置 Nginx+PHP | 火丁笔记](https://huoding.com/2013/10/23/290)
-> - [fastcgi_params Versus fastcgi.conf - Nginx Config History](http://blog.martinfjordvald.com/2013/04/nginx-config-history-fastcgi_params-versus-fastcgi-conf/)
-> - [How To Install Nginx on Ubuntu 16.04 | DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-16-04)
-> - [nginx-build/fastcgi-php.conf at master · EasyEngine/nginx-build](https://github.com/EasyEngine/nginx-build/blob/master/nginx/debian/conf/snippets/fastcgi-php.conf)
+## References
+
+- [如何正确配置 Nginx+PHP | 火丁笔记](https://huoding.com/2013/10/23/290)
+- [fastcgi_params Versus fastcgi.conf - Nginx Config History](http://blog.martinfjordvald.com/2013/04/nginx-config-history-fastcgi_params-versus-fastcgi-conf/)
+- [How To Install Nginx on Ubuntu 16.04 | DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-16-04)
+- [nginx-build/fastcgi-php.conf at master · EasyEngine/nginx-build](https://github.com/EasyEngine/nginx-build/blob/master/nginx/debian/conf/snippets/fastcgi-php.conf)

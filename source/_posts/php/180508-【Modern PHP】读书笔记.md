@@ -77,11 +77,11 @@ PHP 生成器不能满足所有迭代操作的需求，因为如果不查询，�
 
 PHP 生成器是 PHP 函数，只不过要在函数中一次或者多次使用 yield 关键字。生成器从不返回值，值产出值。
 
-```
+```php
 function myGenerator() {
-    yield 'value1';
-    yield 'value2';
-    yield 'value3';
+  yield 'value1';
+  yield 'value2';
+  yield 'value3';
 }
 
 foreach (myGenerator()  as $yieldedValue) {
@@ -95,7 +95,7 @@ value3
 
 使用生成器处理 CSV：
 
-```
+```php
 function getRows($file) {
     $handle = fopen($file, 'rb');
     if ($handle === false) {
@@ -114,9 +114,9 @@ foreach (getRows('data.csv') as $row) {
 
 ### 闭包
 
-理论上讲，闭包和匿名函数是不同的概念。不过，PHP  将其视作相同的概念。
+理论上讲，闭包和匿名函数是不同的概念。不过，PHP 将其视作相同的概念。
 
-```
+```php
 $closure = function ($name) {
     return sprintf('Hello %s', $name);
 }
@@ -128,7 +128,7 @@ echo $closure("Josh");
 
 PHP 闭包常被当做函数和方法的回调使用。
 
-```
+```php
 $numbersPlusOne = array_map(function ($number) {
     return $number + 1;
 }, [1,2,3]);
@@ -140,14 +140,14 @@ print_r($numbersPlusOne);
 
 在有闭包之前，只能单独创建具名函数，然后使用名称引用那个函数：
 
-```
+```php
 $numbersPlusOne = array_map('incrementNumber', [1,2,3]);
 // 如果只需要使用一次回调，没必要单独定义。把闭包当成回调使用，写出的代码更整洁、更清晰。
 ```
 
 使用 use 关键字附加闭包状态：
 
-```
+```php
 function enclosePerson($name) {
     return function ($doCommand) use ($name) {
         return sprintf('%s, %s', $name, $doCommand);
@@ -175,7 +175,7 @@ PHP 闭包是对象。闭包对象的默认状态没什么用，不过有一个 
 
 启动这个服务器：
 
-```
+```php
 php -S localhost:4000
 
 // 让 PHP Web 服务器监听所有接口
@@ -217,7 +217,7 @@ PHP Standards Recommendation.
 
 使用 HTTP 流封装协议创建了一个与 Flickr API 通信的 PHP 流：
 
-```
+```php
 <?php
 $json = file_get_contents(
     'http://api.flickr.com/services/feeds/photos_public.gne?format=json'
@@ -230,7 +230,7 @@ $json = file_get_contents(
 
 隐式使用 file:// 流封装协议：
 
-```
+```php
 $handle = fopen('/etc/hosts', 'rb');
 while (feof($handle) !== ture) {
     echo fgets($handle);
@@ -240,7 +240,7 @@ fclose($handle);
 
 显示使用 file:// 流封装协议：
 
-```
+```php
 ...
 $handle = fopen('file://etc/hosts', 'rb');
 ...
@@ -285,7 +285,7 @@ _能负担的起多少个 PHP-FPM 进程？_
 
 ### Zend OPcache
 
-```
+```php
 opcache.memory_consumption = 64
 # 为操作码缓存分配的内存量（单位 MB）。
 
@@ -308,7 +308,7 @@ opcache.fast_shutdown = 1
 
 ### 文件上传
 
-```
+```php
 file_uploads = 1
 upload_max_filesize = 10M
 max_file_uploads = 3
@@ -318,14 +318,14 @@ max_file_uploads = 3
 
 ### 会话处理
 
-```
+```php
 session.save_handler = 'memcached'
 session.save_path = '127.0.0.2:11211'
 ```
 
 ### 缓冲输出
 
-```
+```php
 output_buffering = 4096
 implicit_flush = false
 ```
@@ -336,7 +336,7 @@ implicit_flush = false
 
 realpath cache，PHP 会缓存应用使用的文件路径，这样每次包含或者导入文件时就无需不断搜索包含路径了。
 
-```
+```php
 realpath_cache_size = 64k
 ```
 

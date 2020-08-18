@@ -13,7 +13,9 @@ cover_img:
 feature_img:
 ---
 
-sogou 输入法突然无法选词输入中文，候选词位置出现白框，多次重重装 fcitx 和 sogou 也没有解决。尝试使用 google pinyin 代替，但是感觉很不顺手
+sogou 输入法突然无法选词输入中文，候选词位置出现白框，多次重重装 fcitx 和 sogou 也没有解决。尝试使用 google pinyin 代替，但是感觉很不顺手。
+
+<!-- more -->
 
 ## issue in GitHub
 
@@ -37,8 +39,6 @@ clean `fcitx`, `SogouPY*`, `sogou-qimpanel` in `~/.config`, then relogin and try
 cd ~/.config
 sudo rm -rf  fcitx SogouPY sogou-qimpanel
 ```
-
-<!--more -->
 
 ## References
 

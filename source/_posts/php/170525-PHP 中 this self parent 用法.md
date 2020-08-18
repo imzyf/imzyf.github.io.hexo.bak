@@ -61,7 +61,7 @@ $x->bar();
 ?>
 ```
 
-```
+```php
 Y::foo()
 ```
 
@@ -90,10 +90,10 @@ $x->bar();
 ?>
 ```
 
-```
+```php
 X::foo()
 ```
 
-> Reference:
->
-> - [php - When to use self over \$this? - Stack Overflow](https://stackoverflow.com/questions/151969/when-to-use-self-over-this)
+## References
+
+- [php - When to use self over \$this? - Stack Overflow](https://stackoverflow.com/questions/151969/when-to-use-self-over-this)
