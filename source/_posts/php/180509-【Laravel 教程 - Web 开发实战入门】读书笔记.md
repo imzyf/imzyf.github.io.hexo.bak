@@ -26,7 +26,7 @@ feature_img:
 - DRY（Don't repeat yourself）不要重复自己，提倡代码重用；
 - 重视「编码愉悦性」。
 
-### 如何正确阅读本书？
+### 如何正确阅读本书
 
 随后你会有很多机会来学习它们。现在最重要的是保持『训练』的连贯性。
 
@@ -38,7 +38,7 @@ feature_img:
 
 ### 第一个应用
 
-```
+```bash
 $ composer create-project laravel/laravel Laravel --prefer-dist "5.5.*"
 ```
 
@@ -46,7 +46,7 @@ $ composer create-project laravel/laravel Laravel --prefer-dist "5.5.*"
 
 设置 push 的默认模式为 simple
 
-```
+```bash
 $ git config --global push.default simple
 ```
 
@@ -94,7 +94,7 @@ $ heroku logs
 
 生成静态页面控制器：
 
-```
+```bash
 $ php artisan make:controller StaticPagesController
 ```
 
@@ -102,7 +102,7 @@ $ php artisan make:controller StaticPagesController
 
 ### 样式美化
 
-```
+```bash
 # 升级 yarn
 $ brew  upgrade yarn
 
@@ -112,7 +112,7 @@ $ yarn add cross-env
 
 每次检测到 `.scss` 文件发生更改时，自动将其编译为 `.css` 文件：
 
-```
+```bash
 $ npm run watch-poll
 ```
 
@@ -124,7 +124,7 @@ Laravel Mix 一款前端任务自动化管理工具。Mix 提供了简洁流畅�
 
 ### 布局中的链接
 
-```
+```bash
 <li><a href="/help">帮助</a></li>
 
 // 可以改写为
@@ -134,7 +134,7 @@ Laravel Mix 一款前端任务自动化管理工具。Mix 提供了简洁流畅�
 
 路由中修改：
 
-```
+```bash
 Route::get('/help', 'StaticPagesController@help')->name('help');
 ```
 
@@ -149,7 +149,7 @@ Route::get('/help', 'StaticPagesController@help')->name('help');
 
 ### 查看数据库表
 
-```
+```bash
 $ php artisan migrate
 
 # 回滚

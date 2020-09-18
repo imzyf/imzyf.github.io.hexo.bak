@@ -66,8 +66,8 @@ FastCGI 是 Nginx 和 PHP 之间的一个通信接口，该接口实际处理过
 
 同时，PHP 安装的时候，需要开启支持 FastCGI 选项，并且编译安装 PHP-FPM 补丁/扩展，同时，需要启动 PHP-FPM 进程，才可以解析 Nginx 通过 FastCGI 转发过来的 PHP 脚本
 
-> Reference:
->
-> - [搞不清 FastCgi 与 PHP-fpm 之间是个什么样的关系](https://segmentfault.com/q/1010000000256516)
-> - [什么是 CGI、FastCGI、PHP-CGI、PHP-FPM、Spawn-FCGI？](http://www.mike.org.cn/articles/what-is-cgi-fastcgi-php-fpm-spawn-fcgi/)
-> - [nginx、fastCGI、php-fpm 关系梳理 842864681 新浪博客](http://blog.sina.com.cn/s/blog_6df9fbe30102v57y.html)
+## References
+
+- [搞不清 FastCgi 与 PHP-fpm 之间是个什么样的关系](https://segmentfault.com/q/1010000000256516)
+- [什么是 CGI、FastCGI、PHP-CGI、PHP-FPM、Spawn-FCGI？](http://www.mike.org.cn/articles/what-is-cgi-fastcgi-php-fpm-spawn-fcgi/)
+- [nginx、fastCGI、php-fpm 关系梳理 842864681 新浪博客](http://blog.sina.com.cn/s/blog_6df9fbe30102v57y.html)
