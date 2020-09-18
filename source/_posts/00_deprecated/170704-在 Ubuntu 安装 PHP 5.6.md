@@ -4,8 +4,6 @@ permalink: install-php-56-on-ubuntu
 date: 2017-07-04 17:00:00
 updated: 2020-04-28 17:32:51
 tags:
-  - php
-  - ubuntu
 categories:
 description:
 comments: true

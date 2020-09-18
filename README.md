@@ -78,49 +78,21 @@ analytics"
 </script>
 ```
 
-### 添加 Vien link
+### Global width `source/css/_variables.scss` ```scss // Global width of '
 
-`layout/_partial/footer.swig`
-
-```html
-<span class="power-by">
-  {{ __('footer.powered', '<a
-    class="hexo-link"
-    rel="nofollow"
-    href="https://hexo.io/"
-    >Hexo</a
-  >') }}
-</span>
-<span class="division">|</span>
-<span class="theme-info">
-  {{ __('footer.theme') }} -
-  <a
-    class="theme-link"
-    rel="nofollow"
-    href="https://github.com/ahonn/hexo-theme-even"
-    >Even</a
-  >
-</span>
-
-{% if is_home() %}
-<span class="division">|</span>
-<span
-  ><a href="https://vien.tech/" target="_blank" rel="noopener"
-    >Vien Blog</a
-  ></span
->
-{% endif %}
-```
-
-### Global width
-
-`source/css/_variables.scss`
-
-```scss
-// Global width of '<body>'.
-$global-body-width: 900px !default;
-```
+<body>
+  '. $global-body-width: 900px !default;
+</body>
+````
 
 ## 图床
 
 GitHub issues
+
+```js
+<script
+  data-ad-client="ca-pub-2330747317815601"
+  async
+  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+></script>
+```

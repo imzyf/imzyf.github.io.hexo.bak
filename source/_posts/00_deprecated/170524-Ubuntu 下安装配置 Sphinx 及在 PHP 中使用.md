@@ -4,8 +4,6 @@ permalink: install-and-configre-sphinx-and-using-by-php-in-ubuntu
 date: 2017-05-24 16:00:00
 updated:
 tags:
-  - php
-  - ubuntu
 categories:
 description:
 comments: true

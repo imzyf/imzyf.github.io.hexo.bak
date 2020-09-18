@@ -4,7 +4,6 @@ permalink: install-and-setting-ngx-pagespeed-in-ubuntu
 date: 2017-05-10 19:00:00
 updated:
 tags:
-  - nginx
 categories:
 description:
 comments: true
