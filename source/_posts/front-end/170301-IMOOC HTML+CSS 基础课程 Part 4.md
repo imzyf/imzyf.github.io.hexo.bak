@@ -146,8 +146,8 @@ p {
 
 ```html
 <p>以这个<span>例子</span>为例。</p>
-// css: p{font-size:14px} span{font-size:0.8em;} // 结果 span
-中的字体“例子”字体大小就为 11.2px（14 * 0.8 = 11.2px）。
+// css: p{font-size:14px} span{font-size:0.8em;}
+// 结果 span 中的字体“例子”字体大小就为 11.2px（14 * 0.8 = 11.2px）。
 ```
 
 - 百分比

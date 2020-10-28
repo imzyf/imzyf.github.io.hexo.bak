@@ -2,7 +2,7 @@
 title: 在 macOS 编译安装 PHP
 permalink: make-install-php-on-macos
 date: 2020-04-28 18:09:59
-updated: 2020-04-29 11:37:55
+updated: 2020-10-13 19:22:17
 tags:
   - php
   - mac
@@ -53,7 +53,20 @@ brew install zlib
 ./configure --help
 ./configure --help | grep openssl
 
-./configure --prefix=/usr/local/php56 --enable-fpm --enable-debug --enable-gd-native-ttf --with-mysqli=mysqlnd --with-pdo-mysql=mysqlnd --with-openssl=(brew --prefix openssl) --enable-mbstring --with-zlib=(brew --prefix zlib) --enable-zip --with-iconv=(brew --prefix libiconv)
+# 注意替换 --prefix
+./configure --prefix=/usr/local/php56 \
+--enable-fpm --enable-debug \
+--enable-gd-native-ttf \
+--with-mysqli=mysqlnd \
+--with-pdo-mysql=mysqlnd \
+--with-openssl=(brew --prefix openssl) \
+--enable-mbstring \
+--with-zlib=(brew --prefix zlib) \
+--enable-zip \
+--with-iconv=(brew --prefix libiconv) \
+--with-curl \
+--enable-soap \
+--enable-ftp
 ```
 
 ## 编译安装
@@ -91,10 +104,11 @@ vim Makefile
 
 EXTRA_LDFLAGS = -L/usr/local/opt/openssl/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/libiconv/lib
 EXTRA_LDFLAGS_PROGRAM = -L/usr/local/opt/openssl/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/libiconv/lib
-```
 
-```bash
 make clean && make -j4
+make install
+
+php71 --ri curl
 ```
 
 ### Please specify the install prefix of iconv with --with-iconv=\<DIR\>
@@ -118,5 +132,6 @@ brew install openssl
 ## References
 
 - [Mac Pro 编译安装 PHP 5.6.21 及 问题汇总 | cnblogs](https://www.cnblogs.com/52php/p/5683356.html)
+- [PHP7 编译安装 | cloud.tencent](https://cloud.tencent.com/developer/article/1047033)
 
 -- EOF --

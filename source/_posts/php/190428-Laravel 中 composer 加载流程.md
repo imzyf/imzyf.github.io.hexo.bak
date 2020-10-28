@@ -1,6 +1,6 @@
 ---
-title: PHP composer 基本原理
-permalink: php-composer-basic
+title: Laravel 中 composer 加载流程
+permalink: composer-autoload-in-laravel
 date: 2019-04-28 19:21:12
 updated:
 tags:
@@ -10,11 +10,13 @@ categories:
 description:
 comments: true
 toc: true
-cover_img: https://images.unsplash.com/photo-1584907797015-7554cd315667?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=640&q=80
+cover_img:
 feature_img:
 ---
 
 ## 启动
+
+- Laravel 5.8
 
 文章以 Laravel 学习。入口文件 `public/index.php`：
 
