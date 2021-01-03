@@ -71,3 +71,4 @@ FastCGI 是 Nginx 和 PHP 之间的一个通信接口，该接口实际处理过
 - [搞不清 FastCgi 与 PHP-fpm 之间是个什么样的关系](https://segmentfault.com/q/1010000000256516)
 - [什么是 CGI、FastCGI、PHP-CGI、PHP-FPM、Spawn-FCGI？](http://www.mike.org.cn/articles/what-is-cgi-fastcgi-php-fpm-spawn-fcgi/)
 - [nginx、fastCGI、php-fpm 关系梳理 842864681 新浪博客](http://blog.sina.com.cn/s/blog_6df9fbe30102v57y.html)
+- [概念了解：CGI，FastCGI，PHP-CGI 与 PHP-FPM](http://www.nowamagic.net/librarys/veda/detail/1319)

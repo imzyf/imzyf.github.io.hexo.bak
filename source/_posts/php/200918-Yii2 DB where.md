@@ -1,6 +1,6 @@
 ---
-title: Yii2 where 条件
-permalink: yii2-where
+title: Yii2 DB where
+permalink: yii2-db-where
 date: 2020-09-18 11:54:53
 updated:
 tags:
@@ -15,10 +15,10 @@ feature_img:
 
 ## TL;DR
 
-- 字符串格式，例如：'status=1'
-- 哈希格式，例如： ['status' => 1, 'type' => 2]
-- 操作符格式，例如：['like', 'name', 'test']
-- 对象格式，例如：new LikeCondition('name', 'LIKE', 'test')
+- 字符串格式，例如：`'status=1'`
+- 哈希格式，例如： `['status' => 1, 'type' => 2]`
+- 操作符格式，例如：`['like', 'name', 'test']`
+- 对象格式，例如：`new LikeCondition('name', 'LIKE', 'test')`
 
 ## 简单条件
 

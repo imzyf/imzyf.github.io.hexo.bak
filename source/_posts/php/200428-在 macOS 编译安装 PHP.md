@@ -55,7 +55,8 @@ brew install zlib
 
 # 注意替换 --prefix
 ./configure --prefix=/usr/local/php56 \
---enable-fpm --enable-debug \
+--enable-fpm \
+--enable-debug \
 --enable-gd-native-ttf \
 --with-mysqli=mysqlnd \
 --with-pdo-mysql=mysqlnd \

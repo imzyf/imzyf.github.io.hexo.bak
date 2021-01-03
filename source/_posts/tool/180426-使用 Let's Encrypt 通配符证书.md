@@ -114,6 +114,6 @@ server {
 
 ## References
 
-> - [配置使用免费的通配符证书](https://blog.laisky.com/p/letsencrypt/)
+- [配置使用免费的通配符证书](https://blog.laisky.com/p/letsencrypt/)
 
 -- EOF --
