@@ -1,10 +1,12 @@
 ---
-title: Yii2 DB where
-permalink: yii2-db-where
-date: 2020-09-18 11:54:53
-updated:
+title: Yii2 Code Snippet
+permalink: yii2-code-snippet
+date: 2021-01-19 12:08:13
+updated: 2021-01-27 17:17:54
 tags:
   - php
+  - yii2
+  - code-snippet
 categories:
 description:
 comments: true
@@ -13,14 +15,25 @@ cover_img:
 feature_img:
 ---
 
-## TL;DR
+## gii CLI
+
+```bash
+php yii help gii/mode
+
+php yii gii/model --generateLabelsFromComments=1 --overwrite=1 --standardizeCapitals=1 --ns='app\models\gii' --tableName="*"
+
+# 多数据库
+php yii gii/model --generateLabelsFromComments=1 --overwrite=1 --standardizeCapitals=1 --db="hub_db" --ns='app\models\hub\gii' --tableName="*"
+```
+
+## DB where
 
 - 字符串格式，例如：`'status=1'`
 - 哈希格式，例如： `['status' => 1, 'type' => 2]`
 - 操作符格式，例如：`['like', 'name', 'test']`
 - 对象格式，例如：`new LikeCondition('name', 'LIKE', 'test')`
 
-## 简单条件
+### 简单条件
 
 ```php
 // SQL: (type = 1) AND (status = 2).
@@ -33,7 +46,7 @@ $cond = ['id' => [1, 2, 3], 'status' => 2]
 $cond = ['status' => null]
 ```
 
-## AND OR
+### AND OR
 
 ```php
 // SQL: `id=1 AND id=2`
@@ -55,14 +68,14 @@ $cond = [
 ]
 ```
 
-## NOT
+### NOT
 
 ```php
 // SQL: `NOT (attribute IS NULL)`
 $cond = ['not', ['attribute' => null]]
 ```
 
-## BETWEEN
+### BETWEEN
 
 ```php
 // not between 用法相同
@@ -70,7 +83,7 @@ $cond = ['not', ['attribute' => null]]
 $cond = ['between', 'id', 1, 10]
 ```
 
-## IN
+### IN
 
 ```php
 // not in 用法相同
@@ -86,7 +99,7 @@ $cond = ['in', ['id', 'name'], [['id' => 1, 'name' => 'foo'], ['id' => 2, 'name'
 $cond = ['in', 'user_id', (new Query())->select('id')->from('users')->where(['active' => 1])]
 ```
 
-## LIKE
+### LIKE
 
 ```php
 // SQL: `name LIKE '%tester%'`
@@ -99,7 +112,7 @@ $cond = ['like', 'name', ['test', 'sample']]
 $cond = ['like', 'name', '%tester', false]
 ```
 
-## EXIST
+### EXIST
 
 ```php
 // not exists用法类似

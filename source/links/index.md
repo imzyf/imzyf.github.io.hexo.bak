@@ -13,7 +13,7 @@ layout: page
 
 ## Friends
 
-- [我盒鸡王又回来啦](http://penmodeyu.com) 喷墨的鱼直播间（域名低价出售）。
+- [我盒鸡王又回来啦](https://penmodeyu.com) 喷墨的鱼直播间（域名低价出售）。
 
 ---
 

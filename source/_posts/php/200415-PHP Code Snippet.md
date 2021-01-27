@@ -1,10 +1,11 @@
 ---
-title: PHP 常用命令
-permalink: php-common-commands
+title: PHP Code Snippet
+permalink: php-code-snippet
 date: 2020-04-15 18:03:44
 updated: 2020-04-26 15:43:32
 tags:
   - php
+  - code-snippet
 categories:
 description:
 comments: true
@@ -122,15 +123,9 @@ composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
     ]
 ```
 
-### 优先使用本地缓存
-
-```bash
-composer require hellogerard/jobby --prefer-dist
-```
-
 ### 忽略 php 版本限制
 
-这个是极不推荐的，这样会造成库安装的版本错误。
+这个是极不推荐的，这样会造成库安装的版本错误。**不应该使用。**
 
 ```bash
 composer require hellogerard/jobby --ignore-platform-reqs
@@ -151,6 +146,14 @@ which composer
 
 ```bash
 php -d memory_limit=-1 /usr/local/bin/composer update
+```
+
+### 更新 composer.lock
+
+若项目之前已通过其他源安装，则需要更新 composer.lock 文件：
+
+```bash
+composer update --lock
 ```
 
 ## PHP.net

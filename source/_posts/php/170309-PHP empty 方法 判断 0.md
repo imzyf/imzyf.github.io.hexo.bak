@@ -39,3 +39,5 @@ $str = '0.0';
 echo empty($str); // false 很可能和预期是相反的
 echo empty((float)$str); // true
 ```
+
+-- EOF --

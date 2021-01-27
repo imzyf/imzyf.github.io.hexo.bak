@@ -1,10 +1,11 @@
 ---
-title: Vue 使用笔记
-permalink: vue-notes
+title: Vue Code Snippet
+permalink: vue-code-snippet
 date: 2019-08-08 17:33:38
 updated: 2020-04-24 17:15:56
 tags:
   - vue
+  - code-snippet
 categories:
 description:
 comments: true
@@ -12,8 +13,6 @@ toc: true
 cover_img: https://images.unsplash.com/photo-1569161031678-f49b4b9ca1c2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=640&q=80
 feature_img:
 ---
-
-记录开发过程中使用 Vue 时遇到的一些问题和解决办法。
 
 <!-- more -->
 
@@ -131,7 +130,7 @@ plugins: [
 
 在数据变化后要执行的某个操作，而这个操作需要使用随数据改变而改变的 DOM 结构的时候，这个操作都应该放进 `Vue.nextTick()` 的回调函数中。
 
-> Vue 异步执行 DOM 更新。只要观察到数据变化，Vue 将开启一个队列，并缓冲在同一事件循环中发生的所有数据改变。如果同一个 watcher 被多次触发，只会被推入到队列中一次。这种在缓冲时去除重复数据对于避免不必要的计算和 DOM 操作上非常重要。然后，在下一个的事件循环 "tick" 中，Vue 刷新队列并执行实际 (已去重的) 工作。Vue 在内部尝试对异步队列使用原生的 Promise.then 和 MessageChannel，如果执行环境不支持，会采用 setTimeout(fn, 0) 代替。
+> Vue 异步执行 DOM 更新。只要观察到数据变化，Vue 将开启一个队列，并缓冲在同一事件循环中发生的所有数据改变。如果同一个 `watcher` 被多次触发，只会被推入到队列中一次。这种在缓冲时去除重复数据对于避免不必要的计算和 DOM 操作上非常重要。然后，在下一个的事件循环 "tick" 中，Vue 刷新队列并执行实际 (已去重的) 工作。Vue 在内部尝试对异步队列使用原生的 `Promise.then` 和 `MessageChannel`，如果执行环境不支持，会采用 `setTimeout(fn, 0)` 代替。
 
 ## 键盘监听事件
 

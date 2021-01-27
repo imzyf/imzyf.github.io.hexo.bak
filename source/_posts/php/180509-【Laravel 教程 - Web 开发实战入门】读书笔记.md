@@ -320,7 +320,7 @@ MAIL_FROM_NAME=SampleApp
 
 `diffForHumans()` 该方法的作用是将日期进行友好化处理：
 
-```
+```bash
 >>> $created_at->diffForHumans()
 => "17 years ago"
 ```

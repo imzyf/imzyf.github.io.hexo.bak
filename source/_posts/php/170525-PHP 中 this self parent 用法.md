@@ -16,7 +16,7 @@ feature_img:
 ## for member variable
 
 - `$this` 调用非静态变量
-- `self::` 调用静态变量
+- `self::` `static::` 调用静态变量
 
 ```php
 <?php

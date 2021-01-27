@@ -5,6 +5,7 @@ date: 2017-04-22 12:00:00
 updated:
 tags:
   - php
+  - nginx
 categories:
 description:
 comments: true

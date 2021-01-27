@@ -73,8 +73,8 @@ class Validator
 ```php
 // https://learnku.com/docs/laravel/5.8/validation/3899#manually-creating-validators
 // $rules = [
-//  'name' => 'required|string|min:2|max:5',
-//  'code' => 'required|string|min:2|max:5',
+//   'name' => 'required|string|min:2|max:5',
+//   'code' => 'required|string|min:2|max:5',
 // ];
 function validator(array $data, array $rules, array $messages = [], array $customAttributes = [])
 {
