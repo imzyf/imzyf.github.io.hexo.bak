@@ -13,7 +13,7 @@ cover_img: https://images.unsplash.com/photo-1518873890627-d4b177c06e51?ixlib=rb
 feature_img:
 ---
 
-注意：**此操作会修改 Git 历史记录**，正式工作环境慎用。
+注意：**此操作会修改 Git 历史记录**，正式工作环境不允许。
 
 <!-- more -->
 
