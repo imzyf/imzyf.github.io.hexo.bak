@@ -43,9 +43,9 @@ SELECT * FROM `t1` ORDER BY id DESC LIMIT 100, 10;
 -- 采用子查询的方式优化，在子查询里先从索引获取到最大 id，然后倒序排，再取 10 行结果集
 -- 注意这里采用了 2 次倒序排，因此在取 LIMIT 的 start 值时，比原来的值加了 10，即 935510，否则结果将和原来的不一致
 SELECT * FROM
-	(SELECT * FROM `t1` WHERE id >
-		( SELECT id FROM `t1` WHERE ftype=1 ORDER BY id DESC LIMIT 935510, 1)
-	LIMIT 10) T
+  (SELECT * FROM `t1` WHERE id >
+    ( SELECT id FROM `t1` WHERE ftype=1 ORDER BY id DESC LIMIT 935510, 1)
+  LIMIT 10) T
 ORDER BY id DESC;
 ```
 
@@ -54,9 +54,9 @@ ORDER BY id DESC;
 ```sql
 -- 采用 INNER JOIN 优化，JOIN 子句里也优先从索引获取 ID 列表，然后直接关联查询获得最终结果，这里不需要加 10
 SELECT * FROM `t1`
-	INNER JOIN ( SELECT id FROM `t1`
-		WHERE ftype=1 ORDER BY id DESC LIMIT 935500,10) t2
-	USING (id);
+  INNER JOIN ( SELECT id FROM `t1`
+    WHERE ftype=1 ORDER BY id DESC LIMIT 935500,10) t2
+  USING (id);
 ```
 
 1、要学着使用 `EXPLAIN` 对 SQL 进行优化调整
@@ -69,7 +69,9 @@ sudo apt-get install mytop
 
 4、`USING (id)` 如果两个表的字段名都一样，那么可以用 using(字段名) 来协商条件，效果跟 `on a.id = b.id` 一样
 
-> References:
->
-> - [MySQL 优化案例系列 — 分页优化 | iMySQL](http://imysql.com/2014/07/26/mysql-optimization-case-paging-optimize.shtml)
-> - [MYSQL 分页 limit 速度太慢优化方法 | Fienda blog](http://www.fienda.com/archives/110)
+## References
+
+- [MySQL 优化案例系列 — 分页优化 | iMySQL](http://imysql.com/2014/07/26/mysql-optimization-case-paging-optimize.shtml)
+- [MYSQL 分页 limit 速度太慢优化方法 | Fienda blog](http://www.fienda.com/archives/110)
+
+-- EOF --

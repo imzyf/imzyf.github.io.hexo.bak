@@ -82,3 +82,5 @@ FROM t1 a JOIN (
 WHERE a.id < b.id
 ;
 ```
+
+-- EOF --

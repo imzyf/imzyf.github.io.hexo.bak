@@ -63,5 +63,6 @@ $query = static::find()
 
 - [MySQL 5.7 新特性 JSON 的创建，插入，查询，更新](https://www.lnmp.cn/mysql-57-new-features-json.html)
 - [MySQL · 最佳实践 · 如何索引 JSON 字段](http://mysql.taobao.org/monthly/2017/12/09/)
+- [MySQL 常用 Json 函数 | cnblogs](https://www.cnblogs.com/waterystone/p/5626098.html)
 
 -- EOF --

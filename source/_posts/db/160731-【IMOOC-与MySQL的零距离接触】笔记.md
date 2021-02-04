@@ -309,3 +309,5 @@ pid SMALLINT UNSIGNED,
 FOREIGN KEY (pid) REFERENCES table_name1(id) /* 外键 pid 参照 table_name1中的 id 字段 */
 )
 ```
+
+-- EOF --

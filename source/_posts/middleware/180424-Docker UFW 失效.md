@@ -5,7 +5,6 @@ date: 2018-04-24 14:00:00
 updated:
 tags:
   - docker
-  - ufw
 categories:
 description:
 comments: true
